@@ -1,0 +1,193 @@
+* {
+  -webkit-font-smoothing: antialiased;
+}
+p {
+  font-size: 18px;
+  color: #555;
+  padding-bottom: 14px;
+}
+h1 {
+  font-size: 28px;
+}
+.font-futura {
+  font-family: "Futura", sans-serif;
+}
+.fw-b {
+  font-weight: bold;
+}
+.ta-c {
+  text-align: center;
+}
+.pad-top-s {
+  padding-top: 20px;
+}
+.pad-bot-s {
+  padding-bottom: 20px;
+}
+.pad-top-m {
+  padding-top: 40px;
+}
+.pad-bot-m {
+  padding-bottom: 40px;
+}
+.pad-bot-l {
+  padding-bottom: 60px;
+}
+.mar-center {
+    margin: 0 auto;
+}
+.d-block {
+    display: block;
+}
+.background-light-grey {
+  background-color: #EEE;
+}
+.border-top-grey {
+  border-top: solid 1px #CCC;
+}
+.border-bottom-grey {
+  border-bottom: solid 1px #CCC;
+}
+.line-height-s {
+    line-height: 24px;
+}
+.line-height-m {
+  line-height: 32px;
+}
+h3 {
+  font-size: 20px;
+  font-weight: 300;
+}
+a {
+  text-decoration: none;
+  color: blue;
+}
+.svg-wrapper {
+  stroke: #222;
+  width: 68%;
+}
+.face-base {
+  stroke-dasharray: 1500;
+  stroke-dashoffset: 1500;
+  animation: dash 4s ease-in-out;
+  animation-fill-mode: forwards;
+}
+.wrapper-30 {
+  width: 30%;
+}
+.wrapper-40 {
+  width: 40%;
+}
+.wrapper-50 {
+  width: 50%;
+}
+.wrapper-60 {
+  width: 60%;
+}
+.wrapper-80 {
+  width: 80%;
+}
+.wrapper-90 {
+  width: 90%;
+}
+.wrapper-100 {
+  width: 100%;
+}
+@media (min-width: 0px) and (max-width: 780px) {
+  .wrapper-30 {
+    width: 90%;
+  }
+  .wrapper-40 {
+    width: 90%;
+  }
+  .wrapper-50 {
+    width: 90%;
+  }
+  .wrapper-60 {
+    width: 90%;
+  }
+  .wrapper-80 {
+    width: 90%;
+  }
+  .wrapper-90 {
+    width: 80%;
+  }
+}
+@keyframes dash {
+  from {
+    stroke-dashoffset: 1500;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+path {
+  stroke-dasharray: 1500;
+  stroke-dashoffset: 1500;
+  animation: dash 6s linear;
+  animation-fill-mode: forwards;
+}
+@keyframes dash {
+  from {
+    stroke-dashoffset: 1500;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+line {
+  stroke-dasharray: 1500;
+  stroke-dashoffset: 1500;
+  animation: dash 8s linear;
+  animation-fill-mode: forwards;
+}
+@keyframes dash {
+  from {
+    stroke-dashoffset: 1500;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+.nosedash {
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  animation: nosedash 8s linear;
+  animation-fill-mode: forwards;
+}
+@keyframes nosedash {
+  from {
+    stroke-dashoffset: 100;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+.eyedash {
+  stroke-dasharray: 700;
+  stroke-dashoffset: 700;
+  animation: eyedash 4s linear;
+  animation-fill-mode: forwards;
+}
+@keyframes eyedash {
+  from {
+    stroke-dashoffset: 700;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+.hairdash {
+  stroke-dasharray: 700;
+  stroke-dashoffset: 700;
+  animation: hairdash 10s linear;
+  animation-fill-mode: forwards;
+}
+@keyframes hairdash {
+  from {
+    stroke-dashoffset: 700;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}

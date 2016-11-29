@@ -1,0 +1,45 @@
+html { background: linear-gradient(#333333, #323232); }
+* { -webkit-font-smoothing: antialiased; color: white; }
+p { font-size: 18px; padding-bottom: 14px; }
+h1 { font-size: 28px; }
+h2 { font-weight: bold; font-size: 18px; }
+h3 { font-size: 18px; font-style: italic; color: #999999; }
+.font-courier { font-family: "Courier", sans-serif; }
+.b { font-weight: bold; }
+.tc { text-align: center; }
+.fl { float: left; }
+.pt1 { padding-top: 1rem; }
+.pt2 { padding-top: 2rem; }
+.pt3 { padding-top: 3rem; }
+.pt4 { padding-top: 4rem; }
+.pr10 { padding-right: 10%; }
+.pb1 { padding-bottom: 1rem; }
+.pb2 { padding-bottom: 2rem; }
+.pb3 { padding-bottom: 3rem; }
+.pad-top-m { padding-top: 40px; }
+.pb4 { padding-bottom: 4rem; }
+.pt8 { padding-top: 8rem; }
+.mar-center { margin: 0 auto; }
+.d-block { display: block; }
+.dib { display: inline-block; }
+.min-h-64 { min-height: 64px; }
+.lhs { line-height: 24px; }
+.lhm { line-height: 32px; }
+a { text-decoration: underline; font-size: 18px; color: #00BBEA; }
+.wrapper-20 { width: 20%; }
+.wrapper-30 { width: 30%; }
+.wrapper-40 { width: 40%; }
+.wrapper-50 { width: 50%; }
+.wrapper-60 { width: 60%; }
+.wrapper-80 { width: 80%; }
+.wrapper-90 { width: 90%; }
+.wrapper-100 { width: 100%; }
+.mw-980 { max-width: 880px; }
+@media (min-width: 0px) and (max-width: 780px) {
+  .wrapper-30 { width: 90%; }
+  .wrapper-40 { width: 90%; padding-left: 1rem; padding-right: 1rem; }
+  .wrapper-50 { width: 90%; padding-left: 1rem; }
+  .wrapper-60 { width: 90%; }
+  .wrapper-80 { width: 90%; }
+  .wrapper-90 { width: 80%; }
+}
