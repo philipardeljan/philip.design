@@ -1,4 +1,4 @@
-html { background: linear-gradient(#333333, #323232); }
+html { background: #333333; }
 * { -webkit-font-smoothing: antialiased; color: white; }
 p { font-size: 18px; padding-bottom: 14px; }
 h1 { font-size: 28px; }
@@ -36,10 +36,6 @@ a { text-decoration: underline; font-size: 18px; color: #00BBEA; }
 .wrapper-100 { width: 100%; }
 .mw-980 { max-width: 880px; }
 @media (min-width: 0px) and (max-width: 780px) {
-  .wrapper-30 { width: 90%; }
   .wrapper-40 { width: 90%; padding-left: 1rem; padding-right: 1rem; }
   .wrapper-50 { width: 90%; padding-left: 1rem; }
-  .wrapper-60 { width: 90%; }
-  .wrapper-80 { width: 90%; }
-  .wrapper-90 { width: 80%; }
 }
