@@ -39,4 +39,5 @@ a { text-decoration: underline; font-size: 18px; color: #00BBEA; }
 @media (min-width: 0px) and (max-width: 780px) {
   .wrapper-40 { width: 90%; padding-left: 1rem; padding-right: 1rem; }
   .wrapper-50 { width: 90%; padding-left: 1rem; }
+  .hide-mobile { display: none; }
 }
