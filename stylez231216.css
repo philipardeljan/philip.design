@@ -2,6 +2,7 @@ html { background: #333333; }
 * { -webkit-font-smoothing: antialiased; color: white; }
 p { font-size: 18px; padding-bottom: 14px; }
 h1 { font-size: 28px; }
+.fsemoji { font-size: 120px; padding-left: 6rem; margin-top: 1rem; }
 h2 { font-weight: bold; font-size: 18px; }
 h3 { font-size: 18px; font-style: italic; color: #999999; }
 .font-courier { font-family: "Courier", sans-serif; }
