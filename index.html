@@ -1,43 +1,197 @@
 <!DOCTYPE html>
-<html class="ma3" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html class="bg-black white pb4" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <!--Hello friend-->
-    <link rel="stylesheet" type="text/css" href="ui-components-v0.1.min.css">
+    <link rel="stylesheet" type="text/css" href="tachyons.css">
     <link rel="shortcut icon" href="favicon.ico">
     <title>Philip Ardeljan. Web designer</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-  </head>
-  <body class="system-font font-antialiased mw15 center">
-    <div class="bl pl3">
-      <h1 class="mb1">philip ardeljan</h1>
-      <p class="mt0 mb1 fs3">web designer</p>
+    <style>
+     
+     .bg-blue {
+         background: rgba(73, 144, 226, .4);
+     }
+     
+     .silver {
+         color: #999;
+     }
+     
+     #inner-face1 {
+         animation-name: rotate;
+         animation-duration: 20s;
+         animation-iteration-count: infinite;
+         animation-timing-function: linear;
+         animation-direction: reverse;
+         transform-origin: 253px 253px;
+     }
+     
+     #inner-face2 {
+         animation-name: rotate;
+         animation-duration: 40s;
+         animation-iteration-count: infinite;
+         animation-timing-function: linear;
+         transform-origin: 253px 253px;
+     }
+
+     #inner-face3 {
+         animation-name: rotate;
+         animation-duration: 60s;
+         animation-iteration-count: infinite;
+         animation-timing-function: linear;
+         animation-direction: reverse;
+         transform-origin: 253px 253px;
+     }
+
+     #inner-brain1 {
+         animation-name: rotate;
+         animation-duration: 1s;
+         animation-iteration-count: infinite;
+         animation-timing-function: linear;
+         animation-direction: reverse;
+         transform-origin: 50px 50px;
+     }
+
+     #inner-brain2 {
+         animation-name: rotate;
+         animation-duration: 4s;
+         animation-iteration-count: infinite;
+         animation-timing-function: linear;
+         transform-origin: 50px 50px;
+     }
+
+     #inner-brain3 {
+         animation-name: rotate;
+         animation-duration: 10s;
+         animation-iteration-count: infinite;
+         animation-timing-function: linear;
+         animation-direction: reverse;
+         transform-origin: 50px 50px;
+     }
+     
+     @keyframes rotate {
+         0% { transform: rotate(360deg); }
+     }
+
+     #think1 {
+         stroke-dasharray: 10;
+         stroke-dashoffset: 100;
+         animation: dash 1s linear forwards;
+         animation-iteration-count: infinite;
+     }
+
+     #think2 {
+         stroke-dasharray: 20;
+         stroke-dashoffset: 200;
+         animation: dash 1s linear forwards;
+         animation-iteration-count: infinite;
+     }
+
+     #think3 {
+         stroke-dasharray: 30;
+         stroke-dashoffset: 300;
+         animation: dash 1s linear forwards;
+         animation-iteration-count: infinite;
+     }
+
+     @keyframes dash {
+         to {
+             stroke-dashoffset: 0;
+         }
+     }     
+     
+    </style>
+</head>
+<body class="">
+    <div class="tc mb4 pb3">
+        <h1 class="f-5 mv4">Philip Ardeljan</h1>
+        <p style="letter-spacing: 1rem;" class="silver mb4 pb3">WEB DESIGNER</p>
+        <button class="bg-black white br2 mh3 pa3 b--blue bg-blue pointer">Think</button>
+        <button class="bg-black green br2 mh3 pa3 pointer">Sketch</button>
+        <button class="bg-black orange br2 mh3 pa3 pointer">Code</button>
     </div>
-    <div class="mw14 mr4">
-      <h2 class="mt4 mb2">writing<span class="fs1 pl2">(hosted on Medium)</span></h2>
-      <div class="lh-body">
-        <a class="db tdn blue button-press" href="https://medium.com/@philipardeljan/15kb-of-css-is-all-youll-ever-need-%EF%B8%8F-634da7258338" target="_blank">15kb of CSS is all you'll ever need</a>
-        <a class="db tdn blue button-press" href="https://medium.com/@philipardeljan/what-do-you-mean-product-designer-87090c99d0e1" target="_blank">"What do you mean Product Designer?"</a>
-      </div>
-    </div>
-    <h2 class="mt4 mb2">networks</h2>
-    <div class="lh-body mb5">
-      <a class="db tdn blue pr2 button-press" href="https://dribbble.com/philipardeljan" target="_blank">Dribbble</a>
-      <a class="db tdn blue pr2 button-press" href="https://twitter.com/philipardeljan" target="_blank">Twitter</a>
-      <a class="db tdn blue button-press" href="https://github.com/philipardeljan" target="_blank">Github</a>
-    </div>
-  </body>
-  <script>
-    (function(i, s, o, g, r, a, m) {
-    i['GoogleAnalyticsObject'] = r;
-    i[r] = i[r] || function() {
-    (i[r].q = i[r].q || []).push(arguments)
-    }, i[r].l = 1 * new Date();
-    a = s.createElement(o),
-    m = s.getElementsByTagName(o)[0];
-    a.async = 1;
-    a.src = g;
-    m.parentNode.insertBefore(a, m)
-    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-    ga('create', 'UA-54702241-1', 'auto');
-    ga('send', 'pageview');
-  </script>
+
+    <svg class="w-100" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="623" height="558" viewBox="0 0 623 558">
+        <defs>
+            <circle id="group3-a" cx="253" cy="253" r="215"/>
+            <mask id="group3-g" width="430" height="430" x="0" y="0" fill="#fff">
+                <use xlink:href="#group3-a"/>
+            </mask>
+            <circle id="group3-b" cx="253" cy="253" r="178"/>
+            <mask id="group3-h" width="356" height="356" x="0" y="0" fill="#fff">
+                <use xlink:href="#group3-b"/>
+            </mask>
+            <circle id="group3-c" cx="253" cy="253" r="140"/>
+            <mask id="group3-i" width="280" height="280" x="0" y="0" fill="#fff">
+                <use xlink:href="#group3-c"/>
+            </mask>
+            <rect id="group3-j" width="16" height="16" x="245" y="267"/>
+            <polygon id="group3-k" points="187 193 219 193 219 225 187 225 187 209"/>
+            <rect id="group3-l" width="32" height="32" x="287" y="193"/>
+            <circle id="group3-d" cx="50" cy="50" r="42.49"/>
+            <mask id="group3-m" width="84.98" height="84.98" x="0" y="0" fill="#fff">
+                <use xlink:href="#group3-d"/>
+            </mask>
+            <circle id="group3-e" cx="50" cy="50" r="35.178"/>
+            <mask id="group3-n" width="70.356" height="70.356" x="0" y="0" fill="#fff">
+                <use xlink:href="#group3-e"/>
+            </mask>
+            <circle id="group3-f" cx="50" cy="50" r="27.668"/>
+            <mask id="group3-o" width="55.336" height="55.336" x="0" y="0" fill="#fff">
+                <use xlink:href="#group3-f"/>
+            </mask>
+            <circle id="group3-q" cx="50.5" cy="50.5" r="5.5"/>
+            <filter id="group3-p" width="809.1%" height="809.1%" x="-354.5%" y="-354.5%" filterUnits="objectBoundingBox">
+                <feMorphology in="SourceAlpha" operator="dilate" radius="5" result="shadowSpreadOuter1"/>
+                <feOffset in="shadowSpreadOuter1" result="shadowOffsetOuter1"/>
+                <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="8"/>
+                <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0.28627451   0 0 0 0 0.564705882   0 0 0 0 0.88627451  0 0 0 1 0"/>
+            </filter>
+        </defs>
+        <g fill="none" fill-rule="evenodd" transform="translate(1 1)">
+            <g transform="translate(32 50)">
+                <circle cx="253" cy="253" r="253" fill="#000" stroke="#FFF"/>
+                <use id="inner-face3" fill="#000" stroke="#FFF" stroke-dasharray="4 4" stroke-width="2" mask="url(#group3-g)" xlink:href="#group3-a"/>
+                <use id="inner-face2" fill="#000" stroke="#FFF" stroke-dasharray="8 8" stroke-width="2" mask="url(#group3-h)" xlink:href="#group3-b"/>
+                <use id="inner-face1" fill="#000" stroke="#FFF" stroke-dasharray="16 16" stroke-width="2" mask="url(#group3-i)" xlink:href="#group3-c"/>
+                <path stroke="#F06298" stroke-linecap="square" stroke-width="4" d="M193,324 L313,324"/>
+                <use fill="#8B572A" xlink:href="#group3-j"/>
+                <rect width="14" height="14" x="246" y="268" stroke="#FFF" stroke-width="1"/>
+                <use fill="#8B572A" xlink:href="#group3-k"/>
+                <path stroke="#FFF" stroke-width="2" d="M189,195 L189,223 L217,223 L217,195 L189,195 Z"/>
+                <g>
+                    <use fill="#8B572A" xlink:href="#group3-l"/>
+                    <rect width="28" height="28" x="289" y="195" stroke="#FFF" stroke-width="2"/>
+                </g>
+            </g>
+            <g id="think">
+                <path id="think1" stroke="#FFF" stroke-dasharray="4 4" stroke-linecap="square" stroke-width="3" d="M80.5,25.5 L621.681116,25.5"/>
+                <path id="think2" stroke="#FFF" stroke-dasharray="8 8" stroke-linecap="square" stroke-width="3" d="M0.5,45.5 L541.681116,45.5"/>
+                <path id="think3" stroke="#FFF" stroke-dasharray="16 16" stroke-linecap="square" stroke-width="3" d="M50.5,65.5 L591.681116,65.5"/>
+            </g>
+            <g transform="translate(235)">
+                <circle cx="50" cy="50" r="50" fill="#000" stroke="#FFF"/>
+                <use id="inner-brain3" fill="#000" stroke="#FFF" stroke-dasharray="4 4" stroke-width="2" mask="url(#group3-m)" xlink:href="#group3-d"/>
+                <use id="inner-brain2" fill="#000" stroke="#FFF" stroke-dasharray="8 8" stroke-width="2" mask="url(#group3-n)" xlink:href="#group3-e"/>
+                <use id="inner-brain1" fill="#000" stroke="#FFF" stroke-dasharray="16 16" stroke-width="2" mask="url(#group3-o)" xlink:href="#group3-f"/>
+                <use fill="#000" filter="url(#group3-p)" xlink:href="#group3-q"/>
+                <use fill="#4990E2" xlink:href="#group3-q"/>
+            </g>
+        </g>
+    </svg>
+    
+</body>
+<script>
+ (function(i, s, o, g, r, a, m) {
+     i['GoogleAnalyticsObject'] = r;
+     i[r] = i[r] || function() {
+         (i[r].q = i[r].q || []).push(arguments)
+     }, i[r].l = 1 * new Date();
+     a = s.createElement(o),
+     m = s.getElementsByTagName(o)[0];
+     a.async = 1;
+     a.src = g;
+     m.parentNode.insertBefore(a, m)
+ })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+ ga('create', 'UA-54702241-1', 'auto');
+ ga('send', 'pageview');
+</script>
 </html>
