@@ -14,10 +14,65 @@
      .silver {
          color: #999;
      }
+
+     @keyframes fadeOut {
+         from {
+             opacity: 1;
+         }
+
+         to {
+             opacity: 0;
+         }
+     }
+
+     .fadeOut {
+         animation-duration: 1s;
+         animation-fill-mode: both;         
+         animation-name: fadeOut;
+     }
+
+     @keyframes fadeIn {
+         from {
+             opacity: 0;
+         }
+
+         to {
+             opacity: 1;
+         }
+     }
+
+     .fadeIn {
+         animation-duration: 1s;
+         animation-fill-mode: both;         
+         animation-name: fadeIn;
+         animation-delay: 1s;
+     }     
+
+
+     #blue-brain {
+         animation-name: pulse;
+         animation-duration: 10s;
+         animation-iteration-count: infinite;
+         animation-timing-function: linear;
+         transform-origin: 51px 51px;
+     }
+
+     #green-brain {
+         animation-name: pulse;
+         animation-duration: 10s;
+         animation-iteration-count: infinite;
+         animation-timing-function: linear;
+         transform-origin: 51px 51px;
+     }     
+
+     @keyframes pulse {
+         0% { transform: scale(.5); }
+         50% { transform: scale(2); }         
+     }
      
      #inner-face1 {
          animation-name: rotate;
-         animation-duration: 20s;
+         animation-duration: 40s;
          animation-iteration-count: infinite;
          animation-timing-function: linear;
          animation-direction: reverse;
@@ -26,7 +81,7 @@
      
      #inner-face2 {
          animation-name: rotate;
-         animation-duration: 40s;
+         animation-duration: 60s;
          animation-iteration-count: infinite;
          animation-timing-function: linear;
          transform-origin: 253px 253px;
@@ -34,7 +89,7 @@
 
      #inner-face3 {
          animation-name: rotate;
-         animation-duration: 60s;
+         animation-duration: 80s;
          animation-iteration-count: infinite;
          animation-timing-function: linear;
          animation-direction: reverse;
@@ -79,18 +134,25 @@
      }
 
      #think2 {
+         stroke-dasharray: 30;
+         stroke-dashoffset: 300;
+         animation: dash 1s linear forwards;
+         animation-iteration-count: infinite;
+     }
+
+     #think3 {
          stroke-dasharray: 20;
          stroke-dashoffset: 200;
          animation: dash 1s linear forwards;
          animation-iteration-count: infinite;
      }
 
-     #think3 {
-         stroke-dasharray: 30;
-         stroke-dashoffset: 300;
+     #sketch1 {
+         stroke-dasharray: 20;
+         stroke-dashoffset: 200;
          animation: dash 1s linear forwards;
          animation-iteration-count: infinite;
-     }
+     }     
 
      @keyframes dash {
          to {
@@ -104,9 +166,9 @@
     <div class="tc mb4 pb3">
         <h1 class="f-5 mv4">Philip Ardeljan</h1>
         <p style="letter-spacing: 1rem;" class="silver mb4 pb3">WEB DESIGNER</p>
-        <button class="bg-black white br2 mh3 pa3 b--blue bg-blue pointer">Think</button>
-        <button class="bg-black green br2 mh3 pa3 pointer">Sketch</button>
-        <button class="bg-black orange br2 mh3 pa3 pointer">Code</button>
+        <button id="think-button" class="bg-black blue br2 mh3 pa3 b--white pointer">Think</button>
+        <button id="sketch-button" class="bg-black green br2 mh3 pa3 b--white pointer">Sketch</button>
+        <button id="code-button" class="bg-black orange br2 mh3 pa3 b--white pointer">Code</button>
     </div>
 
     <svg class="w-100" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="623" height="558" viewBox="0 0 623 558">
@@ -145,6 +207,15 @@
                 <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="8"/>
                 <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0.28627451   0 0 0 0 0.564705882   0 0 0 0 0.88627451  0 0 0 1 0"/>
             </filter>
+
+                <circle id="green-b" cx="50.5" cy="50.5" r="5.5"/>
+                <filter id="green-a" width="809.1%" height="809.1%" x="-354.5%" y="-354.5%" filterUnits="objectBoundingBox">
+                    <feMorphology in="SourceAlpha" operator="dilate" radius="5" result="shadowSpreadOuter1"/>
+                    <feOffset in="shadowSpreadOuter1" result="shadowOffsetOuter1"/>
+                    <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="8"/>
+                    <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0.49415046   0 0 0 0 0.826234102   0 0 0 0 0.129877269  0 0 0 1 0"/>
+                </filter>
+            
         </defs>
         <g fill="none" fill-rule="evenodd" transform="translate(1 1)">
             <g transform="translate(32 50)">
@@ -156,10 +227,10 @@
                 <use fill="#8B572A" xlink:href="#group3-j"/>
                 <rect width="14" height="14" x="246" y="268" stroke="#FFF" stroke-width="1"/>
                 <use fill="#8B572A" xlink:href="#group3-k"/>
-                <path stroke="#FFF" stroke-width="2" d="M189,195 L189,223 L217,223 L217,195 L189,195 Z"/>
+                <path stroke="#FFF" stroke-width="4" d="M189,195 L189,223 L217,223 L217,195 L189,195 Z"/>
                 <g>
                     <use fill="#8B572A" xlink:href="#group3-l"/>
-                    <rect width="28" height="28" x="289" y="195" stroke="#FFF" stroke-width="2"/>
+                    <rect width="28" height="28" x="289" y="195" stroke="#FFF" stroke-width="4"/>
                 </g>
             </g>
             <g id="think">
@@ -167,19 +238,60 @@
                 <path id="think2" stroke="#FFF" stroke-dasharray="8 8" stroke-linecap="square" stroke-width="3" d="M0.5,45.5 L541.681116,45.5"/>
                 <path id="think3" stroke="#FFF" stroke-dasharray="16 16" stroke-linecap="square" stroke-width="3" d="M50.5,65.5 L591.681116,65.5"/>
             </g>
+
+            <g id="sketch" class="dn">
+                <path id="sketch1" fill="none" stroke="#FFF" stroke-dasharray="16 16" stroke-width="4" d="M460,48.9897885 C661.64433,48.7585355 792.977664,80.761561 854,144.998865 C945.533505,241.35482 742,370.499121 831,618.999403 C890.333333,784.666258 904.666667,959.99979 874,1145" transform="translate(-180 0)"/>
+            </g>
+            
             <g transform="translate(235)">
                 <circle cx="50" cy="50" r="50" fill="#000" stroke="#FFF"/>
                 <use id="inner-brain3" fill="#000" stroke="#FFF" stroke-dasharray="4 4" stroke-width="2" mask="url(#group3-m)" xlink:href="#group3-d"/>
                 <use id="inner-brain2" fill="#000" stroke="#FFF" stroke-dasharray="8 8" stroke-width="2" mask="url(#group3-n)" xlink:href="#group3-e"/>
                 <use id="inner-brain1" fill="#000" stroke="#FFF" stroke-dasharray="16 16" stroke-width="2" mask="url(#group3-o)" xlink:href="#group3-f"/>
-                <use fill="#000" filter="url(#group3-p)" xlink:href="#group3-q"/>
-                <use fill="#4990E2" xlink:href="#group3-q"/>
+
+                <g id="blue-brain">
+                    <use fill="#000" filter="url(#group3-p)" xlink:href="#group3-q"/>
+                    <use fill="#4990E2" xlink:href="#group3-q"/>
+                </g>
+
+                <g id="green-brain" class="dn">
+                    <use fill="#000" filter="url(#green-a)" xlink:href="#green-b"/>
+                    <use fill="#7ED321" xlink:href="#green-b"/>
+                </g>
+                
             </g>
         </g>
     </svg>
     
 </body>
 <script>
+
+ document.getElementById("think-button").onclick = function () {
+     document.getElementById("think").classList.remove('fadeOut');
+     document.getElementById("think").classList.add('fadeIn');
+
+     document.getElementById("blue-brain").classList.add('fadeIn');
+     document.getElementById("blue-brain").classList.remove('fadeOut');
+     document.getElementById("green-brain").classList.remove('fadeIn');
+     document.getElementById("green-brain").classList.add('dn');
+
+     document.getElementById("sketch").classList.add('fadeOut');
+     document.getElementById("sketch").classList.remove('fadeIn');               
+ };
+
+ document.getElementById("sketch-button").onclick = function () {
+     document.getElementById("think").classList.remove('fadeIn');
+     document.getElementById("think").classList.add('fadeOut');
+
+     document.getElementById("blue-brain").classList.add('fadeOut');
+     document.getElementById("green-brain").classList.remove('dn');
+     document.getElementById("green-brain").classList.add('fadeIn');
+
+     document.getElementById("sketch").classList.remove('dn');
+     document.getElementById("sketch").classList.add('fadeIn');
+ };
+
+ 
  (function(i, s, o, g, r, a, m) {
      i['GoogleAnalyticsObject'] = r;
      i[r] = i[r] || function() {
