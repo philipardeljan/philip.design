@@ -6,6 +6,12 @@
     <title>Philip Ardeljan. Web designer</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
+
+     .shadow {
+         box-shadow: 0 -100px 28px 40px rgba(0, 0, 0, 1);
+         z-index: 9999999999;
+         top: 300px;
+     }
      
      .bg-blue {
          background: rgba(73, 144, 226, .4);
@@ -272,11 +278,11 @@
                 <path id="think3" stroke="#FFF" stroke-dasharray="16 16" stroke-linecap="square" stroke-width="3" d="M50.5,65.5 L591.681116,65.5"/>
             </g>
 
-            <g id="sketch" class="dn">
-                <path id="sketch1" class="sketch1-animation" fill="none" stroke="#FFF" stroke-width="2" d="M460,48.9897885 C661.64433,48.7585355 792.977664,80.761561 854,144.998865 C945.533505,241.35482 742,370.499121 831,618.999403 C890.333333,784.666258 904.666667,959.99979 874,1145" transform="translate(-180 0)"/>
-                <path id="sketch2" class="sketch2-animation" fill="none" stroke="#FFF" stroke-dasharray="16 16" stroke-width="2" d="M551.5,480 C406.577244,468.255035 292.077244,534.255035 208,678 C156.91671,765.335947 226.958317,879.693155 243,985.5 C258.666667,1088.83333 222,1158.83333 133,1195.5" transform="translate(-255 -430)"/>
-                <path id="sketch3" class="sketch3-animation" fill="none" stroke="#FFF" stroke-dasharray="16 16" d="M1342.5,936 C1538.5,935.666667 1693.5,893.333333 1807.5,809 C1921.5,724.666667 1967.5,455 1945.5,0" stroke-width="2" transform="translate(-1042 -890)"/>
-                <path id="sketch4" class="sketch4-animation" fill="none" stroke="#FFF" stroke-dasharray="16 16" d="M1342.5,937.5 C1184.77571,910.415772 1086.77571,885.082439 1048.5,861.5 C991.086435,826.126342 951.301661,781.762067 976.5,712 C1001.69834,642.237933 1086.5,634.5 1102.5,712 C1118.5,789.5 1064.17858,960.392244 957,875.5 C885.54761,818.905171 789.880944,574.405171 670,142" stroke-width="2" transform="translate(-1056 -886)"/>                
+            <g id="sketch">
+                <path id="sketch1" class="dn sketch1-animation" fill="none" stroke="#FFF" stroke-width="2" d="M460,48.9897885 C661.64433,48.7585355 792.977664,80.761561 854,144.998865 C945.533505,241.35482 742,370.499121 831,618.999403 C890.333333,784.666258 904.666667,959.99979 874,1145" transform="translate(-180 0)"/>
+                <path id="sketch2" class="dn sketch2-animation" fill="none" stroke="#FFF" stroke-dasharray="16 16" stroke-width="2" d="M551.5,480 C406.577244,468.255035 292.077244,534.255035 208,678 C156.91671,765.335947 226.958317,879.693155 243,985.5 C258.666667,1088.83333 222,1158.83333 133,1195.5" transform="translate(-255 -430)"/>
+                <path id="sketch3" class="dn sketch3-animation" fill="none" stroke="#FFF" stroke-dasharray="16 16" d="M1342.5,936 C1538.5,935.666667 1693.5,893.333333 1807.5,809 C1921.5,724.666667 1967.5,455 1945.5,0" stroke-width="2" transform="translate(-1042 -890)"/>
+                <path id="sketch4" class="dn sketch4-animation" fill="none" stroke="#FFF" stroke-dasharray="16 16" d="M1342.5,937.5 C1184.77571,910.415772 1086.77571,885.082439 1048.5,861.5 C991.086435,826.126342 951.301661,781.762067 976.5,712 C1001.69834,642.237933 1086.5,634.5 1102.5,712 C1118.5,789.5 1064.17858,960.392244 957,875.5 C885.54761,818.905171 789.880944,574.405171 670,142" stroke-width="2" transform="translate(-1056 -886)"/>                
             </g>
             
             <g transform="translate(235)">
@@ -299,8 +305,8 @@
         </g>
     </svg>
 
-    <div class="shadow-4">
-        
+    <div class="shadow relative">
+        asd
     </div>
     
 </body>
@@ -320,11 +326,14 @@
      document.getElementById("green-brain").classList.remove('fadeIn');
      document.getElementById("green-brain").classList.add('dn');
 
-     document.getElementById("sketch").classList.add('dn');
      document.getElementById("sketch1").classList.remove('sketch1-animation');
      document.getElementById("sketch2").classList.remove('sketch2-animation');
      document.getElementById("sketch3").classList.remove('sketch3-animation');
-     document.getElementById("sketch4").classList.remove('sketch4-animation');     
+     document.getElementById("sketch4").classList.remove('sketch4-animation');
+     document.getElementById("sketch1").classList.add('dn');
+     document.getElementById("sketch2").classList.add('dn');
+     document.getElementById("sketch3").classList.add('dn');
+     document.getElementById("sketch4").classList.add('dn');          
      document.getElementById("sketch").classList.remove('fadeIn');               
  };
 
@@ -341,11 +350,14 @@
      document.getElementById("green-brain").classList.remove('dn');
      document.getElementById("green-brain").classList.add('fadeIn');
 
-     document.getElementById("sketch").classList.remove('dn');
+     document.getElementById("sketch1").classList.remove('dn');
+     document.getElementById("sketch2").classList.remove('dn');
+     document.getElementById("sketch3").classList.remove('dn');
+     document.getElementById("sketch4").classList.remove('dn');
      document.getElementById("sketch1").classList.add('sketch1-animation');
      document.getElementById("sketch2").classList.add('sketch2-animation');
      document.getElementById("sketch3").classList.add('sketch3-animation');
-     document.getElementById("sketch4").classList.add('sketch4-animation');
+     document.getElementById("sketch4").classList.add('sketch4-animation');     
      document.getElementById("sketch").classList.add('fadeIn');
  };
 
