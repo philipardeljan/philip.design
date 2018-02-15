@@ -7,11 +7,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
 
+     * {
+         will-change: transform;
+     }
+
      .shadow {
          box-shadow: 0 -100px 28px 40px rgba(0, 0, 0, 1);
          z-index: 9999999999;
          top: 300px;
      }
+
+     .blue-glow {
+         filter: drop-shadow(0px 0px 80px #4990E2);
+         transition: all 2s;
+     }
+
+     .green-glow {
+         filter: drop-shadow(0px 0px 80px #7ED321);
+         transition: all 2s;
+     }     
      
      .bg-blue {
          background: rgba(73, 144, 226, .4);
@@ -156,28 +170,28 @@
      .sketch1-animation {
          stroke-dasharray: 1800;
          stroke-dashoffset: 2000;
-         animation: sketch-dash 4s linear forwards;
+         animation: sketch-dash 3s linear forwards;
          animation-delay: 1s;
      }
 
      .sketch2-animation {
          stroke-dasharray: 1800;
          stroke-dashoffset: 2000;
-         animation: sketch-dash 4s linear forwards;
+         animation: sketch-dash 3s linear forwards;
          animation-delay: 1.4s;
      }
 
      .sketch3-animation {
          stroke-dasharray: 1800;
          stroke-dashoffset: 2000;
-         animation: sketch-dash 4s linear forwards;
+         animation: sketch-dash 3s linear forwards;
          animation-delay: 1.8s;
      }
 
      .sketch4-animation {
          stroke-dasharray: 2600;
          stroke-dashoffset: 2800;
-         animation: sketch-dash4 4s linear forwards;
+         animation: sketch-dash4 3s linear forwards;
          animation-delay: 2.2s;
      }
 
@@ -190,12 +204,14 @@
      @keyframes sketch-dash {
          to {
              stroke-dashoffset: 700;
+             stroke-width: 7px;
          }
      }
 
      @keyframes sketch-dash4 {
          to {
              stroke-dashoffset: 700;
+             stroke-width: 5px;
          }
      }
 
@@ -209,13 +225,13 @@
     
      @keyframes totem-bob {
          0% {
-             transform: translate3d(160px, 0, 0);
+             transform: translate3d(162px, 0, 0);
          }
          50% {
              transform: translate3d(160px, -10px, 0);
          }
          100% {
-             transform: translate3d(160px, 0, 0)
+             transform: translate3d(162px, 0, 0)
          }
      }
 
@@ -249,7 +265,7 @@
         <button id="code-button" class="bg-black orange br2 mh3-ns pv3-ns ph4-ns b--white pointer f6 mh1 pv2 ph3">Code</button>
     </div>
 
-    <svg class="w-100 overflow-visible" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="623" height="501" viewBox="0 0 623 501">
+    <svg id="totem-svg" class="w-100 overflow-visible blue-glow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="623" height="501" viewBox="0 0 623 501">
         <defs>
             <path id="totem-brain1-b" d="M2.9267532,70.933373 C20.3655491,37.6704353 32.7247727,20.5259776 40.004424,19.5 C51.8252574,17.8339984 149.865517,2.52860777 184.004424,1 C223.268773,-0.758105178 254.676999,9.58994709 278.229101,32.0441568 L278.229102,32.0441557 C284.039322,37.58353 285.974431,46.0601589 283.143677,53.5721599 L163.362227,371.437421 C159.467238,381.773592 147.930603,386.995202 137.594432,383.100214 C132.542928,381.196651 128.475443,377.331894 126.316326,372.384223 L2.3094156,88.2192287 C-0.115871228,82.6616223 0.111188188,76.3038105 2.9267532,70.933373 Z"/>
             <filter id="totem-brain1-a" width="171.9%" height="153.2%" x="-35.9%" y="-26.6%" filterUnits="objectBoundingBox">
@@ -299,7 +315,7 @@
             <path id="sketch4" class="dn sketch4-animation" fill="none" stroke="#7ED321" stroke-width="2" d="M923.5,937.5 C765.77571,910.415772 667.77571,885.082439 629.5,861.5 C572.086435,826.126342 532.301661,781.762067 557.5,712 C582.698339,642.237933 667.5,634.5 683.5,712 C699.5,789.5 645.178584,960.392244 538,875.5 C466.54761,818.905171 370.880944,574.405171 251,142" transform="translate(-624 -880)"/>            
         </g>        
         
-        <g class="totem-bob" transform="translate(160)">
+        <g class="totem-bob blue-glow" transform="translate(160)">
             <use fill="#000" filter="url(#totem-brain1-a)" xlink:href="#totem-brain1-b"/>
             <use fill="#040404" xlink:href="#totem-brain1-b"/>
             <path stroke="#1F1F1F" stroke-width="2" d="M3.81241666,71.3977007 C1.13762991,76.4996163 0.92192347,82.5395375 3.22594594,87.8192636 L127.232856,371.984258 C129.284017,376.684546 133.148129,380.356065 137.947057,382.164449 C147.76642,385.864688 158.726223,380.904158 162.426462,371.084796 L282.207912,53.2195348 C284.897128,46.0831336 283.058775,38.0303363 277.539065,32.7679319 C254.195567,10.5126025 223.054287,0.252500621 184.049155,1.99899905 C171.043838,2.58132671 147.98703,5.18170325 117.386207,9.3172076 C112.8292,9.93305778 108.138222,10.5786299 103.318954,11.2523766 C82.0509938,14.2256945 35.9425927,21.0823482 40.1439825,20.4902138 C33.359265,21.4464366 21.0441666,38.5296847 3.81241666,71.3977007 Z"/>
@@ -362,6 +378,8 @@
      document.getElementById("blue-brain").classList.remove('fadeOut');
      document.getElementById("blue-brain").classList.add('fadeIn');
 
+     document.getElementById("totem-svg").classList.add('blue-glow');
+     document.getElementById("totem-svg").classList.remove('green-glow');     
 
      document.getElementById("sketch1").classList.remove('sketch1-animation');
      document.getElementById("sketch2").classList.remove('sketch2-animation');
@@ -387,6 +405,9 @@
      document.getElementById("blue-brain").classList.remove('fadeIn');
      document.getElementById("green-brain").classList.remove('dn');
      document.getElementById("green-brain").classList.add('fadeIn');
+
+     document.getElementById("totem-svg").classList.remove('blue-glow');
+     document.getElementById("totem-svg").classList.add('green-glow');     
 
      document.getElementById("sketch1").classList.remove('dn');
      document.getElementById("sketch2").classList.remove('dn');
