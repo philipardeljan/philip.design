@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="bg-black white pb4" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html class="bg-black white pb4 ph4" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <!--Hello friend-->
     <link rel="stylesheet" type="text/css" href="tachyons.css">
     <link rel="shortcut icon" href="favicon.ico">
@@ -9,26 +9,42 @@
 
      * {
          will-change: transform;
+         -webkit-font-smoothing: antialiased;
      }
 
      .shadow {
          box-shadow: 0 -100px 28px 40px rgba(0, 0, 0, 1);
          z-index: 9999999999;
-         top: 300px;
+         top: 600px;
      }
 
+     .small-blue-glow {
+         filter: drop-shadow(0px 0px 20px #4990E2);
+         transition: all 2s;
+     }
+
+     .small-green-glow {
+         filter: drop-shadow(0px 0px 20px #7ED321);
+         transition: all 2s;
+     }
+
+     .small-orange-glow {
+         filter: drop-shadow(0px 0px 20px #FD9131);
+         transition: all 2s;
+     }               
+
      .blue-glow {
-         filter: drop-shadow(0px 0px 80px #4990E2);
+         filter: drop-shadow(0px 0px 100px #4990E2);
          transition: all 2s;
      }
 
      .green-glow {
-         filter: drop-shadow(0px 0px 80px #7ED321);
+         filter: drop-shadow(0px 0px 100px #7ED321);
          transition: all 2s;
      }     
      
      .bg-blue {
-         background: rgba(73, 144, 226, .4);
+         background: rgba(73, 144, 226, 1);
      }
      
      .silver {
@@ -256,10 +272,10 @@
      
     </style>
 </head>
-<body class="">
+<body>
     <div class="tc mb4-ns pb3-ns">
         <h1 class="f-5-ns f2 mv3 pb2 pt3 pt0-ns">Philip <br> Ardeljan</h1>
-        <p style="letter-spacing: 1rem;" class="silver mb3 pb3 f5-ns f6">WEB DESIGNER</p>
+        <p style="letter-spacing: 1rem;" class="mb3 pb3 f5-ns f6">WEB DESIGNER</p>
         <button id="think-button" class="bg-blue white br2 mh3-ns pv3-ns ph4-ns b--blue pointer f6 mh1 pv2 ph3">Think</button>
         <button id="sketch-button" class="bg-black green br2 mh3-ns pv3-ns ph4-ns b--white pointer f6 mh1 pv2 ph3">Sketch</button>
         <button id="code-button" class="bg-black orange br2 mh3-ns pv3-ns ph4-ns b--white pointer f6 mh1 pv2 ph3">Code</button>
@@ -356,8 +372,25 @@
         
     </svg>
 
-    <div class="shadow relative">
-        asd
+    <div class="shadow relative measure center pb5">
+        <div class="mb5 pb3">
+            <div style="width: 20px; height: 20px;" class="br-100 bg-blue small-blue-glow"></div>
+            <h1>Think</h1>
+            <p>Identify and understand the problem. This is the first and most important step in my design process. Once I know what the problem is and can understand it I progress to the next stage.</p>
+        </div>
+
+        <div class="mb5 pb3">
+            <div style="width: 20px; height: 20px;" class="br-100 bg-green small-green-glow"></div>
+            <h1>Sketch</h1>
+            <p>Using pen and paper (or whiteboards!) I through down some UI ideas to solve the problem users are having. Of course, this only happens when a UI is part of the solution. Many times it isn’t. Feedback and discussions abound.</p>
+        </div>
+
+        <div class="">
+            <div style="width: 20px; height: 20px;" class="br-100 bg-orange small-orange-glow"></div>
+            <h1>Code</h1>
+            <p>After getting feedback and iterating on designs, it’s time to write some code. Using throwaway HTML/CSS code, I replicate the final product as closely as possible before getting more feedback. Once the solution is close to what we want, developers write the ‘real’ code and boom, it gets shipped. Visual polish also happens at this stage.</p>
+        </div>        
+        
     </div>
     
 </body>
