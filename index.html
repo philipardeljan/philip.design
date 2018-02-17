@@ -18,20 +18,6 @@
          top: 600px;
      }
 
-     .ball {
-         width: 460px;
-         height: 460px;
-         background: radial-gradient(circle at 100px 100px, #111, #000);
-     }
-
-     .blue-3d {
-         //background: radial-gradient(circle at 100px 100px, #4490E2, #000);
-     }
-
-     .green-3d {
-         //background: radial-gradient(circle at 100px 100px, #7ED321, #000);
-     }     
-     
      .small-blue-glow {
          filter: drop-shadow(0px 0px 10px #4990E2);
          transition: all 2s;
@@ -120,15 +106,7 @@
          animation-iteration-count: infinite;
          animation-timing-function: linear;
          transform-origin: 50px 50px;         
-     }
-
-     #orange-brain {
-         animation-name: pulse;
-         animation-duration: 4s;
-         animation-iteration-count: infinite;
-         animation-timing-function: linear;
-         transform-origin: 50px 50px;         
-     }          
+     }     
 
      a@keyframes pulse {
          0% { transform: scale(.8); }
@@ -217,28 +195,28 @@
          stroke-dasharray: 1800;
          stroke-dashoffset: 2000;
          animation: sketch-dash 3s linear forwards;
-         animation-delay: 3s;
+         animation-delay: 1s;
      }
 
      .sketch2-animation {
          stroke-dasharray: 1800;
          stroke-dashoffset: 2000;
          animation: sketch-dash 3s linear forwards;
-         animation-delay: 3.4s;
+         animation-delay: 1.4s;
      }
 
      .sketch3-animation {
          stroke-dasharray: 1800;
          stroke-dashoffset: 2000;
          animation: sketch-dash 3s linear forwards;
-         animation-delay: 3.8s;
+         animation-delay: 1.8s;
      }
 
      .sketch4-animation {
          stroke-dasharray: 2600;
          stroke-dashoffset: 2800;
          animation: sketch-dash4 3s linear forwards;
-         animation-delay: 4.2s;
+         animation-delay: 2.2s;
      }
 
      @keyframes think-dash {
@@ -263,7 +241,6 @@
 
 
      .totem-bob {
-         perspective: 1px;
          animation-name: totem-bob; 
          animation-duration: 3s;
          animation-iteration-count: infinite;
@@ -299,364 +276,110 @@
          100% {
              transform: translate3d(0, 0, 0)
          }
-     }
-
-     .totem-rotate1 {
-         transition: transform 4s;
-         transform: rotateY(120deg)!important;
-     }
-
-     .totem-rotate2 {
-         transition: transform 4s;
-         transform: rotateY(360deg)!important;
-     }
-
-     .totem-rotate1-back {
-         transition: transform 4s;
-         transform: rotateY(120deg)!important;
-     }
-
-     .totem-rotate2-back {
-         transition: transform 4s;
-         transform: rotateY(0deg)!important;
-     }     
-
-     div#carousel { 
-         perspective: 1200px; 
-     }
-     figure#spinner { 
-         transform-style: preserve-3d; 
-         height: 300px; 
-         transform-origin: 50% 50% -500px; 
-         transition: 4s;
-     } 
-     figure#spinner div { 
-         width: 100%;; 
-         position: absolute;
-         transform-origin: 50% 50% -500px;
-         backface-visibility: hidden;
-     }
-     
-     figure#spinner div:nth-child(1) { transform:rotateY(0deg); }
-     figure#spinner div:nth-child(2) { transform: rotateY(120deg); }
-     figure#spinner div:nth-child(3) { transform: rotateY(240deg); }
-     
-     div#carousel ~ span { 
-         color: #fff; 
-         margin: 5%; 
-         display: inline-block; 
-         text-decoration: none; 
-         font-size: 2rem; 
-         transition: 0.6s color; 
-         position: relative; 
-         margin-top: -6rem; 
-         border-bottom: none; 
-         line-height: 0; }
-     div#carousel ~ span:hover { color: #888; cursor: pointer; }     
+     }         
      
     </style>
 </head>
 <body>
     <div class="tc mb4-ns pb3-ns">
-        <!-- <h1 style="font-weight: 100; letter-spacing: 1rem;" class="f-5-ns ttu f2 mv3 pb2 pt3 pt0-ns">Philip Ardeljan</h1>-->
         <p style="letter-spacing: 1rem;" class="mb3 pb3 f2-ns f6">PHILIP ARDELJAN</p>
         <p style="letter-spacing: 2.3rem; left: 10px;" class="relative mb4 pb3 f5-ns silver f6">WEB DESIGNER</p>
-        <button id="think-button" class="bg-blue white br2 mh3-ns pv3-ns ph4-ns b--blue pointer f6 mh1 pv2 ph3">Think</button>
-        <button id="sketch-button" class="bg-black green br2 mh3-ns pv3-ns ph4-ns b--white pointer f6 mh1 pv2 ph3">Draw</button>
-        <button id="code-button" class="bg-black orange br2 mh3-ns pv3-ns ph4-ns b--white pointer f6 mh1 pv2 ph3">Code</button>
+        <button id="think-button" class="bg-black blue br2 mh3-ns pv3-ns ph4-ns b--blue pointer f6 mh1 pv2 ph3">Think</button>
+        <button id="sketch-button" class="bg-black green br2 mh3-ns pv3-ns ph4-ns b--transparent pointer f6 mh1 pv2 ph3">Draw</button>
+        <button id="code-button" class="bg-black orange br2 mh3-ns pv3-ns ph4-ns b--transparent pointer f6 mh1 pv2 ph3">Code</button>
     </div>
-    
-        <!-- <div id="ball-glow" class="ball bg-black br-100 center blue-3d blue-glow relative">
-            
-        </div>-->
-       
 
+    <svg id="totem-svg" class="w-100 overflow-visible blue-glow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="623" height="501" viewBox="0 0 623 501">
+        <defs>
+            <path id="totem-brain1-b" d="M2.9267532,70.933373 C20.3655491,37.6704353 32.7247727,20.5259776 40.004424,19.5 C51.8252574,17.8339984 149.865517,2.52860777 184.004424,1 C223.268773,-0.758105178 254.676999,9.58994709 278.229101,32.0441568 L278.229102,32.0441557 C284.039322,37.58353 285.974431,46.0601589 283.143677,53.5721599 L163.362227,371.437421 C159.467238,381.773592 147.930603,386.995202 137.594432,383.100214 C132.542928,381.196651 128.475443,377.331894 126.316326,372.384223 L2.3094156,88.2192287 C-0.115871228,82.6616223 0.111188188,76.3038105 2.9267532,70.933373 Z"/>
+            <filter id="totem-brain1-a" width="171.9%" height="153.2%" x="-35.9%" y="-26.6%" filterUnits="objectBoundingBox">
+                <feMorphology in="SourceAlpha" operator="dilate" radius="10" result="shadowSpreadOuter1"/>
+                <feOffset in="shadowSpreadOuter1" result="shadowOffsetOuter1"/>
+                <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="20"/>
+                <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"/>
+                <feColorMatrix in="shadowBlurOuter1" result="shadowMatrixOuter1" values="0 0 0 0 0.28627451   0 0 0 0 0.564705882   0 0 0 0 0.88627451  0 0 0 0.2 0"/>
+                <feMorphology in="SourceAlpha" operator="dilate" radius="1" result="shadowSpreadOuter2"/>
+                <feOffset in="shadowSpreadOuter2" result="shadowOffsetOuter2"/>
+                <feGaussianBlur in="shadowOffsetOuter2" result="shadowBlurOuter2" stdDeviation="5"/>
+                <feComposite in="shadowBlurOuter2" in2="SourceAlpha" operator="out" result="shadowBlurOuter2"/>
+                <feColorMatrix in="shadowBlurOuter2" result="shadowMatrixOuter2" values="0 0 0 0 0.176470588   0 0 0 0 0.184313725   0 0 0 0 0.192156863  0 0 0 1 0"/>
+                <feMerge>
+                    <feMergeNode in="shadowMatrixOuter1"/>
+                    <feMergeNode in="shadowMatrixOuter2"/>
+                </feMerge>
+            </filter>
 
-    <div id="carousel">
-        <figure id="spinner">
-            <div id="totem1" class="">
-                <svg style="top:120px;" class="w-100 overflow-visible relative z-max" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="623" height="501" viewBox="0 0 623 501">
-                    <defs>
-                        <path id="totem-brain1-b" d="M2.9267532,70.933373 C20.3655491,37.6704353 32.7247727,20.5259776 40.004424,19.5 C51.8252574,17.8339984 149.865517,2.52860777 184.004424,1 C223.268773,-0.758105178 254.676999,9.58994709 278.229101,32.0441568 L278.229102,32.0441557 C284.039322,37.58353 285.974431,46.0601589 283.143677,53.5721599 L163.362227,371.437421 C159.467238,381.773592 147.930603,386.995202 137.594432,383.100214 C132.542928,381.196651 128.475443,377.331894 126.316326,372.384223 L2.3094156,88.2192287 C-0.115871228,82.6616223 0.111188188,76.3038105 2.9267532,70.933373 Z"/>
-                        <filter id="totem-brain1-a" width="171.9%" height="153.2%" x="-35.9%" y="-26.6%" filterUnits="objectBoundingBox">
-                            <feMorphology in="SourceAlpha" operator="dilate" radius="10" result="shadowSpreadOuter1"/>
-                            <feOffset in="shadowSpreadOuter1" result="shadowOffsetOuter1"/>
-                            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="20"/>
-                            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"/>
-                            <feColorMatrix in="shadowBlurOuter1" result="shadowMatrixOuter1" values="0 0 0 0 0.28627451   0 0 0 0 0.564705882   0 0 0 0 0.88627451  0 0 0 0.2 0"/>
-                            <feMorphology in="SourceAlpha" operator="dilate" radius="1" result="shadowSpreadOuter2"/>
-                            <feOffset in="shadowSpreadOuter2" result="shadowOffsetOuter2"/>
-                            <feGaussianBlur in="shadowOffsetOuter2" result="shadowBlurOuter2" stdDeviation="5"/>
-                            <feComposite in="shadowBlurOuter2" in2="SourceAlpha" operator="out" result="shadowBlurOuter2"/>
-                            <feColorMatrix in="shadowBlurOuter2" result="shadowMatrixOuter2" values="0 0 0 0 0.176470588   0 0 0 0 0.184313725   0 0 0 0 0.192156863  0 0 0 1 0"/>
-                            <feMerge>
-                                <feMergeNode in="shadowMatrixOuter1"/>
-                                <feMergeNode in="shadowMatrixOuter2"/>
-                            </feMerge>
-                        </filter>
+            <circle id="green-b" cx="50.5" cy="50.5" r="5.5"/>
+            <filter id="green-a" width="809.1%" height="809.1%" x="-354.5%" y="-354.5%" filterUnits="objectBoundingBox">
+                <feMorphology in="SourceAlpha" operator="dilate" radius="5" result="shadowSpreadOuter1"/>
+                <feOffset in="shadowSpreadOuter1" result="shadowOffsetOuter1"/>
+                <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="8"/>
+                <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0.49415046   0 0 0 0 0.826234102   0 0 0 0 0.129877269  0 0 0 1 0"/>
+            </filter>
 
-                        <circle id="green-b" cx="50.5" cy="50.5" r="5.5"/>
-                        <filter id="green-a" width="809.1%" height="809.1%" x="-354.5%" y="-354.5%" filterUnits="objectBoundingBox">
-                            <feMorphology in="SourceAlpha" operator="dilate" radius="5" result="shadowSpreadOuter1"/>
-                            <feOffset in="shadowSpreadOuter1" result="shadowOffsetOuter1"/>
-                            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="8"/>
-                            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0.49415046   0 0 0 0 0.826234102   0 0 0 0 0.129877269  0 0 0 1 0"/>
-                        </filter>
+            <circle id="blue-b" cx="50.5" cy="50.5" r="5.5"/>
+            <filter id="blue-a" width="809.1%" height="809.1%" x="-354.5%" y="-354.5%" filterUnits="objectBoundingBox">
+                <feMorphology in="SourceAlpha" operator="dilate" radius="5" result="shadowSpreadOuter1"/>
+                <feOffset in="shadowSpreadOuter1" result="shadowOffsetOuter1"/>
+                <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="8"/>
+                <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0.28627451   0 0 0 0 0.564705882   0 0 0 0 0.88627451  0 0 0 1 0"/>
+            </filter>
+        </defs>
+        
+        <g id="think" class="fadeIn" fill="none" fill-rule="evenodd">
+            <path id="think1" stroke="#4990E2" stroke-dasharray="4 4" stroke-linecap="square" stroke-width="3" d="M80.5,18.5 L621.681116,18.5"/>
+            <path id="think2" stroke="#4990E2" stroke-dasharray="8 8" stroke-linecap="square" stroke-width="3" d="M0.5,38.5 L541.681116,38.5"/>
+            <path id="think3" stroke="#4990E2" stroke-dasharray="16 16" stroke-linecap="square" stroke-width="3" d="M50.5,58.5 L591.681116,58.5"/>
+        </g>
 
-                        <circle id="blue-b" cx="50.5" cy="50.5" r="5.5"/>
-                        <filter id="blue-a" width="809.1%" height="809.1%" x="-354.5%" y="-354.5%" filterUnits="objectBoundingBox">
-                            <feMorphology in="SourceAlpha" operator="dilate" radius="5" result="shadowSpreadOuter1"/>
-                            <feOffset in="shadowSpreadOuter1" result="shadowOffsetOuter1"/>
-                            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="8"/>
-                            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0.28627451   0 0 0 0 0.564705882   0 0 0 0 0.88627451  0 0 0 1 0"/>
-                        </filter>
-                    </defs>
-                    
-                    <g id="think" fill="none" fill-rule="evenodd">
-                        <path id="think1" stroke="#4990E2" stroke-dasharray="4 4" stroke-linecap="square" stroke-width="3" d="M80.5,18.5 L621.681116,18.5"/>
-                        <path id="think2" stroke="#4990E2" stroke-dasharray="8 8" stroke-linecap="square" stroke-width="3" d="M0.5,38.5 L541.681116,38.5"/>
-                        <path id="think3" stroke="#4990E2" stroke-dasharray="16 16" stroke-linecap="square" stroke-width="3" d="M50.5,58.5 L591.681116,58.5"/>
-                    </g>
+        <g id="sketch">
+            <path id="sketch1" class="dn sketch1-animation" fill="none" stroke="#7ED321" stroke-width="2" d="M923.5,936 C1119.5,935.666667 1274.5,893.333333 1388.5,809 C1502.5,724.666667 1548.5,455 1526.5,0" transform="translate(-700 -880)"/>
+            <path id="sketch2" class="dn sketch2-animation" fill="none" stroke="#7ED321" stroke-width="2" d="M923,937 C1131,935 1264.66667,1016.83333 1324,1182.5 C1383.33333,1348.16667 1645,1325.66667 2109,1115" transform="translate(-700 -880)"/>
+            <path id="sketch3" class="dn sketch3-animation" fill="none" stroke="#7ED321" stroke-width="2" d="M919.5,938 C810.945129,935.944102 726.611795,949.944102 666.5,980 C579.5,1023.5 656.514106,1173.88548 559.5,1189 C421.5,1210.5 513.5,885 408,983.5 C292.991693,1090.87742 156.991693,1131.04409 0,1104" transform="translate(-624 -880)"/>
+            <path id="sketch4" class="dn sketch4-animation" fill="none" stroke="#7ED321" stroke-width="2" d="M923.5,937.5 C765.77571,910.415772 667.77571,885.082439 629.5,861.5 C572.086435,826.126342 532.301661,781.762067 557.5,712 C582.698339,642.237933 667.5,634.5 683.5,712 C699.5,789.5 645.178584,960.392244 538,875.5 C466.54761,818.905171 370.880944,574.405171 251,142" transform="translate(-624 -880)"/>            
+        </g>        
+        
+        <g class="totem-bob blue-glow" transform="translate(160)">
+            <use fill="#000" filter="url(#totem-brain1-a)" xlink:href="#totem-brain1-b"/>
+            <use fill="#040404" xlink:href="#totem-brain1-b"/>
+            <path stroke="#1F1F1F" stroke-width="2" d="M3.81241666,71.3977007 C1.13762991,76.4996163 0.92192347,82.5395375 3.22594594,87.8192636 L127.232856,371.984258 C129.284017,376.684546 133.148129,380.356065 137.947057,382.164449 C147.76642,385.864688 158.726223,380.904158 162.426462,371.084796 L282.207912,53.2195348 C284.897128,46.0831336 283.058775,38.0303363 277.539065,32.7679319 C254.195567,10.5126025 223.054287,0.252500621 184.049155,1.99899905 C171.043838,2.58132671 147.98703,5.18170325 117.386207,9.3172076 C112.8292,9.93305778 108.138222,10.5786299 103.318954,11.2523766 C82.0509938,14.2256945 35.9425927,21.0823482 40.1439825,20.4902138 C33.359265,21.4464366 21.0441666,38.5296847 3.81241666,71.3977007 Z"/>
+            <path fill="#000" stroke="#1F1F1F" stroke-linecap="square" stroke-width="4" d="M89,202 C96.9133109,201.340557 131.570789,200.681115 192.972435,200.021672 L192.972435,200.021674 C194.335418,200.007036 195.612037,200.687472 196.359784,201.827125 C199.328063,206.351124 197.708134,208.908749 191.5,209.5 C184.539649,210.162891 152.861699,210.990565 96.4661503,211.983024 L96.4661503,211.983023 C95.8259821,211.994289 95.192463,211.851717 94.6188401,211.567289 C83.0673624,205.839562 81.1944157,202.650465 89,202 Z"/>
+            <g stroke-width="2" transform="translate(1 19)">
+                <path fill="#000" stroke="#1F1F1F" d="M196.5,82 C197.166667,90 198.833333,94.5 201.5,95.5 C204.166667,96.5 223,96.5 258,95.5 L254.5,105 C216.213374,105.611295 195.713374,105.444629 193,104.5 C190.286626,103.555371 188.28597,96.0553714 186.998032,81.9999999 L196.5,82 Z"/>
+                <path fill="#000" stroke="#252525" d="M40,2 C37.8919759,32.2024288 35.8919759,53.3690955 34,65.5 C32.1080241,77.6309045 28.4413574,94.7975712 23,117 L1,66.5 L0.5,61 L1,56 L17.5,26.5 L26.5,12.5 L33,5.5 L37.5,2.5 L40,2 Z"/>
+                <path stroke="#252525" d="M47,0.5 C44.8919759,31.7024288 42.8919759,53.3690955 41,65.5 C39.1080241,77.6309045 34.2746907,97.1309045 26.5,124"/>
+                <path stroke="#1F1F1F" d="M178.499127,306 C170.845935,289.375511 169.345935,274.875511 173.999127,262.5 C178.65232,250.124489 187.985653,243.791155 201.999127,243.5"/>
+                <path fill="#000" stroke="#1F1F1F" d="M182.5,296 C177.746531,285.820559 177.079864,276.153893 180.5,267 C183.920136,257.846107 190.253469,252.346107 199.5,250.5 L182.5,296 Z"/>
+                <path stroke="#252525" d="M37.5,87.5 C56.7731403,106.10919 67.6064737,122.10919 70,135.5 C72.3935263,148.89081 67.7268597,167.224143 56,190.5"/>
+                <path fill="#000" stroke="#252525" d="M35,94.5 C51.2249086,110.981147 60.3915753,124.647814 62.5,135.5 C64.6084247,146.352186 61.1084247,161.852186 52,182 L26,124 L35,94.5 Z"/>
+                <path fill="#000" stroke="#1F1F1F" d="M232.886062 10.4412296L237.516694 15.0718622C241.32709 18.8822576 241.432996 25.0266657 237.756179 28.9661125L237.714061 29.0112386C234.058297 32.9281292 227.919447 33.1398137 224.002556 29.4840491 223.997303 29.4791459 223.992055 29.4742369 223.986812 29.469322L221.355449 27.0024185C218.128481 23.9771363 217.272424 19.1912375 219.250588 15.2349105L220.655016 12.4260551C222.541293 8.65350094 227.128682 7.12437122 230.901236 9.01064832 231.635426 9.3777434 232.305633 9.86080133 232.886062 10.4412296zM142.5 364.5L138 364 131.5 360.5 127.5 356 122.5 345.5 100.5 294.5 97 284C114.274393 294.112853 126.107726 304.779519 132.5 316 138.892274 327.220481 142.558941 342.887147 143.5 363L142.5 364.5z"/>
+                <path stroke="#1F1F1F" d="M151.5,363 C152.166667,342.666667 147.833333,325 138.5,310 C129.166667,295 113,281.833333 90,270.5"/>
+            </g>
+            <path fill="#181818" d="M136.794169,139.260475 L142.5,136 L148.683447,139.372789 C151.585981,140.95599 153.215579,144.161603 152.784264,147.43959 L151.915311,154.043636 C151.391553,158.024195 147.998546,161 143.983677,161 L141.835951,161 C137.899363,161 134.547808,158.136117 133.933847,154.247701 L132.861177,147.454121 C132.342802,144.17108 133.908378,140.909498 136.794169,139.260475 Z"/>
+            <g>
+                <rect width="28" height="28" x="179" y="73" stroke="#252525" stroke-width="4" rx="14"/>
+            </g>
+            <g>
+                <rect width="28" height="28" x="79" y="73" stroke="#252525" stroke-width="4" rx="14"/>
+            </g>
+        </g>
 
-                    <g id="sketch">
-                        <path id="sketch1" class="dn sketch1-animation" fill="none" stroke="#7ED321" stroke-width="2" d="M923.5,936 C1119.5,935.666667 1274.5,893.333333 1388.5,809 C1502.5,724.666667 1548.5,455 1526.5,0" transform="translate(-700 -880)"/>
-                        <path id="sketch2" class="dn sketch2-animation" fill="none" stroke="#7ED321" stroke-width="2" d="M923,937 C1131,935 1264.66667,1016.83333 1324,1182.5 C1383.33333,1348.16667 1645,1325.66667 2109,1115" transform="translate(-700 -880)"/>
-                        <path id="sketch3" class="dn sketch3-animation" fill="none" stroke="#7ED321" stroke-width="2" d="M919.5,938 C810.945129,935.944102 726.611795,949.944102 666.5,980 C579.5,1023.5 656.514106,1173.88548 559.5,1189 C421.5,1210.5 513.5,885 408,983.5 C292.991693,1090.87742 156.991693,1131.04409 0,1104" transform="translate(-624 -880)"/>
-                        <path id="sketch4" class="dn sketch4-animation" fill="none" stroke="#7ED321" stroke-width="2" d="M923.5,937.5 C765.77571,910.415772 667.77571,885.082439 629.5,861.5 C572.086435,826.126342 532.301661,781.762067 557.5,712 C582.698339,642.237933 667.5,634.5 683.5,712 C699.5,789.5 645.178584,960.392244 538,875.5 C466.54761,818.905171 370.880944,574.405171 251,142" transform="translate(-624 -880)"/>            
-                    </g>        
-                    
-                    <g class="totem-bob blue-glow" transform="translate(160)">
-                        
-                            <use fill="#000" filter="url(#totem-brain1-a)" xlink:href="#totem-brain1-b"/>
-                                <use fill="#040404" xlink:href="#totem-brain1-b"/>
-                        <path stroke="#1F1F1F" stroke-width="2" d="M3.81241666,71.3977007 C1.13762991,76.4996163 0.92192347,82.5395375 3.22594594,87.8192636 L127.232856,371.984258 C129.284017,376.684546 133.148129,380.356065 137.947057,382.164449 C147.76642,385.864688 158.726223,380.904158 162.426462,371.084796 L282.207912,53.2195348 C284.897128,46.0831336 283.058775,38.0303363 277.539065,32.7679319 C254.195567,10.5126025 223.054287,0.252500621 184.049155,1.99899905 C171.043838,2.58132671 147.98703,5.18170325 117.386207,9.3172076 C112.8292,9.93305778 108.138222,10.5786299 103.318954,11.2523766 C82.0509938,14.2256945 35.9425927,21.0823482 40.1439825,20.4902138 C33.359265,21.4464366 21.0441666,38.5296847 3.81241666,71.3977007 Z"/>
-                        <path fill="#000" stroke="#1F1F1F" stroke-linecap="square" stroke-width="4" d="M89,202 C96.9133109,201.340557 131.570789,200.681115 192.972435,200.021672 L192.972435,200.021674 C194.335418,200.007036 195.612037,200.687472 196.359784,201.827125 C199.328063,206.351124 197.708134,208.908749 191.5,209.5 C184.539649,210.162891 152.861699,210.990565 96.4661503,211.983024 L96.4661503,211.983023 C95.8259821,211.994289 95.192463,211.851717 94.6188401,211.567289 C83.0673624,205.839562 81.1944157,202.650465 89,202 Z"/>
-                        <g stroke-width="2" transform="translate(1 19)">
-                            <path fill="#000" stroke="#1F1F1F" d="M196.5,82 C197.166667,90 198.833333,94.5 201.5,95.5 C204.166667,96.5 223,96.5 258,95.5 L254.5,105 C216.213374,105.611295 195.713374,105.444629 193,104.5 C190.286626,103.555371 188.28597,96.0553714 186.998032,81.9999999 L196.5,82 Z"/>
-                            <path fill="#000" stroke="#252525" d="M40,2 C37.8919759,32.2024288 35.8919759,53.3690955 34,65.5 C32.1080241,77.6309045 28.4413574,94.7975712 23,117 L1,66.5 L0.5,61 L1,56 L17.5,26.5 L26.5,12.5 L33,5.5 L37.5,2.5 L40,2 Z"/>
-                            <path stroke="#252525" d="M47,0.5 C44.8919759,31.7024288 42.8919759,53.3690955 41,65.5 C39.1080241,77.6309045 34.2746907,97.1309045 26.5,124"/>
-                            <path stroke="#1F1F1F" d="M178.499127,306 C170.845935,289.375511 169.345935,274.875511 173.999127,262.5 C178.65232,250.124489 187.985653,243.791155 201.999127,243.5"/>
-                            <path fill="#000" stroke="#1F1F1F" d="M182.5,296 C177.746531,285.820559 177.079864,276.153893 180.5,267 C183.920136,257.846107 190.253469,252.346107 199.5,250.5 L182.5,296 Z"/>
-                            <path stroke="#252525" d="M37.5,87.5 C56.7731403,106.10919 67.6064737,122.10919 70,135.5 C72.3935263,148.89081 67.7268597,167.224143 56,190.5"/>
-                            <path fill="#000" stroke="#252525" d="M35,94.5 C51.2249086,110.981147 60.3915753,124.647814 62.5,135.5 C64.6084247,146.352186 61.1084247,161.852186 52,182 L26,124 L35,94.5 Z"/>
-                            <path fill="#000" stroke="#1F1F1F" d="M232.886062 10.4412296L237.516694 15.0718622C241.32709 18.8822576 241.432996 25.0266657 237.756179 28.9661125L237.714061 29.0112386C234.058297 32.9281292 227.919447 33.1398137 224.002556 29.4840491 223.997303 29.4791459 223.992055 29.4742369 223.986812 29.469322L221.355449 27.0024185C218.128481 23.9771363 217.272424 19.1912375 219.250588 15.2349105L220.655016 12.4260551C222.541293 8.65350094 227.128682 7.12437122 230.901236 9.01064832 231.635426 9.3777434 232.305633 9.86080133 232.886062 10.4412296zM142.5 364.5L138 364 131.5 360.5 127.5 356 122.5 345.5 100.5 294.5 97 284C114.274393 294.112853 126.107726 304.779519 132.5 316 138.892274 327.220481 142.558941 342.887147 143.5 363L142.5 364.5z"/>
-                            <path stroke="#1F1F1F" d="M151.5,363 C152.166667,342.666667 147.833333,325 138.5,310 C129.166667,295 113,281.833333 90,270.5"/>
-                        </g>
-                        <path fill="#181818" d="M136.794169,139.260475 L142.5,136 L148.683447,139.372789 C151.585981,140.95599 153.215579,144.161603 152.784264,147.43959 L151.915311,154.043636 C151.391553,158.024195 147.998546,161 143.983677,161 L141.835951,161 C137.899363,161 134.547808,158.136117 133.933847,154.247701 L132.861177,147.454121 C132.342802,144.17108 133.908378,140.909498 136.794169,139.260475 Z"/>
-                        <g>
-                            <rect width="28" height="28" x="179" y="73" stroke="#252525" stroke-width="4" rx="14"/>
-                        </g>
-                        <g>
-                            <rect width="28" height="28" x="79" y="73" stroke="#252525" stroke-width="4" rx="14"/>
-                        </g>
-                    </g>
+        <g id="light-bob">
+            <g transform="translate(252, -10)">
+                <g id="blue-brain">
+                    <use fill="#000" filter="url(#blue-a)" xlink:href="#blue-b"/>
+                    <use fill="#4990E2" xlink:href="#blue-b"/>                    
+                </g>
 
-                    <g id="light-bob">
-                        <g transform="translate(252, -10)">
-                            <g id="blue-brain">
-                                <use fill="#000" filter="url(#blue-a)" xlink:href="#blue-b"/>
-                                <use fill="#4990E2" xlink:href="#blue-b"/>                    
-                            </g>
+                <g id="green-brain" class="dn">
+                    <use fill="#000" filter="url(#green-a)" xlink:href="#green-b"/>
+                    <use fill="#7ED321" xlink:href="#green-b"/>
+                </g>
+            </g>
+        </g>
+        
+    </svg>
 
-                        </g>
-                    </g>
-                    
-                </svg>
-            </div>
-
-            <div id="totem2" class="">
-
-                <svg style="top:120px;" class="w-100 overflow-visible relative" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="623" height="501" viewBox="0 0 623 501">
-                    <defs>
-                        <path id="totem-brain1-b" d="M2.9267532,70.933373 C20.3655491,37.6704353 32.7247727,20.5259776 40.004424,19.5 C51.8252574,17.8339984 149.865517,2.52860777 184.004424,1 C223.268773,-0.758105178 254.676999,9.58994709 278.229101,32.0441568 L278.229102,32.0441557 C284.039322,37.58353 285.974431,46.0601589 283.143677,53.5721599 L163.362227,371.437421 C159.467238,381.773592 147.930603,386.995202 137.594432,383.100214 C132.542928,381.196651 128.475443,377.331894 126.316326,372.384223 L2.3094156,88.2192287 C-0.115871228,82.6616223 0.111188188,76.3038105 2.9267532,70.933373 Z"/>
-                        <filter id="totem-brain1-a" width="171.9%" height="153.2%" x="-35.9%" y="-26.6%" filterUnits="objectBoundingBox">
-                            <feMorphology in="SourceAlpha" operator="dilate" radius="10" result="shadowSpreadOuter1"/>
-                            <feOffset in="shadowSpreadOuter1" result="shadowOffsetOuter1"/>
-                            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="20"/>
-                            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"/>
-                            <feColorMatrix in="shadowBlurOuter1" result="shadowMatrixOuter1" values="0 0 0 0 0.28627451   0 0 0 0 0.564705882   0 0 0 0 0.88627451  0 0 0 0.2 0"/>
-                            <feMorphology in="SourceAlpha" operator="dilate" radius="1" result="shadowSpreadOuter2"/>
-                            <feOffset in="shadowSpreadOuter2" result="shadowOffsetOuter2"/>
-                            <feGaussianBlur in="shadowOffsetOuter2" result="shadowBlurOuter2" stdDeviation="5"/>
-                            <feComposite in="shadowBlurOuter2" in2="SourceAlpha" operator="out" result="shadowBlurOuter2"/>
-                            <feColorMatrix in="shadowBlurOuter2" result="shadowMatrixOuter2" values="0 0 0 0 0.176470588   0 0 0 0 0.184313725   0 0 0 0 0.192156863  0 0 0 1 0"/>
-                            <feMerge>
-                                <feMergeNode in="shadowMatrixOuter1"/>
-                                <feMergeNode in="shadowMatrixOuter2"/>
-                            </feMerge>
-                        </filter>
-
-                        <circle id="green-b" cx="50.5" cy="50.5" r="5.5"/>
-                        <filter id="green-a" width="809.1%" height="809.1%" x="-354.5%" y="-354.5%" filterUnits="objectBoundingBox">
-                            <feMorphology in="SourceAlpha" operator="dilate" radius="5" result="shadowSpreadOuter1"/>
-                            <feOffset in="shadowSpreadOuter1" result="shadowOffsetOuter1"/>
-                            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="8"/>
-                            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0.49415046   0 0 0 0 0.826234102   0 0 0 0 0.129877269  0 0 0 1 0"/>
-                        </filter>
-
-                        <circle id="blue-b" cx="50.5" cy="50.5" r="5.5"/>
-                        <filter id="blue-a" width="809.1%" height="809.1%" x="-354.5%" y="-354.5%" filterUnits="objectBoundingBox">
-                            <feMorphology in="SourceAlpha" operator="dilate" radius="5" result="shadowSpreadOuter1"/>
-                            <feOffset in="shadowSpreadOuter1" result="shadowOffsetOuter1"/>
-                            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="8"/>
-                            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0.28627451   0 0 0 0 0.564705882   0 0 0 0 0.88627451  0 0 0 1 0"/>
-                        </filter>
-                    </defs>
-                    
-                    <g id="think" fill="none" fill-rule="evenodd">
-                        <path id="think1" stroke="#4990E2" stroke-dasharray="4 4" stroke-linecap="square" stroke-width="3" d="M80.5,18.5 L621.681116,18.5"/>
-                        <path id="think2" stroke="#4990E2" stroke-dasharray="8 8" stroke-linecap="square" stroke-width="3" d="M0.5,38.5 L541.681116,38.5"/>
-                        <path id="think3" stroke="#4990E2" stroke-dasharray="16 16" stroke-linecap="square" stroke-width="3" d="M50.5,58.5 L591.681116,58.5"/>
-                    </g>
-
-                    <g id="sketch">
-                        <path id="sketch1" class="dn sketch1-animation" fill="none" stroke="#7ED321" stroke-width="2" d="M923.5,936 C1119.5,935.666667 1274.5,893.333333 1388.5,809 C1502.5,724.666667 1548.5,455 1526.5,0" transform="translate(-700 -880)"/>
-                        <path id="sketch2" class="dn sketch2-animation" fill="none" stroke="#7ED321" stroke-width="2" d="M923,937 C1131,935 1264.66667,1016.83333 1324,1182.5 C1383.33333,1348.16667 1645,1325.66667 2109,1115" transform="translate(-700 -880)"/>
-                        <path id="sketch3" class="dn sketch3-animation" fill="none" stroke="#7ED321" stroke-width="2" d="M919.5,938 C810.945129,935.944102 726.611795,949.944102 666.5,980 C579.5,1023.5 656.514106,1173.88548 559.5,1189 C421.5,1210.5 513.5,885 408,983.5 C292.991693,1090.87742 156.991693,1131.04409 0,1104" transform="translate(-624 -880)"/>
-                        <path id="sketch4" class="dn sketch4-animation" fill="none" stroke="#7ED321" stroke-width="2" d="M923.5,937.5 C765.77571,910.415772 667.77571,885.082439 629.5,861.5 C572.086435,826.126342 532.301661,781.762067 557.5,712 C582.698339,642.237933 667.5,634.5 683.5,712 C699.5,789.5 645.178584,960.392244 538,875.5 C466.54761,818.905171 370.880944,574.405171 251,142" transform="translate(-624 -880)"/>            
-                    </g>        
-                    
-                    <g class="totem-bob blue-glow" transform="translate(160)">
-                        <use fill="#000" filter="url(#totem-brain1-a)" xlink:href="#totem-brain1-b"/>
-                        <use fill="#040404" xlink:href="#totem-brain1-b"/>
-                        <path stroke="#1F1F1F" stroke-width="2" d="M3.81241666,71.3977007 C1.13762991,76.4996163 0.92192347,82.5395375 3.22594594,87.8192636 L127.232856,371.984258 C129.284017,376.684546 133.148129,380.356065 137.947057,382.164449 C147.76642,385.864688 158.726223,380.904158 162.426462,371.084796 L282.207912,53.2195348 C284.897128,46.0831336 283.058775,38.0303363 277.539065,32.7679319 C254.195567,10.5126025 223.054287,0.252500621 184.049155,1.99899905 C171.043838,2.58132671 147.98703,5.18170325 117.386207,9.3172076 C112.8292,9.93305778 108.138222,10.5786299 103.318954,11.2523766 C82.0509938,14.2256945 35.9425927,21.0823482 40.1439825,20.4902138 C33.359265,21.4464366 21.0441666,38.5296847 3.81241666,71.3977007 Z"/>
-                        <path fill="#000" stroke="#1F1F1F" stroke-linecap="square" stroke-width="4" d="M89,202 C96.9133109,201.340557 131.570789,200.681115 192.972435,200.021672 L192.972435,200.021674 C194.335418,200.007036 195.612037,200.687472 196.359784,201.827125 C199.328063,206.351124 197.708134,208.908749 191.5,209.5 C184.539649,210.162891 152.861699,210.990565 96.4661503,211.983024 L96.4661503,211.983023 C95.8259821,211.994289 95.192463,211.851717 94.6188401,211.567289 C83.0673624,205.839562 81.1944157,202.650465 89,202 Z"/>
-                        <g stroke-width="2" transform="translate(1 19)">
-                            <path fill="#000" stroke="#1F1F1F" d="M196.5,82 C197.166667,90 198.833333,94.5 201.5,95.5 C204.166667,96.5 223,96.5 258,95.5 L254.5,105 C216.213374,105.611295 195.713374,105.444629 193,104.5 C190.286626,103.555371 188.28597,96.0553714 186.998032,81.9999999 L196.5,82 Z"/>
-                            <path fill="#000" stroke="#252525" d="M40,2 C37.8919759,32.2024288 35.8919759,53.3690955 34,65.5 C32.1080241,77.6309045 28.4413574,94.7975712 23,117 L1,66.5 L0.5,61 L1,56 L17.5,26.5 L26.5,12.5 L33,5.5 L37.5,2.5 L40,2 Z"/>
-                            <path stroke="#252525" d="M47,0.5 C44.8919759,31.7024288 42.8919759,53.3690955 41,65.5 C39.1080241,77.6309045 34.2746907,97.1309045 26.5,124"/>
-                            <path stroke="#1F1F1F" d="M178.499127,306 C170.845935,289.375511 169.345935,274.875511 173.999127,262.5 C178.65232,250.124489 187.985653,243.791155 201.999127,243.5"/>
-                            <path fill="#000" stroke="#1F1F1F" d="M182.5,296 C177.746531,285.820559 177.079864,276.153893 180.5,267 C183.920136,257.846107 190.253469,252.346107 199.5,250.5 L182.5,296 Z"/>
-                            <path stroke="#252525" d="M37.5,87.5 C56.7731403,106.10919 67.6064737,122.10919 70,135.5 C72.3935263,148.89081 67.7268597,167.224143 56,190.5"/>
-                            <path fill="#000" stroke="#252525" d="M35,94.5 C51.2249086,110.981147 60.3915753,124.647814 62.5,135.5 C64.6084247,146.352186 61.1084247,161.852186 52,182 L26,124 L35,94.5 Z"/>
-                            <path fill="#000" stroke="#1F1F1F" d="M232.886062 10.4412296L237.516694 15.0718622C241.32709 18.8822576 241.432996 25.0266657 237.756179 28.9661125L237.714061 29.0112386C234.058297 32.9281292 227.919447 33.1398137 224.002556 29.4840491 223.997303 29.4791459 223.992055 29.4742369 223.986812 29.469322L221.355449 27.0024185C218.128481 23.9771363 217.272424 19.1912375 219.250588 15.2349105L220.655016 12.4260551C222.541293 8.65350094 227.128682 7.12437122 230.901236 9.01064832 231.635426 9.3777434 232.305633 9.86080133 232.886062 10.4412296zM142.5 364.5L138 364 131.5 360.5 127.5 356 122.5 345.5 100.5 294.5 97 284C114.274393 294.112853 126.107726 304.779519 132.5 316 138.892274 327.220481 142.558941 342.887147 143.5 363L142.5 364.5z"/>
-                            <path stroke="#1F1F1F" d="M151.5,363 C152.166667,342.666667 147.833333,325 138.5,310 C129.166667,295 113,281.833333 90,270.5"/>
-                        </g>
-                        <path fill="#181818" d="M136.794169,139.260475 L142.5,136 L148.683447,139.372789 C151.585981,140.95599 153.215579,144.161603 152.784264,147.43959 L151.915311,154.043636 C151.391553,158.024195 147.998546,161 143.983677,161 L141.835951,161 C137.899363,161 134.547808,158.136117 133.933847,154.247701 L132.861177,147.454121 C132.342802,144.17108 133.908378,140.909498 136.794169,139.260475 Z"/>
-                        <g>
-                            <rect width="28" height="28" x="179" y="73" stroke="#252525" stroke-width="4" rx="14"/>
-                        </g>
-                        <g>
-                            <rect width="28" height="28" x="79" y="73" stroke="#252525" stroke-width="4" rx="14"/>
-                        </g>
-                    </g>
-
-                    <g id="light-bob">
-                        <g transform="translate(252, -10)">
-
-                            <g id="green-brain">
-                                <use fill="#000" filter="url(#green-a)" xlink:href="#green-b"/>
-                                <use fill="#7ED321" xlink:href="#green-b"/>
-                            </g>
-                            
-                        </g>
-                    </g>
-                    
-                </svg>
-                
-            </div>
-            
-            <div id="totem3">
-                <svg style="top:120px;" class="w-100 overflow-visible relative" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="623" height="501" viewBox="0 0 623 501">
-                    <defs>
-                        <path id="totem-brain1-b" d="M2.9267532,70.933373 C20.3655491,37.6704353 32.7247727,20.5259776 40.004424,19.5 C51.8252574,17.8339984 149.865517,2.52860777 184.004424,1 C223.268773,-0.758105178 254.676999,9.58994709 278.229101,32.0441568 L278.229102,32.0441557 C284.039322,37.58353 285.974431,46.0601589 283.143677,53.5721599 L163.362227,371.437421 C159.467238,381.773592 147.930603,386.995202 137.594432,383.100214 C132.542928,381.196651 128.475443,377.331894 126.316326,372.384223 L2.3094156,88.2192287 C-0.115871228,82.6616223 0.111188188,76.3038105 2.9267532,70.933373 Z"/>
-                        <filter id="totem-brain1-a" width="171.9%" height="153.2%" x="-35.9%" y="-26.6%" filterUnits="objectBoundingBox">
-                            <feMorphology in="SourceAlpha" operator="dilate" radius="10" result="shadowSpreadOuter1"/>
-                            <feOffset in="shadowSpreadOuter1" result="shadowOffsetOuter1"/>
-                            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="20"/>
-                            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"/>
-                            <feColorMatrix in="shadowBlurOuter1" result="shadowMatrixOuter1" values="0 0 0 0 0.28627451   0 0 0 0 0.564705882   0 0 0 0 0.88627451  0 0 0 0.2 0"/>
-                            <feMorphology in="SourceAlpha" operator="dilate" radius="1" result="shadowSpreadOuter2"/>
-                            <feOffset in="shadowSpreadOuter2" result="shadowOffsetOuter2"/>
-                            <feGaussianBlur in="shadowOffsetOuter2" result="shadowBlurOuter2" stdDeviation="5"/>
-                            <feComposite in="shadowBlurOuter2" in2="SourceAlpha" operator="out" result="shadowBlurOuter2"/>
-                            <feColorMatrix in="shadowBlurOuter2" result="shadowMatrixOuter2" values="0 0 0 0 0.176470588   0 0 0 0 0.184313725   0 0 0 0 0.192156863  0 0 0 1 0"/>
-                            <feMerge>
-                                <feMergeNode in="shadowMatrixOuter1"/>
-                                <feMergeNode in="shadowMatrixOuter2"/>
-                            </feMerge>
-                        </filter>
-
-                            <circle id="orange-b" cx="9" cy="9" r="9"/>
-                            <filter id="orange-a" width="533.3%" height="533.3%" x="-216.7%" y="-216.7%" filterUnits="objectBoundingBox">
-                                <feMorphology in="SourceAlpha" operator="dilate" radius="5" result="shadowSpreadOuter1"/>
-                                <feOffset in="shadowSpreadOuter1" result="shadowOffsetOuter1"/>
-                                <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="8"/>
-                                <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0.992156863   0 0 0 0 0.568627451   0 0 0 0 0.192156863  0 0 0 1 0"/>
-                            </filter>
-                    </defs>
-                    
-                    <g id="think" fill="none" fill-rule="evenodd">
-                        <path id="think1" stroke="#4990E2" stroke-dasharray="4 4" stroke-linecap="square" stroke-width="3" d="M80.5,18.5 L621.681116,18.5"/>
-                        <path id="think2" stroke="#4990E2" stroke-dasharray="8 8" stroke-linecap="square" stroke-width="3" d="M0.5,38.5 L541.681116,38.5"/>
-                        <path id="think3" stroke="#4990E2" stroke-dasharray="16 16" stroke-linecap="square" stroke-width="3" d="M50.5,58.5 L591.681116,58.5"/>
-                    </g>
-
-                    <g id="sketch">
-                        <path id="sketch1" class="dn sketch1-animation" fill="none" stroke="#7ED321" stroke-width="2" d="M923.5,936 C1119.5,935.666667 1274.5,893.333333 1388.5,809 C1502.5,724.666667 1548.5,455 1526.5,0" transform="translate(-700 -880)"/>
-                        <path id="sketch2" class="dn sketch2-animation" fill="none" stroke="#7ED321" stroke-width="2" d="M923,937 C1131,935 1264.66667,1016.83333 1324,1182.5 C1383.33333,1348.16667 1645,1325.66667 2109,1115" transform="translate(-700 -880)"/>
-                        <path id="sketch3" class="dn sketch3-animation" fill="none" stroke="#7ED321" stroke-width="2" d="M919.5,938 C810.945129,935.944102 726.611795,949.944102 666.5,980 C579.5,1023.5 656.514106,1173.88548 559.5,1189 C421.5,1210.5 513.5,885 408,983.5 C292.991693,1090.87742 156.991693,1131.04409 0,1104" transform="translate(-624 -880)"/>
-                        <path id="sketch4" class="dn sketch4-animation" fill="none" stroke="#7ED321" stroke-width="2" d="M923.5,937.5 C765.77571,910.415772 667.77571,885.082439 629.5,861.5 C572.086435,826.126342 532.301661,781.762067 557.5,712 C582.698339,642.237933 667.5,634.5 683.5,712 C699.5,789.5 645.178584,960.392244 538,875.5 C466.54761,818.905171 370.880944,574.405171 251,142" transform="translate(-624 -880)"/>            
-                    </g>        
-                    
-                    <g class="totem-bob blue-glow" transform="translate(160)">
-                        <use fill="#000" filter="url(#totem-brain1-a)" xlink:href="#totem-brain1-b"/>
-                        <use fill="#040404" xlink:href="#totem-brain1-b"/>
-                        <path stroke="#1F1F1F" stroke-width="2" d="M3.81241666,71.3977007 C1.13762991,76.4996163 0.92192347,82.5395375 3.22594594,87.8192636 L127.232856,371.984258 C129.284017,376.684546 133.148129,380.356065 137.947057,382.164449 C147.76642,385.864688 158.726223,380.904158 162.426462,371.084796 L282.207912,53.2195348 C284.897128,46.0831336 283.058775,38.0303363 277.539065,32.7679319 C254.195567,10.5126025 223.054287,0.252500621 184.049155,1.99899905 C171.043838,2.58132671 147.98703,5.18170325 117.386207,9.3172076 C112.8292,9.93305778 108.138222,10.5786299 103.318954,11.2523766 C82.0509938,14.2256945 35.9425927,21.0823482 40.1439825,20.4902138 C33.359265,21.4464366 21.0441666,38.5296847 3.81241666,71.3977007 Z"/>
-                        <path fill="#000" stroke="#1F1F1F" stroke-linecap="square" stroke-width="4" d="M89,202 C96.9133109,201.340557 131.570789,200.681115 192.972435,200.021672 L192.972435,200.021674 C194.335418,200.007036 195.612037,200.687472 196.359784,201.827125 C199.328063,206.351124 197.708134,208.908749 191.5,209.5 C184.539649,210.162891 152.861699,210.990565 96.4661503,211.983024 L96.4661503,211.983023 C95.8259821,211.994289 95.192463,211.851717 94.6188401,211.567289 C83.0673624,205.839562 81.1944157,202.650465 89,202 Z"/>
-                        <g stroke-width="2" transform="translate(1 19)">
-                            <path fill="#000" stroke="#1F1F1F" d="M196.5,82 C197.166667,90 198.833333,94.5 201.5,95.5 C204.166667,96.5 223,96.5 258,95.5 L254.5,105 C216.213374,105.611295 195.713374,105.444629 193,104.5 C190.286626,103.555371 188.28597,96.0553714 186.998032,81.9999999 L196.5,82 Z"/>
-                            <path fill="#000" stroke="#252525" d="M40,2 C37.8919759,32.2024288 35.8919759,53.3690955 34,65.5 C32.1080241,77.6309045 28.4413574,94.7975712 23,117 L1,66.5 L0.5,61 L1,56 L17.5,26.5 L26.5,12.5 L33,5.5 L37.5,2.5 L40,2 Z"/>
-                            <path stroke="#252525" d="M47,0.5 C44.8919759,31.7024288 42.8919759,53.3690955 41,65.5 C39.1080241,77.6309045 34.2746907,97.1309045 26.5,124"/>
-                            <path stroke="#1F1F1F" d="M178.499127,306 C170.845935,289.375511 169.345935,274.875511 173.999127,262.5 C178.65232,250.124489 187.985653,243.791155 201.999127,243.5"/>
-                            <path fill="#000" stroke="#1F1F1F" d="M182.5,296 C177.746531,285.820559 177.079864,276.153893 180.5,267 C183.920136,257.846107 190.253469,252.346107 199.5,250.5 L182.5,296 Z"/>
-                            <path stroke="#252525" d="M37.5,87.5 C56.7731403,106.10919 67.6064737,122.10919 70,135.5 C72.3935263,148.89081 67.7268597,167.224143 56,190.5"/>
-                            <path fill="#000" stroke="#252525" d="M35,94.5 C51.2249086,110.981147 60.3915753,124.647814 62.5,135.5 C64.6084247,146.352186 61.1084247,161.852186 52,182 L26,124 L35,94.5 Z"/>
-                            <path fill="#000" stroke="#1F1F1F" d="M232.886062 10.4412296L237.516694 15.0718622C241.32709 18.8822576 241.432996 25.0266657 237.756179 28.9661125L237.714061 29.0112386C234.058297 32.9281292 227.919447 33.1398137 224.002556 29.4840491 223.997303 29.4791459 223.992055 29.4742369 223.986812 29.469322L221.355449 27.0024185C218.128481 23.9771363 217.272424 19.1912375 219.250588 15.2349105L220.655016 12.4260551C222.541293 8.65350094 227.128682 7.12437122 230.901236 9.01064832 231.635426 9.3777434 232.305633 9.86080133 232.886062 10.4412296zM142.5 364.5L138 364 131.5 360.5 127.5 356 122.5 345.5 100.5 294.5 97 284C114.274393 294.112853 126.107726 304.779519 132.5 316 138.892274 327.220481 142.558941 342.887147 143.5 363L142.5 364.5z"/>
-                            <path stroke="#1F1F1F" d="M151.5,363 C152.166667,342.666667 147.833333,325 138.5,310 C129.166667,295 113,281.833333 90,270.5"/>
-                        </g>
-                        <path fill="#181818" d="M136.794169,139.260475 L142.5,136 L148.683447,139.372789 C151.585981,140.95599 153.215579,144.161603 152.784264,147.43959 L151.915311,154.043636 C151.391553,158.024195 147.998546,161 143.983677,161 L141.835951,161 C137.899363,161 134.547808,158.136117 133.933847,154.247701 L132.861177,147.454121 C132.342802,144.17108 133.908378,140.909498 136.794169,139.260475 Z"/>
-                        <g>
-                            <rect width="28" height="28" x="179" y="73" stroke="#252525" stroke-width="4" rx="14"/>
-                        </g>
-                        <g>
-                            <rect width="28" height="28" x="79" y="73" stroke="#252525" stroke-width="4" rx="14"/>
-                        </g>
-                    </g>
-
-                    <g id="light-bob">
-                        <g transform="translate(252, -10)">
-
-                            <defs>
-                                <circle id="orange-b" cx="9" cy="9" r="9"/>
-                                <filter id="orange-a" width="533.3%" height="533.3%" x="-216.7%" y="-216.7%" filterUnits="objectBoundingBox">
-                                    <feMorphology in="SourceAlpha" operator="dilate" radius="5" result="shadowSpreadOuter1"/>
-                                    <feOffset in="shadowSpreadOuter1" result="shadowOffsetOuter1"/>
-                                    <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="8"/>
-                                    <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0.992156863   0 0 0 0 0.568627451   0 0 0 0 0.192156863  0 0 0 1 0"/>
-                                </filter>
-                            </defs>
-                            
-                            <g id="orange-brain" fill="none" fill-rule="evenodd" transform="translate(26 26)">
-                                <use fill="#000" filter="url(#orange-a)" xlink:href="#orange-b"/>
-                                <use fill="#FD9131" xlink:href="#orange-b"/>
-                                <circle cx="9" cy="9" r="7" fill="#FD9131" stroke="#FD9131" stroke-width="2"/>
-                            </g>
-
-                        </g>
-                    </g>
-                    
-                </svg>
-                
-            </div>
-            
-        </figure>
-    </div>
-    
-    <span style="float:left" class="ss-icon" onclick="galleryspin('-')">&lt;</span>
-    <span style="float:right" class="ss-icon" onclick="galleryspin('')">&gt;</span>
-
-    
     <div class="shadow relative measure center pb5">
         <div class="mb5">
             <h4>MY PROCESS</h4>
@@ -686,11 +409,6 @@
 <script>
 
  document.getElementById("think-button").onclick = function () {
-     document.getElementById("totem1").classList.remove('totem-rotate1');
-     document.getElementById("totem2").classList.remove('totem-rotate2');
-     document.getElementById("totem1").classList.add('totem-rotate1-back');
-     document.getElementById("totem2").classList.add('totem-rotate2-back');
-     
      document.getElementById("think").classList.remove('fadeOut');
      document.getElementById("think").classList.add('fadeIn');
 
@@ -705,8 +423,8 @@
      document.getElementById("blue-brain").classList.remove('fadeOut');
      document.getElementById("blue-brain").classList.add('fadeIn');
 
-     document.getElementById("ball-glow").classList.add('blue-glow');
-     document.getElementById("ball-glow").classList.remove('green-glow');     
+     document.getElementById("totem-svg").classList.add('blue-glow');
+     document.getElementById("totem-svg").classList.remove('green-glow');     
 
      document.getElementById("sketch1").classList.remove('sketch1-animation');
      document.getElementById("sketch2").classList.remove('sketch2-animation');
@@ -720,26 +438,21 @@
  };
 
  document.getElementById("sketch-button").onclick = function () {
-     document.getElementById("totem1").classList.add('totem-rotate1');
-     document.getElementById("totem1").classList.add('totem-rotate2');
-
-     
      document.getElementById("think").classList.remove('fadeIn');
      document.getElementById("think").classList.add('fadeOut');
 
-     document.getElementById("think-button").classList.remove('bg-blue', 'white', 'b--blue');
-     document.getElementById("think-button").classList.add('bg-black', 'blue', 'b--white');
+     document.getElementById("think-button").classList.remove('b--blue');
+     document.getElementById("think-button").classList.add('b--transparent');
      document.getElementById("sketch-button").classList.remove('bg-black', 'green', 'b--white');     
-     document.getElementById("sketch-button").classList.add('bg-dark-green', 'white', 'b--green');     
+     document.getElementById("sketch-button").classList.add('b--green');     
 
      document.getElementById("blue-brain").classList.add('fadeOut');
      document.getElementById("blue-brain").classList.remove('fadeIn');
      document.getElementById("green-brain").classList.remove('dn');
      document.getElementById("green-brain").classList.add('fadeIn');
 
-     document.getElementById("ball-glow").classList.remove('blue-glow', 'blue-3d');
-     document.getElementById("ball-glow").classList.add('green-glow');
-     document.getElementById("ball-glow").classList.add('green-3d');     
+     document.getElementById("totem-svg").classList.remove('blue-glow');
+     document.getElementById("totem-svg").classList.add('green-glow');     
 
      document.getElementById("sketch1").classList.remove('dn');
      document.getElementById("sketch2").classList.remove('dn');
@@ -766,7 +479,5 @@
  })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
  ga('create', 'UA-54702241-1', 'auto');
  ga('send', 'pageview');
-
-
 </script>
 </html>
