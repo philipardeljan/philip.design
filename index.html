@@ -282,10 +282,10 @@
 </head>
 <body>
     <div class="tc mb4-ns pb3-ns">
-        <p style="letter-spacing: 1rem;" class="mb3 pb3 f2-ns f6">PHILIP ARDELJAN</p>
-        <p style="letter-spacing: 2.3rem; left: 10px;" class="relative mb4 pb3 f5-ns silver f6">WEB DESIGNER</p>
+        <p style="letter-spacing: .2rem;" class="mb3 pb3 f2-ns f6">PHILIP ARDELJAN</p>
+        <p style="letter-spacing: 1.3rem; left: 10px;" class="relative mb4 pb3 f5-ns silver f6">WEB DESIGNER</p>
         <button id="think-button" class="bg-black blue br2 mh3-ns pv3-ns ph4-ns b--blue pointer f6 mh1 pv2 ph3">Think</button>
-        <button id="sketch-button" class="bg-black green br2 mh3-ns pv3-ns ph4-ns b--transparent pointer f6 mh1 pv2 ph3">Draw</button>
+        <button id="draw-button" class="bg-black green br2 mh3-ns pv3-ns ph4-ns b--transparent pointer f6 mh1 pv2 ph3">Draw</button>
         <button id="code-button" class="bg-black orange br2 mh3-ns pv3-ns ph4-ns b--transparent pointer f6 mh1 pv2 ph3">Code</button>
     </div>
 
@@ -357,10 +357,10 @@
             </g>
             <path fill="#181818" d="M136.794169,139.260475 L142.5,136 L148.683447,139.372789 C151.585981,140.95599 153.215579,144.161603 152.784264,147.43959 L151.915311,154.043636 C151.391553,158.024195 147.998546,161 143.983677,161 L141.835951,161 C137.899363,161 134.547808,158.136117 133.933847,154.247701 L132.861177,147.454121 C132.342802,144.17108 133.908378,140.909498 136.794169,139.260475 Z"/>
             <g>
-                <rect width="28" height="28" x="179" y="73" stroke="#252525" stroke-width="4" rx="14"/>
+                <rect width="28" height="28" x="179" y="73" stroke="#555" stroke-width="4" rx="14"/>
             </g>
             <g>
-                <rect width="28" height="28" x="79" y="73" stroke="#252525" stroke-width="4" rx="14"/>
+                <rect width="28" height="28" x="79" y="73" stroke="#555" stroke-width="4" rx="14"/>
             </g>
         </g>
 
@@ -412,10 +412,10 @@
      document.getElementById("think").classList.remove('fadeOut');
      document.getElementById("think").classList.add('fadeIn');
 
-     document.getElementById("think-button").classList.remove('bg-black', 'blue', 'b--white');
-     document.getElementById("think-button").classList.add('bg-blue', 'white', 'b--blue');
-     document.getElementById("sketch-button").classList.remove('bg-dark-green', 'white', 'b--green');
-     document.getElementById("sketch-button").classList.add('bg-black', 'green', 'b--white');     
+     document.getElementById("think-button").classList.remove('b--transparent');
+     document.getElementById("think-button").classList.add('bg-black', 'b--blue');
+     document.getElementById("draw-button").classList.remove('b--green');
+     document.getElementById("draw-button").classList.add('b--transparent');     
 
      document.getElementById("green-brain").classList.remove('fadeIn');
      document.getElementById("green-brain").classList.add('fadeOut');
@@ -437,14 +437,14 @@
      document.getElementById("sketch").classList.remove('fadeIn');               
  };
 
- document.getElementById("sketch-button").onclick = function () {
+ document.getElementById("draw-button").onclick = function () {
      document.getElementById("think").classList.remove('fadeIn');
      document.getElementById("think").classList.add('fadeOut');
 
      document.getElementById("think-button").classList.remove('b--blue');
      document.getElementById("think-button").classList.add('b--transparent');
-     document.getElementById("sketch-button").classList.remove('bg-black', 'green', 'b--white');     
-     document.getElementById("sketch-button").classList.add('b--green');     
+     document.getElementById("draw-button").classList.remove('b--transparent');     
+     document.getElementById("draw-button").classList.add('b--green');     
 
      document.getElementById("blue-brain").classList.add('fadeOut');
      document.getElementById("blue-brain").classList.remove('fadeIn');
