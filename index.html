@@ -256,8 +256,8 @@
 </head>
 <body>
     <div class="tc mb4-ns pb3-ns">
-        <p style="letter-spacing: .2rem;" class="mb3 pb3 f2-ns f6">PHILIP ARDELJAN</p>
-        <p style="letter-spacing: 1.3rem; left: 10px;" class="relative mb4 pb3 f5-ns silver f6">WEB DESIGNER</p>
+        <p style="letter-spacing: .2rem;" class="mt4 mb3 pb3 f2-ns f5">PHILIP ARDELJAN</p>
+        <p class="relative mb4-ns pb3 f5-ns silver f6 tracked-mega">WEB DESIGNER</p>
         <button id="think-button" class="bg-black blue br2 mh3-ns pv3-ns ph4-ns b--blue pointer f6 mh1 pv2 ph3">Think</button>
         <button id="draw-button" class="bg-black green br2 mh3-ns pv3-ns ph4-ns b--transparent pointer f6 mh1 pv2 ph3">Draw</button>
         <button id="code-button" class="bg-black orange br2 mh3-ns pv3-ns ph4-ns b--transparent pointer f6 mh1 pv2 ph3">Code</button>
@@ -283,13 +283,15 @@
                 <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="8"/>
                 <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0.333333333   0 0 0 0 0.333333333   0 0 0 0 0.333333333  0 0 0 1 0"/>
             </filter>
-            <circle id="group-h" cx="9" cy="9" r="9"/>
-            <filter id="group-g" width="533.3%" height="533.3%" x="-216.7%" y="-216.7%" filterUnits="objectBoundingBox">
+
+            <circle id="think-brain-b" cx="9" cy="9" r="9"/>
+            <filter id="think-brain-a" width="533.3%" height="533.3%" x="-216.7%" y="-216.7%" filterUnits="objectBoundingBox">
                 <feMorphology in="SourceAlpha" operator="dilate" radius="5" result="shadowSpreadOuter1"/>
                 <feOffset in="shadowSpreadOuter1" result="shadowOffsetOuter1"/>
                 <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="8"/>
-                <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0.288655698   0 0 0 0 0.56455189   0 0 0 0 0.886238694  0 0 0 1 0"/>
+                <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0.178297571   0 0 0 0 0.396962147   0 0 0 0 0.65191858  0 0 0 1 0"/>
             </filter>
+            
             <circle id="group-j" cx="9" cy="9" r="9"/>
             <filter id="group-i" width="533.3%" height="533.3%" x="-216.7%" y="-216.7%" filterUnits="objectBoundingBox">
                 <feMorphology in="SourceAlpha" operator="dilate" radius="5" result="shadowSpreadOuter1"/>
@@ -370,11 +372,13 @@
                         <use fill="#000" xlink:href="#group-f"/>
                         <circle cx="9" cy="9" r="7" fill="#000" stroke="#000" stroke-width="2"/>
                     </g>
-                    <g id="blue-brain" transform="translate(330 4)">
-                        <use fill="#000" filter="url(#group-g)" xlink:href="#group-h"/>
-                        <use fill="#4A90E2" xlink:href="#group-h"/>
+
+                    <g id="blue-brain" fill="none" fill-rule="evenodd" transform="translate(330 4)">
+                        <use fill="#000" filter="url(#think-brain-a)" xlink:href="#think-brain-b"/>
+                        <use fill="#4A90E2" xlink:href="#think-brain-b"/>
                         <circle cx="9" cy="9" r="7" fill="#4A90E2" stroke="#4A90E2" stroke-width="2"/>
                     </g>
+                    
                     <g id="green-brain" class="dn" transform="translate(330 4)">
                         <use fill="#000" filter="url(#group-i)" xlink:href="#group-j"/>
                         <use fill="#7ED321" xlink:href="#group-j"/>
