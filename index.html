@@ -98,62 +98,6 @@
          100% { transform: scale(.8); }
      }
      
-     #inner-face1 {
-         animation-name: rotate;
-         animation-duration: 40s;
-         animation-iteration-count: infinite;
-         animation-timing-function: linear;
-         animation-direction: reverse;
-         transform-origin: 253px 253px;
-     }
-     
-     #inner-face2 {
-         animation-name: rotate;
-         animation-duration: 60s;
-         animation-iteration-count: infinite;
-         animation-timing-function: linear;
-         transform-origin: 253px 253px;
-     }
-
-     #inner-face3 {
-         animation-name: rotate;
-         animation-duration: 80s;
-         animation-iteration-count: infinite;
-         animation-timing-function: linear;
-         animation-direction: reverse;
-         transform-origin: 253px 253px;
-     }
-
-     #inner-brain1 {
-         animation-name: rotate;
-         animation-duration: 1s;
-         animation-iteration-count: infinite;
-         animation-timing-function: linear;
-         animation-direction: reverse;
-         transform-origin: 50px 50px;
-     }
-
-     #inner-brain2 {
-         animation-name: rotate;
-         animation-duration: 4s;
-         animation-iteration-count: infinite;
-         animation-timing-function: linear;
-         transform-origin: 50px 50px;
-     }
-
-     #inner-brain3 {
-         animation-name: rotate;
-         animation-duration: 10s;
-         animation-iteration-count: infinite;
-         animation-timing-function: linear;
-         animation-direction: reverse;
-         transform-origin: 50px 50px;
-     }
-     
-     @keyframes rotate {
-         0% { transform: rotate(360deg); }
-     }
-
      .think1 {
          stroke-dasharray: 10;
          stroke-dashoffset: 100;
@@ -371,10 +315,10 @@
                 </g>
 
                 <g id="draw-animated-lines" class="dn" stroke="#555" stroke-width="2" transform="translate(248 19)">
-                    <path class="sketch1-face-animation" fill="none" stroke="#555" stroke-width="2" d="M90,19 C67.3333333,27.3333333 50.3333333,43.6666667 39,68 C27.6666667,92.3333333 14.8333333,129.833333 0.5,180.5" transform="translate(0 0)"/>
-                    <path class="sketch2-face-animation" fill="none" stroke="#555" stroke-width="2" d="M227,36 C201.214356,25.0098328 181.047689,18.6764995 166.5,17 C151.952311,15.3235005 127.285644,16.4901672 92.5,20.5" transform="translate(2 0)"/>
-                    <path class="sketch3-face-animation" fill="none" stroke="#555" stroke-width="2" d="M64,326.5 C92.6169371,288.126747 110.116937,261.96008 116.5,248 C126.074594,227.05988 110.5,213 90,209 C69.5,205 48,242.5 73,254 C98,265.5 166.5,192.5 162,130.5 C159,89.1666667 136.166667,52.1666667 93.5,19.5" transform="translate(0 0)"/>
-                    <path class="sketch4-face-animation" fill="none" stroke="#555" stroke-width="2" d="M0,0 C16.0614884,12.3902037 29.228155,19.7235371 39.5,22 C49.771845,24.2764629 67.4385116,23.7764629 92.5,20.5" transform="translate(0 0)"/>
+                    <path id="l1" class="dn" fill="none" stroke="#555" stroke-width="2" d="M90,19 C67.3333333,27.3333333 50.3333333,43.6666667 39,68 C27.6666667,92.3333333 14.8333333,129.833333 0.5,180.5" transform="translate(0 0)"/>
+                    <path id="l2" class="dn" fill="none" stroke="#555" stroke-width="2" d="M227,36 C201.214356,25.0098328 181.047689,18.6764995 166.5,17 C151.952311,15.3235005 127.285644,16.4901672 92.5,20.5" transform="translate(2 0)"/>
+                    <path id="l3" class="dn" fill="none" stroke="#555" stroke-width="2" d="M64,326.5 C92.6169371,288.126747 110.116937,261.96008 116.5,248 C126.074594,227.05988 110.5,213 90,209 C69.5,205 48,242.5 73,254 C98,265.5 166.5,192.5 162,130.5 C159,89.1666667 136.166667,52.1666667 93.5,19.5" transform="translate(0 0)"/>
+                    <path id="l4" class="dn" fill="none" stroke="#555" stroke-width="2" d="M0,0 C16.0614884,12.3902037 29.228155,19.7235371 39.5,22 C49.771845,24.2764629 67.4385116,23.7764629 92.5,20.5" transform="translate(0 0)"/>
                 </g>
 
                 
@@ -475,7 +419,12 @@
      document.getElementById("blue-brain").classList.add('fadeIn');
 
      document.getElementById("draw-animated-lines").classList.remove('fadeIn');
-     document.getElementById("draw-animated-lines").classList.add('dn');     
+     document.getElementById("draw-animated-lines").classList.add('fadeOut');
+
+     document.getElementById("l1").classList.remove('sketch1-face-animation');
+     document.getElementById("l2").classList.remove('sketch2-face-animation');
+     document.getElementById("l3").classList.remove('sketch3-face-animation');
+     document.getElementById("l4").classList.remove('sketch4-face-animation');
 
      document.getElementById("totem-svg").classList.add('blue-glow');
      document.getElementById("totem-svg").classList.remove('green-glow');     
@@ -509,7 +458,15 @@
      document.getElementById("green-brain").classList.add('fadeIn');
 
      document.getElementById("draw-animated-lines").classList.remove('dn');
-     document.getElementById("draw-animated-lines").classList.add('fadeIn');
+     document.getElementById("draw-animated-lines").classList.remove('fadeOut');
+     document.getElementById("l1").classList.remove('dn');
+     document.getElementById("l1").classList.add('sketch1-face-animation');
+     document.getElementById("l2").classList.remove('dn');
+     document.getElementById("l2").classList.add('sketch2-face-animation');
+     document.getElementById("l3").classList.remove('dn');
+     document.getElementById("l3").classList.add('sketch3-face-animation');
+     document.getElementById("l4").classList.remove('dn');
+     document.getElementById("l4").classList.add('sketch4-face-animation');
 
      document.getElementById("totem-svg").classList.remove('blue-glow');
      document.getElementById("totem-svg").classList.add('green-glow');     
