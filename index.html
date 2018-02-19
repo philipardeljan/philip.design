@@ -85,12 +85,29 @@
          }
      }
 
+     @keyframes fadeIn-green-brain {
+         from {
+             opacity: 0;
+         }
+
+         to {
+             opacity: 1;
+         }
+     }
+
      .fadeIn {
          animation-duration: 1s;
          animation-fill-mode: both;         
          animation-name: fadeIn;
          animation-delay: 1s;
-     }  
+     }
+
+     .fadeIn-green-brain {
+         animation-duration: 1s;
+         animation-fill-mode: both;         
+         animation-name: fadeIn;
+         animation-delay: 2s;
+     }       
 
      @keyframes pulse {
          0% { transform: scale(.8); }
@@ -170,29 +187,25 @@
      .sketch1-face-animation {
          stroke-dasharray: 1800;
          stroke-dashoffset: 2000;
-         animation: sketch-dash-face 3s linear forwards;
-         animation-delay: 1s;
+         animation: sketch-dash-face 7s linear forwards;
      }
 
      .sketch2-face-animation {
          stroke-dasharray: 1800;
          stroke-dashoffset: 2000;
-         animation: sketch-dash-face 3s linear forwards;
-         animation-delay: 1.4s;
+         animation: sketch-dash-face 8s linear forwards;
      }
 
      .sketch3-face-animation {
          stroke-dasharray: 1800;
          stroke-dashoffset: 2000;
-         animation: sketch-dash-face 3s linear forwards;
-         animation-delay: 1.8s;
+         animation: sketch-dash-face 4s linear forwards;
      }
 
      .sketch4-face-animation {
          stroke-dasharray: 2600;
          stroke-dashoffset: 2800;
-         animation: sketch-dash-face 3s linear forwards;
-         animation-delay: 2.2s;
+         animation: sketch-dash-face 16s linear forwards;
      }
 
      @keyframes sketch-dash-face {
@@ -200,7 +213,6 @@
              stroke-dashoffset: 700;
          }
      }
-
 
      .totem-bob {
          animation-name: totem-bob; 
@@ -315,7 +327,7 @@
                 </g>
 
                 <g id="draw-animated-lines" class="dn" stroke="#555" stroke-width="2" transform="translate(248 19)">
-                    <path id="l1" class="dn" fill="none" stroke="#555" stroke-width="2" d="M90,19 C67.3333333,27.3333333 50.3333333,43.6666667 39,68 C27.6666667,92.3333333 14.8333333,129.833333 0.5,180.5" transform="translate(0 0)"/>
+                    <path id="l1" class="dn" fill="none" stroke="#555" stroke-width="2" d="M1,181 C5.66666667,179 13.1666667,154.333333 23.5,107 C33.8333333,59.6666667 56,31.1666667 90,21.5" transform="translate(0 0)"/>
                     <path id="l2" class="dn" fill="none" stroke="#555" stroke-width="2" d="M227,36 C201.214356,25.0098328 181.047689,18.6764995 166.5,17 C151.952311,15.3235005 127.285644,16.4901672 92.5,20.5" transform="translate(2 0)"/>
                     <path id="l3" class="dn" fill="none" stroke="#555" stroke-width="2" d="M64,326.5 C92.6169371,288.126747 110.116937,261.96008 116.5,248 C126.074594,227.05988 110.5,213 90,209 C69.5,205 48,242.5 73,254 C98,265.5 166.5,192.5 162,130.5 C159,89.1666667 136.166667,52.1666667 93.5,19.5" transform="translate(0 0)"/>
                     <path id="l4" class="dn" fill="none" stroke="#555" stroke-width="2" d="M0,0 C16.0614884,12.3902037 29.228155,19.7235371 39.5,22 C49.771845,24.2764629 67.4385116,23.7764629 92.5,20.5" transform="translate(0 0)"/>
@@ -412,7 +424,7 @@
      document.getElementById("draw-button").classList.remove('b--green');
      document.getElementById("draw-button").classList.add('b--transparent');     
 
-     document.getElementById("green-brain").classList.remove('fadeIn');
+     document.getElementById("green-brain").classList.remove('fadeIn-green-brain');
      document.getElementById("green-brain").classList.add('fadeOut');
      document.getElementById("green-brain").classList.add('dn');
      document.getElementById("blue-brain").classList.remove('fadeOut');
@@ -429,15 +441,6 @@
      document.getElementById("totem-svg").classList.add('blue-glow');
      document.getElementById("totem-svg").classList.remove('green-glow');     
 
-//     document.getElementById("sketch1").classList.remove('sketch1-animation');
-//     document.getElementById("sketch2").classList.remove('sketch2-animation');
-//     document.getElementById("sketch3").classList.remove('sketch3-animation');
-//     document.getElementById("sketch4").classList.remove('sketch4-animation');
-//     document.getElementById("sketch1").classList.add('dn');
-//     document.getElementById("sketch2").classList.add('dn');
-//     document.getElementById("sketch3").classList.add('dn');
-//     document.getElementById("sketch4").classList.add('dn');          
-//     document.getElementById("sketch").classList.remove('fadeIn');               
  };
 
  document.getElementById("draw-button").onclick = function () {
@@ -455,7 +458,7 @@
      document.getElementById("blue-brain").classList.add('fadeOut');
      document.getElementById("blue-brain").classList.remove('fadeIn');
      document.getElementById("green-brain").classList.remove('dn');
-     document.getElementById("green-brain").classList.add('fadeIn');
+     document.getElementById("green-brain").classList.add('fadeIn-green-brain');
 
      document.getElementById("draw-animated-lines").classList.remove('dn');
      document.getElementById("draw-animated-lines").classList.remove('fadeOut');
