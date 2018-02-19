@@ -7,6 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
 
+     /* sorry firefox users, filter kills perf on ff. try safari or chrome :) */
+     @-moz-document url-prefix() {
+         #totem-svg {
+             filter: none;
+         }
+     }
+
      * {
          will-change: transform;
          -webkit-font-smoothing: antialiased;
