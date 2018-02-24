@@ -17,6 +17,11 @@
      * {
          will-change: transform;
          -webkit-font-smoothing: antialiased;
+         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Ubuntu", sans-serif;
+     }
+
+     p {
+         font-size: 1.15rem;
      }
 
      .shadow {
@@ -97,7 +102,14 @@
          }
      }
 
-     @keyframes fadeIn-green-brain {
+     .fadeIn {
+         animation-duration: 1s;
+         animation-fill-mode: both;         
+         animation-name: fadeIn;
+         animation-delay: 1s;
+     }
+
+     @keyframes fadeIn-delay {
          from {
              opacity: 0;
          }
@@ -107,13 +119,23 @@
          }
      }
 
-     .fadeIn {
+     .fadeIn-delay {
          animation-duration: 1s;
          animation-fill-mode: both;         
          animation-name: fadeIn;
-         animation-delay: 1s;
-     }
+         animation-delay: 2s;
+     }     
 
+
+     @keyframes fadeIn-green-brain {
+         from {
+             opacity: 0;
+         }
+
+         to {
+             opacity: 1;
+         }
+     }     
      .fadeIn-green-brain {
          animation-duration: 1s;
          animation-fill-mode: both;         
@@ -500,7 +522,7 @@
             
             <g fill="none" fill-rule="evenodd" transform="translate(-270 12)">
 
-                <g id="think" class="fadeIn" stroke="#4990E2" stroke-linecap="square" stroke-width="3" transform="translate(180 15)">
+                <g id="think" class="fadeIn-delay" stroke="#4990E2" stroke-linecap="square" stroke-width="3" transform="translate(180 15)">
                     <path class="think1" stroke-dasharray="4 4" d="M80.5,1.5 L621.681116,1.5"/>
                     <path class="think2" stroke-dasharray="8 8" d="M0.5,21.5 L541.681116,21.5"/>
                     <path class="think3" stroke-dasharray="16 16" d="M50.5,41.5 L591.681116,41.5"/>
@@ -670,7 +692,7 @@
                             <circle cx="9" cy="9" r="7" fill="#000" stroke="#000" stroke-width="2"/>
                         </g>
 
-                        <g id="blue-brain" fill="none" fill-rule="evenodd" transform="translate(330 4)">
+                        <g id="blue-brain" class="fadeIn" fill="none" fill-rule="evenodd" transform="translate(330 4)">
                             <use fill="#000" filter="url(#think-brain-a)" xlink:href="#think-brain-b"/>
                             <use fill="#4A90E2" xlink:href="#think-brain-b"/>
                             <circle cx="9" cy="9" r="7" fill="#4A90E2" stroke="#4A90E2" stroke-width="2"/>
@@ -725,7 +747,7 @@
  document.getElementById("think-button").onclick = function () {
      
      document.getElementById("think").classList.remove('fadeOut');
-     document.getElementById("think").classList.add('fadeIn');
+     document.getElementById("think").classList.add('fadeIn-delay');
      document.getElementById("think2").classList.remove('fadeOut');
      document.getElementById("think2").classList.add('fadeIn');
 
@@ -816,7 +838,7 @@
  document.getElementById("draw-button").onclick = function () {
      document.getElementById("code-easter-egg").classList.add('dn');
      
-     document.getElementById("think").classList.remove('fadeIn');
+     document.getElementById("think").classList.remove('fadeIn-delay');
      document.getElementById("think").classList.add('fadeOut');
      document.getElementById("think2").classList.remove('fadeIn');
      document.getElementById("think2").classList.add('fadeOut');
@@ -910,7 +932,7 @@
  };
 
  document.getElementById("code-button").onclick = function () {
-     document.getElementById("think").classList.remove('fadeIn');
+     document.getElementById("think").classList.remove('fadeIn-delay');
      document.getElementById("think").classList.add('fadeOut');
      document.getElementById("think2").classList.remove('fadeIn');
      document.getElementById("think2").classList.add('fadeOut');
