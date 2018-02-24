@@ -119,7 +119,24 @@
          animation-fill-mode: both;         
          animation-name: fadeIn;
          animation-delay: 2s;
-     }       
+     }
+
+     @keyframes fadeIn-orange-brain {
+         from {
+             opacity: 0;
+         }
+
+         to {
+             opacity: 1;
+         }
+     }
+
+     .fadeIn-orange-brain {
+         animation-duration: 1s;
+         animation-fill-mode: both;         
+         animation-name: fadeIn;
+         animation-delay: 4.4s;
+     }            
 
      @keyframes pulse {
          0% { transform: scale(.8); }
@@ -257,16 +274,175 @@
          }
      }
 
+     .cfd1-animation {
+         animation: cfd1 100ms linear forwards;
+         animation-delay: 1s;
+         opacity: 0;
+     }
+
+     .cfd2-animation {
+         animation: cfd1 100ms linear forwards;
+         animation-delay: 1.4s;
+         opacity: 0;
+     }
+
+     .cfd3-animation {
+         animation: cfd1 100ms linear forwards;
+         animation-delay: 1.8s;
+         opacity: 0;
+     }
+
+     .cfd4-animation {
+         animation: cfd1 100ms linear forwards;
+         animation-delay: 2.2s;
+         opacity: 0;
+     }
+
+     .cfd5-animation {
+         animation: cfd1 100ms linear forwards;
+         animation-delay: 2.6s;
+         opacity: 0;
+     }
+
+     .cfd6-animation {
+         animation: cfd1 100ms linear forwards;
+         animation-delay: 3.0s;
+         opacity: 0;
+     }
+
+     .cfd7-animation {
+         animation: cfd1 100ms linear forwards;
+         animation-delay: 3.4s;
+         opacity: 0;
+     }
+
+     .cfd8-animation {
+         animation: cfd1 100ms linear forwards;
+         animation-delay: 3.8s;
+         opacity: 0;
+     }
+
+     .cfd9-animation {
+         animation: cfd1 100ms linear forwards;
+         animation-delay: 4.2s;
+         opacity: 0;
+     }     
+
+     @keyframes cfd1 {
+         0% { opacity: 0; }
+         100% { opacity: 1; }
+     }
+
      .cfc1-animation {
-         animation: cfc1 10ms linear forwards;
+         animation: cfc1 6000ms linear forwards;
+         animation-delay: 1s;
+         transform: translate(-4px, 0);
      }
 
      @keyframes cfc1 {
-         0% { display: none; }
-         50% { display: block; }
-         100% { display: none; }
+         0% { transform: translate(0, 0); }
+         4% { transform: translate(0px, 0); }
+         4.1% { transform: translate(7px, 0); }
+         8% { transform: translate(7px, 0); }
+         8.1% { transform: translate(14px, 0); }
+         12% { transform: translate(14px, 0); }
+         12.1% { transform: translate(21px, 0); }
+         16% { transform: translate(21px, 0); }
+         16.1% { transform: translate(28px, 0); }
+         20% { transform: translate(28px, 0); }
+         20.1% { transform: translate(35px, 0); }
+         24% { transform: translate(35px, 0); }
+         24.1% { transform: translate(42px, 0); }
+         28% { transform: translate(42px, 0); }
+         28.1% { transform: translate(49px, 0); }
+         32% { transform: translate(49px, 0); }
+         32.1% { transform: translate(56px, 0); }
+         36% { transform: translate(56px, 0); }
+         36.1% { transform: translate(63px, 0); }
+         40% { transform: translate(63px, 0); }
+         40.1% { transform: translate(70px, 0); }
+         44% { transform: translate(70px, 0); }
+         44.1% { transform: translate(77px, 0); }
+         48% { transform: translate(77px, 0); }
+         48.1% { transform: translate(84px, 0); }
+         52% { transform: translate(84px, 0); }
+         52.1% { transform: translate(91px, 0); }
+         56% { transform: translate(91px, 0); }
+         56.1% { transform: translate(97px, 0); }
+         56.2% { opacity: 1; }
+         56.3% { opacity: 0; }
+         100% { opacity: 0; }
      }
-     
+
+
+     .cb1-animation {
+         animation: cb1 1000ms linear infinite;
+         animation-delay: 4.4s;
+         opacity: 0;
+     }
+
+     .cb2-animation {
+         animation: cb1 1000ms linear infinite;
+         animation-delay: 4.5s;
+         opacity: 0;
+     }
+
+     .cb3-animation {
+         animation: cb1 1000ms linear infinite;
+         animation-delay: 4.6s;
+         opacity: 0;
+     }
+
+     .cb4-animation {
+         animation: cb1 1000ms linear infinite;
+         animation-delay: 4.7s;
+         opacity: 0;
+     }
+
+     .cb5-animation {
+         animation: cb1 1000ms linear infinite;
+         animation-delay: 4.8s;
+         opacity: 0;
+     }
+
+     .cb6-animation {
+         animation: cb1 1000ms linear infinite;
+         animation-delay: 4.9s;
+         opacity: 0;
+     }
+
+     .cb7-animation {
+         animation: cb1 1000ms linear infinite;
+         animation-delay: 5s;
+         opacity: 0;
+     }
+
+     .cb8-animation {
+         animation: cb1 1000ms linear infinite;
+         animation-delay: 5.1s;
+         opacity: 0;
+     }
+
+     .cb9-animation {
+         animation: cb1 1000ms linear infinite;
+         animation-delay: 5.2s;
+         opacity: 0;
+     }
+
+     .cb10-animation {
+         animation: cb1 1000ms linear infinite;
+         animation-delay: 5.3s;
+         opacity: 0;
+     }
+
+     @keyframes cb1 {
+         0% { opacity: 0; }
+         30% { opacity: 0; }
+         50% { opacity: 1; }
+         70% { opacity: 0; }
+         100% { opacity: 0; }
+     }
+
     </style>
 </head>
 <body>
@@ -381,73 +557,86 @@
                         <rect id="cfc22" class="dn" width="7" height="15" x="210" fill="#F5A623"/>
                     </g>
 
-                    <g id="code-face-dots" class="dn" fill="none" fill-rule="evenodd" font-family="ArialMT, Arial" font-size="16" transform="translate(240 25)">
-                        <text fill="#555">
+                    <g id="code-face-dots" fill="none" fill-rule="evenodd" font-family="ArialMT, Arial" font-size="16" transform="translate(240 25)">
+                        <text id="cfd1" class="dn" fill="#555">
                             <tspan x=".777" y="14">.</tspan>
                         </text>
-                        <text fill="#555">
+                        <text id="cfd2" class="dn" fill="#555">
                             <tspan x="10.777" y="14">.</tspan>
                         </text>
-                        <text fill="#555">
+                        <text id="cfd3" class="dn" fill="#555">
                             <tspan x="20.777" y="14">.</tspan>
                         </text>
-                        <text fill="#555">
+                        <text id="cfd4" class="dn" fill="#555">
                             <tspan x="30.777" y="14">.</tspan>
                         </text>
-                        <text fill="#555">
+                        <text id="cfd5" class="dn" fill="#555">
                             <tspan x="40.777" y="14">.</tspan>
                         </text>
-                        <text fill="#555">
+                        <text id="cfd6" class="dn" fill="#555">
                             <tspan x="50.777" y="14">.</tspan>
                         </text>
-                        <text fill="#555">
+                        <text id="cfd7" class="dn" fill="#555">
                             <tspan x="60.777" y="14">.</tspan>
                         </text>
-                        <text fill="#555">
+                        <text id="cfd8" class="dn" fill="#555">
                             <tspan x="70.777" y="14">.</tspan>
                         </text>
-                        <text fill="#555">
+                        <text id="cfd9" class="dn" fill="#555">
                             <tspan x="80.777" y="14">.</tspan>
                         </text>
-                        <text fill="#555">
+                        <text id="cfd10" class="dn" fill="#555">
                             <tspan x="90.777" y="14">.</tspan>
                         </text>
-                        <text fill="#F5A623">
+                        <text id="cfd11" class="dn" fill="#F5A623">
                             <tspan x="100.777" y="14">.</tspan>
                         </text>
-                        <text fill="#F5A623">
+                        <text id="cfd12" class="dn" fill="#F5A623">
                             <tspan x="110.777" y="14">.</tspan>
                         </text>
-                        <text fill="#F5A623">
+                        <text id="cfd13" class="dn" fill="#F5A623">
                             <tspan x="120.777" y="14">.</tspan>
                         </text>
-                        <text fill="#F5A623">
+                        <text id="cfd14" class="dn" fill="#F5A623">
                             <tspan x="130.777" y="14">.</tspan>
                         </text>
-                        <text fill="#F5A623">
+                        <text id="cfd15" class="dn" fill="#F5A623">
                             <tspan x="140.777" y="14">.</tspan>
                         </text>
-                        <text fill="#F5A623">
+                        <text id="cfd16" class="dn" fill="#F5A623">
                             <tspan x="150.777" y="14">.</tspan>
                         </text>
-                        <text fill="#F5A623">
+                        <text id="cfd17" class="dn" fill="#F5A623">
                             <tspan x="160.777" y="14">.</tspan>
                         </text>
-                        <text fill="#F5A623">
+                        <text id="cfd18" class="dn" fill="#F5A623">
                             <tspan x="170.777" y="14">.</tspan>
                         </text>
-                        <text fill="#F5A623">
+                        <text id="cfd19" class="dn" fill="#F5A623">
                             <tspan x="180.777" y="14">.</tspan>
                         </text>
-                        <text fill="#F5A623">
+                        <text id="cfd20" class="dn" fill="#F5A623">
                             <tspan x="190.777" y="14">.</tspan>
                         </text>
-                        <text fill="#F5A623">
+                        <text id="cfd21" class="dn" fill="#F5A623">
                             <tspan x="200.777" y="14">.</tspan>
                         </text>
-                        <text fill="#F5A623">
+                        <text id="cfd22" class="dn" fill="#F5A623">
                             <tspan x="210.777" y="14">.</tspan>
                         </text>
+                    </g>
+
+                    <g id="blink-cursors" fill="#F5A623" fill-rule="evenodd" transform="translate(100)">
+                        <rect id="cb1" class="dn" width="7" height="15" x="40"/>
+                        <rect id="cb2" class="dn" width="7" height="15" y="90"/>
+                        <rect id="cb3" class="dn" width="7" height="15" x="90" y="170"/>
+                        <rect id="cb4" class="dn" width="7" height="15" y="250"/>
+                        <rect id="cb5" class="dn" width="7" height="15" x="130" y="320"/>
+                        <rect id="cb6" class="dn" width="7" height="15" x="370" y="300"/>
+                        <rect id="cb7" class="dn" width="7" height="15" x="430" y="270"/>
+                        <rect id="cb8" class="dn" width="7" height="15" x="450" y="110"/>
+                        <rect id="cb9" class="dn" width="7" height="15" x="420"/>
+                        <rect id="cb10" class="dn" width="7" height="15" x="410" y="190"/>
                     </g>                    
 
                     
@@ -522,6 +711,7 @@
 
         <div class="">
             <div id="code-orb" style="width: 20px; height: 20px;" class="br-100 bg-orange small-orange-glow"></div>
+            <div id="code-orb2" style="width: 20px; height: 20px;" class="br-100 bg-orange small-orange-glow dn"></div>
             <h1 id="code-heading">Code</h1>
             <h1 id="code-easter-egg" class="dn">emacs > vim</h1>
             <p>After getting feedback and iterating on designs, it’s time to write some code. Using throwaway HTML/CSS code, I replicate the final product as closely as possible before getting more feedback. Once the solution is close to what we want, developers write the ‘real’ code and boom, it gets shipped. Visual polish also happens at this stage.</p>
@@ -533,7 +723,6 @@
 <script>
 
  document.getElementById("think-button").onclick = function () {
-     document.getElementById("code-easter-egg").classList.add('dn');
      
      document.getElementById("think").classList.remove('fadeOut');
      document.getElementById("think").classList.add('fadeIn');
@@ -637,22 +826,74 @@
      document.getElementById("blue-brain").classList.add('fadeOut');
      document.getElementById("blue-brain").classList.remove('fadeIn');
      document.getElementById("orange-brain").classList.remove('dn');
-     document.getElementById("orange-brain").classList.add('fadeIn');
+     document.getElementById("orange-brain").classList.add('fadeIn-orange-brain');
 
      document.getElementById("totem-svg").classList.remove('blue-glow');
      document.getElementById("totem-svg").classList.remove('green-glow');
      document.getElementById("totem-svg").classList.add('orange-glow');          
       
-     document.getElementById("cfc1").classList.remove('dn');     
-     document.getElementById("cfc1").classList.add('cfc1-animation');     
- };
- 
+     document.getElementById("cfc1").classList.remove('dn');
+     document.getElementById("cfc1").classList.add('cfc1-animation');
 
- document.getElementById("code-orb").onclick = function () {
+     document.getElementById("cfd1").classList.remove('dn');
+     document.getElementById("cfd2").classList.remove('dn');
+     document.getElementById("cfd3").classList.remove('dn');
+     document.getElementById("cfd4").classList.remove('dn');
+     document.getElementById("cfd5").classList.remove('dn');
+     document.getElementById("cfd6").classList.remove('dn');
+     document.getElementById("cfd7").classList.remove('dn');
+     document.getElementById("cfd8").classList.remove('dn');
+     document.getElementById("cfd9").classList.remove('dn');     
+     
+     document.getElementById("cfd1").classList.add('cfd1-animation');
+     document.getElementById("cfd2").classList.add('cfd2-animation');
+     document.getElementById("cfd3").classList.add('cfd3-animation');
+     document.getElementById("cfd4").classList.add('cfd4-animation');
+     document.getElementById("cfd5").classList.add('cfd5-animation');
+     document.getElementById("cfd6").classList.add('cfd6-animation');
+     document.getElementById("cfd7").classList.add('cfd7-animation');
+     document.getElementById("cfd8").classList.add('cfd8-animation');
+     document.getElementById("cfd9").classList.add('cfd9-animation');
+
+     
+     document.getElementById("cb1").classList.remove('dn');
+     document.getElementById("cb2").classList.remove('dn');
+     document.getElementById("cb3").classList.remove('dn');
+     document.getElementById("cb4").classList.remove('dn');
+     document.getElementById("cb5").classList.remove('dn');
+     document.getElementById("cb6").classList.remove('dn');
+     document.getElementById("cb7").classList.remove('dn');
+     document.getElementById("cb8").classList.remove('dn');
+     document.getElementById("cb9").classList.remove('dn');
+     document.getElementById("cb10").classList.remove('dn');
+
+     document.getElementById("cb1").classList.add('cb1-animation');
+     document.getElementById("cb2").classList.add('cb2-animation');
+     document.getElementById("cb3").classList.add('cb3-animation');
+     document.getElementById("cb4").classList.add('cb4-animation');
+     document.getElementById("cb5").classList.add('cb5-animation');
+     document.getElementById("cb6").classList.add('cb6-animation');
+     document.getElementById("cb7").classList.add('cb7-animation');
+     document.getElementById("cb8").classList.add('cb8-animation');
+     document.getElementById("cb9").classList.add('cb9-animation');
+     document.getElementById("cb10").classList.add('cb10-animation');
+ };
+
+  document.getElementById("code-orb").onclick = function () {
      document.getElementById("code-easter-egg").classList.remove('dn');
+     document.getElementById("code-orb").classList.add('dn');
+     document.getElementById("code-orb2").classList.remove('dn');
      document.getElementById("code-heading").classList.add('dn');
      
-  };
+ };
+
+ document.getElementById("code-orb2").onclick = function () {
+     document.getElementById("code-orb2").classList.add('dn');
+     document.getElementById("code-orb").classList.remove('dn');
+     document.getElementById("code-easter-egg").classList.add('dn');
+     document.getElementById("code-heading").classList.remove('dn');
+     
+ }; 
 
  
  (function(i, s, o, g, r, a, m) {
