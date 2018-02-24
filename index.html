@@ -368,69 +368,69 @@
          52% { transform: translate(84px, 0); }
          52.1% { transform: translate(91px, 0); }
          56% { transform: translate(91px, 0); }
-         56.1% { transform: translate(97px, 0); }
-         56.2% { opacity: 1; }
-         56.3% { opacity: 0; }
-         100% { opacity: 0; }
+         56.1% { transform: translate(91px, 0); }
+         56.2% { transform: translate(97px, 0); opacity: 1; }
+         60% { transform: translate(97px, 0); opacity: 0; }
+         100% { transform: translate(97px, 0); opacity: 0; }
      }
 
 
      .cb1-animation {
-         animation: cb1 1000ms linear infinite;
+         animation: cb1 1.4s linear infinite;
          animation-delay: 4.4s;
          opacity: 0;
      }
 
      .cb2-animation {
-         animation: cb1 1000ms linear infinite;
+         animation: cb1 1.4s linear infinite;
          animation-delay: 4.5s;
          opacity: 0;
      }
 
      .cb3-animation {
-         animation: cb1 1000ms linear infinite;
+         animation: cb1 1.4s linear infinite;
          animation-delay: 4.6s;
          opacity: 0;
      }
 
      .cb4-animation {
-         animation: cb1 1000ms linear infinite;
+         animation: cb1 1.4s linear infinite;
          animation-delay: 4.7s;
          opacity: 0;
      }
 
      .cb5-animation {
-         animation: cb1 1000ms linear infinite;
+         animation: cb1 1.4s linear infinite;
          animation-delay: 4.8s;
          opacity: 0;
      }
 
      .cb6-animation {
-         animation: cb1 1000ms linear infinite;
+         animation: cb1 1.4s linear infinite;
          animation-delay: 4.9s;
          opacity: 0;
      }
 
      .cb7-animation {
-         animation: cb1 1000ms linear infinite;
+         animation: cb1 1.4s linear infinite;
          animation-delay: 5s;
          opacity: 0;
      }
 
      .cb8-animation {
-         animation: cb1 1000ms linear infinite;
+         animation: cb1 1.4s linear infinite;
          animation-delay: 5.1s;
          opacity: 0;
      }
 
      .cb9-animation {
-         animation: cb1 1000ms linear infinite;
+         animation: cb1 1.4s linear infinite;
          animation-delay: 5.2s;
          opacity: 0;
      }
 
      .cb10-animation {
-         animation: cb1 1000ms linear infinite;
+         animation: cb1 1.4s linear infinite;
          animation-delay: 5.3s;
          opacity: 0;
      }
@@ -732,13 +732,17 @@
      document.getElementById("think-button").classList.remove('b--transparent');
      document.getElementById("think-button").classList.add('bg-black', 'b--blue');
      document.getElementById("draw-button").classList.remove('b--green');
-     document.getElementById("draw-button").classList.add('b--transparent');     
+     document.getElementById("draw-button").classList.add('b--transparent');
+     document.getElementById("code-button").classList.remove('b--orange');
+     document.getElementById("code-button").classList.add('b--transparent');     
 
      document.getElementById("green-brain").classList.remove('fadeIn-green-brain');
      document.getElementById("green-brain").classList.add('fadeOut');
      document.getElementById("green-brain").classList.add('dn');
      document.getElementById("blue-brain").classList.remove('fadeOut');
      document.getElementById("blue-brain").classList.add('fadeIn');
+     document.getElementById("orange-brain").classList.add('dn');
+     document.getElementById("orange-brain").classList.remove('fadeIn-orange-brain');     
 
      document.getElementById("draw-animated-lines").classList.remove('fadeIn');
      document.getElementById("draw-animated-lines").classList.add('fadeOut');
@@ -758,8 +762,54 @@
      document.getElementById("draw3").classList.add('dn');
      document.getElementById("draw4").classList.add('dn');
 
+     document.getElementById("cb1").classList.add('dn');
+     document.getElementById("cb2").classList.add('dn');
+     document.getElementById("cb3").classList.add('dn');
+     document.getElementById("cb4").classList.add('dn');
+     document.getElementById("cb5").classList.add('dn');
+     document.getElementById("cb6").classList.add('dn');
+     document.getElementById("cb7").classList.add('dn');
+     document.getElementById("cb8").classList.add('dn');
+     document.getElementById("cb9").classList.add('dn');
+     document.getElementById("cb10").classList.add('dn');
+
+     document.getElementById("cb1").classList.remove('cb1-animation');
+     document.getElementById("cb2").classList.remove('cb2-animation');
+     document.getElementById("cb3").classList.remove('cb3-animation');
+     document.getElementById("cb4").classList.remove('cb4-animation');
+     document.getElementById("cb5").classList.remove('cb5-animation');
+     document.getElementById("cb6").classList.remove('cb6-animation');
+     document.getElementById("cb7").classList.remove('cb7-animation');
+     document.getElementById("cb8").classList.remove('cb8-animation');
+     document.getElementById("cb9").classList.remove('cb9-animation');
+     document.getElementById("cb10").classList.remove('cb10-animation');
+
+     document.getElementById("cfd1").classList.add('dn');
+     document.getElementById("cfd2").classList.add('dn');
+     document.getElementById("cfd3").classList.add('dn');
+     document.getElementById("cfd4").classList.add('dn');
+     document.getElementById("cfd5").classList.add('dn');
+     document.getElementById("cfd6").classList.add('dn');
+     document.getElementById("cfd7").classList.add('dn');
+     document.getElementById("cfd8").classList.add('dn');
+     document.getElementById("cfd9").classList.add('dn');     
+     
+     document.getElementById("cfd1").classList.remove('cfd1-animation');
+     document.getElementById("cfd2").classList.remove('cfd2-animation');
+     document.getElementById("cfd3").classList.remove('cfd3-animation');
+     document.getElementById("cfd4").classList.remove('cfd4-animation');
+     document.getElementById("cfd5").classList.remove('cfd5-animation');
+     document.getElementById("cfd6").classList.remove('cfd6-animation');
+     document.getElementById("cfd7").classList.remove('cfd7-animation');
+     document.getElementById("cfd8").classList.remove('cfd8-animation');
+     document.getElementById("cfd9").classList.remove('cfd9-animation');
+
+     document.getElementById("cfc1").classList.add('dn');
+     document.getElementById("cfc1").classList.remove('cfc1-animation');
+
      document.getElementById("totem-svg").classList.add('blue-glow');
-     document.getElementById("totem-svg").classList.remove('green-glow');     
+     document.getElementById("totem-svg").classList.remove('green-glow');
+     document.getElementById("totem-svg").classList.remove('orange-glow');     
 
  };
 
@@ -774,13 +824,17 @@
      document.getElementById("think-button").classList.remove('b--blue');
      document.getElementById("think-button").classList.add('b--transparent');
      document.getElementById("draw-button").classList.remove('b--transparent');     
-     document.getElementById("draw-button").classList.add('b--green');     
+     document.getElementById("draw-button").classList.add('b--green');
+     document.getElementById("code-button").classList.remove('b--orange');
+     document.getElementById("code-button").classList.add('b--transparent');     
 
      document.getElementById("brain").classList.add('fadeOut');
      document.getElementById("blue-brain").classList.add('fadeOut');
      document.getElementById("blue-brain").classList.remove('fadeIn');
      document.getElementById("green-brain").classList.remove('dn');
      document.getElementById("green-brain").classList.add('fadeIn-green-brain');
+     document.getElementById("orange-brain").classList.add('dn');
+     document.getElementById("orange-brain").classList.remove('fadeIn-orange-brain');          
 
      //face draw lines
      document.getElementById("draw-animated-lines").classList.remove('dn');
@@ -802,10 +856,56 @@
      document.getElementById("draw3").classList.remove('dn');
      document.getElementById("draw3").classList.add('sketch3-animation');
      document.getElementById("draw4").classList.remove('dn');
-     document.getElementById("draw4").classList.add('sketch4-animation');     
+     document.getElementById("draw4").classList.add('sketch4-animation');
+
+     document.getElementById("cfc1").classList.add('dn');
+     document.getElementById("cfc1").classList.remove('cfc1-animation');
+
+     document.getElementById("cb1").classList.add('dn');
+     document.getElementById("cb2").classList.add('dn');
+     document.getElementById("cb3").classList.add('dn');
+     document.getElementById("cb4").classList.add('dn');
+     document.getElementById("cb5").classList.add('dn');
+     document.getElementById("cb6").classList.add('dn');
+     document.getElementById("cb7").classList.add('dn');
+     document.getElementById("cb8").classList.add('dn');
+     document.getElementById("cb9").classList.add('dn');
+     document.getElementById("cb10").classList.add('dn');
+
+     document.getElementById("cb1").classList.remove('cb1-animation');
+     document.getElementById("cb2").classList.remove('cb2-animation');
+     document.getElementById("cb3").classList.remove('cb3-animation');
+     document.getElementById("cb4").classList.remove('cb4-animation');
+     document.getElementById("cb5").classList.remove('cb5-animation');
+     document.getElementById("cb6").classList.remove('cb6-animation');
+     document.getElementById("cb7").classList.remove('cb7-animation');
+     document.getElementById("cb8").classList.remove('cb8-animation');
+     document.getElementById("cb9").classList.remove('cb9-animation');
+     document.getElementById("cb10").classList.remove('cb10-animation');
+
+     document.getElementById("cfd1").classList.add('dn');
+     document.getElementById("cfd2").classList.add('dn');
+     document.getElementById("cfd3").classList.add('dn');
+     document.getElementById("cfd4").classList.add('dn');
+     document.getElementById("cfd5").classList.add('dn');
+     document.getElementById("cfd6").classList.add('dn');
+     document.getElementById("cfd7").classList.add('dn');
+     document.getElementById("cfd8").classList.add('dn');
+     document.getElementById("cfd9").classList.add('dn');     
+     
+     document.getElementById("cfd1").classList.remove('cfd1-animation');
+     document.getElementById("cfd2").classList.remove('cfd2-animation');
+     document.getElementById("cfd3").classList.remove('cfd3-animation');
+     document.getElementById("cfd4").classList.remove('cfd4-animation');
+     document.getElementById("cfd5").classList.remove('cfd5-animation');
+     document.getElementById("cfd6").classList.remove('cfd6-animation');
+     document.getElementById("cfd7").classList.remove('cfd7-animation');
+     document.getElementById("cfd8").classList.remove('cfd8-animation');
+     document.getElementById("cfd9").classList.remove('cfd9-animation');     
 
      document.getElementById("totem-svg").classList.remove('blue-glow');
-     document.getElementById("totem-svg").classList.add('green-glow');     
+     document.getElementById("totem-svg").classList.add('green-glow');
+     document.getElementById("totem-svg").classList.remove('orange-glow');     
 
  };
 
@@ -814,6 +914,24 @@
      document.getElementById("think").classList.add('fadeOut');
      document.getElementById("think2").classList.remove('fadeIn');
      document.getElementById("think2").classList.add('fadeOut');
+
+     document.getElementById("draw-animated-lines").classList.remove('fadeIn');
+     document.getElementById("draw-animated-lines").classList.add('fadeOut');
+
+     document.getElementById("l1").classList.remove('sketch1-face-animation');
+     document.getElementById("l2").classList.remove('sketch2-face-animation');
+     document.getElementById("l3").classList.remove('sketch3-face-animation');
+     document.getElementById("l4").classList.remove('sketch4-face-animation');
+
+     document.getElementById("draw1").classList.remove('sketch1-animation');
+     document.getElementById("draw2").classList.remove('sketch2-animation');
+     document.getElementById("draw3").classList.remove('sketch3-animation');
+     document.getElementById("draw4").classList.remove('sketch4-animation');
+
+     document.getElementById("draw1").classList.add('dn');
+     document.getElementById("draw2").classList.add('dn');
+     document.getElementById("draw3").classList.add('dn');
+     document.getElementById("draw4").classList.add('dn');     
 
      document.getElementById("think-button").classList.remove('b--blue');
      document.getElementById("think-button").classList.add('b--transparent');
@@ -825,13 +943,15 @@
      document.getElementById("brain").classList.add('fadeOut');
      document.getElementById("blue-brain").classList.add('fadeOut');
      document.getElementById("blue-brain").classList.remove('fadeIn');
+     document.getElementById("green-brain").classList.add('fadeOut');
+     document.getElementById("green-brain").classList.remove('fadeIn-green-brain');
      document.getElementById("orange-brain").classList.remove('dn');
      document.getElementById("orange-brain").classList.add('fadeIn-orange-brain');
 
      document.getElementById("totem-svg").classList.remove('blue-glow');
      document.getElementById("totem-svg").classList.remove('green-glow');
-     document.getElementById("totem-svg").classList.add('orange-glow');          
-      
+     document.getElementById("totem-svg").classList.add('orange-glow');
+
      document.getElementById("cfc1").classList.remove('dn');
      document.getElementById("cfc1").classList.add('cfc1-animation');
 
