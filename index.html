@@ -470,7 +470,7 @@
 
     </style>
 </head>
-<body>
+<body id="hidden-for-load" class="o-0">
     <div class="tc mb4-ns pb3-ns">
         
         <p style="letter-spacing: .2rem;" class="mt4 mb3 pt2 pb3 f2-ns f3 fw7">PHILIP ARDELJAN</p>
@@ -720,8 +720,6 @@
         </svg>
     </div>
 
-    <div id="hidden-for-load" class="o-0">
-
     <div class="bg-black shadow relative measure center pb5">
         <div class="mb4">
             <h1 class="mt4 pb3 f2-ns f3 fw7"><span class="f4">I'm a</span><span class="i">WEB DESIGNER</span><span class="f4"> from</span> <span class="i">MELBOURNE, AUSTRALIA</span></h1>
@@ -778,7 +776,6 @@
 
         <br><br><br><br><br><br><br><br>
         <a class="black no-underline" href="https://www.youtube.com/watch?v=T1XgFsitnQw">You're still here? It's Over. Go Home. Go.</a>
-    </div>
     </div>
     
 </body>
@@ -1083,7 +1080,8 @@
 
  setTimeout(function(){
      document.getElementById("hidden-for-load").classList.remove('o-0');
- },4000); 
+     document.getElementById("hidden-for-load").classList.add('fadeIn');
+ },1400); 
 
  //this is my ga tracking code. there are many others like it, but this one is mine 👋
  (function(i, s, o, g, r, a, m) {
