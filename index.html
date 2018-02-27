@@ -470,9 +470,24 @@
 
      #totem-svg {
          backface-visibility: hidden;
-         perspective: 1000;
-         transform: translate3d(0,0,0);
+         perspective: 1000px;
          transform: translateZ(0);
+     }
+
+     @media screen and (max-width: 415px) {     
+
+         .sorry {
+             right: 180px!important;
+         }
+
+     }
+
+     @media screen and (min-width: 412px) and (max-width: 520px) {     
+
+         .sorry {
+             right: 200px!important;
+         }
+
      }
 
     </style>
@@ -487,9 +502,9 @@
         <a href="#" id="code-button" class="bg-black no-underline orange mh3-ns pv3-ns ph4-ns bb b--transparent pointer f6 mh1 pv2 ph3">Code</a>
     </div>
 
-    <div class="relative" style="right: 270px;">
+    <div class="sorry relative h-100" style="right: 270px;">
 
-        <svg id="totem-svg" class="w-100 overflow-visible pt4 pb7 mb7" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="462" height="408" viewBox="0 0 462 408">
+        <svg id="totem-svg" class="w-100 flex justify-center align-center overflow-visible pt4" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="462" height="408" viewBox="0 0 462 408">
             <defs>
                 <path id="group-b" d="M198.282203,70.2132112 C215.737251,36.9061999 228.107741,19.739085 235.393671,18.7118665 C247.223291,17.0440487 345.336428,1.72197236 379.500711,0.191698121 C418.802159,-1.56867811 450.238477,8.79518215 473.809665,31.2832789 L473.809666,31.2832782 C479.61552,36.822354 481.548711,45.2951555 478.720002,52.8043303 L358.831007,371.065252 C354.937201,381.401869 343.401163,386.624798 333.064546,382.730991 C328.011258,380.827415 323.942443,376.961346 321.783285,372.011866 L279.748079,275.653739 L197.665348,87.4938812 C195.241576,81.9378197 195.468443,75.5823125 198.282203,70.2132112 Z"/>
                 <filter id="group-a" width="112.7%" height="109.4%" x="-6.3%" y="-4.7%" filterUnits="objectBoundingBox">
@@ -730,7 +745,7 @@
 
     <div class="bg-black shadow relative measure center pb5">
         <div class="mb4">
-            <h1 class="mt4 pb3 f2-ns f3 fw7"><span class="f4">I'm a</span><span class="i">WEB DESIGNER</span><span class="f4"> from</span> <span class="i">MELBOURNE, AUSTRALIA</span></h1>
+            <h1 class="pb3 f2-ns f3 fw7"><span class="f4">I'm a</span><span class="i">WEB DESIGNER</span><span class="f4"> from</span> <span class="i">MELBOURNE, AUSTRALIA</span></h1>
         </div>
         <h3 class="silver">Okay, what's with the totem thingy?</h3>
         <p>It's me! Or rather, a representation of my design process. I'm actually a human.</p>
@@ -740,7 +755,7 @@
         
     </div>        
 
-    <div class="ph5 pv4 ba b--black br3 w-40 center bg-near-black">
+    <div class="ph5 pv4 ba b--black br3 measure center bg-near-black">
         <div class="mb5">
             <h1 class="silver">MY DESIGN PROCESS</h1>
         </div>
