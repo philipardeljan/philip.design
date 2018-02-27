@@ -479,7 +479,7 @@
         <a href="#" id="code-button" class="bg-black no-underline orange mh3-ns pv3-ns ph4-ns bb b--transparent pointer f6 mh1 pv2 ph3">Code</a>
     </div>
 
-    <div style="transform: translate3d(-270px, 12px, 0);">
+    <div class="relative" style="right: 270px;">
 
         <svg id="totem-svg" class="fadeIn w-100 blue-glow overflow-visible pt4 pb7 mb7" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="462" height="408" viewBox="0 0 462 408">
             <defs>
@@ -720,6 +720,8 @@
         </svg>
     </div>
 
+    <div id="hidden-for-load" class="o-0">
+
     <div class="bg-black shadow relative measure center pb5">
         <div class="mb4">
             <h1 class="mt4 pb3 f2-ns f3 fw7"><span class="f4">I'm a</span><span class="i">WEB DESIGNER</span><span class="f4"> from</span> <span class="i">MELBOURNE, AUSTRALIA</span></h1>
@@ -777,7 +779,7 @@
         <br><br><br><br><br><br><br><br>
         <a class="black no-underline" href="https://www.youtube.com/watch?v=T1XgFsitnQw">You're still here? It's Over. Go Home. Go.</a>
     </div>
-
+    </div>
     
 </body>
 <script>
@@ -1077,7 +1079,11 @@
      document.getElementById("code-easter-egg").classList.add('dn');
      document.getElementById("code-heading").classList.remove('dn');
      
- }; 
+ };
+
+ setTimeout(function(){
+     document.getElementById("hidden-for-load").classList.remove('o-0');
+ },4000); 
 
  //this is my ga tracking code. there are many others like it, but this one is mine 👋
  (function(i, s, o, g, r, a, m) {
