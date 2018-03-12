@@ -1,0 +1,1116 @@
+<!DOCTYPE html>
+<html class="bg-black white pb4 ph4 h-100" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!--Hello friend-->
+    <link rel="stylesheet" type="text/css" href="tachyons.css">
+    <link rel="shortcut icon" href="favicon.ico">
+    <title>Philip Ardeljan. Web designer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+
+     /* sorry firefox users, filter kills perf on ff. try safari or chrome :) */
+     @-moz-document url-prefix() {
+         #totem-svg {
+             filter: none;
+         }
+     }
+
+     /* haha */
+     *,
+     *::before,
+     *::after {
+         will-change: transform, transition, opacity;
+         -webkit-font-smoothing: antialiased;
+         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Ubuntu", sans-serif;
+     }
+
+     p {
+         font-size: 1.15rem;
+     }
+
+     .shadow {
+         box-shadow: 0 -100px 28px 40px rgba(0, 0, 0, 1);
+         z-index: 9999999999;
+         
+     }
+
+     .small-blue-glow {
+         filter: drop-shadow(0px 0px 10px #4990E2);
+         transition: all 2s;
+     }
+
+     .small-green-glow {
+         filter: drop-shadow(0px 0px 10px #7ED321);
+         transition: all 2s;
+     }
+
+     .small-orange-glow {
+         filter: drop-shadow(0px 0px 10px #FD9131);
+         transition: all 2s;
+     }               
+
+     .blue-glow {
+         filter: drop-shadow(0px 0px 100px #4990E2);
+         transition: all 2s;
+     }
+
+     .green-glow {
+         filter: drop-shadow(0px 0px 100px #7ED321);
+         transition: all 2s;
+     }
+
+     .orange-glow {
+         filter: drop-shadow(0px 0px 100px #FD9131);
+         transition: all 2s;
+     }          
+     
+     .bg-blue {
+         background: rgba(73, 144, 226, 1);
+     }
+
+     .bg-green {
+         background-color: #7ED321;
+     }
+
+     .green {
+         color: #7ED321;
+     }
+     
+     .silver {
+         color: #999;
+     }
+
+     @keyframes fadeOut {
+         from {
+             opacity: 1;
+         }
+
+         to {
+             opacity: 0;
+         }
+     }
+
+     .fadeOut {
+         animation-duration: 1s;
+         animation-fill-mode: both;         
+         animation-name: fadeOut;
+     }
+
+     @keyframes fadeIn {
+         from {
+             opacity: 0;
+         }
+
+         to {
+             opacity: 1;
+         }
+     }
+
+     .fadeIn {
+         animation-duration: 1s;
+         animation-fill-mode: both;         
+         animation-name: fadeIn;
+         animation-delay: 1s;
+     }
+
+     @keyframes fadeIn-delay {
+         from {
+             opacity: 0;
+         }
+
+         to {
+             opacity: 1;
+         }
+     }
+
+     .fadeIn-delay {
+         animation-duration: 1s;
+         animation-fill-mode: both;         
+         animation-name: fadeIn;
+         animation-delay: 2s;
+     }     
+
+
+     @keyframes fadeIn-green-brain {
+         from {
+             opacity: 0;
+         }
+
+         to {
+             opacity: 1;
+         }
+     }     
+     .fadeIn-green-brain {
+         animation-duration: 1s;
+         animation-fill-mode: both;         
+         animation-name: fadeIn;
+         animation-delay: 2s;
+     }
+
+     @keyframes fadeIn-orange-brain {
+         from {
+             opacity: 0;
+         }
+
+         to {
+             opacity: 1;
+         }
+     }
+
+     .fadeIn-orange-brain {
+         animation-duration: 1s;
+         animation-fill-mode: both;         
+         animation-name: fadeIn;
+         animation-delay: 4.4s;
+     }            
+
+     @keyframes pulse {
+         0% { transform: scale(.8); }
+         50% { transform: scale(1.4); }
+         100% { transform: scale(.8); }
+     }
+     
+     .think1 {
+         stroke-dasharray: 10;
+         stroke-dashoffset: 100;
+         animation: think-dash 1s linear forwards;
+         animation-iteration-count: infinite;
+     }
+
+     .think2 {
+         stroke-dasharray: 30;
+         stroke-dashoffset: 300;
+         animation: think-dash 1s linear forwards;
+         animation-iteration-count: infinite;
+     }
+
+     .think3 {
+         stroke-dasharray: 20;
+         stroke-dashoffset: 200;
+         animation: think-dash 1s linear forwards;
+         animation-iteration-count: infinite;
+     }
+
+     .sketch1-animation {
+         stroke-dasharray: 1800;
+         stroke-dashoffset: 2000;
+         animation: sketch-dash 2.6s linear forwards;
+         animation-delay: 2.4s;
+     }
+
+     .sketch2-animation {
+         stroke-dasharray: 1800;
+         stroke-dashoffset: 2000;
+         animation: sketch-dash 2.2s linear forwards;
+         animation-delay: 2.4s;
+     }
+
+     .sketch3-animation {
+         stroke-dasharray: 1800;
+         stroke-dashoffset: 2000;
+         animation: sketch-dash 2.9s linear forwards;
+         animation-delay: 2.4s;
+     }
+
+     .sketch4-animation {
+         stroke-dasharray: 2600;
+         stroke-dashoffset: 2800;
+         animation: sketch-dash 6.2s linear forwards;
+         animation-delay: 2.2s;
+     }
+
+     @keyframes think-dash {
+         to {
+             stroke-dashoffset: 0;
+         }
+     }          
+
+     @keyframes sketch-dash {
+         to {
+             stroke-dashoffset: 700;
+             stroke-width: 7px;
+         }
+     }
+
+     .sketch1-face-animation {
+         stroke-dasharray: 1800;
+         stroke-dashoffset: 2000;
+         animation: sketch-dash-face 7s linear forwards;
+     }
+
+     .sketch2-face-animation {
+         stroke-dasharray: 1800;
+         stroke-dashoffset: 2000;
+         animation: sketch-dash-face 8s linear forwards;
+     }
+
+     .sketch3-face-animation {
+         stroke-dasharray: 1800;
+         stroke-dashoffset: 2000;
+         animation: sketch-dash-face 3.8s linear forwards;
+     }
+
+     .sketch4-face-animation {
+         stroke-dasharray: 2600;
+         stroke-dashoffset: 2800;
+         animation: sketch-dash-face 15s linear forwards;
+     }
+
+     @keyframes sketch-dash-face {
+         to {
+             stroke-dashoffset: 700;
+         }
+     }
+
+     .totem-bob {
+         animation-name: totem-bob; 
+         animation-duration: 3s;
+         animation-iteration-count: infinite;
+         animation-timing-function: ease-in-out;
+     }
+     
+     @keyframes totem-bob {
+         0% {
+             transform: translate3d(162px, 0, 0);
+         }
+         50% {
+             transform: translate3d(160px, -10px, 0);
+         }
+         100% {
+             transform: translate3d(162px, 0, 0);
+         }
+     }
+
+     .light-bob {
+         animation-name: light-bob; 
+         animation-duration: 3s;
+         animation-iteration-count: infinite;
+         animation-timing-function: ease-in-out;
+     }
+     
+     @keyframes light-bob {
+         0% {
+             transform: translate3d(0, 26px, 0);
+         }
+         50% {
+             transform: translate3d(0, 24px, 0);
+         }
+         100% {
+             transform: translate3d(0, 26px, 0);
+         }
+     }
+
+     .cfd1-animation {
+         animation: cfd1 100ms linear forwards;
+         animation-delay: 1s;
+         opacity: 0;
+     }
+
+     .cfd2-animation {
+         animation: cfd1 100ms linear forwards;
+         animation-delay: 1.4s;
+         opacity: 0;
+     }
+
+     .cfd3-animation {
+         animation: cfd1 100ms linear forwards;
+         animation-delay: 1.8s;
+         opacity: 0;
+     }
+
+     .cfd4-animation {
+         animation: cfd1 100ms linear forwards;
+         animation-delay: 2.2s;
+         opacity: 0;
+     }
+
+     .cfd5-animation {
+         animation: cfd1 100ms linear forwards;
+         animation-delay: 2.6s;
+         opacity: 0;
+     }
+
+     .cfd6-animation {
+         animation: cfd1 100ms linear forwards;
+         animation-delay: 3.0s;
+         opacity: 0;
+     }
+
+     .cfd7-animation {
+         animation: cfd1 100ms linear forwards;
+         animation-delay: 3.4s;
+         opacity: 0;
+     }
+
+     .cfd8-animation {
+         animation: cfd1 100ms linear forwards;
+         animation-delay: 3.8s;
+         opacity: 0;
+     }
+
+     .cfd9-animation {
+         animation: cfd1 100ms linear forwards;
+         animation-delay: 4.2s;
+         opacity: 0;
+     }     
+
+     @keyframes cfd1 {
+         0% { opacity: 0; }
+         100% { opacity: 1; }
+     }
+
+     .cfc1-animation {
+         animation: cfc1 6000ms linear forwards;
+         animation-delay: 1s;
+         transform: translate(-4px, 0);
+     }
+
+     @keyframes cfc1 {
+         0% { transform: translate(0, 0); }
+         4% { transform: translate(0px, 0); }
+         4.1% { transform: translate(7px, 0); }
+         8% { transform: translate(7px, 0); }
+         8.1% { transform: translate(14px, 0); }
+         12% { transform: translate(14px, 0); }
+         12.1% { transform: translate(21px, 0); }
+         16% { transform: translate(21px, 0); }
+         16.1% { transform: translate(28px, 0); }
+         20% { transform: translate(28px, 0); }
+         20.1% { transform: translate(35px, 0); }
+         24% { transform: translate(35px, 0); }
+         24.1% { transform: translate(42px, 0); }
+         28% { transform: translate(42px, 0); }
+         28.1% { transform: translate(49px, 0); }
+         32% { transform: translate(49px, 0); }
+         32.1% { transform: translate(56px, 0); }
+         36% { transform: translate(56px, 0); }
+         36.1% { transform: translate(63px, 0); }
+         40% { transform: translate(63px, 0); }
+         40.1% { transform: translate(70px, 0); }
+         44% { transform: translate(70px, 0); }
+         44.1% { transform: translate(77px, 0); }
+         48% { transform: translate(77px, 0); }
+         48.1% { transform: translate(84px, 0); }
+         52% { transform: translate(84px, 0); }
+         52.1% { transform: translate(91px, 0); }
+         56% { transform: translate(91px, 0); }
+         56.1% { transform: translate(91px, 0); }
+         56.2% { transform: translate(97px, 0); opacity: 1; }
+         60% { transform: translate(97px, 0); opacity: 0; }
+         100% { transform: translate(97px, 0); opacity: 0; }
+     }
+
+
+     .cb1-animation {
+         animation: cb1 1.4s linear infinite;
+         animation-delay: 4.4s;
+         opacity: 0;
+     }
+
+     .cb2-animation {
+         animation: cb1 1.4s linear infinite;
+         animation-delay: 4.5s;
+         opacity: 0;
+     }
+
+     .cb3-animation {
+         animation: cb1 1.4s linear infinite;
+         animation-delay: 4.6s;
+         opacity: 0;
+     }
+
+     .cb4-animation {
+         animation: cb1 1.4s linear infinite;
+         animation-delay: 4.7s;
+         opacity: 0;
+     }
+
+     .cb5-animation {
+         animation: cb1 1.4s linear infinite;
+         animation-delay: 4.8s;
+         opacity: 0;
+     }
+
+     .cb6-animation {
+         animation: cb1 1.4s linear infinite;
+         animation-delay: 4.9s;
+         opacity: 0;
+     }
+
+     .cb7-animation {
+         animation: cb1 1.4s linear infinite;
+         animation-delay: 5s;
+         opacity: 0;
+     }
+
+     .cb8-animation {
+         animation: cb1 1.4s linear infinite;
+         animation-delay: 5.1s;
+         opacity: 0;
+     }
+
+     .cb9-animation {
+         animation: cb1 1.4s linear infinite;
+         animation-delay: 5.2s;
+         opacity: 0;
+     }
+
+     .cb10-animation {
+         animation: cb1 1.4s linear infinite;
+         animation-delay: 5.3s;
+         opacity: 0;
+     }
+
+     @keyframes cb1 {
+         0% { opacity: 0; }
+         30% { opacity: 0; }
+         50% { opacity: 1; }
+         70% { opacity: 0; }
+         100% { opacity: 0; }
+     }
+
+     #totem-svg {
+         backface-visibility: hidden;
+         perspective: 1000px;
+         transform: translateZ(0);
+     }
+
+     @media screen and (max-width: 415px) {     
+
+         .sorry {
+             right: 180px!important;
+         }
+
+     }
+
+     @media screen and (min-width: 412px) and (max-width: 520px) {     
+
+         .sorry {
+             right: 200px!important;
+         }
+
+     }
+
+    </style>
+</head>
+<body class="h-100">
+
+    <div class="tc mb4-ns pb3-ns">
+        
+        <p style="letter-spacing: .2rem;" class="mt4 mb3 pt2 pb3 f2-ns f3 fw7">PHILIP ARDELJAN</p>
+        <a href="#" id="think-button" class="bg-black no-underline blue mh3-ns pv3-ns ph4-ns bb b--blue pointer f6 mh1 pv2 ph3">Think</a>
+        <a href="#" id="draw-button" class="bg-black no-underline green mh3-ns pv3-ns ph4-ns bb b--transparent pointer f6 mh1 pv2 ph3">Draw</a>
+        <a href="#" id="code-button" class="bg-black no-underline orange mh3-ns pv3-ns ph4-ns bb b--transparent pointer f6 mh1 pv2 ph3">Code</a>
+    </div>
+
+    <div class="sorry relative h-100" style="right: 270px;">
+
+        <svg id="totem-svg" class="w-100 flex blue-glow justify-center align-center overflow-visible pt4" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="462" height="408" viewBox="0 0 462 408">
+            <defs>
+                <path id="group-b" d="M198.282203,70.2132112 C215.737251,36.9061999 228.107741,19.739085 235.393671,18.7118665 C247.223291,17.0440487 345.336428,1.72197236 379.500711,0.191698121 C418.802159,-1.56867811 450.238477,8.79518215 473.809665,31.2832789 L473.809666,31.2832782 C479.61552,36.822354 481.548711,45.2951555 478.720002,52.8043303 L358.831007,371.065252 C354.937201,381.401869 343.401163,386.624798 333.064546,382.730991 C328.011258,380.827415 323.942443,376.961346 321.783285,372.011866 L279.748079,275.653739 L197.665348,87.4938812 C195.241576,81.9378197 195.468443,75.5823125 198.282203,70.2132112 Z"/>
+                <filter id="group-a" width="112.7%" height="109.4%" x="-6.3%" y="-4.7%" filterUnits="objectBoundingBox">
+                    <feMorphology in="SourceAlpha" operator="dilate" radius="1" result="shadowSpreadOuter1"/>
+                    <feOffset in="shadowSpreadOuter1" result="shadowOffsetOuter1"/>
+                    <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="5"/>
+                    <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"/>
+                    <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0.176470588   0 0 0 0 0.184313725   0 0 0 0 0.192156863  0 0 0 1 0"/>
+                </filter>
+                <rect id="group-c" width="32" height="32" x="100" rx="16"/>
+                <rect id="group-d" width="32" height="32" rx="16"/>
+                <circle id="group-f" cx="9" cy="9" r="9"/>
+                <filter id="group-e" width="533.3%" height="533.3%" x="-216.7%" y="-216.7%" filterUnits="objectBoundingBox">
+                    <feMorphology in="SourceAlpha" operator="dilate" radius="5" result="shadowSpreadOuter1"/>
+                    <feOffset in="shadowSpreadOuter1" result="shadowOffsetOuter1"/>
+                    <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="8"/>
+                    <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0.333333333   0 0 0 0 0.333333333   0 0 0 0 0.333333333  0 0 0 1 0"/>
+                </filter>
+
+                <circle id="think-brain-b" cx="9" cy="9" r="9"/>
+                <filter id="think-brain-a" width="533.3%" height="533.3%" x="-216.7%" y="-216.7%" filterUnits="objectBoundingBox">
+                    <feMorphology in="SourceAlpha" operator="dilate" radius="5" result="shadowSpreadOuter1"/>
+                    <feOffset in="shadowSpreadOuter1" result="shadowOffsetOuter1"/>
+                    <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="8"/>
+                    <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0.178297571   0 0 0 0 0.396962147   0 0 0 0 0.65191858  0 0 0 1 0"/>
+                </filter>
+                
+                <circle id="group-j" cx="9" cy="9" r="9"/>
+                <filter id="group-i" width="533.3%" height="533.3%" x="-216.7%" y="-216.7%" filterUnits="objectBoundingBox">
+                    <feMorphology in="SourceAlpha" operator="dilate" radius="5" result="shadowSpreadOuter1"/>
+                    <feOffset in="shadowSpreadOuter1" result="shadowOffsetOuter1"/>
+                    <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="8"/>
+                    <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0.49415046   0 0 0 0 0.826234102   0 0 0 0 0.129877269  0 0 0 1 0"/>
+                </filter>
+                <circle id="group-l" cx="9" cy="9" r="9"/>
+                <filter id="group-k" width="533.3%" height="533.3%" x="-216.7%" y="-216.7%" filterUnits="objectBoundingBox">
+                    <feMorphology in="SourceAlpha" operator="dilate" radius="5" result="shadowSpreadOuter1"/>
+                    <feOffset in="shadowSpreadOuter1" result="shadowOffsetOuter1"/>
+                    <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="8"/>
+                    <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0.992156863   0 0 0 0 0.568627451   0 0 0 0 0.192156863  0 0 0 1 0"/>
+                </filter>
+            </defs>
+            
+            <g fill="none" fill-rule="evenodd">
+
+                <g id="think" class="fadeIn-delay" stroke="#4990E2" stroke-linecap="square" stroke-width="3" transform="translate(180 15)">
+                    <path class="think1" stroke-dasharray="4 4" d="M80.5,1.5 L621.681116,1.5"/>
+                    <path class="think2" stroke-dasharray="8 8" d="M0.5,21.5 L541.681116,21.5"/>
+                    <path class="think3" stroke-dasharray="16 16" d="M50.5,41.5 L591.681116,41.5"/>
+                </g>
+
+                <g id="draw-lines" class="totem-bob">
+                    <path id="draw1" class="dn" fill="none" stroke="#7ED321" stroke-width="2" d="M370.5,110 C608.166667,179.666667 724.166667,281.5 718.5,415.5 C712.833333,549.5 601.833333,550.333333 385.5,418" transform="translate(-10 -96)"/>
+                    <path id="draw2" class="dn" fill="none" stroke="#7ED321" stroke-width="2" d="M302.5,396.5 C282.5,385.5 93.9032115,282.690474 19,356 C-98.5,471 435,505 329.5,603.5 C214.491693,710.877424 217.491693,648.210758 338.5,415.5" transform="translate(0 -94)"/>
+                    <path id="draw3" class="dn" fill="none" stroke="#7ED321" stroke-width="2" d="M227.5,226.5 C189,357.5 -19.5,86 2.5,36 C24.5,-14 89,208.5 123,275.5 C157,342.5 237,324 258,292.5" transform="translate(-6 -92)"/>
+                    <path id="draw4" class="dn" fill="none" stroke="#7ED321" stroke-width="2" d="M257,116.5 C239,89.1666667 237.333333,58.8333333 252,25.5 C274,-24.5 523,4 557,71 C591,138 494,215.5 458,217.5" transform="translate(-10 -96)"/>
+                </g>
+
+                <g class="totem-bob">
+                    <use fill="#000" filter="url(#group-a)" xlink:href="#group-b"/>
+                    <use fill="#040404" xlink:href="#group-b"/>
+                    <path stroke="#1F1F1F" stroke-width="2" d="M199.167941,70.6773959 C196.49487,75.7780422 196.279345,81.8157741 198.581929,87.0940325 L280.66466,275.25389 L322.699866,371.612017 C324.751066,376.314024 328.61644,379.986789 333.417064,381.795186 C343.23685,385.494302 354.196086,380.53252 357.895202,370.712734 L477.784197,52.4518123 C480.47147,45.318096 478.634939,37.2689346 473.119377,32.0068134 C449.756809,9.7177511 418.587558,-0.558063137 379.545458,1.19069648 C366.530457,1.7736597 343.456503,4.37687204 312.832921,8.51688649 C308.272526,9.13340815 303.57806,9.77968412 298.755209,10.4541654 C277.471437,13.4307251 231.328762,20.2948539 235.533277,19.7020737 C228.742376,20.6594997 216.41592,37.7655071 199.167941,70.6773959 Z"/>
+
+                    <g id="think2" class="fadeIn" stroke="#555" stroke-width="2" transform="translate(234 3)">
+                        <path class="think3" stroke-dasharray="8 8" d="M204,152 L106,36"/>
+                        <path class="think2" stroke-dasharray="10 10" d="M176.5,0.5 L106,36"/>
+                        <path class="think1" stroke-dasharray="16 16" d="M98.5,377.5 L105,34"/>
+                        <path class="think3" stroke-dasharray="8 8" d="M0,17.5 L104.5,35.5"/>
+                    </g>
+
+                    <g id="draw-animated-lines" class="dn" stroke="#555" stroke-width="2" transform="translate(248 19)">
+                        <path id="l1" class="dn" fill="none" stroke="#555" stroke-width="2" d="M1,181 C5.66666667,179 13.1666667,154.333333 23.5,107 C33.8333333,59.6666667 56,31.1666667 90,21.5" transform="translate(0 0)"/>
+                        <path id="l2" class="dn" fill="none" stroke="#555" stroke-width="2" d="M227,36 C201.214356,25.0098328 181.047689,18.6764995 166.5,17 C151.952311,15.3235005 127.285644,16.4901672 92.5,20.5" transform="translate(2 0)"/>
+                        <path id="l3" class="dn" fill="none" stroke="#555" stroke-width="2" d="M64,326.5 C92.6169371,288.126747 110.116937,261.96008 116.5,248 C126.074594,227.05988 110.5,213 90,209 C69.5,205 48,242.5 73,254 C98,265.5 166.5,192.5 162,130.5 C159,89.1666667 136.166667,52.1666667 93.5,19.5" transform="translate(0 0)"/>
+                        <path id="l4" class="dn" fill="none" stroke="#555" stroke-width="2" d="M0,0 C16.0614884,12.3902037 29.228155,19.7235371 39.5,22 C49.771845,24.2764629 67.4385116,23.7764629 92.5,20.5" transform="translate(0 0)"/>
+                    </g>
+
+                    <g id="code-face-cursors" fill="none" fill-rule="evenodd" transform="translate(240 30)">
+                        <rect id="cfc1" class="dn" width="7" height="15" fill="#555"/>
+                        <rect id="cfc2" class="dn" width="7" height="15" x="10" fill="#555"/>
+                        <rect id="cfc3" class="dn" width="7" height="15" x="20" fill="#555"/>
+                        <rect id="cfc4" class="dn" width="7" height="15" x="30" fill="#555"/>
+                        <rect id="cfc5" class="dn" width="7" height="15" x="40" fill="#555"/>
+                        <rect id="cfc6" class="dn" width="7" height="15" x="50" fill="#555"/>
+                        <rect id="cfc7" class="dn" width="7" height="15" x="60" fill="#555"/>
+                        <rect id="cfc8" class="dn" width="7" height="15" x="70" fill="#555"/>
+                        <rect id="cfc9" class="dn" width="7" height="15" x="80" fill="#555"/>
+                        <rect id="cfc10" class="dn" width="7" height="15" x="90" fill="#555"/>
+                        <rect id="cfc11" class="dn" width="7" height="15" x="100" fill="#F5A623"/>
+                        <rect id="cfc12" class="dn" width="7" height="15" x="110" fill="#F5A623"/>
+                        <rect id="cfc13" class="dn" width="7" height="15" x="120" fill="#F5A623"/>
+                        <rect id="cfc14" class="dn" width="7" height="15" x="130" fill="#F5A623"/>
+                        <rect id="cfc15" class="dn" width="7" height="15" x="140" fill="#F5A623"/>
+                        <rect id="cfc16" class="dn" width="7" height="15" x="150" fill="#F5A623"/>
+                        <rect id="cfc17" class="dn" width="7" height="15" x="160" fill="#F5A623"/>
+                        <rect id="cfc18" class="dn" width="7" height="15" x="170" fill="#F5A623"/>
+                        <rect id="cfc19" class="dn" width="7" height="15" x="180" fill="#F5A623"/>
+                        <rect id="cfc20" class="dn" width="7" height="15" x="190" fill="#F5A623"/>
+                        <rect id="cfc21" class="dn" width="7" height="15" x="200" fill="#F5A623"/>
+                        <rect id="cfc22" class="dn" width="7" height="15" x="210" fill="#F5A623"/>
+                    </g>
+
+                    <g id="code-face-dots" fill="none" fill-rule="evenodd" font-family="ArialMT, Arial" font-size="16" transform="translate(240 25)">
+                        <text id="cfd1" class="dn" fill="#555">
+                            <tspan x=".777" y="14">.</tspan>
+                        </text>
+                        <text id="cfd2" class="dn" fill="#555">
+                            <tspan x="10.777" y="14">.</tspan>
+                        </text>
+                        <text id="cfd3" class="dn" fill="#555">
+                            <tspan x="20.777" y="14">.</tspan>
+                        </text>
+                        <text id="cfd4" class="dn" fill="#555">
+                            <tspan x="30.777" y="14">.</tspan>
+                        </text>
+                        <text id="cfd5" class="dn" fill="#555">
+                            <tspan x="40.777" y="14">.</tspan>
+                        </text>
+                        <text id="cfd6" class="dn" fill="#555">
+                            <tspan x="50.777" y="14">.</tspan>
+                        </text>
+                        <text id="cfd7" class="dn" fill="#555">
+                            <tspan x="60.777" y="14">.</tspan>
+                        </text>
+                        <text id="cfd8" class="dn" fill="#555">
+                            <tspan x="70.777" y="14">.</tspan>
+                        </text>
+                        <text id="cfd9" class="dn" fill="#555">
+                            <tspan x="80.777" y="14">.</tspan>
+                        </text>
+                        <text id="cfd10" class="dn" fill="#555">
+                            <tspan x="90.777" y="14">.</tspan>
+                        </text>
+                        <text id="cfd11" class="dn" fill="#F5A623">
+                            <tspan x="100.777" y="14">.</tspan>
+                        </text>
+                        <text id="cfd12" class="dn" fill="#F5A623">
+                            <tspan x="110.777" y="14">.</tspan>
+                        </text>
+                        <text id="cfd13" class="dn" fill="#F5A623">
+                            <tspan x="120.777" y="14">.</tspan>
+                        </text>
+                        <text id="cfd14" class="dn" fill="#F5A623">
+                            <tspan x="130.777" y="14">.</tspan>
+                        </text>
+                        <text id="cfd15" class="dn" fill="#F5A623">
+                            <tspan x="140.777" y="14">.</tspan>
+                        </text>
+                        <text id="cfd16" class="dn" fill="#F5A623">
+                            <tspan x="150.777" y="14">.</tspan>
+                        </text>
+                        <text id="cfd17" class="dn" fill="#F5A623">
+                            <tspan x="160.777" y="14">.</tspan>
+                        </text>
+                        <text id="cfd18" class="dn" fill="#F5A623">
+                            <tspan x="170.777" y="14">.</tspan>
+                        </text>
+                        <text id="cfd19" class="dn" fill="#F5A623">
+                            <tspan x="180.777" y="14">.</tspan>
+                        </text>
+                        <text id="cfd20" class="dn" fill="#F5A623">
+                            <tspan x="190.777" y="14">.</tspan>
+                        </text>
+                        <text id="cfd21" class="dn" fill="#F5A623">
+                            <tspan x="200.777" y="14">.</tspan>
+                        </text>
+                        <text id="cfd22" class="dn" fill="#F5A623">
+                            <tspan x="210.777" y="14">.</tspan>
+                        </text>
+                    </g>
+
+                    <g id="blink-cursors" fill="#F5A623" fill-rule="evenodd" transform="translate(100)">
+                        <rect id="cb1" class="dn" width="7" height="15" x="40"/>
+                        <rect id="cb2" class="dn" width="7" height="15" y="90"/>
+                        <rect id="cb3" class="dn" width="7" height="15" x="90" y="170"/>
+                        <rect id="cb4" class="dn" width="7" height="15" y="250"/>
+                        <rect id="cb5" class="dn" width="7" height="15" x="130" y="320"/>
+                        <rect id="cb6" class="dn" width="7" height="15" x="370" y="300"/>
+                        <rect id="cb7" class="dn" width="7" height="15" x="430" y="270"/>
+                        <rect id="cb8" class="dn" width="7" height="15" x="450" y="110"/>
+                        <rect id="cb9" class="dn" width="7" height="15" x="420"/>
+                        <rect id="cb10" class="dn" width="7" height="15" x="410" y="190"/>
+                    </g>                    
+
+                    
+                    <g id="face-base-pattern" fill="#000" stroke-width="2" transform="translate(197 19)">
+                        <path stroke="#1F1F1F" d="M196.5,81 C197.166667,89 198.833333,93.5 201.5,94.5 C204.166667,95.5 223,95.5 258,94.5 L254.5,104 C216.213374,104.611295 195.713374,104.444629 193,103.5 C190.286626,102.555371 188.28597,95.0553714 186.998032,80.9999999 L196.5,81 Z"/>
+                        <path stroke="#252525" d="M40,1 C37.8919759,31.2024288 35.8919759,52.3690955 34,64.5 C32.1080241,76.6309045 28.4413574,93.7975712 23,116 L1,65.5 L0.5,60 L1,55 L17.5,25.5 L26.5,11.5 L33,4.5 L37.5,1.5 L40,1 Z"/>
+                        <path stroke="#252525" d="M47,0.5 C44.8919759,31.0357622 42.8919759,52.3690955 41,64.5 C39.1080241,76.6309045 34.2746907,96.1309045 26.5,123 L22.5,115 C28.7739391,90.4154825 32.9406058,71.4154825 35,58 C37.0593942,44.5845175 38.7260609,25.5845175 40,1 L47,0.5 Z"/>
+                        <path stroke="#1F1F1F" d="M178.499127,305 C170.845935,288.375511 169.345935,273.875511 173.999127,261.5 C178.65232,249.124489 187.985653,242.791155 201.999127,242.5"/>
+                        <path stroke="#1F1F1F" d="M182.5,295 C177.746531,284.820559 177.079864,275.153893 180.5,266 C183.920136,256.846107 190.253469,251.346107 199.5,249.5 L182.5,295 Z"/>
+                        <path stroke="#252525" d="M37.5,86.5 C56.7731403,105.10919 67.6064737,121.10919 70,134.5 C72.3935263,147.89081 67.7268597,166.224143 56,189.5"/>
+                        <path stroke="#252525" d="M35,93.5 C51.2249086,109.981147 60.3915753,123.647814 62.5,134.5 C64.6084247,145.352186 61.1084247,160.852186 52,181 L26,123 L35,93.5 Z"/>
+                        <path stroke="#1F1F1F" d="M232.886062 9.44122962L237.516694 14.0718622C241.32709 17.8822576 241.432996 24.0266657 237.756179 27.9661125L237.714061 28.0112386C234.058297 31.9281292 227.919447 32.1398137 224.002556 28.4840491 223.997303 28.4791459 223.992055 28.4742369 223.986812 28.469322L221.355449 26.0024185C218.128481 22.9771363 217.272424 18.1912375 219.250588 14.2349105L220.655016 11.4260551C222.541293 7.65350094 227.128682 6.12437122 230.901236 8.01064832 231.635426 8.3777434 232.305633 8.86080133 232.886062 9.44122962zM142.5 363.5L138 363 131.5 359.5 127.5 355 122.5 344.5 100.5 293.5 97 283C114.274393 293.112853 126.107726 303.779519 132.5 315 138.892274 326.220481 142.558941 341.887147 143.5 362L142.5 363.5z"/>
+                        <path stroke="#1F1F1F" d="M151.5,362 C152.166667,341.666667 147.833333,324 138.5,309 C129.166667,294 113,280.833333 90,269.5 L96,283 C108.666667,289 119.666667,298.166667 129,310.5 C138.333333,322.833333 143,340.833333 143,364.5"/>
+                    </g>
+
+                    <g id="face-features" transform="translate(270 74)">
+                        <path fill="#000" stroke="#1F1F1F" stroke-linecap="square" stroke-width="4" d="M12,131 C19.9133109,130.340557 54.5707894,129.681115 115.972435,129.021672 L115.972435,129.021674 C117.335418,129.007036 118.612037,129.687472 119.359784,130.827125 C122.328063,135.351124 120.708134,137.908749 114.5,138.5 C107.539649,139.162891 75.8616986,139.990565 19.4661503,140.983024 L19.4661503,140.983023 C18.8259821,140.994289 18.192463,140.851717 17.6188401,140.567289 C6.06736243,134.839562 4.19441574,131.650465 12,131 Z"/>
+                        <path fill="#181818" d="M59.7941691,68.2604748 L65.5,65 L71.6834471,68.3727894 C74.5859814,69.9559898 76.2155785,73.1616033 75.7842645,76.43959 L74.915311,83.0436361 C74.3915532,87.0241954 70.9985458,90 66.9836767,90 L64.8359512,90 C60.8993626,90 57.5478079,87.136117 56.9338475,83.2477006 L55.8611769,76.4541205 C55.342802,73.1710795 56.9083778,69.9094984 59.7941691,68.2604748 Z"/>
+                        <use fill="#000" xlink:href="#group-c"/>
+                        <rect width="28" height="28" x="102" y="2" stroke="#555" stroke-width="4" rx="14"/>
+                        <g>
+                            <use fill="#000" xlink:href="#group-d"/>
+                            <rect width="28" height="28" x="2" y="2" stroke="#555" stroke-width="4" rx="14"/>
+                        </g>
+                    </g>
+
+                    <g class="light-bob">
+                        <g id="brain" class="dn" transform="translate(330 4)">
+                            <use fill="#000" filter="url(#group-e)" xlink:href="#group-f"/>
+                            <use fill="#000" xlink:href="#group-f"/>
+                            <circle cx="9" cy="9" r="7" fill="#000" stroke="#000" stroke-width="2"/>
+                        </g>
+
+                        <g id="blue-brain" class="fadeIn" fill="none" fill-rule="evenodd" transform="translate(330 4)">
+                            <use fill="#000" filter="url(#think-brain-a)" xlink:href="#think-brain-b"/>
+                            <use fill="#4A90E2" xlink:href="#think-brain-b"/>
+                            <circle cx="9" cy="9" r="7" fill="#4A90E2" stroke="#4A90E2" stroke-width="2"/>
+                        </g>
+                        
+                        <g id="green-brain" class="dn" transform="translate(330 4)">
+                            <use fill="#000" filter="url(#group-i)" xlink:href="#group-j"/>
+                            <use fill="#7ED321" xlink:href="#group-j"/>
+                            <circle cx="9" cy="9" r="7" fill="#7ED321" stroke="#7ED321" stroke-width="2"/>
+                        </g>
+                        <g id="orange-brain" class="dn" transform="translate(330 4)">
+                            <use fill="#000" filter="url(#group-k)" xlink:href="#group-l"/>
+                            <use fill="#F5A623" xlink:href="#group-l"/>
+                            <circle cx="9" cy="9" r="7" fill="#F5A623" stroke="#F5A623" stroke-width="2"/>
+                        </g>
+                    </g>
+                    
+                </g>
+            </g>
+        </svg>
+    </div>
+
+    <div class="bg-black shadow relative measure center pb5">
+        <div class="mb4">
+            <h1 class="pb3 f2-ns f3 fw7"><span class="f4">I'm a</span><span class="i">WEB DESIGNER</span><span class="f4"> from</span> <span class="i">MELBOURNE, AUSTRALIA</span></h1>
+        </div>
+        <h3 class="silver">Okay, what's with the totem thingy?</h3>
+        <p>It's me! Or rather, a representation of my design process. I'm actually a human.</p>
+        <br>
+        <h3 class="silver">That's comforting. So what's your design process?</h3>
+        <p>Glad you asked, here is something I prepared earlier...</p>
+        
+    </div>        
+
+    <div class="ph5 pv4 ba b--black br3 measure center bg-near-black">
+        <div class="mb5">
+            <h1 class="silver">MY DESIGN PROCESS</h1>
+        </div>
+
+        
+        <div class="mb5 pb3">
+            <div style="width: 20px; height: 20px;" class="br-100 bg-blue small-blue-glow"></div>
+            <h1>Think</h1>
+            <p>Identify and understand the problem. This is the first and most important step in my design process. Once I know what the problem is and can understand it I progress to the next stage.</p>
+        </div>
+
+        <div class="mb5 pb3">
+            <div style="width: 20px; height: 20px;" class="br-100 bg-green small-green-glow"></div>
+            <h1>Draw</h1>
+            <p>Using pen/paper and whiteboards I through down some UI ideas to solve the problem users are having. Of course, this only happens when a UI is part of the solution. Many times it isn’t. Feedback and discussions abound.</p>
+        </div>
+
+        <div class="">
+            <div id="code-orb" style="width: 20px; height: 20px;" class="br-100 bg-orange small-orange-glow"></div>
+            <div id="code-orb2" style="width: 20px; height: 20px;" class="br-100 bg-orange small-orange-glow dn"></div>
+            <h1 id="code-heading">Code</h1>
+            <h1 id="code-easter-egg" class="dn">emacs > vim</h1>
+            <p>After getting feedback and iterating on rough sketches it’s time to write some code. Using throwaway HTML/CSS/JS I replicate the final solution as closely as possible. Then I get more feedback. Once the solution is close to what we want, developers write the ‘real’ code and boom, it gets shipped. Visual polish also happens at this stage.</p>
+        </div>
+    </div>
+
+    <div class="bg-black relative measure center pb5">
+        
+
+        <br><br><br>
+        <h3 class="silver mt0">Do you have any examples of work you've done?</h3>
+        <p>Yup! I post snippets of <a href="https://dribbble.com/philipardeljan" class="blue">my work on Dribbble.</a></p>
+
+        <br>
+        <h3 class="silver">Thank you. Bye for now.</h3>
+        <p>Goodbye friend 👋</p>
+
+        <br><br><br><br><br><br><br><br>
+        <a class="black no-underline" href="https://www.youtube.com/watch?v=T1XgFsitnQw">You're still here? It's Over. Go Home. Go.</a>
+    </div>
+    
+</body>
+<script>
+
+ //OKAY SO FIRST THINGS FIRST
+
+ //I'm a web designer, not a front end developer. So plz excuse the epic javascript...
+
+ document.getElementById("think-button").onclick = function () {
+     
+     document.getElementById("think").classList.remove('fadeOut');
+     document.getElementById("think").classList.add('fadeIn-delay');
+     document.getElementById("think2").classList.remove('fadeOut');
+     document.getElementById("think2").classList.add('fadeIn');
+
+     document.getElementById("think-button").classList.remove('b--transparent');
+     document.getElementById("think-button").classList.add('bg-black', 'b--blue');
+     document.getElementById("draw-button").classList.remove('b--green');
+     document.getElementById("draw-button").classList.add('b--transparent');
+     document.getElementById("code-button").classList.remove('b--orange');
+     document.getElementById("code-button").classList.add('b--transparent');     
+
+     document.getElementById("green-brain").classList.remove('fadeIn-green-brain');
+     document.getElementById("green-brain").classList.add('fadeOut');
+     document.getElementById("green-brain").classList.add('dn');
+     document.getElementById("blue-brain").classList.remove('fadeOut');
+     document.getElementById("blue-brain").classList.add('fadeIn');
+     document.getElementById("orange-brain").classList.add('dn');
+     document.getElementById("orange-brain").classList.remove('fadeIn-orange-brain');     
+
+     document.getElementById("draw-animated-lines").classList.remove('fadeIn');
+     document.getElementById("draw-animated-lines").classList.add('fadeOut');
+
+     document.getElementById("l1").classList.remove('sketch1-face-animation');
+     document.getElementById("l2").classList.remove('sketch2-face-animation');
+     document.getElementById("l3").classList.remove('sketch3-face-animation');
+     document.getElementById("l4").classList.remove('sketch4-face-animation');
+
+     document.getElementById("draw1").classList.remove('sketch1-animation');
+     document.getElementById("draw2").classList.remove('sketch2-animation');
+     document.getElementById("draw3").classList.remove('sketch3-animation');
+     document.getElementById("draw4").classList.remove('sketch4-animation');
+
+     document.getElementById("draw1").classList.add('dn');
+     document.getElementById("draw2").classList.add('dn');
+     document.getElementById("draw3").classList.add('dn');
+     document.getElementById("draw4").classList.add('dn');
+
+     document.getElementById("cb1").classList.add('dn');
+     document.getElementById("cb2").classList.add('dn');
+     document.getElementById("cb3").classList.add('dn');
+     document.getElementById("cb4").classList.add('dn');
+     document.getElementById("cb5").classList.add('dn');
+     document.getElementById("cb6").classList.add('dn');
+     document.getElementById("cb7").classList.add('dn');
+     document.getElementById("cb8").classList.add('dn');
+     document.getElementById("cb9").classList.add('dn');
+     document.getElementById("cb10").classList.add('dn');
+
+     document.getElementById("cb1").classList.remove('cb1-animation');
+     document.getElementById("cb2").classList.remove('cb2-animation');
+     document.getElementById("cb3").classList.remove('cb3-animation');
+     document.getElementById("cb4").classList.remove('cb4-animation');
+     document.getElementById("cb5").classList.remove('cb5-animation');
+     document.getElementById("cb6").classList.remove('cb6-animation');
+     document.getElementById("cb7").classList.remove('cb7-animation');
+     document.getElementById("cb8").classList.remove('cb8-animation');
+     document.getElementById("cb9").classList.remove('cb9-animation');
+     document.getElementById("cb10").classList.remove('cb10-animation');
+
+     document.getElementById("cfd1").classList.add('dn');
+     document.getElementById("cfd2").classList.add('dn');
+     document.getElementById("cfd3").classList.add('dn');
+     document.getElementById("cfd4").classList.add('dn');
+     document.getElementById("cfd5").classList.add('dn');
+     document.getElementById("cfd6").classList.add('dn');
+     document.getElementById("cfd7").classList.add('dn');
+     document.getElementById("cfd8").classList.add('dn');
+     document.getElementById("cfd9").classList.add('dn');     
+     
+     document.getElementById("cfd1").classList.remove('cfd1-animation');
+     document.getElementById("cfd2").classList.remove('cfd2-animation');
+     document.getElementById("cfd3").classList.remove('cfd3-animation');
+     document.getElementById("cfd4").classList.remove('cfd4-animation');
+     document.getElementById("cfd5").classList.remove('cfd5-animation');
+     document.getElementById("cfd6").classList.remove('cfd6-animation');
+     document.getElementById("cfd7").classList.remove('cfd7-animation');
+     document.getElementById("cfd8").classList.remove('cfd8-animation');
+     document.getElementById("cfd9").classList.remove('cfd9-animation');
+
+     document.getElementById("cfc1").classList.add('dn');
+     document.getElementById("cfc1").classList.remove('cfc1-animation');
+
+     document.getElementById("totem-svg").classList.add('blue-glow');
+     document.getElementById("totem-svg").classList.remove('green-glow');
+     document.getElementById("totem-svg").classList.remove('orange-glow');     
+
+ };
+
+ document.getElementById("draw-button").onclick = function () {
+     document.getElementById("code-easter-egg").classList.add('dn');
+     
+     document.getElementById("think").classList.remove('fadeIn-delay');
+     document.getElementById("think").classList.add('fadeOut');
+     document.getElementById("think2").classList.remove('fadeIn');
+     document.getElementById("think2").classList.add('fadeOut');
+
+     document.getElementById("think-button").classList.remove('b--blue');
+     document.getElementById("think-button").classList.add('b--transparent');
+     document.getElementById("draw-button").classList.remove('b--transparent');     
+     document.getElementById("draw-button").classList.add('b--green');
+     document.getElementById("code-button").classList.remove('b--orange');
+     document.getElementById("code-button").classList.add('b--transparent');     
+
+     document.getElementById("brain").classList.add('fadeOut');
+     document.getElementById("blue-brain").classList.add('fadeOut');
+     document.getElementById("blue-brain").classList.remove('fadeIn');
+     document.getElementById("green-brain").classList.remove('dn');
+     document.getElementById("green-brain").classList.add('fadeIn-green-brain');
+     document.getElementById("orange-brain").classList.add('dn');
+     document.getElementById("orange-brain").classList.remove('fadeIn-orange-brain');          
+
+     //face draw lines
+     document.getElementById("draw-animated-lines").classList.remove('dn');
+     document.getElementById("draw-animated-lines").classList.remove('fadeOut');
+     document.getElementById("l1").classList.remove('dn');
+     document.getElementById("l1").classList.add('sketch1-face-animation');
+     document.getElementById("l2").classList.remove('dn');
+     document.getElementById("l2").classList.add('sketch2-face-animation');
+     document.getElementById("l3").classList.remove('dn');
+     document.getElementById("l3").classList.add('sketch3-face-animation');
+     document.getElementById("l4").classList.remove('dn');
+     document.getElementById("l4").classList.add('sketch4-face-animation');
+
+     //draw lines
+     document.getElementById("draw1").classList.remove('dn');
+     document.getElementById("draw1").classList.add('sketch1-animation');
+     document.getElementById("draw2").classList.remove('dn');
+     document.getElementById("draw2").classList.add('sketch2-animation');
+     document.getElementById("draw3").classList.remove('dn');
+     document.getElementById("draw3").classList.add('sketch3-animation');
+     document.getElementById("draw4").classList.remove('dn');
+     document.getElementById("draw4").classList.add('sketch4-animation');
+
+     document.getElementById("cfc1").classList.add('dn');
+     document.getElementById("cfc1").classList.remove('cfc1-animation');
+
+     document.getElementById("cb1").classList.add('dn');
+     document.getElementById("cb2").classList.add('dn');
+     document.getElementById("cb3").classList.add('dn');
+     document.getElementById("cb4").classList.add('dn');
+     document.getElementById("cb5").classList.add('dn');
+     document.getElementById("cb6").classList.add('dn');
+     document.getElementById("cb7").classList.add('dn');
+     document.getElementById("cb8").classList.add('dn');
+     document.getElementById("cb9").classList.add('dn');
+     document.getElementById("cb10").classList.add('dn');
+
+     document.getElementById("cb1").classList.remove('cb1-animation');
+     document.getElementById("cb2").classList.remove('cb2-animation');
+     document.getElementById("cb3").classList.remove('cb3-animation');
+     document.getElementById("cb4").classList.remove('cb4-animation');
+     document.getElementById("cb5").classList.remove('cb5-animation');
+     document.getElementById("cb6").classList.remove('cb6-animation');
+     document.getElementById("cb7").classList.remove('cb7-animation');
+     document.getElementById("cb8").classList.remove('cb8-animation');
+     document.getElementById("cb9").classList.remove('cb9-animation');
+     document.getElementById("cb10").classList.remove('cb10-animation');
+
+     document.getElementById("cfd1").classList.add('dn');
+     document.getElementById("cfd2").classList.add('dn');
+     document.getElementById("cfd3").classList.add('dn');
+     document.getElementById("cfd4").classList.add('dn');
+     document.getElementById("cfd5").classList.add('dn');
+     document.getElementById("cfd6").classList.add('dn');
+     document.getElementById("cfd7").classList.add('dn');
+     document.getElementById("cfd8").classList.add('dn');
+     document.getElementById("cfd9").classList.add('dn');     
+     
+     document.getElementById("cfd1").classList.remove('cfd1-animation');
+     document.getElementById("cfd2").classList.remove('cfd2-animation');
+     document.getElementById("cfd3").classList.remove('cfd3-animation');
+     document.getElementById("cfd4").classList.remove('cfd4-animation');
+     document.getElementById("cfd5").classList.remove('cfd5-animation');
+     document.getElementById("cfd6").classList.remove('cfd6-animation');
+     document.getElementById("cfd7").classList.remove('cfd7-animation');
+     document.getElementById("cfd8").classList.remove('cfd8-animation');
+     document.getElementById("cfd9").classList.remove('cfd9-animation');     
+
+     document.getElementById("totem-svg").classList.remove('blue-glow');
+     document.getElementById("totem-svg").classList.add('green-glow');
+     document.getElementById("totem-svg").classList.remove('orange-glow');     
+
+ };
+
+ document.getElementById("code-button").onclick = function () {
+     document.getElementById("think").classList.remove('fadeIn-delay');
+     document.getElementById("think").classList.add('fadeOut');
+     document.getElementById("think2").classList.remove('fadeIn');
+     document.getElementById("think2").classList.add('fadeOut');
+
+     document.getElementById("draw-animated-lines").classList.remove('fadeIn');
+     document.getElementById("draw-animated-lines").classList.add('fadeOut');
+
+     document.getElementById("l1").classList.remove('sketch1-face-animation');
+     document.getElementById("l2").classList.remove('sketch2-face-animation');
+     document.getElementById("l3").classList.remove('sketch3-face-animation');
+     document.getElementById("l4").classList.remove('sketch4-face-animation');
+
+     document.getElementById("draw1").classList.remove('sketch1-animation');
+     document.getElementById("draw2").classList.remove('sketch2-animation');
+     document.getElementById("draw3").classList.remove('sketch3-animation');
+     document.getElementById("draw4").classList.remove('sketch4-animation');
+
+     document.getElementById("draw1").classList.add('dn');
+     document.getElementById("draw2").classList.add('dn');
+     document.getElementById("draw3").classList.add('dn');
+     document.getElementById("draw4").classList.add('dn');     
+
+     document.getElementById("think-button").classList.remove('b--blue');
+     document.getElementById("think-button").classList.add('b--transparent');
+     document.getElementById("draw-button").classList.remove('b--green');     
+     document.getElementById("draw-button").classList.add('b--transparent');
+     document.getElementById("code-button").classList.remove('b--transparent');     
+     document.getElementById("code-button").classList.add('b--orange');     
+
+     document.getElementById("brain").classList.add('fadeOut');
+     document.getElementById("blue-brain").classList.add('fadeOut');
+     document.getElementById("blue-brain").classList.remove('fadeIn');
+     document.getElementById("green-brain").classList.add('fadeOut');
+     document.getElementById("green-brain").classList.remove('fadeIn-green-brain');
+     document.getElementById("orange-brain").classList.remove('dn');
+     document.getElementById("orange-brain").classList.add('fadeIn-orange-brain');
+
+     document.getElementById("totem-svg").classList.remove('blue-glow');
+     document.getElementById("totem-svg").classList.remove('green-glow');
+     document.getElementById("totem-svg").classList.add('orange-glow');
+
+     document.getElementById("cfc1").classList.remove('dn');
+     document.getElementById("cfc1").classList.add('cfc1-animation');
+
+     document.getElementById("cfd1").classList.remove('dn');
+     document.getElementById("cfd2").classList.remove('dn');
+     document.getElementById("cfd3").classList.remove('dn');
+     document.getElementById("cfd4").classList.remove('dn');
+     document.getElementById("cfd5").classList.remove('dn');
+     document.getElementById("cfd6").classList.remove('dn');
+     document.getElementById("cfd7").classList.remove('dn');
+     document.getElementById("cfd8").classList.remove('dn');
+     document.getElementById("cfd9").classList.remove('dn');     
+     
+     document.getElementById("cfd1").classList.add('cfd1-animation');
+     document.getElementById("cfd2").classList.add('cfd2-animation');
+     document.getElementById("cfd3").classList.add('cfd3-animation');
+     document.getElementById("cfd4").classList.add('cfd4-animation');
+     document.getElementById("cfd5").classList.add('cfd5-animation');
+     document.getElementById("cfd6").classList.add('cfd6-animation');
+     document.getElementById("cfd7").classList.add('cfd7-animation');
+     document.getElementById("cfd8").classList.add('cfd8-animation');
+     document.getElementById("cfd9").classList.add('cfd9-animation');
+
+     
+     document.getElementById("cb1").classList.remove('dn');
+     document.getElementById("cb2").classList.remove('dn');
+     document.getElementById("cb3").classList.remove('dn');
+     document.getElementById("cb4").classList.remove('dn');
+     document.getElementById("cb5").classList.remove('dn');
+     document.getElementById("cb6").classList.remove('dn');
+     document.getElementById("cb7").classList.remove('dn');
+     document.getElementById("cb8").classList.remove('dn');
+     document.getElementById("cb9").classList.remove('dn');
+     document.getElementById("cb10").classList.remove('dn');
+
+     document.getElementById("cb1").classList.add('cb1-animation');
+     document.getElementById("cb2").classList.add('cb2-animation');
+     document.getElementById("cb3").classList.add('cb3-animation');
+     document.getElementById("cb4").classList.add('cb4-animation');
+     document.getElementById("cb5").classList.add('cb5-animation');
+     document.getElementById("cb6").classList.add('cb6-animation');
+     document.getElementById("cb7").classList.add('cb7-animation');
+     document.getElementById("cb8").classList.add('cb8-animation');
+     document.getElementById("cb9").classList.add('cb9-animation');
+     document.getElementById("cb10").classList.add('cb10-animation');
+ };
+
+ document.getElementById("code-orb").onclick = function () {
+     document.getElementById("code-easter-egg").classList.remove('dn');
+     document.getElementById("code-orb").classList.add('dn');
+     document.getElementById("code-orb2").classList.remove('dn');
+     document.getElementById("code-heading").classList.add('dn');
+     
+ };
+
+ document.getElementById("code-orb2").onclick = function () {
+     document.getElementById("code-orb2").classList.add('dn');
+     document.getElementById("code-orb").classList.remove('dn');
+     document.getElementById("code-easter-egg").classList.add('dn');
+     document.getElementById("code-heading").classList.remove('dn');
+     
+ };
+
+  //this is my ga tracking code. there are many others like it, but this one is mine 👋
+ (function(i, s, o, g, r, a, m) {
+     i['GoogleAnalyticsObject'] = r;
+     i[r] = i[r] || function() {
+         (i[r].q = i[r].q || []).push(arguments)
+     }, i[r].l = 1 * new Date();
+     a = s.createElement(o),
+     m = s.getElementsByTagName(o)[0];
+     a.async = 1;
+     a.src = g;
+     m.parentNode.insertBefore(a, m)
+ })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+ ga('create', 'UA-54702241-1', 'auto');
+ ga('send', 'pageview');
+
+</script>
+</html>
