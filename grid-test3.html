@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HTML5 template</title>
+    <meta name="description" content="Blank HTML template">
+    <script src="jquery-3.1.1.js"></script>
+    <style>
+
+     #grid {
+         display: grid;
+         grid-template-columns: 100px 100px;
+         grid-template-rows: 100px 100px;
+         grid-gap: 20px;
+     }
+
+     #test {
+
+     }
+     
+    </style>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+  </head>
+
+  <body>
+      <span></span>
+      <button id="gap" >increase gap</button>
+      <button id="createButton" >create</button>      
+  </body>
+
+  <script>
+   
+   
+   
+   //add <div id="grid"> to DOM
+   createButton.onmousedown = function (){
+       var newButton = document.createElement('div');
+       newButton.id = 'grid';
+       document.body.appendChild(newButton);
+   }
+
+   //createButton.onmousedown = function (){   
+
+       //$( document ).ready(
+           //function() {
+               //var cssText = document.styleSheets[1].cssRules[0].style.cssText;
+               //document.styleSheets[1].cssRules[0].style.cssText = cssText.replace( "yellow", "red" );
+           //}
+       //);
+   //}
+
+   var newDiv = document.createElement('div');
+
+   for (i = 0; i < 4; i++) {
+       var gridChild = document.createElement('div');
+       newDiv.appendChild(gridChild);
+       gridChild.className = 'grid-child';
+       gridChild.style.backgroundColor = 'black';
+       gridChild.style.padding = '20px';
+   }
+   newDiv.id = 'grid';
+
+   var span = document.querySelector('span');
+   document.body.insertBefore(newDiv, span);
+
+   // Below creates h1, stores all computed styles i think, assigns an HTML ID of "cssvalue" to the h1, then creates a TextNode inside the h1 with the computed display value. Finally we insert the h1 before newDiv
+   var cssProp = document.createElement('h1');
+   var style = window.getComputedStyle(newDiv, null);
+   var getCSSProp = style.getPropertyValue('display');
+   cssProp.id = 'cssvalue';
+   cssProp.appendChild(document.createTextNode(getCSSProp));
+   //this says insert cssProp (which is the #cssvalue) before newDiv (which is #grid)
+   document.body.insertBefore(cssProp, newDiv);
+
+
+   //onmousedown is a Javascript event.
+   var stylesheet = document.styleSheets[0];
+   var newRule = "#grid { display: grid; grid-template-columns: 140px 140px; grid-template-rows: 100px 100px; grid-gap: 20px; }";   
+   gap.onmousedown = function(){
+       //this is cool, it actually DELETES #test
+       //stylesheet.deleteRule(1);
+       //stylesheet.removeRule(newRule, 0);
+       //stylesheet.removeRule(newRule, 1);       
+       //stylesheet.insertRule(newRule, null);
+       //stylesheet.setProperty(newRule);
+
+       //stylesheet.cssRules[0].style.backgroundColor="blue";
+       //stylesheet.cssRules[0].style.cssText = "background-color: blue";
+       var declaration = document.styleSheets[0].rules[0].style;
+       declaration.setProperty('background-color', 'blue');
+
+       var newButton = document.createElement('div');          
+       
+       document.body.appendChild(newButton);       
+       
+       //document.styleSheets[0].cssRules[0].style = {'color':'red', 'background-color':'green;'};       
+       
+       //stylesheet.innerHTML = newRule;
+   }
+   //stylesheet.innerHTML = newRule;
+   //alert(stylesheet.cssRules[0].selectorText);
+
+   //document.styleSheets[0].cssRules[1].style = {'color':'red', 'background-color':'green;'};
+
+   //the below gets stylesheets in the document. the alert displays the name of the ID (not the actual CSS props, i'm probably just using the wrong thing here
+   //var stylesheet = document.styleSheets[0];
+   //alert(stylesheet.cssRules[1].selectorText);
+
+   
+   //Cool! This is adding a style tag and adding actual styles to it by using innerHTML. That's pretty unique cool i didn't realise that. innerHMTL is super powerful, you can use it to add anything anywhere really. This probably can't be used to drag and drop the pin head. This is creating a sheet. Not dynamically modifying the contents which we're really after here. maybe we can just use sheet.innerHTML to modify the css on the fly?
+   var sheet = document.createElement('style')
+   sheet.innerHTML = "div {border: 2px solid yellow;}";
+   document.head.appendChild(sheet);
+   
+   
+   
+  </script>
+
+</html>
