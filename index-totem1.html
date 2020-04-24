@@ -30,7 +30,7 @@
      .shadow {
          box-shadow: 0 -100px 28px 40px rgba(0, 0, 0, 1);
          z-index: 9999999999;
-         
+
      }
 
      .small-blue-glow {
@@ -46,7 +46,7 @@
      .small-orange-glow {
          filter: drop-shadow(0px 0px 10px #FD9131);
          transition: all 2s;
-     }               
+     }
 
      .blue-glow {
          filter: drop-shadow(0px 0px 100px #4990E2);
@@ -61,8 +61,8 @@
      .orange-glow {
          filter: drop-shadow(0px 0px 100px #FD9131);
          transition: all 2s;
-     }          
-     
+     }
+
      .bg-blue {
          background: rgba(73, 144, 226, 1);
      }
@@ -74,7 +74,7 @@
      .green {
          color: #7ED321;
      }
-     
+
      .silver {
          color: #999;
      }
@@ -91,7 +91,7 @@
 
      .fadeOut {
          animation-duration: 1s;
-         animation-fill-mode: both;         
+         animation-fill-mode: both;
          animation-name: fadeOut;
      }
 
@@ -107,7 +107,7 @@
 
      .fadeIn {
          animation-duration: 1s;
-         animation-fill-mode: both;         
+         animation-fill-mode: both;
          animation-name: fadeIn;
          animation-delay: 1s;
      }
@@ -124,10 +124,10 @@
 
      .fadeIn-delay {
          animation-duration: 1s;
-         animation-fill-mode: both;         
+         animation-fill-mode: both;
          animation-name: fadeIn;
          animation-delay: 2s;
-     }     
+     }
 
 
      @keyframes fadeIn-green-brain {
@@ -138,10 +138,10 @@
          to {
              opacity: 1;
          }
-     }     
+     }
      .fadeIn-green-brain {
          animation-duration: 1s;
-         animation-fill-mode: both;         
+         animation-fill-mode: both;
          animation-name: fadeIn;
          animation-delay: 2s;
      }
@@ -158,17 +158,17 @@
 
      .fadeIn-orange-brain {
          animation-duration: 1s;
-         animation-fill-mode: both;         
+         animation-fill-mode: both;
          animation-name: fadeIn;
          animation-delay: 4.4s;
-     }            
+     }
 
      @keyframes pulse {
          0% { transform: scale(.8); }
          50% { transform: scale(1.4); }
          100% { transform: scale(.8); }
      }
-     
+
      .think1 {
          stroke-dasharray: 10;
          stroke-dashoffset: 100;
@@ -222,7 +222,7 @@
          to {
              stroke-dashoffset: 0;
          }
-     }          
+     }
 
      @keyframes sketch-dash {
          to {
@@ -262,12 +262,12 @@
      }
 
      .totem-bob {
-         animation-name: totem-bob; 
+         animation-name: totem-bob;
          animation-duration: 3s;
          animation-iteration-count: infinite;
          animation-timing-function: ease-in-out;
      }
-     
+
      @keyframes totem-bob {
          0% {
              transform: translate3d(162px, 0, 0);
@@ -281,12 +281,12 @@
      }
 
      .light-bob {
-         animation-name: light-bob; 
+         animation-name: light-bob;
          animation-duration: 3s;
          animation-iteration-count: infinite;
          animation-timing-function: ease-in-out;
      }
-     
+
      @keyframes light-bob {
          0% {
              transform: translate3d(0, 26px, 0);
@@ -351,7 +351,7 @@
          animation: cfd1 100ms linear forwards;
          animation-delay: 4.2s;
          opacity: 0;
-     }     
+     }
 
      @keyframes cfd1 {
          0% { opacity: 0; }
@@ -474,7 +474,7 @@
          transform: translateZ(0);
      }
 
-     @media screen and (max-width: 415px) {     
+     @media screen and (max-width: 415px) {
 
          .sorry {
              right: 180px!important;
@@ -482,7 +482,7 @@
 
      }
 
-     @media screen and (min-width: 412px) and (max-width: 520px) {     
+     @media screen and (min-width: 412px) and (max-width: 520px) {
 
          .sorry {
              right: 200px!important;
@@ -495,7 +495,7 @@
 <body class="h-100">
 
     <div class="tc mb4-ns pb3-ns">
-        
+
         <p style="letter-spacing: .2rem;" class="mt4 mb3 pt2 pb3 f2-ns f3 fw7">PHILIP ARDELJAN</p>
         <a href="#" id="think-button" class="bg-black no-underline blue mh3-ns pv3-ns ph4-ns bb b--blue pointer f6 mh1 pv2 ph3">Think</a>
         <a href="#" id="draw-button" class="bg-black no-underline green mh3-ns pv3-ns ph4-ns bb b--transparent pointer f6 mh1 pv2 ph3">Draw</a>
@@ -531,7 +531,7 @@
                     <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="8"/>
                     <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0.178297571   0 0 0 0 0.396962147   0 0 0 0 0.65191858  0 0 0 1 0"/>
                 </filter>
-                
+
                 <circle id="group-j" cx="9" cy="9" r="9"/>
                 <filter id="group-i" width="533.3%" height="533.3%" x="-216.7%" y="-216.7%" filterUnits="objectBoundingBox">
                     <feMorphology in="SourceAlpha" operator="dilate" radius="5" result="shadowSpreadOuter1"/>
@@ -547,7 +547,7 @@
                     <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0.992156863   0 0 0 0 0.568627451   0 0 0 0 0.192156863  0 0 0 1 0"/>
                 </filter>
             </defs>
-            
+
             <g fill="none" fill-rule="evenodd">
 
                 <g id="think" class="fadeIn-delay" stroke="#4990E2" stroke-linecap="square" stroke-width="3" transform="translate(180 15)">
@@ -687,9 +687,9 @@
                         <rect id="cb8" class="dn" width="7" height="15" x="450" y="110"/>
                         <rect id="cb9" class="dn" width="7" height="15" x="420"/>
                         <rect id="cb10" class="dn" width="7" height="15" x="410" y="190"/>
-                    </g>                    
+                    </g>
 
-                    
+
                     <g id="face-base-pattern" fill="#000" stroke-width="2" transform="translate(197 19)">
                         <path stroke="#1F1F1F" d="M196.5,81 C197.166667,89 198.833333,93.5 201.5,94.5 C204.166667,95.5 223,95.5 258,94.5 L254.5,104 C216.213374,104.611295 195.713374,104.444629 193,103.5 C190.286626,102.555371 188.28597,95.0553714 186.998032,80.9999999 L196.5,81 Z"/>
                         <path stroke="#252525" d="M40,1 C37.8919759,31.2024288 35.8919759,52.3690955 34,64.5 C32.1080241,76.6309045 28.4413574,93.7975712 23,116 L1,65.5 L0.5,60 L1,55 L17.5,25.5 L26.5,11.5 L33,4.5 L37.5,1.5 L40,1 Z"/>
@@ -725,7 +725,7 @@
                             <use fill="#4A90E2" xlink:href="#think-brain-b"/>
                             <circle cx="9" cy="9" r="7" fill="#4A90E2" stroke="#4A90E2" stroke-width="2"/>
                         </g>
-                        
+
                         <g id="green-brain" class="dn" transform="translate(330 4)">
                             <use fill="#000" filter="url(#group-i)" xlink:href="#group-j"/>
                             <use fill="#7ED321" xlink:href="#group-j"/>
@@ -737,7 +737,7 @@
                             <circle cx="9" cy="9" r="7" fill="#F5A623" stroke="#F5A623" stroke-width="2"/>
                         </g>
                     </g>
-                    
+
                 </g>
             </g>
         </svg>
@@ -752,15 +752,15 @@
         <br>
         <h3 class="silver">That's comforting. So what's your design process?</h3>
         <p>Glad you asked, here is something I prepared earlier...</p>
-        
-    </div>        
+
+    </div>
 
     <div class="ph5 pv4 ba b--black br3 measure center bg-near-black">
         <div class="mb5">
             <h1 class="silver">MY DESIGN PROCESS</h1>
         </div>
 
-        
+
         <div class="mb5 pb3">
             <div style="width: 20px; height: 20px;" class="br-100 bg-blue small-blue-glow"></div>
             <h1>Think</h1>
@@ -783,7 +783,7 @@
     </div>
 
     <div class="bg-black relative measure center pb5">
-        
+
 
         <br><br><br>
         <h3 class="silver mt0">Do you have any examples of work you've done?</h3>
@@ -796,7 +796,7 @@
         <br><br><br><br><br><br><br><br>
         <a class="black no-underline" href="https://www.youtube.com/watch?v=T1XgFsitnQw">You're still here? It's Over. Go Home. Go.</a>
     </div>
-    
+
 </body>
 <script>
 
@@ -805,7 +805,7 @@
  //I'm a web designer, not a front end developer. So plz excuse the epic javascript...
 
  document.getElementById("think-button").onclick = function () {
-     
+
      document.getElementById("think").classList.remove('fadeOut');
      document.getElementById("think").classList.add('fadeIn-delay');
      document.getElementById("think2").classList.remove('fadeOut');
@@ -816,7 +816,7 @@
      document.getElementById("draw-button").classList.remove('b--green');
      document.getElementById("draw-button").classList.add('b--transparent');
      document.getElementById("code-button").classList.remove('b--orange');
-     document.getElementById("code-button").classList.add('b--transparent');     
+     document.getElementById("code-button").classList.add('b--transparent');
 
      document.getElementById("green-brain").classList.remove('fadeIn-green-brain');
      document.getElementById("green-brain").classList.add('fadeOut');
@@ -824,7 +824,7 @@
      document.getElementById("blue-brain").classList.remove('fadeOut');
      document.getElementById("blue-brain").classList.add('fadeIn');
      document.getElementById("orange-brain").classList.add('dn');
-     document.getElementById("orange-brain").classList.remove('fadeIn-orange-brain');     
+     document.getElementById("orange-brain").classList.remove('fadeIn-orange-brain');
 
      document.getElementById("draw-animated-lines").classList.remove('fadeIn');
      document.getElementById("draw-animated-lines").classList.add('fadeOut');
@@ -874,8 +874,8 @@
      document.getElementById("cfd6").classList.add('dn');
      document.getElementById("cfd7").classList.add('dn');
      document.getElementById("cfd8").classList.add('dn');
-     document.getElementById("cfd9").classList.add('dn');     
-     
+     document.getElementById("cfd9").classList.add('dn');
+
      document.getElementById("cfd1").classList.remove('cfd1-animation');
      document.getElementById("cfd2").classList.remove('cfd2-animation');
      document.getElementById("cfd3").classList.remove('cfd3-animation');
@@ -891,13 +891,13 @@
 
      document.getElementById("totem-svg").classList.add('blue-glow');
      document.getElementById("totem-svg").classList.remove('green-glow');
-     document.getElementById("totem-svg").classList.remove('orange-glow');     
+     document.getElementById("totem-svg").classList.remove('orange-glow');
 
  };
 
  document.getElementById("draw-button").onclick = function () {
      document.getElementById("code-easter-egg").classList.add('dn');
-     
+
      document.getElementById("think").classList.remove('fadeIn-delay');
      document.getElementById("think").classList.add('fadeOut');
      document.getElementById("think2").classList.remove('fadeIn');
@@ -905,10 +905,10 @@
 
      document.getElementById("think-button").classList.remove('b--blue');
      document.getElementById("think-button").classList.add('b--transparent');
-     document.getElementById("draw-button").classList.remove('b--transparent');     
+     document.getElementById("draw-button").classList.remove('b--transparent');
      document.getElementById("draw-button").classList.add('b--green');
      document.getElementById("code-button").classList.remove('b--orange');
-     document.getElementById("code-button").classList.add('b--transparent');     
+     document.getElementById("code-button").classList.add('b--transparent');
 
      document.getElementById("brain").classList.add('fadeOut');
      document.getElementById("blue-brain").classList.add('fadeOut');
@@ -916,7 +916,7 @@
      document.getElementById("green-brain").classList.remove('dn');
      document.getElementById("green-brain").classList.add('fadeIn-green-brain');
      document.getElementById("orange-brain").classList.add('dn');
-     document.getElementById("orange-brain").classList.remove('fadeIn-orange-brain');          
+     document.getElementById("orange-brain").classList.remove('fadeIn-orange-brain');
 
      //face draw lines
      document.getElementById("draw-animated-lines").classList.remove('dn');
@@ -973,8 +973,8 @@
      document.getElementById("cfd6").classList.add('dn');
      document.getElementById("cfd7").classList.add('dn');
      document.getElementById("cfd8").classList.add('dn');
-     document.getElementById("cfd9").classList.add('dn');     
-     
+     document.getElementById("cfd9").classList.add('dn');
+
      document.getElementById("cfd1").classList.remove('cfd1-animation');
      document.getElementById("cfd2").classList.remove('cfd2-animation');
      document.getElementById("cfd3").classList.remove('cfd3-animation');
@@ -983,11 +983,11 @@
      document.getElementById("cfd6").classList.remove('cfd6-animation');
      document.getElementById("cfd7").classList.remove('cfd7-animation');
      document.getElementById("cfd8").classList.remove('cfd8-animation');
-     document.getElementById("cfd9").classList.remove('cfd9-animation');     
+     document.getElementById("cfd9").classList.remove('cfd9-animation');
 
      document.getElementById("totem-svg").classList.remove('blue-glow');
      document.getElementById("totem-svg").classList.add('green-glow');
-     document.getElementById("totem-svg").classList.remove('orange-glow');     
+     document.getElementById("totem-svg").classList.remove('orange-glow');
 
  };
 
@@ -1013,14 +1013,14 @@
      document.getElementById("draw1").classList.add('dn');
      document.getElementById("draw2").classList.add('dn');
      document.getElementById("draw3").classList.add('dn');
-     document.getElementById("draw4").classList.add('dn');     
+     document.getElementById("draw4").classList.add('dn');
 
      document.getElementById("think-button").classList.remove('b--blue');
      document.getElementById("think-button").classList.add('b--transparent');
-     document.getElementById("draw-button").classList.remove('b--green');     
+     document.getElementById("draw-button").classList.remove('b--green');
      document.getElementById("draw-button").classList.add('b--transparent');
-     document.getElementById("code-button").classList.remove('b--transparent');     
-     document.getElementById("code-button").classList.add('b--orange');     
+     document.getElementById("code-button").classList.remove('b--transparent');
+     document.getElementById("code-button").classList.add('b--orange');
 
      document.getElementById("brain").classList.add('fadeOut');
      document.getElementById("blue-brain").classList.add('fadeOut');
@@ -1045,8 +1045,8 @@
      document.getElementById("cfd6").classList.remove('dn');
      document.getElementById("cfd7").classList.remove('dn');
      document.getElementById("cfd8").classList.remove('dn');
-     document.getElementById("cfd9").classList.remove('dn');     
-     
+     document.getElementById("cfd9").classList.remove('dn');
+
      document.getElementById("cfd1").classList.add('cfd1-animation');
      document.getElementById("cfd2").classList.add('cfd2-animation');
      document.getElementById("cfd3").classList.add('cfd3-animation');
@@ -1057,7 +1057,7 @@
      document.getElementById("cfd8").classList.add('cfd8-animation');
      document.getElementById("cfd9").classList.add('cfd9-animation');
 
-     
+
      document.getElementById("cb1").classList.remove('dn');
      document.getElementById("cb2").classList.remove('dn');
      document.getElementById("cb3").classList.remove('dn');
@@ -1086,7 +1086,7 @@
      document.getElementById("code-orb").classList.add('dn');
      document.getElementById("code-orb2").classList.remove('dn');
      document.getElementById("code-heading").classList.add('dn');
-     
+
  };
 
  document.getElementById("code-orb2").onclick = function () {
@@ -1094,7 +1094,7 @@
      document.getElementById("code-orb").classList.remove('dn');
      document.getElementById("code-easter-egg").classList.add('dn');
      document.getElementById("code-heading").classList.remove('dn');
-     
+
  };
 
   //this is my ga tracking code. there are many others like it, but this one is mine 👋
