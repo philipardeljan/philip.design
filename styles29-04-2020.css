@@ -40,6 +40,10 @@ main {
     color: #555;
 }
 
+.blog-wrapper li {
+    color: #555;
+}
+
 .blog-nav-wrapper {
     max-width: 700px;
     margin: 0 auto;
