@@ -40,6 +40,11 @@ main {
     color: #555;
 }
 
+.blog-nav-wrapper {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
 figcaption {
     text-align: center;
     color: #999;
@@ -58,6 +63,16 @@ nav a {
 .nav-wrapper {
     max-width: 960px;
     margin: 0 auto;
+}
+
+.nav-items {
+    display: flex;
+    align-items: center;
+    margin: 1rem 0 0rem;
+}
+
+.nav-items svg {
+    margin-left: auto;
 }
 
 h1 {
