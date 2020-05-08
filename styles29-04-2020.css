@@ -112,6 +112,11 @@ ul li {
     padding: .25rem;
 }
 
+ol li {
+    font-size: 18px;
+    padding: .25rem;
+}
+
 a {
     color: #009AFF;
 }
