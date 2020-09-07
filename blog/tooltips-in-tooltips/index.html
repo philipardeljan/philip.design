@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!--Hello friend-->
+    <link rel="stylesheet" type="text/css" href="/../styles29-04-2020.css">
+    <link rel="shortcut icon" href="/../favicon.ico">
+    <title>Tooltips in tooltips · Philip Ardeljan is a UI designer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.fastcomments.com/js/embed.min.js"></script>
+
+</head>
+<style>
+
+ .tooltip {
+     position: relative;
+     display: inline-block;
+     color: blue;
+     cursor: pointer;
+ }
+
+ .tooltip .tooltiptext {
+     visibility: hidden;
+     width: 300px;
+     background-color: #fff;
+     box-shadow: 0px 0px 20px rgba(0, 0, 0, .1), 0px 0px 2px rgba(0, 0, 0, .1) ;
+     color: #000;
+     border-radius: 2px;
+     position: absolute;
+     z-index: 1;
+     top: 100%;
+     left: 50%;
+     margin-left: -120px;
+     opacity: 0;
+     transition: opacity 0.3s;
+ }
+
+ .tooltip .tooltiptext::after {
+     content: "";
+     position: absolute;
+     bottom: 100%;
+     left: 50%;
+     margin-left: -5px;
+     border-width: 15px;
+     border-style: solid;
+     border-color: transparent transparent transparent transparent;
+ }
+
+ .tooltip:hover .tooltiptext {
+     visibility: visible;
+     opacity: 1;
+ }
+
+ .tooltip2 {
+     color: blue;
+ }
+
+ .tooltip2 .tooltiptext2 {
+     visibility: hidden;
+     width: 420px;
+     height: 240px;
+     background-color: #fff;
+     box-shadow: 0px 0px 20px rgba(0, 0, 0, .1), 0px 0px 2px rgba(0, 0, 0, .1) ;
+     color: #000;
+     border-radius: 2px;
+     position: absolute;
+     z-index: 1;
+     top: 75%;
+     left: 50%;
+     margin-left: -120px;
+     opacity: 0;
+     transition: opacity 0.3s;
+ }
+
+ .tooltip2 .tooltiptext2::after {
+     content: "";
+     position: absolute;
+     bottom: 100%;
+     left: 50%;
+     margin-left: -5px;
+     border-width: 15px;
+     border-style: solid;
+     border-color: transparent transparent transparent transparent;
+ }
+
+ .tooltip2:hover .tooltiptext2 {
+     visibility: visible;
+     opacity: 1;
+ }
+
+
+ .tooltip3 {
+     color: blue;
+ }
+
+ .tooltip3 .tooltiptext3 {
+     visibility: hidden;
+     width: 320px;
+     background-color: #fff;
+     box-shadow: 0px 0px 20px rgba(0, 0, 0, .1), 0px 0px 2px rgba(0, 0, 0, .1) ;
+     color: #000;
+     border-radius: 2px;
+     position: absolute;
+     z-index: 1;
+     top: 75%;
+     left: 50%;
+     margin-left: -120px;
+     opacity: 0;
+     transition: opacity 0.3s;
+ }
+
+ .tooltip3 .tooltiptext3::after {
+     content: "";
+     position: absolute;
+     bottom: 100%;
+     left: 50%;
+     margin-left: -5px;
+     border-width: 15px;
+     border-style: solid;
+     border-color: transparent transparent transparent transparent;
+ }
+
+ .tooltip3:hover .tooltiptext3 {
+     visibility: visible;
+     opacity: 1;
+ }
+ 
+</style>
+
+<body>
+    <nav>
+        <div class="blog-wrapper">
+            <h3 style="margin-bottom: .5rem;">Hello! 👋 I'm Philip, a user interface designer.</h3>
+        </div>
+        <div class="blog-wrapper">
+            <a href="/blog/">✏️Back</a>
+        </div>
+    </nav>
+
+    <div class="blog-wrapper">
+
+        <div style="background: #E5EEFC;" class="blog-box">
+            <br>
+            <h2 style="color: #0A2651;">Tooltips in tooltips</h2>
+            <p style="color: #0A2651;">7 September 2020</p>
+            <br>
+
+        </div>
+
+    </div>
+
+    <br>
+    <div class="blog-wrapper">
+
+        <div>
+            <p>With the recent release of Crusader Kings 3 by Paradox Interactive, a new UI paradigm in the game stopped me in my tracks. There are a lot of lessons that web designers can learn from video game user interface design and while they aren’t always transferrable, they are worth exploring. In this case it’s the idea of having <i>tooltips within tooltips.</i></p>
+
+            <p>Tooltips have become a standard element within user interface design. The majority of web UI frameworks include some form of tooltip, with Bootstrap having two types (Tooltips and Popovers). Even Wikipedia has embraced the tooltip when hovering over links:</p>
+
+            <img style="width: 50%;" src="droplet2.png" />
+
+            <p>When Wikipedia first released this tooltip I was kind of against the idea of it. If I want to click a link, I’ll click a link. Why show me a tiny amount of information? But over time, I find myself getting a lot of value out of the snapshot of information contained in the tooltip. I also didn’t like how “rich” the tooltips were, with images and interactivity. How my tune has changed!</p>
+            <br>
+
+            <h3>Here’s an interactive example:</h3>
+            <br>
+            
+            <div style="margin: 0 auto;">The virus is spread primarily via
+            <div class="tooltip">small droplets
+                <span class="tooltiptext">
+                    <img style="width: 300px;" src="droplet.png" />
+                    <p style="padding: 10px 20px; color: unset; font-size: 15px;">A respiratory droplet is a small aqueous droplet produced by exhalation, consisting of
+
+                        <span class="tooltip3">saliva
+
+                            <span class="tooltiptext3">
+
+                                <img style="display: block; width: 320px;" src="saliva.jpg" />
+
+                                <span style="display: block; padding: 20px 20px;"><b>Saliva</b> (commonly referred to as <b>spit</b>) is an extracellular fluid produced and secreted by salivary glands in the mouth. In humans, saliva is 99.5⁠% water plus electrolytes, mucus, white blood cells, epithelial cells (from which DNA can be extracted), enzymes (such as amylase and lipase), antimicrobial agents such as secretory IgA, and lysozymes.</span>
+                                
+                                
+                            </span>
+                        </span>
+
+                        or mucus and other matter derived from
+
+                        <span class="tooltip2">respiratory tract
+
+                            <span style="display: flex; align-items: center;" class="tooltiptext2">
+
+                                <span style="display: inline-block; padding: 20px 20px; width: 230px;">The <b>respiratory tract</b> is the subdivision of the respiratory system involved with the process of respiration in mammals. The respiratory tract is lined with respiratory mucosa or respiratory epithelium.</span>
+                                
+                                <img style="display: inline-block; height: 240px; border-left: 1px solid #ddd;" src="tract.svg" />
+                                
+                            </span>
+                        </span>
+                        
+                        surfaces. Droplet sizes range from <5 µm to 1000 µm. Large droplets fall to the ground or another surface before drying, but smaller ones fall slowly and dry so quickly...
+                </span>
+                    </p>
+                    
+            </div>
+            from coughing, sneezing, and talking. The droplets are usually not airborne, however those standing in close proximity may inhale them and become infected. People may also become infected by touching a contaminated surface and then touching their face. The transmission may also occur through aerosols that can stay suspended in the air for longer periods of time in enclosed spaces. It is most contagious during the first three days after the onset of symptoms, although spread is possible before symptoms appear, and from people who are asymptomatic.
+            </div>
+
+            <br><br><br>
+
+            <p>Did you find it intuitive?</p>
+
+            <p>Bear in mind this is a quick HTML/CSS example that I put together in 5 mins, so it’s rough around the edges.</p>
+
+            <p>Something I found intuitive was when you hover on the first tooltip, you don’t move your cursor. Then when you find a piece of information you want to learn more about, you’ll hover over that. It might overlap the first tooltip, but that’s fine. You’ve chosen to seek more information.</p>
+
+            <p>If you, like me, are designing a product that has a blend of simple and complex ideas, nested tooltips could be just the ticket. At Maths Pathway, high school teachers are one of the main personas. While they understand what a Test is, they might not know what our rules are about generating a test for their class. So a tooltip can be a great way to provide that small tidbit of information. Within that tooltip, we might refer to the idea of regeneration. Why not give the teacher a quick explanation? The assumption is that they just read about generation, so they are primed. An example of this could be:</p>
+
+            <h3>EXAMPLE</h3>
+
+            <p>It seems highly logical to have this “knowledge web” built into nested tooltips. Granted, a game like Crusader Kings 3 is highly complex, with many interrelated concepts. There are likely hundreds of different tooltips in Crusader Kings 3, so it makes sense for Paradox to focus on having a great system to explain many new concepts to players. But lots of web products have complexity too.</p>
+
+            <p>Potential issues</p>
+            <ul>
+                <li>Accessibility. Well anything is possible with javascript right? You could possible tab through them to get them working.</li>
+                <li>User experience. It can be frustrating to move your cursor 1 pixel outside of the bounds of the element which removes the tooltip.</li>
+                <li>How deep do you go? The design should have discretion, an infinitely deep tooltip chain wouldn’t make sense. There might be some sweet number here like, 2 or 3 nested tooltips.</li>
+                <li>Touch devices? You could just treat them as tappable elements.</li>
+            </ul>
+
+            
+
+            <br><br>
+            <h4>Leave a comment :)</h4>
+            <br>
+            <div id="fastcomments-widget"></div>
+        </div>
+    </div>
+
+    <br><br><br><br><br>
+
+</body>
+<script>
+
+ window.FastCommentsUI(document.getElementById('fastcomments-widget'), {
+     tenantId: 'lb8_Jei4q'
+ });
+
+ //this is my ga tracking code. there are many others like it, but this one is mine 👋
+ (function(i, s, o, g, r, a, m) {
+     i['GoogleAnalyticsObject'] = r;
+     i[r] = i[r] || function() {
+         (i[r].q = i[r].q || []).push(arguments)
+     }, i[r].l = 1 * new Date();
+     a = s.createElement(o),
+     m = s.getElementsByTagName(o)[0];
+     a.async = 1;
+     a.src = g;
+     m.parentNode.insertBefore(a, m)
+ })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+ ga('create', 'UA-54702241-1', 'auto');
+ ga('send', 'pageview');
+
+</script>
+</html>
