@@ -23,6 +23,23 @@ html, body {
     opacity: .9;
 }
 
+.nz h2 {
+    color: wheat;
+}
+
+.nz h3 {
+    color: wheat;
+    opacity: .7;
+}
+
+.nz p, li {
+    opacity: .9;
+}
+
+hr {
+    margin: 4rem 0;
+}
+
 main {
     max-width: 960px;
     margin: 0 auto;
@@ -74,7 +91,9 @@ main {
 
 figcaption {
     text-align: center;
-    margin-top: .5rem;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    opacity: .8;
 }
 
 nav {
@@ -140,11 +159,20 @@ code pre {
 
 img {
     max-width: 100%;
-    border-radius: .5rem;
+    border-radius: .25rem;
 }
 
 .name-title {
     font-size: 6rem;
+    margin-top: -1rem;
+}
+
+.name-subheading1 {
+    padding-top: 1rem;
+}
+
+.name-subheading2 {
+    opacity: .8;
 }
 
 .home-box {
