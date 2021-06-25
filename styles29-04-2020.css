@@ -1,12 +1,26 @@
 * {
     -webkit-font-smoothing: antialiased;
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Poppins', serif;
 }
 
 html, body {
-    background: #fff;
+    background: #111;
     margin: 0 auto;
     padding: 0;
+    color: white;
+}
+
+.mp h2 {
+    color: #8790ff;
+}
+
+.mp h3 {
+    color: #8790ff;
+    opacity: .7;
+}
+
+.mp p, li {
+    opacity: .9;
 }
 
 main {
@@ -16,9 +30,8 @@ main {
 }
 
 .top-section {
-    height: 70vh;
-    display: flex;
-    align-items: center;
+    height: 40vh;
+    padding-top: 4rem;
 }
 
 .top-section img {
@@ -61,7 +74,6 @@ main {
 
 figcaption {
     text-align: center;
-    color: #777;
     margin-top: .5rem;
 }
 
@@ -106,7 +118,6 @@ h3 {
 
 p {
     font-size: 1.5rem;
-    color: #0f1021;
 }
 
 ul li {
