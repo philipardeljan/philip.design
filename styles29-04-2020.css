@@ -1,11 +1,10 @@
 * {
     -webkit-font-smoothing: antialiased;
-    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-    line-height: 1.2;
+    font-family: 'Cormorant Garamond', serif;
 }
 
 html, body {
-    background: #f7f7f7;
+    background: #fff;
     margin: 0 auto;
     padding: 0;
 }
@@ -14,6 +13,16 @@ main {
     max-width: 960px;
     margin: 0 auto;
     padding: 0 2rem;
+}
+
+.top-section {
+    height: 70vh;
+    display: flex;
+    align-items: center;
+}
+
+.top-section img {
+
 }
 
 .home-wrapper {
@@ -52,8 +61,7 @@ main {
 
 figcaption {
     text-align: center;
-    color: #999;
-    font-size: 90%;
+    color: #777;
     margin-top: .5rem;
 }
 
@@ -81,39 +89,32 @@ nav a {
 }
 
 h1 {
-    font-size: 2.5rem;
-    margin: 1rem 0;
+    font-size: 4rem;
+    font-weight: 700;
+    margin: 0;
 }
 
 h2 {
+    font-size: 3rem;
     margin: 0;
-    font-size: 200%;
 }
 
 h3 {
-    opacity: .8;
-}
-
-h4 {
+    font-size: 2rem;
     margin: 0;
 }
 
-h5 {
-    margin-bottom: 0;
-}
-
 p {
-    font-size: 18px;
-    margin-top: .25rem;
+    font-size: 1.5rem;
+    color: #0f1021;
 }
 
 ul li {
-    font-size: 18px;
     padding: .25rem;
 }
 
-ol li {
-    font-size: 18px;
+li {
+    font-size: 1.5rem;
     padding: .25rem;
 }
 
@@ -128,15 +129,17 @@ code pre {
 
 img {
     max-width: 100%;
-    border-radius: 2px;
+    border-radius: .5rem;
+}
+
+.name-title {
+    font-size: 6rem;
 }
 
 .home-box {
     width: 100%;
-    text-align: center;
     margin: 1rem 0;
     padding: 1rem;
-    background: #f5f5f5;
     border-radius: 2px;
 }
 
