@@ -14,12 +14,31 @@
     <script src="splide.min.js"></script>
 
     <script>
-     document.addEventListener( 'DOMContentLoaded', function () {
-	 new Splide( '.splide' ).mount();
-     } );
+
     </script>
 
-    </head>
+    <style>
+
+     .height {
+         height: 700px;
+     }
+
+     .splide__arrows {
+         display: none;
+     }
+
+     .splide--nav>.splide__track>.splide__list>.splide__slide {
+         border-radius: .5rem;
+     }
+
+
+     .splide--nav>.splide__track>.splide__list>.splide__slide.is-active {
+         border-color: gold;
+     }
+     
+    </style>
+
+</head>
 <body>
 
     <main>
@@ -82,14 +101,14 @@
                 <div id="primary-slider" class="splide">
 	            <div class="splide__track">
 		        <ul class="splide__list">
-			    <li class="splide__slide">
+			    <li class="splide__slide height">
                                 <img src="mp2.jpg" />
                             </li>
-			    <li class="splide__slide">
-                                <img src="mp2.jpg" />
+			    <li class="splide__slide height">
+                                <img src="pf1.png" />
                             </li>
-			    <li class="splide__slide">
-                                <img src="mp2.jpg" />
+			    <li class="splide__slide height">
+                                <img src="ti2.png" />
                             </li>
 		        </ul>
 	            </div>
@@ -102,10 +121,10 @@
                                 <img src="mp2.jpg" />
                             </li>
 			    <li class="splide__slide">
-                                <img src="mp2.jpg" />
+                                <img src="pf1.png" />
                             </li>
 			    <li class="splide__slide">
-                                <img src="mp2.jpg" />
+                                <img src="ti2.png" />
                             </li>
 		        </ul>
 	            </div>
@@ -280,6 +299,10 @@
 
 <script>
 
+ document.addEventListener( 'DOMContentLoaded', function () {
+     new Splide( '.splide' ).mount();
+ } );
+
  // Create and mount the thumbnails slider.
  var secondarySlider = new Splide( '#secondary-slider', {
      rewind      : true,
@@ -287,7 +310,7 @@
      fixedHeight : 64,
      isNavigation: true,
      gap         : 10,
-     focus       : 'center',
+     focus       : 'left',
      pagination  : false,
      cover       : true,
      breakpoints : {
