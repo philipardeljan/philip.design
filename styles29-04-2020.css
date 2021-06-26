@@ -68,6 +68,12 @@ main {
     padding: 0 2rem;
 }
 
+.not-so-main {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
 .top-section {
     height: 40vh;
     padding-top: 4rem;

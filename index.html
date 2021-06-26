@@ -9,33 +9,20 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="splide.min.css">
-
-    <script src="splide.min.js"></script>
-
-    <script>
-
-    </script>
-
+    
     <style>
+     .keen-slider{cursor: grab; display:flex;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-webkit-touch-callout:none;-khtml-user-select:none;touch-action:pan-y;-webkit-tap-highlight-color:transparent}.keen-slider,.keen-slider__slide{overflow:hidden;position:relative}.keen-slider__slide{min-width:100%;min-height:100%}.keen-slider[data-keen-slider-v]{flex-wrap:wrap}.keen-slider[data-keen-slider-v] .keen-slider__slide{width:100%}.keen-slider[data-keen-slider-moves] *{pointer-events:none}
+     .keen-slider:active {cursor: grabbing;}
 
-     .height {
-         height: 700px;
+     .swipe-indicator {
+         animation: moving 3s infinite;
      }
 
-     .splide__arrows {
-         display: none;
+     @keyframes moving {
+         50% {
+             transform: translate3d(-10px, 0px, 0);
+         }
      }
-
-     .splide--nav>.splide__track>.splide__list>.splide__slide {
-         border-radius: .5rem;
-     }
-
-
-     .splide--nav>.splide__track>.splide__list>.splide__slide.is-active {
-         border-color: gold;
-     }
-     
     </style>
 
 </head>
@@ -98,39 +85,26 @@
 
                 <p>Soon after starting at Maths Pathway, I was tasked with redesigning the student experience. As the first designer, there was a lot of design work to do. Working closely with internal stakeholders and conducting user research workshops, an initial prototype was designed and then developed over the course of several months.</p>
 
-                <div id="primary-slider" class="splide">
-	            <div class="splide__track">
-		        <ul class="splide__list">
-			    <li class="splide__slide height">
-                                <img src="mp2.jpg" />
-                            </li>
-			    <li class="splide__slide height">
-                                <img src="pf1.png" />
-                            </li>
-			    <li class="splide__slide height">
-                                <img src="ti2.png" />
-                            </li>
-		        </ul>
-	            </div>
+    </main>
+
+    <div class="not-so-main">
+
+                <div id="my-keen-slider" class="keen-slider">
+                    <div class="keen-slider__slide number-slide1">
+                        <img src="mp2.jpg" />
+                    </div>
+                    <div class="keen-slider__slide number-slide2">
+                        <img src="mp3.jpg" />
+                    </div>
+                    <div class="keen-slider__slide number-slide3">
+                        <img src="mp4.jpg" />
+                    </div>
                 </div>
+    </div>
+
+                <main>
                 
-                <div id="secondary-slider" class="splide">
-	            <div class="splide__track">
-		        <ul class="splide__list">
-			    <li class="splide__slide">
-                                <img src="mp2.jpg" />
-                            </li>
-			    <li class="splide__slide">
-                                <img src="pf1.png" />
-                            </li>
-			    <li class="splide__slide">
-                                <img src="ti2.png" />
-                            </li>
-		        </ul>
-	            </div>
-                </div>
-                
-                <figcaption>A user workshop. We spent a Saturday brainstorming ideas for a new curriculum visualisation for students.</figcaption>
+                <figcaption class="swipe-indicator">Drag for more</figcaption>
 
                 <p>Throughout this time, ongoing improvements were delivered to the teacher experience, new data reports, improved UX and refined visuals.</p>
 
@@ -277,6 +251,11 @@
 
     <br><br><br><br>
 
+    <script src="keen-slider.min.js"></script>
+    <script>
+     var slider = new KeenSlider("#my-keen-slider", { loop: true })
+    </script>
+    
 </body>
 <script>
 
@@ -295,44 +274,6 @@
  ga('create', 'UA-54702241-1', 'auto');
  ga('send', 'pageview');
 
-</script>
-
-<script>
-
- document.addEventListener( 'DOMContentLoaded', function () {
-     new Splide( '.splide' ).mount();
- } );
-
- // Create and mount the thumbnails slider.
- var secondarySlider = new Splide( '#secondary-slider', {
-     rewind      : true,
-     fixedWidth  : 100,
-     fixedHeight : 64,
-     isNavigation: true,
-     gap         : 10,
-     focus       : 'left',
-     pagination  : false,
-     cover       : true,
-     breakpoints : {
-	 '600': {
-	     fixedWidth  : 66,
-	     fixedHeight : 40,
-	 }
-     }
- } ).mount();
-
- // Create the main slider.
- var primarySlider = new Splide( '#primary-slider', {
-     type       : 'fade',
-     heightRatio: 0.5,
-     pagination : false,
-     arrows     : false,
-     cover      : true,
- } );
-
- // Set the thumbnails slider as a sync target and then call mount.
- primarySlider.sync( secondarySlider ).mount();
- 
 </script>
 
 </html>
