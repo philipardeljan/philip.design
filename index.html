@@ -9,8 +9,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="splide.min.css">
 
-</head>
+    <script src="splide.min.js"></script>
+
+    <script>
+     document.addEventListener( 'DOMContentLoaded', function () {
+	 new Splide( '.splide' ).mount();
+     } );
+    </script>
+
+    </head>
 <body>
 
     <main>
@@ -70,7 +79,38 @@
 
                 <p>Soon after starting at Maths Pathway, I was tasked with redesigning the student experience. As the first designer, there was a lot of design work to do. Working closely with internal stakeholders and conducting user research workshops, an initial prototype was designed and then developed over the course of several months.</p>
 
-                <img src="mp2.jpg" />
+                <div id="primary-slider" class="splide">
+	            <div class="splide__track">
+		        <ul class="splide__list">
+			    <li class="splide__slide">
+                                <img src="mp2.jpg" />
+                            </li>
+			    <li class="splide__slide">
+                                <img src="mp2.jpg" />
+                            </li>
+			    <li class="splide__slide">
+                                <img src="mp2.jpg" />
+                            </li>
+		        </ul>
+	            </div>
+                </div>
+                
+                <div id="secondary-slider" class="splide">
+	            <div class="splide__track">
+		        <ul class="splide__list">
+			    <li class="splide__slide">
+                                <img src="mp2.jpg" />
+                            </li>
+			    <li class="splide__slide">
+                                <img src="mp2.jpg" />
+                            </li>
+			    <li class="splide__slide">
+                                <img src="mp2.jpg" />
+                            </li>
+		        </ul>
+	            </div>
+                </div>
+                
                 <figcaption>A user workshop. We spent a Saturday brainstorming ideas for a new curriculum visualisation for students.</figcaption>
 
                 <p>Throughout this time, ongoing improvements were delivered to the teacher experience, new data reports, improved UX and refined visuals.</p>
@@ -237,4 +277,39 @@
  ga('send', 'pageview');
 
 </script>
+
+<script>
+
+ // Create and mount the thumbnails slider.
+ var secondarySlider = new Splide( '#secondary-slider', {
+     rewind      : true,
+     fixedWidth  : 100,
+     fixedHeight : 64,
+     isNavigation: true,
+     gap         : 10,
+     focus       : 'center',
+     pagination  : false,
+     cover       : true,
+     breakpoints : {
+	 '600': {
+	     fixedWidth  : 66,
+	     fixedHeight : 40,
+	 }
+     }
+ } ).mount();
+
+ // Create the main slider.
+ var primarySlider = new Splide( '#primary-slider', {
+     type       : 'fade',
+     heightRatio: 0.5,
+     pagination : false,
+     arrows     : false,
+     cover      : true,
+ } );
+
+ // Set the thumbnails slider as a sync target and then call mount.
+ primarySlider.sync( secondarySlider ).mount();
+ 
+</script>
+
 </html>
