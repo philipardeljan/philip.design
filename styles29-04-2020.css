@@ -75,8 +75,8 @@ main {
 }
 
 .top-section {
-    height: 40vh;
-    padding-top: 4rem;
+    height: 50vh;
+    padding-top: 6rem;
 }
 
 .top-section img {
@@ -121,7 +121,6 @@ figcaption {
     text-align: center;
     padding-top: .5rem;
     padding-bottom: .5rem;
-    opacity: .8;
 }
 
 nav {
@@ -253,4 +252,12 @@ img {
     right: 0;
     margin: 0 auto;
     width: 200px;
+    transform: scale3d(1, 1, 1);
+    transition: 200ms;
+}
+
+.bottom-box:hover img {
+    transform: scale3d(1.1, 1.1, 1);
+    transform-origin: 50% 50%;
+    transition: 200ms;
 }
