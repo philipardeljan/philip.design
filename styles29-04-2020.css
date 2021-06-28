@@ -79,10 +79,6 @@ main {
     padding-top: 6rem;
 }
 
-.top-section img {
-
-}
-
 .home-wrapper {
     display: flex;
     max-width: 960px;
@@ -259,4 +255,36 @@ img {
     transform: scale3d(1.1, 1.1, 1);
     transform-origin: 50% 50%;
     transition: 200ms;
+}
+
+@media (max-width: 1090px) {
+    .remove-mobile {
+        display: none;
+    }
+
+    .show-mobile {
+        display: block!important;
+    }
+
+    .top-section {
+        height: 70vh;
+        padding-top: 3rem;
+    }
+
+    .name-title {
+        font-size: 5.5rem;
+        margin-top: -1rem;
+        margin-bottom: -2rem;
+        color: gold;
+        line-height: 1;
+    }
+
+    .name-subheading1 {
+        padding-bottom: 1rem;
+    }
+
+    .name-subheading2 {
+        padding-top: 1rem;
+        line-height: 1.1;
+    }
 }
