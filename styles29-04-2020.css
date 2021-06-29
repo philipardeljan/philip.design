@@ -8,6 +8,7 @@ html, body {
     margin: 0 auto;
     padding: 0;
     color: white;
+    overflow-x: hidden;
 }
 
 .mp h2 {
@@ -247,6 +248,10 @@ img {
 }
 
 @media (max-width: 1090px) {
+    main {
+        padding: 1rem;
+    }
+    
     .remove-mobile {
         display: none;
     }
@@ -261,7 +266,7 @@ img {
     }
 
     .name-title {
-        font-size: 5.5rem;
+        font-size: 4rem;
         margin-top: -1rem;
         margin-bottom: -2rem;
         color: gold;
@@ -270,10 +275,28 @@ img {
 
     .name-subheading1 {
         padding-bottom: 1rem;
+        font-size: 1.5rem;
     }
 
     .name-subheading2 {
         padding-top: 1rem;
         line-height: 1.1;
+        font-size: 1.5rem;
+    }
+
+    p, li {
+        font-size: 1.25rem;
+    }
+
+    h2 {
+        line-height: 1.15;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    figcaption {
+        font-size: .75rem;
     }
 }
