@@ -37,6 +37,19 @@ html, body {
     opacity: .9;
 }
 
+.tcg h2 {
+    color: #F1C01C;
+}
+
+.tcg h3 {
+    color: #F1C01C;
+    opacity: .8;
+}
+
+.tcg p, li {
+    opacity: .9;
+}
+
 .saasu h2 {
     color: #f7a181;
 }
