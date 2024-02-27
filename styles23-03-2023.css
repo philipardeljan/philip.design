@@ -11,6 +11,11 @@ html, body {
     overflow-x: hidden;
 }
 
+.history-wrapper {
+    display: flex;
+    align-items: center;
+}
+
 .mp h2 {
     color: #8790ff;
 }
@@ -89,8 +94,8 @@ main {
 }
 
 .top-section {
-    height: 50vh;
-    padding-top: 6rem;
+    height: 45vh;
+    padding-top: 4rem;
 }
 
 .home-wrapper {
