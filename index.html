@@ -1,422 +1,513 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html lang="en">
+    <head>
+        <script>
+         //this is my ga tracking code. there are many others like it, but this one is mine 👋
+         (function(i, s, o, g, r, a, m) {
+             i['GoogleAnalyticsObject'] = r;
+             i[r] = i[r] || function() {
+                 (i[r].q = i[r].q || []).push(arguments)
+             }, i[r].l = 1 * new Date();
+             a = s.createElement(o),
+             m = s.getElementsByTagName(o)[0];
+             a.async = 1;
+             a.src = g;
+             m.parentNode.insertBefore(a, m)
+         })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+         ga('create', 'UA-54702241-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+        
+        <!--Hello friend-->
+        <link rel="shortcut icon" href="favicon.ico">
+        <title>Philip Ardeljan is a product designer</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+        <meta charset="UTF-8">
+        <title>Philip Ardeljan is a product designer</title>
+        
+        <style>
 
-    <script>
+         * {
+             -webkit-font-smoothing: antialiased;
+         }
+         
+         body {
+             font-family: "Inter", serif;
+             margin: 0;
+             padding: 0;
+             background: #111;
+             font-size: 14px;
+             color: #999;
+             overflow-x: hidden;
+         }
 
-     //this is my ga tracking code. there are many others like it, but this one is mine 👋
-     (function(i, s, o, g, r, a, m) {
-         i['GoogleAnalyticsObject'] = r;
-         i[r] = i[r] || function() {
-             (i[r].q = i[r].q || []).push(arguments)
-         }, i[r].l = 1 * new Date();
-         a = s.createElement(o),
-         m = s.getElementsByTagName(o)[0];
-         a.async = 1;
-         a.src = g;
-         m.parentNode.insertBefore(a, m)
-     })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-     ga('create', 'UA-54702241-1', 'auto');
-     ga('send', 'pageview');
+         h4 {
+             color: #fff;
+             font-weight: bold;
+             margin-bottom: 0;
+         }
 
-    </script>
-    
-    <!--Hello friend-->
-    <link rel="stylesheet" type="text/css" href="styles23-03-2023.css">
-    <link rel="shortcut icon" href="favicon.ico">
-    <title>Philip Ardeljan is a product designer</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+         button {
+             background: #111;
+             color: #fff;
+             border: 1px solid #ccc;
+             border-radius: 40px;
+             padding: .75rem 1rem;
+             font-size: 14px;
+             cursor: pointer;
+         }
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-    
-</head>
-<body>
+         .button {
+             background: #111;
+             color: #fff;
+             border: 1px solid #ccc;
+             border-radius: 40px;
+             padding: .75rem 1rem;
+             font-size: 14px;
+             cursor: pointer;
+         }
 
-    <main>
+         .wrapper {
+             max-width: 500px;
+             margin: 0 auto;
+             padding: 0 2rem;
+         }
 
-        <div class="top-section">
-            
-            <a style="text-decoration: none; color: unset;" href="/">
+         .footer-wrapper {
+             max-width: 600px;
+             margin: 0 auto;
+         }
+
+         .footer-wrapper h4 {
+             margin: 0;
+         }
+
+         .footer-wrapper p {
+             margin: .5rem auto 1.5rem;
+         }
+
+         .header-wrapper {
+             display: flex;
+             align-items: center;
+             padding-top: 4rem;
+         }
+
+         .main-heading {
+             color: #fff;
+             font-size: 24px;
+             font-weight: bold;
+             margin-bottom: 0;
+         }
+
+         .subheading {
+             margin-top: .25rem;
+         }
+
+         .profile-image {
+             border-radius: 100%;
+             width: 80px;
+             margin-right: 1rem;
+         }
+
+         .status-button {
+             display: flex;
+             background: #62CD6D;
+             border-radius: 40px;
+             padding: .5rem 1rem;
+             margin-left: 2rem;
+             filter: drop-shadow(0px 0px 10px rgba(98, 205, 109, .5));
+         }
+
+         .dot {
+             margin-right: .25rem;
+         }
+
+         .status-text {
+             color: #111;
+             font-size: 12px;
+         }
+
+         .recommendation-heading {
+             display: flex;
+             align-items: center;
+             margin-top: 3rem;
+             margin-bottom: 1rem;
+         }
+
+         .recommendation-heading h4 {
+             margin-top: 0;
+             margin-bottom: 0;
+             margin-left: .5rem;
+         }
+
+         .recommendation-box {
+             background: #000;
+             padding: 1rem 2rem;
+             margin-bottom: 1rem;
+             border-radius: 20px;
+             color: #fff;
+         }
+
+         .recommendation-box div {
+             display: flex;
+             align-items: center;
+             padding: .5rem 0;
+         }
+
+         .recommendation-box p {
+             margin-bottom: 0;
+         }
+
+         .recommendation-box h4 {
+             font-weight: normal;
+             margin: 0;
+         }
+
+         .recommendation-box div p {
+             color: #999;
+             margin: 0;
+         }
+
+         .recommendation-box div img {
+             width: 32px;
+             margin-right: .5rem;
+         }
+
+         .career-heading {
+             display: flex;
+             align-items: center;
+             margin-top: 3rem;
+             margin-bottom: 1rem;
+         }
+
+         .career-heading h4 {
+             margin-top: 0;
+             margin-bottom: 0;
+             margin-left: .5rem;
+         }
+
+         .career-box {
+             background: #000;
+             padding: 2rem;
+             margin-bottom: 1rem;
+             border-radius: 20px;
+             color: #fff;
+         }
+
+         .career-box h4 {
+             font-weight: normal;
+             margin: 0;
+         }
+
+         .career-box div p {
+             color: #999;
+             margin: 0;
+         }
+
+         .career-box div img {
+             width: 32px;
+             margin-right: .5rem;
+         }         
+
+         .position {
+             display: flex;
+             margin-top: 2rem;
+         }
+
+         .tenure.tenure {
+             margin-top: auto;
+             margin-left: auto;
+         }
+
+         .showcase-heading {
+             display: flex;
+             align-items: center;
+             justify-content: center;
+             margin-top: 4rem;
+         }
+
+         .showcase-heading h4 {
+             margin-top: 0;
+             margin-bottom: 0;
+             margin-left: .5rem;
+         }
+
+         .footer {
+             border-top: 1px solid #333;
+             background: #000;
+             padding: 3rem 0 4.5rem;
+             margin-top: 4rem;
+         }
+         
+         .carousel-container {
+             width: 100%;
+             overflow: hidden;
+             position: relative;
+         }
+         .carousel {
+             display: flex;
+             width: max-content; /* Allows content to exceed container width */
+         }
+         .carousel-item {
+             margin-right: 40px;
+             text-align: center;
+             font-size: 20px;
+             border-radius: 10px;
+             color: #333;
+         }
+
+         .size {
+             max-width: 777px;
+             max-height: 486px;
+         }
+
+         .block.block {
+             display: block;
+         }
+
+         .flex.flex {
+             display: flex;
+         }
+
+         @media (max-width: 700px) {
+             .footer-wrapper {
+                 padding: 0 2rem;
+             }
+             
+             .footer-mobile {
+                 display: flex;
+                 flex-direction: column;
+                 align-items: flex-start;
+             }
+             .footer-mobile a {
+                 margin-bottom: .5rem;
+             }
+         }
+         
+        </style>
+    </head>
+    <body>
+
+        <div class="wrapper">
+            <div class="header-wrapper">
+                <img class="profile-image" src="profile.jpg" />
                 <div>
-                    <h3 class="name-subheading1">The portfolio of</h3>
-                    <h1 class="name-title">Philip Ardeljan</h1>
-                    <br>
-                    <h2 class="name-subheading2">a product designer.</h2>
+                    <h3 class="main-heading">Philip Ardeljan</h3>
+                    <p class="subheading">Product Designer · UI/UX Designer</p>
                 </div>
-            </a>
+                <div class="status-button">
+                    <img class="dot" src="dot.svg" />
+                    <span class="status-text">Available</span>
+                </div>
+            </div>
+
+            <div>
+                <h4>About me</h4>
+                <p>I am a Product Designer with 10 years of experience. I enjoy finding elegant solutions to complex problems and have a focus on human centred design.</p>
+
+                <p>I use my excellent communication skills to seek critical feedback and to design the best possible user experience within all constraints.</p>
+            </div>
+
+            <div>
+                <h4>Core competencies</h4>
+                <p>User interface design, product design, agile product development, prototyping, web & mobile (iOS) design, ideation, product vision development, user research & validation.</p>
+            </div>
+
+            <div>
+                <h4>Tools I use</h4>
+                <p>Figma, HTML/CSS, SVG, git, Bootstrap, Sketch, Photoshop, Illustrator, Tachyons, Terminal, emacs, GitHub, Trello, Excel, Google Docs/Sheets.</p>
+            </div>
+
+            <br>
+            <a href="Philip Ardeljan Product Designer Resume.pdf" download><button>Download CV (PDF)</button></a>
+
+            <div class="recommendation-heading">
+                <img src="star.svg" />
+                <h4>Recommendations</h4>
+            </div>
+
+            <div class="recommendation-box">
+                <p>As the first designer hired by Maths Pathway, Philip has taken our products to a whole new level. In his time with us, Philip grew from a good UI designer into a great UI and UX designer, with flexible Business Analyst skills. With a consistently friendly tone and open communication, Philip works very well with engineers, scrum masters, product owners and customer-facing staff. When laying out the vision for a feature or epic, it is always worth arming Philip with the business objectives and user attributes. This is because Philip is equally capable of two things: bringing another person's vision to life faithfully; and taking the seed of the initial idea and coming back with a much better alternative. I highly recommend Philip.</p>
+                <div>
+                    <img src="justin.png" />
+                    <div class="block">
+                        <h4>Justin</h4>
+                        <p>Co-founder</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="recommendation-box">
+                <p>Philip is an exceptional Product Designer with a keen eye for detail and a deep understanding of user-centric design. His ability to seamlessly blend research, UX, and UI ensures intuitive and impactful solutions. A strong collaborator and problem-solver, Philip consistently delivers high-quality designs that align with both user needs and business objectives.</p>
+                <div>
+                    <img src="sean.png" />
+                    <div class="block">
+                        <h4>Sean</h4>
+                        <p>CTO</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="recommendation-box">
+                <p>I’ve worked with Philip for 7 years and I can say that he is without doubt the best Product designer I’ve ever worked with. I’ve been amazed at his attention to detail and his continued focus on making sure the end user has the best possible experience. He’s also shown an incredible flexibility to work in areas beyond the normal scope of his job description. While his specialty is design he's also capable of writing technical specifications that software engineers can easily pick up and deliver, as well as contributing to the codebase directly. He would be a great asset to any team.</p>
+                <div>
+                    <img src="stephen.png" />
+                    <div class="block">
+                        <h4>Stephen</h4>
+                        <p>Full stack engineer</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="recommendation-box">
+                <p>As an engineer, working with Philip has been amazing. He understands the need to balance technical complexity with business goals. Philip has been able to help me as a software engineer to solve complex CSS challenges as well.</p>
+                <div>
+                    <img src="komal.png" />
+                    <div class="block">
+                        <h4>Komal</h4>
+                        <p>Software engineer</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="recommendation-box">
+                <p>Philip excels in creating user-focused, visually compelling designs. His expertise in UX and UI, combined with strong research skills and collaborative spirit, ensures innovative solutions that drive business success and enhance user experiences.</p>
+                <div>
+                    <img src="richard.png" />
+                    <div class="block">
+                        <h4>Richard</h4>
+                        <p>Co-founder</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="recommendation-box">
+                <p>Philip is a talented product designer that I’ve worked with for 7 years. He combines innovative thinking with practical solutions, delivering designs that are both beautiful and functional. His focus on ensuring that all solutions meet the needs of the end user has been invaluable and has delivered excellent results. Philip’s collaborative nature and attention to detail make him an invaluable asset. He creates engaging and intuitive experiences for the user and I highly recommend him for any opportunity.</p>
+                <div>
+                    <img src="dylan.png" />
+                    <div class="block">
+                        <h4>Dylan</h4>
+                        <p>Software engineer</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="recommendation-box">
+                <p>Philip is an exceptional product designer with a keen eye for detail and innovative solutions. His user-centric approach consistently delivers outstanding results, blending aesthetics with functionality. A collaborative professional, Philip excels at turning complex ideas into elegant, impactful designs.</p>
+                <div>
+                    <img src="geoff.png" />
+                    <div class="block">
+                        <h4>Geoff</h4>
+                        <p>Software engineer</p>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+            <div class="career-heading">
+                <img src="laptop.svg" />
+                <h4>Career</h4>
+            </div>
+
+            <div class="career-box">
+                <img style="max-height: 72px;" src="mp-logo2.svg" />
+                <div class="position">
+                    <br>
+                    <div class="block">
+                        <h4>Maths Pathway</h4>
+                        <p>Product Designer</p>
+                    </div>
+                    <p class="tenure">Mar 2017 – Present</p>
+                </div>
+            </div>
+
+            <div class="career-box">
+                <img style="max-height: 50px; margin: 1.25rem 0;" src="tcgfish-logo.png" />
+                <div class="position">
+                    <br>
+                    <div class="block">
+                        <h4>TCGFish</h4>
+                        <p>Web Designer</p>
+                    </div>
+                    <p class="tenure">Sep 2022 – May 2023</p>
+                </div>
+            </div>
+
+            <div class="career-box">
+                <br>
+                <img style="max-height: 25px; margin: 1.25rem 0;" src="nzx-logo.png" />
+                <br>
+                <div class="position">
+                    <br>
+                    <div class="block">
+                        <h4>New Zealand Stock Exchange</h4>
+                        <p>UI/UX Designer</p>
+                    </div>
+                    <p class="tenure">Jun 2015 – Dec 2016</p>
+                </div>
+            </div>
+
+            <div class="career-box">
+                <img style="max-height: 62px; margin: .5rem 0;" src="saasu-logo.png" />
+                <div class="position">
+                    <br>
+                    <div class="block">
+                        <h4>Saasu</h4>
+                        <p>UI/UX Designer</p>
+                    </div>
+                    <p class="tenure">Oct 2013 – May 2015</p>
+                </div>
+            </div>
+
+            <div class="career-box">
+                <img style="max-height: 80px; margin: .5rem 0;" src="loaf-logo.png" />
+                <div class="position">
+                    <br>
+                    <div class="block">
+                        <h4>Loaf</h4>
+                        <p>Personal side project</p>
+                    </div>
+                    <p class="tenure">Jan 2020 – Present</p>
+                </div>
+            </div>
             
         </div>
 
-        <br><br><br><br><br><br><br>
+        <div class="showcase-heading">
+            <img src="showcase.svg" />
+            <h4>Showcase</h4>
+        </div>
 
-        <div class="mp">
-            <div class="home-box history-wrapper">
-                <img style="width: 80px; padding-right: 1rem; margin: .5rem; transform: scale(.8);" src="mp-logo2.svg" />
-                <span><h3>Maths Pathway</h3> UI Designer</span>
+        <br><br>
+        <div class="carousel-container">
+            <div class="carousel" id="carousel">
+                <div class="carousel-item"><img class="size" src="1.png"></div>
+                <div class="carousel-item"><img class="size" src="2.png"></div>
+                <div class="carousel-item"><img class="size" src="3.png"></div>
+                <div class="carousel-item"><img class="size" src="4.png"></div>
+                <div class="carousel-item"><img class="size" src="5.png"></div>
+                <div class="carousel-item"><img class="size" src="6.png"></div>
+                <div class="carousel-item"><img class="size" src="7.png"></div>
             </div>
         </div>
+        <br><br>
 
-        <div class="nz">
-            <div class="home-box history-wrapper">
-                <img style="width: 80px; padding-right: 1rem; margin: .5rem;" src="nzx-logo.png" />
-                <span><h3>New Zealand Stock Exchange</h3> UI/UX Designer</span>
-            </div>
-        </div>
-
-        <div class="tcg">
-            <div class="home-box history-wrapper">
-                <img style="width: 80px; padding-right: 1rem; margin: .5rem; transform: scale(.9);" src="tcgfish-logo.png" />
-                <span><h3>TCG Fish</h3> Web Designer</span>
-            </div>
-        </div>
-
-        <div class="saasu">
-            <div class="home-box history-wrapper">
-                <img style="width: 80px; padding-right: 1rem; margin: .5rem; transform: scale(.9);" src="saasu-logo.png" />
-                <span><h3>Saasu</h3> UI/UX Designer</span>
-            </div>
-        </div>
-
-        <div class="loaf">
-            <div class="home-box history-wrapper">
-                <img style="width: 80px; padding-right: 1rem; margin: .5rem;" src="loaf-logo.png" />
-                <span><h3>Loaf</h3> My side project</span>
-            </div>
-        </div>
-        
-        <br><br><br>
-
-        <div class="home-wrapper mp">
-            <div class="home-box">
-                <h2>Maths Pathway</h2>
-
-                <br>
-                <h3>Role summary</h3>
-                <p>I led the redesign of the student web application used by 70,000 primary and high school students. I redesigned the teacher web application and created the framework for the development of future product vision. I helped foster a positive attitude towards product design within the engineering team. I facilitated user feedback workshops and brainstorming sessions. Other activities included specification writing, designing user interfaces, design thinking, bench testing and contributing directly to the codebase by writing production HTML and CSS.</p>
-
-    </main>
-            </div>
-        </div>
-
-        <div class="not-so-main">
-
-            <img src="select-mp-ui-design.png" />
-            <figcaption>As the only designer, I was solely responsible for designing all of the UI.</figcaption>
-            <br><br><br>
-
-        </div>
-
-        <main>
-            <div class="home-wrapper mp">
-                <div class="home-box">
-                    
-                    <br>
-                    <h3>Tools used</h3>
-                    <ul>
-                        <li>Figma, Sketch</li>
-                        <li>HTML/CSS/SVG/git</li>
-                        <li>Photoshop, Illustrator</li>
-                    </ul>
-
-                    <br>
-                    <h3>Key achievements</h3>
-                    <ul>
-                        <li>Redesigned the student app</li>
-                        <li>Redesigned the teacher app</li>
-                    </ul>
-
-                    <br>
-                    <h3>Context</h3>
-                    <p>When I went to high school everyone learned maths the same way. The teacher would start the lesson with: “Everyone turn to chapter 7”. The idea, of all students learning the same content at the same time, is what Maths Pathway is flipping on its head. With Maths Pathway, all students learn the maths that <b>they are ready for.</b> This is enabled by intuitive technology and amazing teachers.</p>
-
-                    <p>All students sit an initial diagnostic to determine what their maths knowledge is. For a year 7 class, some students might be at level 4. Other students might be at level 8. That’s OK. We can’t look back. What we can do is provide students with maths that’ll make the most impact on their learning.</p>
-
-                    <p>Over 300 schools in Australia use this approach to teaching maths. Not only do students work on maths that’s perfectly tailored to their needs, teachers get powerful data tools that improve their teaching practices. Instead of teaching 25 kids the same content, teachers can use accurate data to target their teaching more effectively. Things like mini-lessons are now possible; working with 4-5 students at a time on a given topic.</p>
-
-                    <p>Soon after joining Maths Pathway I was tasked with redesigning the student experience. Working closely with internal stakeholders and conducting user research workshops, an initial prototype was designed and then developed over the course of several months.</p>
-
-                    <!--
-                         <div class="not-so-main">
-
-                         <img src="timeline.png" />
-                         <figcaption>The students timeline using the 'Snow' theme</figcaption>
-                         <br><br><br>
-
-                         <img src="learning-map2.png" />
-                         <figcaption>The Learning Map using the 'Cave' theme</figcaption>
-                         <br>
-
-                         </div>
-                    -->
-
-        </main>
-
-        <div class="not-so-main">
-            <img src="ti2.png" />
-        </div>
-        <figcaption>The redesigned teacher dashboard.</figcaption>
-
-        <main>
-
-            
-            <p>After this project was released another project was already underway: redesigning the teacher experience.</p>
-
-            <p>It was becoming clear that in order for schools to succeed and for students to maximise their potential, all areas of the Maths Pathway model needed to be implemented. This includes Diagnostics, Tests, Feedback, Mini-lessons, Rich Learning and more. As such, we needed to ensure teachers had a firm understanding of all these different components and how they fit into the classroom environment. A new dashboard was designed (along with an overhaul to the global navigation) to help with this.</p>
-
-            <p>This redesigned dashboard provided the right balance of onboarding new users, providing context for existing users as well as supporting power users.</p>
-
-            <p>Maths Pathway is a technology startup based in Melbourne, Australia. <a href="https://mathspathway.com/">Learn more here.</a></p>
-
+        <div class="footer">
+            <div class="footer-wrapper">
+                <h4>Let’s work together!</h4>
+                <p>I’m confident we can build something amazing.</p>
+                <div class="footer-mobile">
+                    <a href="Philip Ardeljan Product Designer Resume.pdf" download><button>Download CV (PDF)</button></a>
+                    <a href="https://dribbble.com/philipardeljan"><button>Dribbble</button></a>
+                    <a href="https://x.com/philipardeljan"><button>X (Twitter)</button></a>
+                    <span class="button" style="cursor: unset;">Email: philip@ardeljan.com</span>
                 </div>
-
-            </div>
-
-            <hr />
-
-            <div class="home-wrapper nz">
-                <div class="home-box">
-                    <h2>New Zealand Stock Exchange</h2>
-
-                    <br>
-                    <h3>Role summary</h3>
-                    <p>I led the redesign of the Profarmer web application, a daily grain pricing service used by thousands of grain farmers and analysts in the Australian grain industry. This work informed my redesign of the Profarmer marketing website and the Profarmer iPhone and iPad applications. I designed the standalone SalesMate iPhone application, a service which helps farmers make decisions on how much of their wheat crop to sell at a given time. I designed the physical booths used by the business for the Australian Grains Industry Conference (AGIC).</p>
-
-                    <br>
-                    <h3>Tools used</h3>
-                    <ul>
-                        <li>Photoshop, InDesign</li>
-                        <li>Sketch</li>
-                    </ul>
-
-                    <br>
-                    <h3>Key achievements</h3>
-                    <ul>
-                        <li>Redesigned the Profarmer web application</li>
-                        <li>Refreshed the Profarmer iPhone application</li>
-                        <li>Refreshed the Profarmer iPad application</li>
-                        <li>Designed the SalesMate iPhone application</li>
-                        <li>Redesigned the Profarmer marketing website</li>
-                    </ul>
-
-                    <br>
-                    <h3>Context</h3>
-                    <p>The New Zealand Stock Exchange (NZX) had an office in St Kilda, Melbourne which worked on building tools for stakeholders in the Australian grain industry. A grain trading platform (Clear) and price discovery tools (Profarmer) were part of this suite of tools.</p>
-
-                    <p>My first project was redesigning the Profarmer price tool. This application was used by thousands of grain farmers and analysts to track the price of Wheat, Barley, Canola and many other grain and cereal products. The redesigned simplified the experience, with a focus on improving price transparency.</p>
-
-        </main>
-
-        <div class="not-so-main">
-            <img src="pf1.png" />
-            <figcaption>The design of the Profarmer site pricing page</figcaption>
-        </div>
-
-        <main>
-
-            <p>The main way to find grain prices is to search for grain storage locations. An onboarding experience was designed and developed which helped users understand how the search feature works. The redesign of the Profarmer web app lead to the redesign of the marketing website and the Profarmer iPhone and iPad applications. I led all of these design efforts.</p>
-
-            <img src="coggo.png" />
-            <figcaption>The SalesMate iPhone application</figcaption>
-            
-            <p>Another project I was involved in was designing the SalesMate iPhone application. This app provides a service which helps farmers make decisions on how much of their wheat crop to sell at a given time. Based on their risk profile and expected yield, a recommendation is made which farmers can use to help guide their decisions.</p>
-
-            <p>Learn more about <a href="https://www.profarmergrain.com.au/">Profarmer here.</a></p>
-
-                </div>
-
-            </div>
-
-            <hr />
-            
-            <div class="home-wrapper tcg">
-                <div class="home-box">
-                    <h2>TCGFish</h2>
-        </main>
-        <div class="not-so-main">
-            <img src="tcg1a.png" />
-            <figcaption>The design of the Card page</figcaption>
-        </div>
-
-        <main class="tcg">
-
-            <br>
-            <h3>Summary</h3>
-            <p>As someone who collected Pokémon cards as a kid, I did some price research and stumbled across TCGFish. After using it I thought it could be improved so I fired up Figma and had some fun improving it. I saw that there was a Discord so I joined and reached out to the owner showing some screenshots of the ideas I had for UI improvements. He really liked them and it evolved naturally from there!</p>
-
-            <p>Collaborating on a product where you already have existing domain knowledge makes such a big difference. Design decisions become so much easier. That was something that became very apparent the more UI designs I created for TCGFish. Assumptions that would ordinarily have to be tested and reviewed became decisions I could make automatically.</p>
-
-            <br>
-            <h3>Tools used</h3>
-            <ul>
-                <li>Figma</li>
-            </ul>
-
-            <br>
-            <h3>Key achievements</h3>
-            <ul>
-                <li>Designed the market cap page</li>
-                <li>Redesigned the card price page</li>
-                <li>Designed the Watchlist for mobile</li>
-            </ul>
-
-        </main>
-
-        <div class="not-so-main">
-            <img src="tcg2.png" />
-            <figcaption>The design of the market cap page</figcaption>
-        </div>
-        <br><br><br>
-
-        <div class="not-so-main">
-            <img style="max-width: 400px; display: flex; margin: 0 auto;" src="tcg5.png" />
-            <br>
-            <figcaption>The design of the market cap page</figcaption>
-        </div>
-
-        <main>
-            <p>Learn more about <a href="https://tcgfish.com/">TCGFish here.</a></p>
-
-                </div>
-
-            </div>
-
-            <hr />
-
-            <div class="home-wrapper saasu">
-                <div class="home-box">
-                    <h2>Saasu</h2>
-
-                    <br>
-                    <h3>Role summary</h3>
-                    <p>I designed new product features, redesigned the marketing website and redesigned the knowledge base. I worked on the internal “Saasu 2023” UI concept. This UI concept helped drive future product development. I created graphics and animations for the website and blog.</p>
-
-                    <br>
-                    <h3>Tools used</h3>
-                    <ul>
-                        <li>Photoshop</li>
-                        <li>HTML, CSS</li>
-                    </ul>
-
-                    <br>
-                    <h3>Key achievements</h3>
-                    <ul>
-                        <li>Designed major new product features</li>
-                        <li>Redesigned the marketing website</li>
-                        <li>Redesigned the help centre</li>
-                        <li>Designed the internal “Saasu 2023” UI concept</li>
-                    </ul>
-
-                    <br>
-                    <h3>Context</h3>
-                    <p>Saasu is online accounting software. This was my first design role and I’m still incredibly grateful for the opportunity I was given to learn on the job. I had a couple of fantastic mentors while in this role which helped shape and inform my design process and aesthetic.</p>
-
-                    <p>My first design project was working on the marketing website. I was involved in the development of the website as well. After I cut my teeth on this I moved onto designing various features for the main web application. I also redesigned and rebuilt the help centre using Wordpress.</p>
-
-                    <img src="saasu1.png" />
-
-                    <p>By far, the most exciting and fulfilling project was working on the internal “Saasu 2023” UI concept. This UI concept (which was undertaken in 2013) made bold predictions about what accounting software might look like 10 years in the future. This UI concept helped drive future product development such as building a global search tool and a cashflow forecasting tool. This general idea of thinking about where an industry and product might be in the long term and backwards planning from there left a strong impression on me and is something that I’ve brought to other roles.</p>
-
-                </div>
-
-            </div>
-
-            <hr />
-
-            <div class="home-wrapper loaf">
-                <div class="home-box">
-                    <h2>Loaf</h2>
-
-                    <a href="https://getloaf.io/">
-                        <img src="loaf-screenshot.png" />
-                    </a>
-                    <br>
-                    <h3>Summary</h3>
-
-                    <p>Loaf (<a href="https://getloaf.io/">getloaf.io</a>) is my side project. It is an Electron.js app that helps web designers and developers integrate animated SVG icons into their workflow. After partnering with an engineer to build the initial prototype, I now maintain this application.</p>
-
-                </div>
-
-            </div>
-
-            <hr />
-
-            <br><br><br><br>
-
-        </main>
-        
-        <div class="not-so-main remove-mobile">
-            <div class="bottom-box-wrapper">
-
-                <a href="/">
-                    <div class="bottom-box">
-                        <img src="files2.png" />
-                        <p>Portfolio</p>
-                    </div>
-                </a>
-
-                <a href="/process">
-                    <div class="bottom-box">
-                        <img src="process2.png" />
-                        <p>Process</p>
-                    </div>
-                </a>
-
-                <a href="/blog">
-                    <div class="bottom-box">
-                        <img src="process.png" />
-                        <p>Blog</p>
-                    </div>
-                </a>
-
-                <a href="https://twitter.com/philipardeljan">
-                    <div class="bottom-box">
-                        <img src="twitter.png" />
-                        <p>X <small>(Twitter)</small></p>
-                    </div>
-                </a>
-                
             </div>
         </div>
 
-        <div style="display: none;" class="not-so-main show-mobile">
-            <div style="display: flex; flex-direction: column; align-items: center;" class="bottom-box-wrapper">
-
-                <a href="/">
-                    <div class="bottom-box">
-                        <p>Portfolio</p>
-                    </div>
-                </a>
-
-                <br>
-
-                <a href="/process">
-                    <div class="bottom-box">
-                        <p>Process</p>
-                    </div>
-                </a>
-
-                <br>
-
-                <a href="/blog">
-                    <div class="bottom-box">
-                        <p>Blog</p>
-                    </div>
-                </a>
-
-                <br>
-
-                <a href="https://twitter.com/philipardeljan">
-                    <div class="bottom-box">
-                        <p>X <small>(Twitter)</small></p>
-                    </div>
-                </a>
-                
-            </div>
-        </div>
-
-        <br><br><br><br>
-
-</body>
-
+        <script src="carousel.js"></script>
+    </body>
 </html>
