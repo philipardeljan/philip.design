@@ -28,7 +28,7 @@ function startCarousel() {
 // Adjust scrolling speed on hover
 carouselItems.forEach((item) => {
   item.addEventListener("mouseenter", () => {
-    scrollSpeed = 0.5; // Slow down by 50%
+    scrollSpeed = 0; // Slow down by 50%
   });
 
   item.addEventListener("mouseleave", () => {
