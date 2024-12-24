@@ -39,22 +39,36 @@
              margin: 0;
              padding: 0;
              background: #111;
-             font-size: 14px;
-             color: #999;
+             font-size: 16px;
+             color: #fff;
              overflow-x: hidden;
          }
 
+         h1 {
+             font-size: 48px;
+             text-align: center;
+             margin-bottom: 1rem;
+         }
+
+         h2 {
+             font-size: 32px;
+             text-align: center;
+         }
+
          h4 {
-             color: #fff;
              font-weight: bold;
              margin-bottom: 0;
          }
 
+         .subheading {
+             max-width: 780px;
+         }
+
          button {
              background: #111;
-             color: #fff;
-             border: 1px solid #ccc;
-             border-radius: 40px;
+             color: #E6EBF8;
+             border: 1px solid #333;
+             border-radius: 2px;
              padding: .75rem 1rem;
              font-size: 14px;
              cursor: pointer;
@@ -62,93 +76,63 @@
 
          .button {
              background: #111;
-             color: #fff;
-             border: 1px solid #ccc;
-             border-radius: 40px;
+             color: #E6EBF8;
+             border: 1px solid #333;
+             border-radius: 2px;
              padding: .75rem 1rem;
              font-size: 14px;
              cursor: pointer;
          }
 
          .wrapper {
-             max-width: 500px;
+             max-width: 920px;
              margin: 0 auto;
              padding: 0 2rem;
          }
 
          .footer-wrapper {
-             max-width: 600px;
-             margin: 0 auto;
+             display: flex;
+             flex-direction: column;
+             justify-content: end;
+             max-width: 900px;
+             height: 550px;
+             max-height: 550px;
+             border-radius: 4px;
+             border: 1px solid #333;
+             margin: 0 auto 2rem;
+             background-image: url("test4.png");
+             background-size: cover;
+             background-repeat: no-repeat;
+             background-position: center;
          }
 
          .footer-wrapper h4 {
              margin: 0;
          }
 
-         .footer-wrapper p {
-             margin: .5rem auto 1.5rem;
-         }
-
          .header-wrapper {
              display: flex;
              align-items: center;
-             padding-top: 4rem;
-         }
-
-         .main-heading {
-             color: #fff;
-             font-size: 24px;
-             font-weight: bold;
-             margin-bottom: 0;
-         }
-
-         .subheading {
-             margin-top: .25rem;
-         }
-
-         .profile-image {
-             border-radius: 100%;
-             width: 80px;
-             margin-right: 1rem;
+             justify-content: center;
+             padding-top: 2rem;
          }
 
          .status-button {
              display: flex;
-             background: #62CD6D;
-             border-radius: 40px;
-             padding: .5rem 1rem;
-             margin-left: 2rem;
-             filter: drop-shadow(0px 0px 10px rgba(98, 205, 109, .5));
-         }
-
-         .dot {
-             margin-right: .25rem;
-         }
-
-         .status-text {
-             color: #111;
-             font-size: 12px;
-         }
-
-         .recommendation-heading {
-             display: flex;
-             align-items: center;
-             margin-top: 3rem;
-             margin-bottom: 1rem;
-         }
-
-         .recommendation-heading h4 {
-             margin-top: 0;
-             margin-bottom: 0;
-             margin-left: .5rem;
+             background: #44CC6C;
+             border-radius: 24px;
+             width: 12px;
+             height: 12px;
+             margin-right: .5rem;
+             filter: drop-shadow(0px 0px 5px rgba(68, 204, 108, .8));
          }
 
          .recommendation-box {
              background: #000;
              padding: 1rem 2rem;
-             margin-bottom: 1rem;
              border-radius: 20px;
-             color: #fff;
+             max-width: 576px;
+             margin: 0 auto 1rem;
          }
 
          .recommendation-box div {
@@ -162,77 +146,37 @@
          }
 
          .recommendation-box h4 {
-             font-weight: normal;
              margin: 0;
          }
 
          .recommendation-box div p {
-             color: #999;
              margin: 0;
          }
 
-         .recommendation-box div img {
-             width: 32px;
-             margin-right: .5rem;
+         .recommendation-box-green {
+             background: #C0E6C9;
+             color: #00360D;
          }
 
-         .career-heading {
-             display: flex;
-             align-items: center;
-             margin-top: 3rem;
-             margin-bottom: 1rem;
+         .recommendation-box-blue {
+             background: #C0C9E6;
+             color: #000E3A;
          }
 
-         .career-heading h4 {
-             margin-top: 0;
-             margin-bottom: 0;
-             margin-left: .5rem;
+         .recommendation-box-yellow {
+             background: #E6DDC0;
+             color: #171201;
          }
 
-         .career-box {
-             background: #000;
-             padding: 2rem;
-             margin-bottom: 1rem;
-             border-radius: 20px;
-             color: #fff;
-         }
-
-         .career-box h4 {
-             font-weight: normal;
-             margin: 0;
-         }
-
-         .career-box div p {
-             color: #999;
-             margin: 0;
-         }
-
-         .career-box div img {
-             width: 32px;
-             margin-right: .5rem;
-         }         
+         .blue-text { color: #C0CAE6; }
+         .yellow-text { color: #E6DDC0; }
+         .green-text { color: #C0E6C9; }
+         .normal { font-weight: 400; }
+         .ma0 { margin: 0; }
 
          .position {
              display: flex;
              margin-top: 2rem;
-         }
-
-         .tenure.tenure {
-             margin-top: auto;
-             margin-left: auto;
-         }
-
-         .showcase-heading {
-             display: flex;
-             align-items: center;
-             justify-content: center;
-             margin-top: 4rem;
-         }
-
-         .showcase-heading h4 {
-             margin-top: 0;
-             margin-bottom: 0;
-             margin-left: .5rem;
          }
 
          .footer {
@@ -241,27 +185,59 @@
              padding: 3rem 0 4.5rem;
              margin-top: 4rem;
          }
-         
-         .carousel-container {
-             width: 100%;
-             overflow: hidden;
-             position: relative;
-         }
-         .carousel {
-             display: flex;
-             width: max-content; /* Allows content to exceed container width */
-         }
-         .carousel-item {
-             margin-right: 40px;
+
+         .footer-mobile {
              text-align: center;
-             font-size: 20px;
-             border-radius: 10px;
-             color: #333;
+         }
+         
+         .hero-image {
+             margin-bottom: 10px;
+         }
+         .hero-image img {
+             width: 100%;
+             height: auto;
+             border-radius: 8px;
+         }
+         .thumbnail-container {
+             display: flex;
+             gap: 10px;
+             flex-wrap: wrap;
+             justify-content: center;
+         }
+         .thumbnail {
+             width: 85px;
+             height: 80px;
+             object-fit: cover;
+             cursor: pointer;
+             border: 2px solid transparent;
+             border-radius: 4px;
+             opacity: .4;
+         }
+         .thumbnail:hover, .thumbnail.active {
+             border-color: #007BFF;
+             opacity: 1;
          }
 
-         .size {
-             max-width: 777px;
-             max-height: 486px;
+         .case-study {
+             background: 000;
+             border: 1px solid #333;
+             border-radius: 8px;
+         }
+
+         .case-study img {
+             display: block;
+             max-width: 50%;
+             margin: 0 auto;
+         }
+
+         .case-study h4 {
+             text-align: center;
+         }
+
+         .case-study a {
+             display: flex;
+             justify-content: center;
+             margin: 1rem 0 1.5rem; 
          }
 
          .block.block {
@@ -272,7 +248,15 @@
              display: flex;
          }
 
-         @media (max-width: 700px) {
+         .justify-center {
+             justify-content: center
+         }
+
+         .items-center {
+             align-items: center;
+         }
+
+         @media (max-width: 450px) {
              .footer-wrapper {
                  padding: 0 2rem;
              }
@@ -293,46 +277,45 @@
 
         <div class="wrapper">
             <div class="header-wrapper">
-                <img class="profile-image" src="profile.jpg" />
                 <div>
-                    <h3 class="main-heading">Philip Ardeljan</h3>
-                    <p class="subheading">Product Designer · UI/UX Designer</p>
+                    <h1 class="main-heading"><span class="blue-text">Philip Ardeljan.</span> <span class="yellow-text">Product Designer</span></h1>
+                    <h2 class="subheading"><span class="blue-text">I work with founders & engineers to turn concepts into mature products.</span> <span class="yellow-text normal"> I help companies through their growing pains by leveraging</span> <span class="blue-text">10+ years of experience.</span></h2>
                 </div>
-                <div class="status-button">
-                    <img class="dot" src="dot.svg" />
-                    <span class="status-text">Available</span>
-                </div>
-            </div>
-
-            <div>
-                <h4>About me</h4>
-                <p>I am a Product Designer with 10 years of experience. I enjoy finding elegant solutions to complex problems and have a focus on human centred design.</p>
-
-                <p>I use my excellent communication skills to seek critical feedback and to design the best possible user experience within all constraints.</p>
-            </div>
-
-            <div>
-                <h4>Core competencies</h4>
-                <p>User interface design, product design, agile product development, prototyping, web & mobile (iOS) design, ideation, product vision development, user research & validation.</p>
-            </div>
-
-            <div>
-                <h4>Tools I use</h4>
-                <p>Figma, HTML/CSS, SVG, git, Bootstrap, Sketch, Photoshop, Illustrator, Tachyons, Terminal, emacs, GitHub, Trello, Excel, Google Docs/Sheets.</p>
             </div>
 
             <br>
-            <a href="Philip Ardeljan Product Designer Resume.pdf" download><button>Download CV (PDF)</button></a>
 
-            <div class="recommendation-heading">
-                <img src="star.svg" />
-                <h4>Recommendations</h4>
+            <div class="carousel">
+                <div class="hero-image">
+                    <img id="hero" src="1.png" alt="Hero">
+                </div>
+                <div class="thumbnail-container">
+                    <img class="thumbnail active" src="1.png" alt="Thumbnail 1" data-image="1.png">
+                    <img class="thumbnail" src="2.png" alt="Thumbnail 2" data-image="2.png">
+                    <img class="thumbnail" src="3.png" alt="Thumbnail 3" data-image="3.png">
+                    <img class="thumbnail" src="4.png" alt="Thumbnail 4" data-image="4.png">
+                    <img class="thumbnail" src="5.png" alt="Thumbnail 5" data-image="5.png">
+                    <img class="thumbnail" src="6.png" alt="Thumbnail 6" data-image="6.png">
+                    <img class="thumbnail" src="4.png" alt="Thumbnail 7" data-image="4.png">
+                    <img class="thumbnail" src="5.png" alt="Thumbnail 8" data-image="5.png">
+                    <img class="thumbnail" src="6.png" alt="Thumbnail 9" data-image="6.png">
+                </div>
             </div>
 
-            <div class="recommendation-box">
-                <p>As the first designer hired by Maths Pathway, Philip has taken our products to a whole new level. In his time with us, Philip grew from a good UI designer into a great UI and UX designer, with flexible Business Analyst skills. With a consistently friendly tone and open communication, Philip works very well with engineers, scrum masters, product owners and customer-facing staff. When laying out the vision for a feature or epic, it is always worth arming Philip with the business objectives and user attributes. This is because Philip is equally capable of two things: bringing another person's vision to life faithfully; and taking the seed of the initial idea and coming back with a much better alternative. I highly recommend Philip.</p>
+            <br><br><br>
+            
+            <div>
+                <h2 class="blue-text">I'm passionate about</h2>
+                <h2 class="green-text normal ma0">Understanding user needs</h2>
+                <h2 class="blue-text normal ma0">Designing intuitive user interfaces</h2>
+                <h2 class="yellow-text normal ma0">Collaborating with software engineers</h2>
+            </div>
+
+            <br><br><br><br><br><br>
+
+            <div class="recommendation-box recommendation-box-green">
+                <p><b>Philip has taken our products to a whole new level.</b> With a consistently friendly tone and open communication, Philip works very well with engineers, scrum masters, product owners and customer-facing staff. Philip is equally capable of two things: bringing another person's vision to life faithfully; and taking the seed of the initial idea and coming back with a much better alternative. <b>I highly recommend Philip.</b></p>
                 <div>
-                    <img src="justin.png" />
                     <div class="block">
                         <h4>Justin</h4>
                         <p>Co-founder</p>
@@ -340,10 +323,9 @@
                 </div>
             </div>
 
-            <div class="recommendation-box">
-                <p>Philip is an exceptional Product Designer with a keen eye for detail and a deep understanding of user-centric design. His ability to seamlessly blend research, UX, and UI ensures intuitive and impactful solutions. A strong collaborator and problem-solver, Philip consistently delivers high-quality designs that align with both user needs and business objectives.</p>
+            <div class="recommendation-box recommendation-box-blue">
+                <p>Philip is an <b>exceptional product designer</b> with a keen eye for detail and a deep understanding of user-centric design. His ability to seamlessly blend research, UX, and UI ensures intuitive and impactful solutions. A strong collaborator and problem-solver, <b>Philip consistently delivers high-quality designs</b> that align with both user needs and business objectives.</p>
                 <div>
-                    <img src="sean.png" />
                     <div class="block">
                         <h4>Sean</h4>
                         <p>CTO</p>
@@ -351,10 +333,9 @@
                 </div>
             </div>
 
-            <div class="recommendation-box">
-                <p>I’ve worked with Philip for 7 years and I can say that he is without doubt the best Product designer I’ve ever worked with. I’ve been amazed at his attention to detail and his continued focus on making sure the end user has the best possible experience. He’s also shown an incredible flexibility to work in areas beyond the normal scope of his job description. While his specialty is design he's also capable of writing technical specifications that software engineers can easily pick up and deliver, as well as contributing to the codebase directly. He would be a great asset to any team.</p>
+            <div class="recommendation-box recommendation-box-yellow">
+                <p>I’ve worked with Philip for 7 years and I can say that he is without doubt <b>the best product designer I’ve ever worked with.</b> I’ve been amazed at his attention to detail and his continued focus on making sure the end user has the best possible experience. While his specialty is design he's also capable of writing technical specifications that software engineers can easily pick up and deliver, as well as contributing to the codebase directly. <b>He would be a great asset to any team.</b></p>
                 <div>
-                    <img src="stephen.png" />
                     <div class="block">
                         <h4>Stephen</h4>
                         <p>Full stack engineer</p>
@@ -362,152 +343,55 @@
                 </div>
             </div>
 
-            <div class="recommendation-box">
-                <p>As an engineer, working with Philip has been amazing. He understands the need to balance technical complexity with business goals. Philip has been able to help me as a software engineer to solve complex CSS challenges as well.</p>
-                <div>
-                    <img src="komal.png" />
-                    <div class="block">
-                        <h4>Komal</h4>
-                        <p>Software engineer</p>
-                    </div>
+        </div>
+
+        <br><br><br>
+
+        <div class="wrapper">
+            <div class="case-study">
+                <h2 class="blue-text">Case study</h2>
+                <img src="case-study.png" alt="Hero">
+                <h4 class="yellow-text">How do you get 50,000 students excited about mathematics?</h4>
+                <a style="opacity: .4;" href="#"><button>Available on request</button></a>
+            </div>
+        </div>
+
+        <br><br><br>
+        
+        <div class="footer-wrapper">
+            <div>
+                <h2 class="yellow-text ma0">Let’s build something amazing together!</h2>
+                <div class="flex justify-center items-center yellow-text">
+                    <span class="status-button"></span>
+                    <p>Currently available for opportunities</p>
+                </div>
+                <div class="footer-mobile">
+                    <a href="Philip Ardeljan Product Designer Resume.pdf" download><button>Download CV (PDF)</button></a>
+                    <span class="button">Email</span>
+                    <span class="button">LinkedIn</span>
                 </div>
             </div>
-
-            <div class="recommendation-box">
-                <p>Philip excels in creating user-focused, visually compelling designs. His expertise in UX and UI, combined with strong research skills and collaborative spirit, ensures innovative solutions that drive business success and enhance user experiences.</p>
-                <div>
-                    <img src="richard.png" />
-                    <div class="block">
-                        <h4>Richard</h4>
-                        <p>Co-founder</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="recommendation-box">
-                <p>Philip is a talented product designer that I’ve worked with for 7 years. He combines innovative thinking with practical solutions, delivering designs that are both beautiful and functional. His focus on ensuring that all solutions meet the needs of the end user has been invaluable and has delivered excellent results. Philip’s collaborative nature and attention to detail make him an invaluable asset. He creates engaging and intuitive experiences for the user and I highly recommend him for any opportunity.</p>
-                <div>
-                    <img src="dylan.png" />
-                    <div class="block">
-                        <h4>Dylan</h4>
-                        <p>Software engineer</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="recommendation-box">
-                <p>Philip is an exceptional product designer with a keen eye for detail and innovative solutions. His user-centric approach consistently delivers outstanding results, blending aesthetics with functionality. A collaborative professional, Philip excels at turning complex ideas into elegant, impactful designs.</p>
-                <div>
-                    <img src="geoff.png" />
-                    <div class="block">
-                        <h4>Geoff</h4>
-                        <p>Software engineer</p>
-                    </div>
-                </div>
-            </div>
-
-            <br>
-            <div class="career-heading">
-                <img src="laptop.svg" />
-                <h4>Career</h4>
-            </div>
-
-            <div class="career-box">
-                <img style="max-height: 72px;" src="mp-logo2.svg" />
-                <div class="position">
-                    <br>
-                    <div class="block">
-                        <h4>Maths Pathway</h4>
-                        <p>Product Designer</p>
-                    </div>
-                    <p class="tenure">Mar 2017 – Present</p>
-                </div>
-            </div>
-
-            <div class="career-box">
-                <img style="max-height: 50px; margin: 1.25rem 0;" src="tcgfish-logo.png" />
-                <div class="position">
-                    <br>
-                    <div class="block">
-                        <h4>TCGFish</h4>
-                        <p>Web Designer</p>
-                    </div>
-                    <p class="tenure">Sep 2022 – May 2023</p>
-                </div>
-            </div>
-
-            <div class="career-box">
-                <br>
-                <img style="max-height: 25px; margin: 1.25rem 0;" src="nzx-logo.png" />
-                <br>
-                <div class="position">
-                    <br>
-                    <div class="block">
-                        <h4>New Zealand Stock Exchange</h4>
-                        <p>UI/UX Designer</p>
-                    </div>
-                    <p class="tenure">Jun 2015 – Dec 2016</p>
-                </div>
-            </div>
-
-            <div class="career-box">
-                <img style="max-height: 62px; margin: .5rem 0;" src="saasu-logo.png" />
-                <div class="position">
-                    <br>
-                    <div class="block">
-                        <h4>Saasu</h4>
-                        <p>UI/UX Designer</p>
-                    </div>
-                    <p class="tenure">Oct 2013 – May 2015</p>
-                </div>
-            </div>
-
-            <div class="career-box">
-                <img style="max-height: 80px; margin: .5rem 0;" src="loaf-logo.png" />
-                <div class="position">
-                    <br>
-                    <div class="block">
-                        <h4>Loaf</h4>
-                        <p>Personal side project</p>
-                    </div>
-                    <p class="tenure">Jan 2020 – Present</p>
-                </div>
-            </div>
+            <br><br><br>
             
         </div>
 
-        <div class="showcase-heading">
-            <img src="showcase.svg" />
-            <h4>Showcase</h4>
-        </div>
+        <script>
+         const heroImage = document.getElementById('hero');
+         const thumbnails = document.querySelectorAll('.thumbnail');
 
-        <br><br>
-        <div class="carousel-container">
-            <div class="carousel" id="carousel">
-                <div class="carousel-item"><img class="size" src="1.png"></div>
-                <div class="carousel-item"><img class="size" src="2.png"></div>
-                <div class="carousel-item"><img class="size" src="3.png"></div>
-                <div class="carousel-item"><img class="size" src="4.png"></div>
-                <div class="carousel-item"><img class="size" src="5.png"></div>
-                <div class="carousel-item"><img class="size" src="6.png"></div>
-                <div class="carousel-item"><img class="size" src="7.png"></div>
-            </div>
-        </div>
-        <br><br>
+         thumbnails.forEach(thumbnail => {
+             thumbnail.addEventListener('click', (event) => {
+                 // Update hero image
+                 heroImage.src = event.target.getAttribute('data-image');
 
-        <div class="footer">
-            <div class="footer-wrapper">
-                <h4>Let’s work together!</h4>
-                <p>I’m confident we can build something amazing.</p>
-                <div class="footer-mobile">
-                    <a href="Philip Ardeljan Product Designer Resume.pdf" download><button>Download CV (PDF)</button></a>
-                    <a href="https://dribbble.com/philipardeljan"><button>Dribbble</button></a>
-                    <a href="https://x.com/philipardeljan"><button>X (Twitter)</button></a>
-                    <span class="button" style="cursor: unset;">Email: philip@ardeljan.com</span>
-                </div>
-            </div>
-        </div>
+                 // Remove active class from all thumbnails
+                 thumbnails.forEach(thumb => thumb.classList.remove('active'));
 
-        <script src="carousel.js"></script>
+                 // Add active class to clicked thumbnail
+                 event.target.classList.add('active');
+             });
+         });
+        </script>
+        
     </body>
 </html>
