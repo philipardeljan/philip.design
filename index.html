@@ -230,6 +230,14 @@
              border-radius: 8px;
          }
 
+         .case-study:nth-of-type(1) {
+             margin-right: 1rem;
+         }
+
+         .case-study:nth-of-type(2) {
+             margin-left: 1rem;
+         }
+
          .case-study img {
              display: block;
              max-width: 50%;
@@ -244,6 +252,10 @@
              display: flex;
              justify-content: center;
              margin: 1rem 0 1.5rem; 
+         }
+
+         .flex-block-mobile {
+             display: flex;
          }
 
          .block.block {
@@ -276,7 +288,16 @@
                  margin-bottom: .5rem;
              }
          }
-         
+
+         @media (max-width: 500px) {
+             .flex-block-mobile {
+                 display: block;
+             }
+             .case-study.case-study {
+                 margin: 0 0 1rem;
+             }
+         }
+
         </style>
     </head>
     <body>
@@ -354,12 +375,19 @@
 
         <br><br><br>
 
-        <div class="wrapper">
+        <div class="wrapper flex-block-mobile">
             <div class="case-study">
-                <h2 class="blue-text">Case study</h2>
-                <img src="img/case-study.png" alt="Hero">
-                <h3 style="text-align: center; padding: 0 .5rem;" class="yellow-text">How do you get 50,000 students excited about mathematics?</h3>
+                <img style="width: 60px; margin-top: 1rem;" src="img/document-emoji.png" alt="Hero">
+                <h2 style="font-size: 24px;" class="blue-text ma0">Case study</h2>
+                <p style="text-align: center; padding: .5rem;" class="yellow-text ma0">How do you get 50,000 students excited about mathematics?</p>
                 <a href="Case Study How do you get 50,000 students excited about mathematics.pdf" download><button>Get Case Study (PDF)</button></a>
+            </div>
+            
+            <div class="case-study">
+                <img style="width: 60px; margin-top: 1rem;" src="img/art-emoji.png" alt="Hero">
+                <h2 style="font-size: 24px;" class="blue-text ma0">UI example kit</h2>
+                <p style="text-align: center; padding: .5rem;" class="yellow-text ma0">Examples of Product Design work I've created in my career.</p>
+                <a href="UI work examples of Philip Ardeljan, Product Designer.pdf" download><button>Get UI samples (PDF)</button></a>
             </div>
         </div>
 
