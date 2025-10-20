@@ -1,93 +1,177 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <!--Hello friend-->
-    <link rel="stylesheet" type="text/css" href="/../styles23-03-2023.css">
-    <link rel="shortcut icon" href="/../favicon.ico">
-    <title>Philip Ardeljan is a UI designer</title>
+<html lang="en">
+<head>
+    <script>
+        // Google Analytics tracking code
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-54702241-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <title>Don't alarm your users · Philip Ardeljan</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    
+    <style>
+        * {
+            -webkit-font-smoothing: antialiased;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            letter-spacing: -0.5px;
+        }
+        
+        body {
+            font-family: "Inter", sans-serif;
+            background: #ffffff;
+            color: #333;
+            line-height: 1.7;
+        }
 
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .back-link {
+            display: inline-block;
+            color: #999999;
+            text-decoration: none;
+            margin: 2rem 0 1rem;
+            font-size: 0.95rem;
+        }
+
+        .back-link:hover {
+            color: #000;
+            text-decoration: underline;
+        }
+
+        .article-header {
+            margin: 2rem 0 3rem;
+        }
+
+        .article-header h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: #000;
+        }
+
+        .article-date {
+            font-size: 0.95rem;
+            color: #999999;
+        }
+
+        .article-content {
+            margin-bottom: 4rem;
+        }
+
+        .article-content p {
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        .article-content ul {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        .article-content li {
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .article-content li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #999;
+        }
+
+        .article-content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+
+        .article-content .img-container {
+            max-width: 500px;
+            margin: 2rem 0;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 1rem;
+            }
+
+            .article-header h1 {
+                font-size: 1.75rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <nav>
-        <br>
-        <div class="blog-wrapper">
-            <a href="/blog/">Back</a>
-        </div>
-    </nav>
+    <div class="container">
+        <a href="/blog/" class="back-link">← Back to blog</a>
 
-    <div class="blog-wrapper">
+        <header class="article-header">
+            <h1>Don't alarm your users</h1>
+            <p class="article-date">7 October 2016</p>
+        </header>
 
-        <div class="blog-box">
-            <h2>Don't alarm your users</h2>
-            <p>7 Oct 2016</p>
-        </div>
+        <article class="article-content">
+            <p>As of El Capitan Version 10.11.6, if you go to iCloud and click on "Sign Out" the following alert will open:</p>
 
-    </div>
-
-    <div class="blog-wrapper">
-
-        <div>
-            <p>As of El Capitan Version 10.11.6, if you go to iCloud and click on “Sign Out” the following alert will open:</p>
-
-            <div style="max-width: 500px;">
-                <img style="max-width: 100%" src="../dont-alarm-your-users1.png" />
+            <div class="img-container">
+                <img src="../dont-alarm-your-users1.png" alt="iCloud Sign Out Alert" />
             </div>
 
             <p>I have some problems with this alert:</p>
             <ul>
-                <li>The tone used is confronting when it shouldn’t be.</li>
-                <li>As a result it doesn’t help guide the user in achieving their goal.</li>
-                <li>The primary action button doesn’t match the preceding action button. This alert opens when the user clicks on “Sign Out”. Therefore the end action should be “Sign Out” not “Delete from Mac”.</li>
-                <li>Opting out of the process by clicking “Cancel” feels like the safer option when it ought to feel secondary.</li>
-                <li>The first sentence starts with a conditional “if”. There’s nothing inherently wrong with this however there are many better ways to start a sentence.</li>
-                <li>There is no mention of retrieving these “Deleted” documents.</li>
-                <li>Using the word “Delete” in the action button. The word “Delete” isn’t even used when deleting documents (Move to Trash, Empty Trash are used instead) making it even scarier.</li>
+                <li>The tone used is confronting when it shouldn't be.</li>
+                <li>As a result it doesn't help guide the user in achieving their goal.</li>
+                <li>The primary action button doesn't match the preceding action button. This alert opens when the user clicks on "Sign Out". Therefore the end action should be "Sign Out" not "Delete from Mac".</li>
+                <li>Opting out of the process by clicking "Cancel" feels like the safer option when it ought to feel secondary.</li>
+                <li>The first sentence starts with a conditional "if". There's nothing inherently wrong with this however there are many better ways to start a sentence.</li>
+                <li>There is no mention of retrieving these "Deleted" documents.</li>
+                <li>Using the word "Delete" in the action button. The word "Delete" isn't even used when deleting documents (Move to Trash, Empty Trash are used instead) making it even scarier.</li>
                 <li>more things (like why does it even need to exist?).</li>
             </ul>
 
-            <p>It almost feels like this wording was chosen to discourage users from signing out of iCloud. And that is not cool. Out of the two buttons, I feel much safer click on “Cancel”.</p>
+            <p>It almost feels like this wording was chosen to discourage users from signing out of iCloud. And that is not cool. Out of the two buttons, I feel much safer click on "Cancel".</p>
 
             <p>So I reckon the whole thing should just say:</p>
 
-            <div style="max-width: 500px;">
-                <img style="max-width: 100%" src="../dont-alarm-your-users2.png" />
+            <div class="img-container">
+                <img src="../dont-alarm-your-users2.png" alt="Improved iCloud Sign Out Alert" />
             </div>
 
             <p>Nicer right? I would much prefer to see this. I have the peace of mind knowing that I can access my documents again at any time.</p>
             
-            <p>It’s obvious Apple has a vested interest in having more iCloud users ( 🤑) but I’m not interested in that.</p>
+            <p>It's obvious Apple has a vested interest in having more iCloud users ( 🤑) but I'm not interested in that.</p>
             
-            <p>For what it’s worth, I like using iCloud for Notes. It’s great. But this alert makes me sad.</p>
+            <p>For what it's worth, I like using iCloud for Notes. It's great. But this alert makes me sad.</p>
             
-            <p>TL;DR: Don’t scare or bully your users into taking certain actions. Help them accomplish what they set out to do.</p>
-
-            
-        </div>
-
+            <p>TL;DR: Don't scare or bully your users into taking certain actions. Help them accomplish what they set out to do.</p>
+        </article>
     </div>
-
-    <br><br><br><br><br>
-
 </body>
-<script>
-
- //this is my ga tracking code. there are many others like it, but this one is mine 👋
- (function(i, s, o, g, r, a, m) {
-     i['GoogleAnalyticsObject'] = r;
-     i[r] = i[r] || function() {
-         (i[r].q = i[r].q || []).push(arguments)
-     }, i[r].l = 1 * new Date();
-     a = s.createElement(o),
-     m = s.getElementsByTagName(o)[0];
-     a.async = 1;
-     a.src = g;
-     m.parentNode.insertBefore(a, m)
- })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
- ga('create', 'UA-54702241-1', 'auto');
- ga('send', 'pageview');
-
-</script>
 </html>

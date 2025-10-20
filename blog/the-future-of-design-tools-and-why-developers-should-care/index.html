@@ -1,221 +1,326 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <!--Hello friend-->
-    <link rel="stylesheet" type="text/css" href="/../styles23-03-2023.css">
-    <link rel="shortcut icon" href="/../favicon.ico">
-    <title>The future of design tools · Philip Ardeljan is a UI designer</title>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="https://cdn.fastcomments.com/js/embed.min.js"></script>
+    <link rel="shortcut icon" href="/favicon.ico">
+    <title>The future of design tools · Philip Ardeljan</title>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: #7B7B7B;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        nav {
+            margin-bottom: 60px;
+        }
+
+        nav a {
+            color: #7B7B7B;
+            text-decoration: none;
+            font-size: 0.95rem;
+        }
+
+        nav a:hover {
+            color: #000;
+        }
+
+        article h1 {
+            font-size: 2rem;
+            font-weight: 500;
+            color: #000;
+            margin-bottom: 0.5rem;
+            line-height: 1.3;
+        }
+
+        .post-date {
+            color: #999999;
+            font-size: 0.95rem;
+            margin-bottom: 3rem;
+        }
+
+        article h2, article h3 {
+            color: #000;
+            font-weight: 500;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        article h2 {
+            font-size: 1.5rem;
+        }
+
+        article h3 {
+            font-size: 1.25rem;
+        }
+
+        article h4 {
+            color: #000;
+            font-weight: 400;
+            font-size: 1rem;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        article p {
+            margin-bottom: 1.5rem;
+        }
+
+        article a {
+            color: #009AFF;
+            text-decoration: none;
+        }
+
+        article a:hover {
+            text-decoration: underline;
+        }
+
+        article ul, article ol {
+            margin-bottom: 1.5rem;
+            margin-left: 1.5rem;
+        }
+
+        article li {
+            margin-bottom: 0.5rem;
+        }
+
+        article img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            margin: 2rem 0 0.5rem 0;
+        }
+
+        figcaption {
+            color: #999999;
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
+        }
+
+        blockquote {
+            border-left: 3px solid #ddd;
+            padding-left: 1.5rem;
+            margin: 2rem 0;
+            color: #666;
+        }
+
+        code {
+            background: #f5f5f5;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-size: 0.9rem;
+        }
+
+        pre {
+            background: #f5f5f5;
+            padding: 1.5rem;
+            border-radius: 4px;
+            overflow-x: auto;
+            margin-bottom: 1.5rem;
+        }
+
+        pre code {
+            background: none;
+            padding: 0;
+        }
+
+        .row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+    </style>
 </head>
 <body>
-    <nav>
-        <br>
-        <div class="blog-wrapper">
-            <a href="/blog/">Back</a>
-        </div>
-    </nav>
+    <div class="container">
+        <nav>
+            <a href="/blog/">← Back</a>
+        </nav>
 
-    <div class="blog-wrapper">
-        <div class="blog-box">
-            <h2>The future of design tools and why developers should care</h2>
-            <p>17 Mar 2020</p>
+        <article>
+            <h1>The future of design tools and why developers should care</h1>
+            <p class="post-date">17 Mar 2020</p>
 
-        </div>
-
-    </div>
-    
-    <div class="blog-wrapper">
-        <div>
-            <div style="display: flex; align-items: center;" class="row">
+            <div class="row">
                 <img style="height: 20px; margin: 0; border-radius: 4px; border: 1px solid #ccc;" src="../jp-flag.png" />
-                <p style="margin: 0; padding-left: 10px;">Japanese translation: <a href="https://itnews.org/news_contents/the-future-of-design-tools"><small style="color: #009AFF;">Part 1</small></a>
-                    <a href="https://itnews.org/news_contents/the-future-of-design-tools-2"><small style="color: #009AFF;">Part 2</small></a></p>
+                <p style="margin: 0; padding-left: 10px;">Japanese translation: <a href="https://itnews.org/news_contents/the-future-of-design-tools">Part 1</a>
+                    <a href="https://itnews.org/news_contents/the-future-of-design-tools-2">Part 2</a></p>
             </div>
-        </div>
+
+            <h3 style="margin-top: .25rem;">This will be jolly good.</h3>
+            
+            <img src="../the-future-of-design-tools.jpg" />
+            <figcaption>The Black Knight wasn't available for questions, unfortunately</figcaption>
+
+            <p>Here it is. The exposé. Buckle up, grab a packet of chips and open that can of Coke. This is what we'll do:</p>
+
+            <ol>
+                <li>Outline the current design tool landscape</li>
+                <li>Talk about the f u t u r e</li>
+                <li>Talk about why developers need to care about this</li>
+            </ol>
+
+            <p>Ready? Let's do it!</p>
+
+            <p>p.s. just before we start, this is for user interface tools and visual design tools. Things that can output a "final" design. So Balsamiq and other UX wireframing tools aren't included.</p>
+
+            <h3>The present</h3>
+            <p>There are a lot of design tools right now. And that's because we don't know what a design tool should BE. We have some ideas. But really we are still trying to figure it out. So to start, let's create some buckets:</p>
+
+            <h3>Traditional tools:</h3>
+            <p>
+                <a style="margin-right: 1rem;" href="https://www.adobe.com/au/products/photoshop.html">Photoshop</a>
+                <a style="margin-right: 1rem;" href="https://sketch.com/">Sketch</a>
+                <a style="margin-right: 1rem;" href="https://www.figma.com/">Figma</a>
+                <a href="https://www.adobe.com/au/products/xd.html">Adobe XD</a>
+            </p>
+            <img style="max-width: 100px; margin: 1rem 0; border-radius: 4px;" src="../photoshop-logo-0.png" />
+            <img style="max-width: 100px; margin: 1rem 0; border-radius: 4px;" src="../sketch-logo.png" />
+            <img style="max-width: 100px; margin: 1rem 0; border-radius: 4px;" src="../figma-logo.png" />
+            <img style="max-width: 100px; margin: 1rem 0; border-radius: 4px;" src="../adobe-xd-logo.png" />
+
+            <p>The way you know we still haven't figured out design tools is by the fact that Photoshop still ranks highly in design tool surveys. It was released in 1990 and its main selling point was the ability to edit raster graphics!</p>
+
+            <p>It might not seem fair to consider the new tools as traditional tools. Their multiplayer magic where many people can work in the same file makes them feel like a new wave. But they aren't. They are all based on the same paradigm. You have layers. You manipulate them. You export artboards or images to static image formats or you share the canvas with a colleague.</p>
+
+            <p>Another paradigm these tools conform to is that when are designing, it all happens on a canvas. And that canvas isn't based on HTML. It's great, you can manipulate objects in a very natural way. You can draw anything you want, add shapes and even bitmaps. But where it stops short is integrating neatly with the web. For example:</p>
+            
+            <img style="max-width: 50%; display: block; margin: 1rem auto; border: 1px solid #ddd; border-radius: 4px;" src="../Rectangle 1.png" />
+            <figcaption>CSS output by Figma</figcaption>
+
+            <p>If you create a rectangle and give it a fill colour, this is the CSS you are given by Figma. This is really great for developers. They can pop-in and see what various CSS properties an object has. But that's where it stops. You have to rely on naming artboards and files correctly to ensure developers don't use the wrong version. There's also no connection in the relationship of this orange rectangle to the objects around it.</p>
+
+            <p>I want to be clear, I'm not bashing Figma. It's actually my favourite design tool right now. They go through great lengths to guide developers and designers though this murky process. <a href="https://www.figma.com/best-practices/guide-to-developer-handoff/">Their guides</a> are exceptional. But really, the limiting factor here is that word. CANVAS. They have one. And it's built using a 2D WebGL rendering engine. It is not built on top of HTML. And for good reason! There are <a href="https://www.figma.com/blog/building-a-professional-design-tool-on-the-web/">various rendering issues</a> and web browsers aren't at the same level as native platforms (yet).</p>
+
+            <p>I'm an optimist though. Depending on how things play out, Figma could be the future. And I'd be OK with that. A recent feature they pushed out, <a href="https://www.figma.com/blog/announcing-auto-layout/">Auto Layout</a>, brings rules from CSS into the Figma experience. This makes me very happy.</p>
+
+            <p>That's a lot of talk about Figma specifically. What about Sketch and all the others? Well, Figma is kinda winning. <a href="https://uxtools.co/survey-2019/">Sketch is still king, but Figma is growing.</a> This chart really helps put it in context:</p>
+
+            <img style="max-width: 100%; display: block; margin: 1rem auto; border: 1px solid #ddd; border-radius: 4px;" src="../Most Exciting Tools of 2020.png" />
+            <figcaption>Figma is the heir apparent</figcaption>
+
+            <p>And Figma is a great segue into the next category of tools!</p>
+
+            <h3>No-code tools:</h3>
+            <p>
+                <a style="margin-right: 1rem;" href="https://webflow.com/">Webflow, basically</a>
+            </p>
+            <img style="max-width: 100px; margin: 0 0 1rem 0; border-radius: 4px;" src="../webflow-logo.png" />
+
+            <p>Webflow is the cool kid on the block. It's young, new and holds great promise. The tagline on their website is <b>"Build better business websites, faster. Without coding."</b> so clearly they are going for the no-code designers. And not just designers. They have the potential to become the Dreamweaver of the 21st century. And I mean that in the best way possible.</p>
+
+            <p>How many designers started out by opening up Dreamweaver in high school and hacking together a functional website? More than a few. Webflow channels that vibe. You can build a website and feel like a pro with all of the buttons in that sweet GUI. Feeling like a pro while being a newbie is so powerful. Webflow could capture the next generation of designers.</p>
+
+            <p>The fact you can hit "publish" and instantly send someone a hyperlink to a live website is… amazing. The hyperlink is the foundation of the web. All you need to do is click it. And if that power can be leveraged by designers more effectively it would be great. It beats a static .png file every time.</p>
+
+            <p>The approach they are taking is solid and it'll just come down to execution. Really. That's all I have to say about no-code. It's mostly Webflow and if they do it right and focus a little more on performance I can see them becoming a new standard.</p>
+
+            <h3>Hybrid tools:</h3>
+            <p>
+                <a style="margin-right: 1rem;" href="https://hadron.app/">Hadron</a>
+                <a href="https://www.modulz.app/">Modulz</a>
+            </p>
+            <img style="max-width: 100px; margin: 1rem 0; border-radius: 4px;" src="../hadron-logo.png" />
+            <img style="max-width: 100px; margin: 1rem 0 1rem 2rem; border-radius: 4px;" src="../modulz-logo.png" />
+
+            <p>These are the <i>even cooler</i> kids on the block. And I'm not yet 100% sure what to make of them. I love the idea behind them so much, I want them to become the new normal. But I'm not sure how many designers are ready for them.</p>
+
+            <p>How are these tools different to Webflow? They don't shy away from code. In fact, they encourage developers and designers to work together.  They argue that designers and developers should work on the UI, together. A designer might want a colour palette and a developer might want an input box. And that's fine, the GUI should support both workflows. The main point is that they should be doing it together.</p>
+
+            <h4>
+                <p>Modulz: "Our mission is to <b>fix the disconnect</b> between digital product teams."</p>
+                <p>and;</p>
+                <p>"To get everyone collaborating on their products. <b>Together.</b>"</p>
+            </h4>
+
+            <h4><p>Hadron: "Hadron is a development environment <b>for designers and developers who work together</b> towards the same goal, moving ideas forward and learning from each other along the way."</p>
+            </h4>
+
+            <p>Pretty strong, clear statements. Personally, I like this. I know many people won't like it. Separation of concerns is a real thing. Many developers believe in it, almost blindly, like a credo whose meaning is lost to the mist of time. OK I got a bit poetic there. But really, it's a thing. HTML/CSS/JS should be separate. Or should they? Even that long standing tower is being attacked on all sides. So why should design and developer tools be separate?</p>
+
+            <h3>Pure code tools:</h3>
+            <p>This is an interesting bucket because it doesn't pertain to the majority of designers. Many designers are not comfortable designing in the browser. They aren't comfortable using a code editor at all. And this should be OK. Anyway, these tools are ones that many developers are familiar with. <a href="https://getbootstrap.com/">Bootstrap,</a> <a href="https://tachyons.io/">Tachyons</a> (and the other 87364873 frameworks out there). Even APIs like <a href="https://daneden.github.io/animate.css/">Animate.css</a> are a form of design tool.</p>
+
+            <h3>Side-note</h3>
+            <p>There are other Experimental tools which developers have been playing around with. Things like <a href="http://rene.jon.gold/">René</a> or <a href="http://www.cicerone.co/">Cicerone,</a> things I've come across over the years which have their own twist on things. And there are so many apps that are dead and gone. <a href="http://macaw.co/">R.I.P Macaw,</a> I barely knew thee.</p>
+
+            <h3>Time for The F U T U R E</h3>
+            
+            <img src="../time-for-the-future.jpg" />
+            
+            <p>We've hashed out a basic summary of the current landscape, now let's think of where we'll be in 5, 10 or 20 years from now.</p>
+
+            <h3>Future #1: The IDE takes over</h3>
+            <p>Do I mean the integrated development environment? Or the integrated DESIGN environment? I don't know! Tons of developers live inside Visual Studio. What if there was a design equivalent?</p>
+
+            <p>I think this future is the most likely. After enough developers get a taste of accessing a Figma URL and grabbing some code, they'll wish they could access more. And an app like Hadron would give that to them. While it might be Modulz or Hadron that creates the first version of this future, they'll probably be bought out by Google or Facebook and that product or type of experience will become the new standard.</p>
+
+            <p>That being said, this future looks bright. It would be incredible to have a single tool that designers create in and developers write code in. I'm sure most designers, even the ones who don't code, would like this. The "handoff" wouldn't exist as everyone would be on the same page, literally.</p>
+
+            <h3>Future #2: Micro-apps</h3>
+            <p>Maybe I'm biased as I'm building a micro app myself but hey this could happen! This is more of a pipe dream. I would love for <a href="https://www.electronjs.org/">Electron.js</a> to lead the proliferation of a million useful design tools. And for these tools to be created by independent designers and developers, leading to a strong and robust design ecosystem.</p> 
+
+            <p>It's like the cafè culture in Melbourne. Lots and lots of small delicious cafès, serving up the best coffee in the world. As opposed to Starbucks owning the entire coffee marketplace and calling all the shots (ha get it).</p>
+
+            <p>This doesn't seem likely. Humans love standards and standardising things so I think whatever the future is, it'll always gravitate towards 1 or 2 main tools.</p>
+
+            <h3>Future #3: Browsers gobble it up</h3>
+            <p>This is a crazy idea but hear me out. Inspect Element is amazing. It's what Hadron is basically utilising in its app. The experience that Chrome and Firefox have created around things like animations and grids is impressive. So why can't Chrome and Firefox add a few extra features, let developers enter "Edit" mode and allows those edits to change the files you are manipulating?</p>
+
+            <p>Edge is now on Chromium so I don't see why this couldn't be a possibility. Imagine: You have your web app open. If you click "Edit" mode you authenticate with your local dev environment and boom, the Inspect Element tool is now accessing your local file system. Make a change in the DOM directly through Inspect Element, commit and push the changes and you're done. Do you like the sound of that?</p>
+
+            <img src="../chrome-alert.png" />
+            <figcaption>Would you click OK?</figcaption>
+
+            <p>This could be a thing. How many of you have an AdBlocker extension running right now? And if so, did it ask for persmission to read all data on websites you visit? And that's to remove ads. Imagine the productivity boost you'd gain if Chrome or Firefox had this Inspect Element/local file system feature.</p>
+
+            <h3>Future #4: AI takes over</h3>
+            <p>Why use a computer at all? Sketch something on a piece of paper, take a photo and AI recognises all the components right away. Not as far away as you think. <a href="https://airbnb.design/sketching-interfaces/">Airbnb have already blogged about it</a> with a very real demo.</p>
+
+            <p>But demos are demos. Personally I think this is a 50 year problem. I dunno, after you have the computer automatically turning your hand drawn sketches into React components, you still need the human element to choose the "theme" at the very least. And even then, there's always the custom part of your UI that needs to be created.</p>
+
+            <p>If all apps were able to be fully componentised, UI designers would already be out of a job. When AI solves this, it'll also have solved self-driving cars.</p>
+
+            <h3>Why is this important for developers?</h3>
+            <p>As designers we… need you! How many of these tools have you never heard of before? How many of them did you wish you could use? How many of them do you wish your designer was using? How many ideas do you have for improving designer/developer collaboration?</p>
+
+            <p>These are all important questions that require (at least a little bit) of your attention. Electron.js is making it super easy for people to "create apps". With your software engineering kills, you can literally whip up a new design tool within a matter of weeks, or days! With some careful planning and outsourcing I was able to build Motion in a few months. And I'm no software engineer. But you are! :) The vision for new design tools might be driven by designers, but ultimately, they will be built by developers.</p>
+        </article>
     </div>
 
-    <br>
-    <div class="blog-wrapper">
-        <div>
-
-            <h3 style="margin-top: .25rem;">This will be jolly good.</h4>
-                <br>
-                <img style="max-width: 100%; max-height: 80vh; margin: 1rem 0; border-radius: 4px;" src="../the-future-of-design-tools.jpg" />
-                <figcaption>The Black Knight wasn't available for questions, unfortunately</figcaption>
-
-                <br>
-                <p>Here it is. The exposé. Buckle up, grab a packet of chips and open that can of Coke. This is what we’ll do:</p>
-
-                <ol>
-                    <li>Outline the current design tool landscape</li>
-                    <li>Talk about the f u t u r e</li>
-                    <li>Talk about why developers need to care about this</li>
-                </ol>
-
-                <p>Ready? Let’s do it!</p>
-
-                <p>p.s. just before we start, this is for user interface tools and visual design tools. Things that can output a “final” design. So Balsamiq and other UX wireframing tools aren’t included.</p>
-
-                <h3>The present</h3>
-                <p>There are a lot of design tools right now. And that’s because we don’t know what a design tool should BE. We have some ideas. But really we are still trying to figure it out. So to start, let’s create some buckets:</p>
-
-                <h3>Traditional tools:</h4>
-                    <p>
-                        <a style="margin-right: 1rem;" href="https://www.adobe.com/au/products/photoshop.html">Photoshop</a>
-                        <a style="margin-right: 1rem;" href="https://sketch.com/">Sketch</a>
-                        <a style="margin-right: 1rem;" href="https://www.figma.com/">Figma</a>
-                        <a href="https://www.adobe.com/au/products/xd.html">Adobe XD</a>
-                    </p>
-                    <img style="max-width: 100px; margin: 1rem 0; border-radius: 4px;" src="../photoshop-logo-0.png" />
-                    <img style="max-width: 100px; margin: 1rem 0; border-radius: 4px;" src="../sketch-logo.png" />
-                    <img style="max-width: 100px; margin: 1rem 0; border-radius: 4px;" src="../figma-logo.png" />
-                    <img style="max-width: 100px; margin: 1rem 0; border-radius: 4px;" src="../adobe-xd-logo.png" />
-
-                    <p>The way you know we still haven’t figured out design tools is by the fact that Photoshop still ranks highly in design tool surveys. It was released in 1990 and its main selling point was the ability to edit raster graphics!</p>
-
-                    <p>It might not seem fair to consider the new tools as traditional tools. Their multiplayer magic where many people can work in the same file makes them feel like a new wave. But they aren't. They are all based on the same paradigm. You have layers. You manipulate them. You export artboards or images to static image formats or you share the canvas with a colleague.</p>
-
-                    <p>Another paradigm these tools conform to is that when are designing, it all happens on a canvas. And that canvas isn’t based on HTML. It’s great, you can manipulate objects in a very natural way. You can draw anything you want, add shapes and even bitmaps. But where it stops short is integrating neatly with the web. For example:</p>
-                    <br>
-                    <img style="max-width: 50%; display: block; margin: 1rem auto; border: 1px solid #ddd; border-radius: 4px;" src="../Rectangle 1.png" />
-                    <figcaption>CSS output by Figma</figcaption>
-                    <br>
-
-                    <p>If you create a rectangle and give it a fill colour, this is the CSS you are given by Figma. This is really great for developers. They can pop-in and see what various CSS properties an object has. But that’s where it stops. You have to rely on naming artboards and files correctly to ensure developers don’t use the wrong version. There's also no connection in the relationship of this orange rectangle to the objects around it.</p>
-
-                    <p>I want to be clear, I’m not bashing Figma. It’s actually my favourite design tool right now. They go through great lengths to guide developers and designers though this murky process. <a href="https://www.figma.com/best-practices/guide-to-developer-handoff/">Their guides</a> are exceptional. But really, the limiting factor here is that word. CANVAS. They have one. And it’s built using a 2D WebGL rendering engine. It is not built on top of HTML. And for good reason! There are <a href="https://www.figma.com/blog/building-a-professional-design-tool-on-the-web/">various rendering issues</a> and web browsers aren’t at the same level as native platforms (yet).</p>
-
-                    <p>I’m an optimist though. Depending on how things play out, Figma could be the future. And I’d be OK with that. A recent feature they pushed out, <a href="https://www.figma.com/blog/announcing-auto-layout/">Auto Layout</a>, brings rules from CSS into the Figma experience. This makes me very happy.</p>
-
-                    <p>That’s a lot of talk about Figma specifically. What about Sketch and all the others? Well, Figma is kinda winning. <a href="https://uxtools.co/survey-2019/">Sketch is still king, but Figma is growing.</a> This chart really helps put it in context:</p>
-
-                    <br>
-                    <img style="max-width: 100%; display: block; margin: 1rem auto; border: 1px solid #ddd; border-radius: 4px;" src="../Most Exciting Tools of 2020.png" />
-                    <figcaption>Figma is the heir apparent</figcaption>
-                    <br>
-
-                    <p>And Figma is a great segue into the next category of tools!</p>
-
-                    <h3>No-code tools:</h4>
-                        <p>
-                            <a style="margin-right: 1rem;" href="https://webflow.com/">Webflow, basically</a>
-                        </p>
-                        <img style="max-width: 100px; margin: 0 0 1rem 0; border-radius: 4px;" src="../webflow-logo.png" />
-
-                        <p>Webflow is the cool kid on the block. It’s young, new and holds great promise. The tagline on their website is <b>“Build better business websites, faster. Without coding.”</b> so clearly they are going for the no-code designers. And not just designers. They have the potential to become the Dreamweaver of the 21st century. And I mean that in the best way possible.</p>
-
-                        <p>How many designers started out by opening up Dreamweaver in high school and hacking together a functional website? More than a few. Webflow channels that vibe. You can build a website and feel like a pro with all of the buttons in that sweet GUI. Feeling like a pro while being a newbie is so powerful. Webflow could capture the next generation of designers.</p>
-
-                        <p>The fact you can hit “publish” and instantly send someone a hyperlink to a live website is… amazing. The hyperlink is the foundation of the web. All you need to do is click it. And if that power can be leveraged by designers more effectively it would be great. It beats a static .png file every time.</p>
-
-                        <p>The approach they are taking is solid and it’ll just come down to execution. Really. That’s all I have to say about no-code. It’s mostly Webflow and if they do it right and focus a little more on performance I can see them becoming a new standard.</p>
-
-                        <h3>Hybrid tools:</h4>
-                            <p>
-                                <a style="margin-right: 1rem;" href="https://hadron.app/">Hadron</a>
-                                <a href="https://www.modulz.app/">Modulz</a>
-                            </p>
-                            <img style="max-width: 100px; margin: 1rem 0; border-radius: 4px;" src="../hadron-logo.png" />
-                            <img style="max-width: 100px; margin: 1rem 0 1rem 2rem; border-radius: 4px;" src="../modulz-logo.png" />
-
-                            <p>These are the <i>even cooler</i> kids on the block. And I’m not yet 100% sure what to make of them. I love the idea behind them so much, I want them to become the new normal. But I’m not sure how many designers are ready for them.</p>
-
-                            <p>How are these tools different to Webflow? They don’t shy away from code. In fact, they encourage developers and designers to work together.  They argue that designers and developers should work on the UI, together. A designer might want a colour palette and a developer might want an input box. And that’s fine, the GUI should support both workflows. The main point is that they should be doing it together.</p>
-                            <br>
-
-                            <h4>
-                                <p>Modulz: “Our mission is to <b>fix the disconnect</b> between digital product teams.”</p>
-                                <p>and;</p>
-                                <p>“To get everyone collaborating on their products. <b>Together.</b>”</p>
-                            </h4>
-
-                            <h4><p>Hadron: “Hadron is a development environment <b>for designers and developers who work together</b> towards the same goal, moving ideas forward and learning from each other along the way.”</p>
-                            </h4>
-
-                            <br>
-
-                            <p>Pretty strong, clear statements. Personally, I like this. I know many people won’t like it. Separation of concerns is a real thing. Many developers believe in it, almost blindly, like a credo whose meaning is lost to the mist of time. OK I got a bit poetic there. But really, it’s a thing. HTML/CSS/JS should be separate. Or should they? Even that long standing tower is being attacked on all sides. So why should design and developer tools be separate?</p>
-
-                            <h3>Pure code tools:</h4>
-                                <p>This is an interesting bucket because it doesn’t pertain to the majority of designers. Many designers are not comfortable designing in the browser. They aren’t comfortable using a code editor at all. And this should be OK. Anyway, these tools are ones that many developers are familiar with. <a href="https://getbootstrap.com/">Bootstrap,</a> <a href="https://tachyons.io/">Tachyons</a> (and the other 87364873 frameworks out there). Even APIs like <a href="https://daneden.github.io/animate.css/">Animate.css</a> are a form of design tool.</p>
-
-                                <h3>Side-note</h4>
-                                    <p>There are other Experimental tools which developers have been playing around with. Things like <a href="http://rene.jon.gold/">René</a> or <a href="http://www.cicerone.co/">Cicerone,</a> things I’ve come across over the years which have their own twist on things. And there are so many apps that are dead and gone. <a href="http://macaw.co/">R.I.P Macaw,</a> I barely knew thee.</p>
-
-                                    <br><br>
-                                    <h3>Time for The F U T U R E</h3>
-                                    <br>
-                                    <img style="max-width: 100%; max-height: 80vh; margin: 1rem 0; border-radius: 4px;" src="../time-for-the-future.jpg" />
-                                    <br>
-                                    <p>We've hashed out a basic summary of the current landscape, now let's think of where we'll be in 5, 10 or 20 years from now.</p>
-
-                                    <h3>Future #1: The IDE takes over</h4>
-                                        <p>Do I mean the integrated development environment? Or the integrated DESIGN environment? I don’t know! Tons of developers live inside Visual Studio. What if there was a design equivalent?</p>
-
-                                        <p>I think this future is the most likely. After enough developers get a taste of accessing a Figma URL and grabbing some code, they’ll wish they could access more. And an app like Hadron would give that to them. While it might be Modulz or Hadron that creates the first version of this future, they'll probably be bought out by Google or Facebook and that product or type of experience will become the new standard.</p>
-
-                                        <p>That being said, this future looks bright. It would be incredible to have a single tool that designers create in and developers write code in. I'm sure most designers, even the ones who don't code, would like this. The "handoff" wouldn't exist as everyone would be on the same page, literally.</p>
-
-                                        <h3>Future #2: Micro-apps</h4>
-                                            <p>Maybe I’m biased as I’m building a micro app myself but hey this could happen! This is more of a pipe dream. I would love for <a href="https://www.electronjs.org/">Electron.js</a> to lead the proliferation of a million useful design tools. And for these tools to be created by independent designers and developers, leading to a strong and robust design ecosystem.</p> 
-
-                                            <p>It’s like the cafè culture in Melbourne. Lots and lots of small delicious cafès, serving up the best coffee in the world. As opposed to Starbucks owning the entire coffee marketplace and calling all the shots (ha get it).</p>
-
-                                            <p>This doesn't seem likely. Humans love standards and standardising things so I think whatever the future is, it'll always gravitate towards 1 or 2 main tools.</p>
-
-                                            <h3>Future #3: Browsers gobble it up</h4>
-                                                <p>This is a crazy idea but hear me out. Inspect Element is amazing. It’s what Hadron is basically utilising in its app. The experience that Chrome and Firefox have created around things like animations and grids is impressive. So why can't Chrome and Firefox add a few extra features, let developers enter “Edit” mode and allows those edits to change the files you are manipulating?</p>
-
-                                                <p>Edge is now on Chromium so I don’t see why this couldn’t be a possibility. Imagine: You have your web app open. If you click “Edit” mode you authenticate with your local dev environment and boom, the Inspect Element tool is now accessing your local file system. Make a change in the DOM directly through Inspect Element, commit and push the changes and you’re done. Do you like the sound of that?</p>
-
-                                                <br>
-                                                <img style="max-width: 100%; max-height: 80vh; margin: 1rem 0; border-radius: 4px;" src="../chrome-alert.png" />
-                                                <figcaption>Would you click OK?</figcaption>
-                                                <br>
-
-                                                <p>This could be a thing. How many of you have an AdBlocker extension running right now? And if so, did it ask for persmission to read all data on websites you visit? And that's to remove ads. Imagine the productivity boost you'd gain if Chrome or Firefox had this Inspect Element/local file system feature.</p>
-
-                                                <h3>Future #4: AI takes over</h3>
-                                                <p>Why use a computer at all? Sketch something on a piece of paper, take a photo and AI recognises all the components right away. Not as far away as you think. <a href="https://airbnb.design/sketching-interfaces/">Airbnb have already blogged about it</a> with a very real demo.</p>
-
-                                                <p>But demos are demos. Personally I think this is a 50 year problem. I dunno, after you have the computer automatically turning your hand drawn sketches into React components, you still need the human element to choose the “theme” at the very least. And even then, there’s always the custom part of your UI that needs to be created.</p>
-
-                                                <p>If all apps were able to be fully componentised, UI designers would already be out of a job. When AI solves this, it’ll also have solved self-driving cars.</p>
-
-
-                                                <h3>Why is this important for developers?</h3>
-                                                <p>As designers we… need you! How many of these tools have you never heard of before? How many of them did you wish you could use? How many of them do you wish your designer was using? How many ideas do you have for improving designer/developer collaboration?</p>
-
-                                                <p>These are all important questions that require (at least a little bit) of your attention. Electron.js is making it super easy for people to “create apps”. With your software engineering kills, you can literally whip up a new design tool within a matter of weeks, or days! With some careful planning and outsourcing I was able to build Motion in a few months. And I’m no software engineer. But you are! :) The vision for new design tools might be driven by designers, but ultimately, they will be built by developers.</p>
-
-        </div>
-    </div>
-
-    <br><br><br><br><br>
-
+    <script>
+    (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-54702241-1', 'auto');
+    ga('send', 'pageview');
+    </script>
 </body>
-<script>
-
- 
-
- //this is my ga tracking code. there are many others like it, but this one is mine 👋
- (function(i, s, o, g, r, a, m) {
-     i['GoogleAnalyticsObject'] = r;
-     i[r] = i[r] || function() {
-         (i[r].q = i[r].q || []).push(arguments)
-     }, i[r].l = 1 * new Date();
-     a = s.createElement(o),
-     m = s.getElementsByTagName(o)[0];
-     a.async = 1;
-     a.src = g;
-     m.parentNode.insertBefore(a, m)
- })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
- ga('create', 'UA-54702241-1', 'auto');
- ga('send', 'pageview');
-
-</script>
 </html>

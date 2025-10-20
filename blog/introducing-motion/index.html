@@ -1,46 +1,128 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <!--Hello friend-->
-    <link rel="stylesheet" type="text/css" href="/../styles23-03-2023.css">
-    <link rel="shortcut icon" href="/../favicon.ico">
-    <title>Philip Ardeljan is a UI designer</title>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Lora:400,700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <title>Introducing Motion · Philip Ardeljan</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: #7B7B7B;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        nav {
+            margin-bottom: 60px;
+        }
+
+        nav a {
+            color: #7B7B7B;
+            text-decoration: none;
+            font-size: 0.95rem;
+        }
+
+        nav a:hover {
+            color: #000;
+        }
+
+        article h1 {
+            font-size: 2rem;
+            font-weight: 500;
+            color: #000;
+            margin-bottom: 0.5rem;
+            line-height: 1.3;
+        }
+
+        .post-date {
+            color: #999999;
+            font-size: 0.95rem;
+            margin-bottom: 3rem;
+        }
+
+        article h2, article h3 {
+            color: #000;
+            font-weight: 500;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        article h2 {
+            font-size: 1.5rem;
+        }
+
+        article h3 {
+            font-size: 1.25rem;
+        }
+
+        article p {
+            margin-bottom: 1.5rem;
+        }
+
+        article a {
+            color: #009AFF;
+            text-decoration: none;
+        }
+
+        article a:hover {
+            text-decoration: underline;
+        }
+
+        article ul, article ol {
+            margin-bottom: 1.5rem;
+            margin-left: 1.5rem;
+        }
+
+        article li {
+            margin-bottom: 0.5rem;
+        }
+
+        article img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            margin: 2rem 0 0.5rem 0;
+        }
+
+        figcaption {
+            color: #999999;
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
+        }
+    </style>
 </head>
 <body>
-    <nav>
-        <div class="blog-wrapper">
-            <h3 style="margin-bottom: .5rem;">Hello! 👋 I'm Philip, a user interface designer.</h3>
-        </div>
-        <div class="blog-wrapper">
-            <a href="/blog/">✏️Back</a>
-        </div>
-    </nav>
+    <div class="container">
+        <nav>
+            <a href="/blog/">← Back</a>
+        </nav>
 
-    <div class="blog-wrapper">
+        <article>
+            <h1>Introducing Motion</h1>
+            <p class="post-date">4 Feb 2020</p>
 
-        <div style="background: #E5EEFC;" class="blog-box">
-            <br>
-            <h2 style="color: #0A2651;">Introducing Motion</h2>
-            <p style="color: #0A2651;">4 Feb 2020</p>
-            <br>
+            <img src="../introducing-motion1.png" />
 
-        </div>
-
-    </div>
-
-    <br>
-    <br>
-    <div style="max-width: 1200px; margin: 0 auto;">
-        <img style="max-width: 100%" src="../introducing-motion1.png" />
-    </div>
-    <br>
-    <div class="blog-wrapper">
-
-        <div>
-            <h3>Greetings! 👋 </h3>
-            <p>Hello, nice to meet you! My name is Philip and after 6 months of development, the <a href="https://www.getmotion.io/">public beta for Motion is available for Windows and macOS!</a> (in a small voice: yes it’s an electron app, please go easy).</p>
+            <h3>Greetings! 👋 </h3>
+            <p>Hello, nice to meet you! My name is Philip and after 6 months of development, the <a href="https://www.getmotion.io/">public beta for Motion is available for Windows and macOS!</a> (in a small voice: yes it's an electron app, please go easy).</p>
 
             <h3>What is Motion?</h3>
             <p>Motion is a free, simple animated SVG icon editor with a pre-built, premium icon library.</p>
@@ -57,38 +139,32 @@
             <p>I think they are great! SVGator is amazing. It's incredible to have design specific tools for animating SVGs. I can't tell you how happy that makes me. Lottie is nice too but I'm not a big fan of the large embedded min.js file you need to include to get the animation to work. Or the fact you need to use Adobe After Effects to product the animations (it's just so heavy). But the end product is great and the fact it's cross-platform too is amazing so I like Lottie too :)</p>
 
             <h3>OK then. You and whose army?</h3>
-            <p>Ha, precisely. I’m just a guy with an idea, no corporation here. Would really appreciate any thoughts and feedback you have! Email me (hello@getmotion.io) or <a href="https://twitter.com/philipardeljan">send me a tweet</a>, I'm happy to chat!</p>
+            <p>Ha, precisely. I'm just a guy with an idea, no corporation here. Would really appreciate any thoughts and feedback you have! Email me (hello@getmotion.io) or <a href="https://twitter.com/philipardeljan">send me a tweet</a>, I'm happy to chat!</p>
 
-            <h3>What’s the vision?</h3>
-            <p>Many things. Accent colours. Export to .gif and mp4. Star/Favourite icons. Collections. The list goes on. But really, the most important thing is having a gigantic set of animated icons. So many, that it almost doesn’t matter what kind of project you have, if you need an animation, Motion is the one-stop shop.</p>
+            <h3>What's the vision?</h3>
+            <p>Many things. Accent colours. Export to .gif and mp4. Star/Favourite icons. Collections. The list goes on. But really, the most important thing is having a gigantic set of animated icons. So many, that it almost doesn't matter what kind of project you have, if you need an animation, Motion is the one-stop shop.</p>
 
             <p>I guess the end game would be: Like Canva, but for animations.</p>
 
             <h3>Good… luck?</h3>
-            <p>Yeah, thanks. I’ll need it. To help give me a barometer of Motion, I’d really appreciate it if you could check it out, have a play and give me your feedback. Any thoughts you have would be great! 🙂 👍</p>
-            
-        </div>
+            <p>Yeah, thanks. I'll need it. To help give me a barometer of Motion, I'd really appreciate it if you could check it out, have a play and give me your feedback. Any thoughts you have would be great! 🙂 👍</p>
+        </article>
     </div>
 
-    <br><br><br><br><br>
-
+    <script>
+    (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-54702241-1', 'auto');
+    ga('send', 'pageview');
+    </script>
 </body>
-<script>
-
- //this is my ga tracking code. there are many others like it, but this one is mine 👋
- (function(i, s, o, g, r, a, m) {
-     i['GoogleAnalyticsObject'] = r;
-     i[r] = i[r] || function() {
-         (i[r].q = i[r].q || []).push(arguments)
-     }, i[r].l = 1 * new Date();
-     a = s.createElement(o),
-     m = s.getElementsByTagName(o)[0];
-     a.async = 1;
-     a.src = g;
-     m.parentNode.insertBefore(a, m)
- })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
- ga('create', 'UA-54702241-1', 'auto');
- ga('send', 'pageview');
-
-</script>
 </html>

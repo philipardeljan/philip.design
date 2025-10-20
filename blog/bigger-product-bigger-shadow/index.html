@@ -1,36 +1,124 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <!--Hello friend-->
-    <link rel="stylesheet" type="text/css" href="/../styles23-03-2023.css">
-    <link rel="shortcut icon" href="/../favicon.ico">
-    <title>Bigger product, bigger shadow · Philip Ardeljan is a UI designer</title>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="https://cdn.fastcomments.com/js/embed.min.js"></script>
+    <link rel="shortcut icon" href="/favicon.ico">
+    <title>Bigger product, bigger shadow · Philip Ardeljan</title>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: #7B7B7B;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        nav {
+            margin-bottom: 60px;
+        }
+
+        nav a {
+            color: #7B7B7B;
+            text-decoration: none;
+            font-size: 0.95rem;
+        }
+
+        nav a:hover {
+            color: #000;
+        }
+
+        article h1 {
+            font-size: 2rem;
+            font-weight: 500;
+            color: #000;
+            margin-bottom: 0.5rem;
+            line-height: 1.3;
+        }
+
+        .post-date {
+            color: #999999;
+            font-size: 0.95rem;
+            margin-bottom: 3rem;
+        }
+
+        article h2, article h3 {
+            color: #000;
+            font-weight: 500;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        article h2 {
+            font-size: 1.5rem;
+        }
+
+        article h3 {
+            font-size: 1.25rem;
+        }
+
+        article p {
+            margin-bottom: 1.5rem;
+        }
+
+        article a {
+            color: #009AFF;
+            text-decoration: none;
+        }
+
+        article a:hover {
+            text-decoration: underline;
+        }
+
+        article ul, article ol {
+            margin-bottom: 1.5rem;
+            margin-left: 1.5rem;
+        }
+
+        article li {
+            margin-bottom: 0.5rem;
+        }
+
+        article img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            margin: 2rem 0 0.5rem 0;
+        }
+
+        figcaption {
+            color: #999999;
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
+        }
+    </style>
 </head>
-
 <body>
-    <nav>
-        <br>
-        <div class="blog-wrapper">
-            <a href="/blog/">Back</a>
-        </div>
-    </nav>
+    <div class="container">
+        <nav>
+            <a href="/blog/">← Back</a>
+        </nav>
 
-    <div class="blog-wrapper">
-        <div class="blog-box">
-            <h2>Bigger product, bigger shadow</h2>
-            <p>11 June 2021</p>
-        </div>
+        <article>
+            <h1>Bigger product, bigger shadow</h1>
+            <p class="post-date">11 June 2021</p>
 
-    </div>
-
-    <div class="blog-wrapper">
-
-        <div>
             <p>The bigger your product gets, the more its shadow grows.</p>
 
             <p><b>The product</b> getting bigger is made up of things like features, number of users, tech infrastructure, design processes.<br>
@@ -40,30 +128,24 @@
 
             <p>Think of your shadow. What are the things that are in it? Do you have loads of bugs? Is your roadmap fuzzy and unclear? Do you have too many feature requests from demanding customers?</p>
 
-            <p>It can be fun building product, but don’t forget about the shadow.</p>
-
-        </div>
+            <p>It can be fun building product, but don't forget about the shadow.</p>
+        </article>
     </div>
 
-    <br><br><br><br><br>
-
+    <script>
+    (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-54702241-1', 'auto');
+    ga('send', 'pageview');
+    </script>
 </body>
-<script>
-
- //this is my ga tracking code. there are many others like it, but this one is mine 👋
- (function(i, s, o, g, r, a, m) {
-     i['GoogleAnalyticsObject'] = r;
-     i[r] = i[r] || function() {
-         (i[r].q = i[r].q || []).push(arguments)
-     }, i[r].l = 1 * new Date();
-     a = s.createElement(o),
-     m = s.getElementsByTagName(o)[0];
-     a.async = 1;
-     a.src = g;
-     m.parentNode.insertBefore(a, m)
- })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
- ga('create', 'UA-54702241-1', 'auto');
- ga('send', 'pageview');
-
-</script>
 </html>

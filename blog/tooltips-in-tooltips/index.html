@@ -1,165 +1,244 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <!--Hello friend-->
-    <link rel="stylesheet" type="text/css" href="/../styles23-03-2023.css">
-    <link rel="shortcut icon" href="/../favicon.ico">
-    <title>Tooltips in tooltips · Philip Ardeljan is a UI designer</title>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="https://cdn.fastcomments.com/js/embed.min.js"></script>
+    <link rel="shortcut icon" href="/favicon.ico">
+    <title>Tooltips in tooltips · Philip Ardeljan</title>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-
-</head>
-<style>
-
- .tooltip {
-     position: relative;
-     display: inline-block;
-     color: blue;
-     cursor: pointer;
- }
-
- .tooltip .tooltiptext {
-     visibility: hidden;
-     width: 300px;
-     background-color: #fff;
-     box-shadow: 0px 0px 20px rgba(0, 0, 0, .1), 0px 0px 2px rgba(0, 0, 0, .1) ;
-     color: #000;
-     border-radius: 2px;
-     position: absolute;
-     z-index: 1;
-     top: 100%;
-     left: 50%;
-     margin-left: -120px;
-     opacity: 0;
-     transition: opacity 0.3s;
- }
-
- .tooltip:hover .tooltiptext {
-     visibility: visible;
-     opacity: 1;
- }
-
- .tooltip2 {
-     color: blue;
-     padding: 20px 0;
- }
-
- .tooltip2 .tooltiptext2 {
-     visibility: hidden;
-     width: 420px;
-     height: 240px;
-     background-color: #fff;
-     box-shadow: 0px 0px 20px rgba(0, 0, 0, .1), 0px 0px 2px rgba(0, 0, 0, .1) ;
-     color: #000;
-     border-radius: 2px;
-     position: absolute;
-     z-index: 1;
-     top: 72%;
-     left: 50%;
-     margin-left: -130px;
-     opacity: 0;
-     transition: opacity 0.3s;
- }
-
- .tooltip2:hover .tooltiptext2 {
-     visibility: visible;
-     opacity: 1;
- }
-
-
- .tooltip3 {
-     color: blue;
-     padding: 20px 0;
- }
-
- .tooltip3 .tooltiptext3 {
-     visibility: hidden;
-     width: 320px;
-     background-color: #fff;
-     box-shadow: 0px 0px 20px rgba(0, 0, 0, .1), 0px 0px 2px rgba(0, 0, 0, .1) ;
-     color: #000;
-     border-radius: 2px;
-     position: absolute;
-     z-index: 1;
-     top: 63%;
-     left: 50%;
-     margin-left: -130px;
-     opacity: 0;
-     transition: opacity 0.3s;
- }
-
- .tooltip3:hover .tooltiptext3 {
-     visibility: visible;
-     opacity: 1;
- }
-
- .tooltip4 {
-     color: blue;
-     padding: 20px 0;
- }
-
- .tooltip4 .tooltiptext4 {
-     visibility: hidden;
-     width: 400px;
-     background-color: #fff;
-     box-shadow: 0px 0px 20px rgba(0, 0, 0, .1), 0px 0px 2px rgba(0, 0, 0, .1) ;
-     color: #000;
-     border-radius: 2px;
-     position: absolute;
-     z-index: 1;
-     bottom: 80px;
-     left: 50%;
-     margin-left: -180px;
-     opacity: 0;
-     transition: opacity 0.3s;
- }
-
- .tooltip4:hover .tooltiptext4 {
-     visibility: visible;
-     opacity: 1;
- }
- 
-</style>
-
-<body>
-    <nav>
-        <br>
-        <div class="blog-wrapper">
-            <a href="/blog/">Back</a>
-        </div>
-    </nav>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     
-    <div class="blog-wrapper">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-        <div class="blog-box">
-            <h2>Tooltips in tooltips</h2>
-            <p>7 September 2020</p>
-        </div>
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: #7B7B7B;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
 
-    </div>
+        .container {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
 
-    <div class="blog-wrapper">
+        nav {
+            margin-bottom: 60px;
+        }
 
-        <div>
-            <p>With the recent release of <a target="_blank" href="https://store.steampowered.com/app/1158310/Crusader_Kings_III/">Crusader Kings 3</a> by Paradox Interactive, a new UI paradigm in the game stopped me in my tracks. There are a lot of lessons that web designers can learn from video game user interface design and while they aren’t always transferrable, they are worth exploring. In this case it’s the idea of having <i>tooltips within tooltips.</i></p>
+        nav a {
+            color: #7B7B7B;
+            text-decoration: none;
+            font-size: 0.95rem;
+        }
+
+        nav a:hover {
+            color: #000;
+        }
+
+        article h1 {
+            font-size: 2rem;
+            font-weight: 500;
+            color: #000;
+            margin-bottom: 0.5rem;
+            line-height: 1.3;
+        }
+
+        .post-date {
+            color: #999999;
+            font-size: 0.95rem;
+            margin-bottom: 3rem;
+        }
+
+        article h2, article h3 {
+            color: #000;
+            font-weight: 500;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        article h2 {
+            font-size: 1.5rem;
+        }
+
+        article h3 {
+            font-size: 1.25rem;
+        }
+
+        article p {
+            margin-bottom: 1.5rem;
+        }
+
+        article a {
+            color: #009AFF;
+            text-decoration: none;
+        }
+
+        article a:hover {
+            text-decoration: underline;
+        }
+
+        article ul, article ol {
+            margin-bottom: 1.5rem;
+            margin-left: 1.5rem;
+        }
+
+        article li {
+            margin-bottom: 0.5rem;
+        }
+
+        article img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            margin: 2rem 0 0.5rem 0;
+        }
+
+        figcaption {
+            color: #999999;
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
+            text-align: left;
+        }
+
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            color: blue;
+            cursor: pointer;
+        }
+
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 300px;
+            background-color: #fff;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, .1), 0px 0px 2px rgba(0, 0, 0, .1);
+            color: #000;
+            border-radius: 2px;
+            position: absolute;
+            z-index: 1;
+            top: 100%;
+            left: 50%;
+            margin-left: -120px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .tooltip2 {
+            color: blue;
+            padding: 20px 0;
+        }
+
+        .tooltip2 .tooltiptext2 {
+            visibility: hidden;
+            width: 420px;
+            height: 240px;
+            background-color: #fff;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, .1), 0px 0px 2px rgba(0, 0, 0, .1);
+            color: #000;
+            border-radius: 2px;
+            position: absolute;
+            z-index: 1;
+            top: 72%;
+            left: 50%;
+            margin-left: -130px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .tooltip2:hover .tooltiptext2 {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .tooltip3 {
+            color: blue;
+            padding: 20px 0;
+        }
+
+        .tooltip3 .tooltiptext3 {
+            visibility: hidden;
+            width: 320px;
+            background-color: #fff;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, .1), 0px 0px 2px rgba(0, 0, 0, .1);
+            color: #000;
+            border-radius: 2px;
+            position: absolute;
+            z-index: 1;
+            top: 63%;
+            left: 50%;
+            margin-left: -130px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .tooltip3:hover .tooltiptext3 {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .tooltip4 {
+            color: blue;
+            padding: 20px 0;
+        }
+
+        .tooltip4 .tooltiptext4 {
+            visibility: hidden;
+            width: 400px;
+            background-color: #fff;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, .1), 0px 0px 2px rgba(0, 0, 0, .1);
+            color: #000;
+            border-radius: 2px;
+            position: absolute;
+            z-index: 1;
+            bottom: 80px;
+            left: 50%;
+            margin-left: -180px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .tooltip4:hover .tooltiptext4 {
+            visibility: visible;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <a href="/blog/">← Back</a>
+        </nav>
+
+        <article>
+            <h1>Tooltips in tooltips</h1>
+            <p class="post-date">7 September 2020</p>
+
+            <p>With the recent release of <a target="_blank" href="https://store.steampowered.com/app/1158310/Crusader_Kings_III/">Crusader Kings 3</a> by Paradox Interactive, a new UI paradigm in the game stopped me in my tracks. There are a lot of lessons that web designers can learn from video game user interface design and while they aren't always transferrable, they are worth exploring. In this case it's the idea of having <i>tooltips within tooltips.</i></p>
 
             <img src="tooltips.png" />
-            <figcaption style="text-align: left;">Tooltips within tooltips! Image taken from <a target="_blank" href="https://www.crusaderkings.com/news/dev-diary-16-tutorials-and-tooltips-and-encyclopedias-oh-my">this dev diary</a></figcaption>
-
-            <br>
+            <figcaption>Tooltips within tooltips! Image taken from <a target="_blank" href="https://www.crusaderkings.com/news/dev-diary-16-tutorials-and-tooltips-and-encyclopedias-oh-my">this dev diary</a></figcaption>
 
             <p>Tooltips have become a standard component in user interface design. The majority of web UI frameworks include some form of tooltip, with Bootstrap having <i>two</i> types (Tooltips and Popovers). Wikipedia uses tooltips when hovering over links:</p>
 
             <img style="width: 50%;" src="droplet2.png" />
-            <figcaption style="text-align: left;">Image taken from this <a target="_blank" href="https://en.wikipedia.org/wiki/Respiratory_droplet">Wikipedia article</a></figcaption>
-
-            <br>
+            <figcaption>Image taken from this <a target="_blank" href="https://en.wikipedia.org/wiki/Respiratory_droplet">Wikipedia article</a></figcaption>
 
             <h2>What about nested tooltips... on the web?</h2>
             <h3>Hover over "small droplets" to begin</h3>
-            <br>
             
             <div style="margin: 0 auto; padding: 1rem; border: 1px solid #eee; line-height: 1.5;">The virus is spread primarily via
                 <div class="tooltip"><span style="color: #009AFF;">small droplets</span>
@@ -214,13 +293,11 @@
                 </div>
                 from coughing, sneezing, and talking. The droplets are usually not airborne, however those standing in close proximity may inhale them and become infected. People may also become infected by touching a contaminated surface and then touching their face. The transmission may also occur through aerosols that can stay suspended in the air for longer periods of time in enclosed spaces. It is most contagious during the first three days after the onset of symptoms, although spread is possible before symptoms appear, and from people who are asymptomatic.
             </div>
-            <figcaption style="text-align: left;">Images and content taken from <a target="_blank" href="https://en.wikipedia.org/">Wikipedia</a></figcaption>
+            <figcaption>Images and content taken from <a target="_blank" href="https://en.wikipedia.org/">Wikipedia</a></figcaption>
 
-            <br>
+            <p>Did you find it intuitive? Could you easily traverse up and down the tooltip chain? Note: this is a HTML/CSS example that I quickly put together so it's rough around the edges.</p>
 
-            <p>Did you find it intuitive? Could you easily traverse up and down the tooltip chain? Note: this is a HTML/CSS example that I quickly put together so it’s rough around the edges.</p>
-
-            <p>I found it suprisingly intuitive and easy to use. When you hover to reveal the first tooltip, you keep your cursor nice and still. After that, you locate a piece of information you want to learn more about and you hover over that. It might overlap the first tooltip, but that’s fine. You’ve chosen to seek more information.</p>
+            <p>I found it suprisingly intuitive and easy to use. When you hover to reveal the first tooltip, you keep your cursor nice and still. After that, you locate a piece of information you want to learn more about and you hover over that. It might overlap the first tooltip, but that's fine. You've chosen to seek more information.</p>
 
             <p>Another reason I like this idea, is that it matches how I think. When learning something new, there might be a supporting concept or idea I don't fully grasp. A nested tooltip is a great solution.</p>
 
@@ -235,29 +312,23 @@
             </ul>
 
             <p>I guess the question is: could the web embrace nested tooltips?</p>
-
-        </div>
+        </article>
     </div>
 
-    <br><br><br><br><br>
-
+    <script>
+    (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-54702241-1', 'auto');
+    ga('send', 'pageview');
+    </script>
 </body>
-<script>
-
- //this is my ga tracking code. there are many others like it, but this one is mine 👋
- (function(i, s, o, g, r, a, m) {
-     i['GoogleAnalyticsObject'] = r;
-     i[r] = i[r] || function() {
-         (i[r].q = i[r].q || []).push(arguments)
-     }, i[r].l = 1 * new Date();
-     a = s.createElement(o),
-     m = s.getElementsByTagName(o)[0];
-     a.async = 1;
-     a.src = g;
-     m.parentNode.insertBefore(a, m)
- })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
- ga('create', 'UA-54702241-1', 'auto');
- ga('send', 'pageview');
-
-</script>
 </html>
