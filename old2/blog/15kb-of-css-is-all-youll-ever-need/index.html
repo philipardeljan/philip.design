@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!--Hello friend-->
+    <link rel="stylesheet" type="text/css" href="/../styles23-03-2023.css">
+    <link rel="shortcut icon" href="/../favicon.ico">
+    <title>Philip Ardeljan is a UI designer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <nav>
+        <br>
+        <div class="blog-wrapper">
+            <a href="/blog/">Back</a>
+        </div>
+    </nav>
+
+    <div class="blog-wrapper">
+
+        <div class="blog-box">
+            <h2>15kb of CSS is all you’ll ever need ⚡️</h2>
+            <p>17 Nov 2016</p>
+        </div>
+
+    </div>
+
+    <br>
+    <div class="blog-wrapper">
+
+        <div>
+            <p>With the danger of having lured you with a click-baity title I’m going to further test your patience by talking about functional CSS. This seems to be a topic with polarising opinions.</p>
+
+            <p>I have found two overall benefits when using functional CSS:</p>
+            <ol>
+                <li>Much smaller CSS file sizes (faster load time 🐎 = happier users). This is what this post is about.</li>
+                <li>Much faster UI development in the browser 💻 (working faster = happy co-workers and happy boss). I want to do a separate post for this soon.</li>
+            </ol>
+
+            <p>I’ve used functional CSS for a few months and have found it to be most enjoyable. It feels like direct manipulation in the browser which is pretty cool. For this post however I won’t be talking about how functional CSS has improved my workflow, instead I’ll talk about the benefit it brings to performance:</p>
+        </div>
+    </div>
+
+    <br>
+    <div style="max-width: 1200px; margin: 0 auto;">
+        <img style="max-width: 100%" src="../15kb-of-css.png" />
+    </div>
+    <br>
+
+    <div class="blog-wrapper">
+        <div>
+            <p>You can build any UI with 15kb of CSS? Are you sure about that? 🤔</p>
+            
+            <p>Yup. Classes in functional CSS have a single purpose or responsibility. This makes them infinitely re-useable. Unlike the following class:</p>
+
+            <code>
+                <pre>
+.card {
+  display: block;
+  border: 1px solid #999;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+}
+                </pre>
+            </code>
+
+            <p>which can only be re-used once. Think of how many times you can re-use the following class:</p>
+
+            <code>
+                <pre>
+.tc {
+  text-align: center;
+}
+                </pre>
+            </code>
+
+            <p>The semantic class name approach to writing CSS leads to the constant need for new CSS. You’ll never stop writing CSS. On the other hand, the functional CSS approach means you will write all the CSS you need, and then you will stop. If you are clever about it, it won’t be much larger than 15kb. Ideally you are the designer and it matches your design/pattern library. If not, then you are a developer and you work closely with the designer to define all the CSS classes.</p>
+
+            <p>The reason I say that: CSS is design. The things that get declared in CSS almost all relate to the user interface in some way:</p>
+
+            <ul>
+                <li>Typography</li>
+                <li>A grid system (if you use one)</li>
+                <li>Colours</li>
+                <li>Margins and paddings</li>
+                <li>etc...</li>
+            </ul>
+
+            <p>CSS is the dictionary of your design library.</p>
+
+            <p>Perhaps the fact they are called CSS classes has led us down the wrong path. A CSS class has little resemblance to the classes of OOP languages. I recently heard someone say that you don’t class an element, you style it. I’m going to run with that.</p>
+
+            <h3>CSS is simple.</h3>
+            <p>CSS is responsible for making something blue. Or making some text big. Or making every second element have a light grey background. Or making a block of text hide on small screen sizes. It’s quite simple, let’s not over complicate it.</p>
+
+            <p>“O.K. Philip” I hear you say, “that makes sense. But why the fuss over 300kb of CSS? How is that a big deal?” 🤔</p>
+
+            <h3>But it is.</h3>
+            <p>It takes ten seconds 🐢 to load 300kb of CSS on a 3G connection. It takes two seconds on a 4G connection. That’s just the CSS, not the content/scripts/images/fonts etc. Many of us, especially in tech, are blessed with fast internet speeds (❤️ fibre internet). Before deeming your web app fast, try loading it with the standard 3G throttle in Chrome Dev Tools. Really, give it a shot. Performance is a feature. CSS no longer gets a free pass.</p>
+
+            <p>There is the bigger issue of CSS in web development (which is another post in itself). It shouldn’t take a day to change a piece of UI because the CSS is a nightmare to work with. From my experience over the last few months functional CSS gets around this.</p>
+
+            <h3>User first.</h3>
+            <p>We are all building products for users. If our clever Sass or Less spits out a CSS file that is over 300kb after minification and compression then we’ve over complicated things and we’re making our users suffer.</p>
+
+            <h3>Give it a go. 🖥</h3>
+            <p>Your users will have a better experience and I daresay when you try it, you’ll have a better experience working with CSS. It’s a big shift mentally, but it’s only when you start to use it that you see how easy it is to work with.</p>
+
+            <h3>Further reading:</h3>
+            <p><a href="http://mrmrs.io/writing/2016/03/24/scalable-css/">CSS and Scalability by Adam Morse</a>
+            </p>
+
+            <p><a href="https://blog.colepeters.com/building-and-shipping-functional-css/">Building and shipping functional CSS by Cole Peters</a>
+            </p>
+
+            <h3>Functional CSS toolkits:</h3>
+            <p>(functional CSS libraries/toolkits have similar structures so most of it comes down to class naming and how much CSS is included. I prefer Tachyons in this instance but you can extend/augment them based on your needs which is what makes them so great!)</p>
+
+            <p><a href="http://tachyons.io/">Tachyons</a></p>
+            <p><a href="http://tachyons.io/">Basscss</a></p>
+
+            <i>Thanks to Grant and Adam for feedback and Kira for encouragement 😊 ✍️</i>
+
+        </div>
+    </div>
+
+    <br><br><br><br><br>
+
+</body>
+<script>
+
+ //this is my ga tracking code. there are many others like it, but this one is mine 👋
+ (function(i, s, o, g, r, a, m) {
+     i['GoogleAnalyticsObject'] = r;
+     i[r] = i[r] || function() {
+         (i[r].q = i[r].q || []).push(arguments)
+     }, i[r].l = 1 * new Date();
+     a = s.createElement(o),
+     m = s.getElementsByTagName(o)[0];
+     a.async = 1;
+     a.src = g;
+     m.parentNode.insertBefore(a, m)
+ })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+ ga('create', 'UA-54702241-1', 'auto');
+ ga('send', 'pageview');
+
+</script>
+</html>

@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script>
+         //this is my ga tracking code. there are many others like it, but this one is mine 👋
+         (function(i, s, o, g, r, a, m) {
+             i['GoogleAnalyticsObject'] = r;
+             i[r] = i[r] || function() {
+                 (i[r].q = i[r].q || []).push(arguments)
+             }, i[r].l = 1 * new Date();
+             a = s.createElement(o),
+             m = s.getElementsByTagName(o)[0];
+             a.async = 1;
+             a.src = g;
+             m.parentNode.insertBefore(a, m)
+         })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+         ga('create', 'UA-54702241-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+        
+        <!--Hello friend-->
+        <link rel="shortcut icon" href="favicon.ico">
+        <title>Philip Ardeljan is a product designer</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+        <meta charset="UTF-8">
+        <title>Philip Ardeljan is a product designer</title>
+        
+        <style>
+
+         * {
+             -webkit-font-smoothing: antialiased;
+         }
+         
+         body {
+             font-family: "Inter", serif;
+             margin: 0;
+             padding: 0;
+             background: #111;
+             font-size: 16px;
+             color: #fff;
+             overflow-x: hidden;
+         }
+
+         h1 {
+             font-size: 48px;
+             text-align: center;
+             margin-bottom: 1rem;
+         }
+
+         h2 {
+             font-size: 32px;
+             text-align: center;
+         }
+
+         h4 {
+             font-weight: bold;
+             margin-bottom: 0;
+         }
+
+         a {
+             text-decoration: none;
+         }
+
+         .subheading {
+             max-width: 780px;
+         }
+
+         button {
+             background: #111;
+             color: #E6EBF8;
+             border: 1px solid #333;
+             border-radius: 2px;
+             padding: .75rem 1rem;
+             font-size: 16px;
+             cursor: pointer;
+         }
+
+         .button {
+             background: #111;
+             color: #E6EBF8;
+             border: 1px solid #333;
+             border-radius: 2px;
+             padding: .75rem 1rem;
+             font-size: 16px;
+             cursor: pointer;
+         }
+
+         .wrapper {
+             max-width: 920px;
+             margin: 0 auto;
+             padding: 0 2rem;
+         }
+
+         .footer-wrapper {
+             display: flex;
+             flex-direction: column;
+             justify-content: end;
+             max-width: 920px;
+             height: 550px;
+             max-height: 550px;
+             border-radius: 8px;
+             border: 1px solid #333;
+             margin: 0 auto 2rem;
+             background-image: url("img/me.png");
+             background-size: cover;
+             background-repeat: no-repeat;
+             background-position: center;
+         }
+
+         .footer-wrapper h3 {
+             margin-top: .5rem;
+             text-align: center;
+             font-weight: 400;
+         }
+
+         .header-wrapper {
+             display: flex;
+             align-items: center;
+             justify-content: center;
+             padding-top: 2rem;
+         }
+
+         .status-button {
+             display: flex;
+             background: #44CC6C;
+             border-radius: 24px;
+             width: 12px;
+             height: 12px;
+             margin-right: .5rem;
+             filter: drop-shadow(0px 0px 6px rgba(68, 204, 108, 1));
+         }
+
+         .recommendation-box {
+             background: #000;
+             padding: 1rem 2rem;
+             border-radius: 20px;
+             max-width: 576px;
+             margin: 0 auto 1rem;
+         }
+
+         .recommendation-box div {
+             display: flex;
+             align-items: center;
+             padding: .5rem 0;
+         }
+
+         .recommendation-box p {
+             margin-bottom: 0;
+         }
+
+         .recommendation-box h4 {
+             margin: 0;
+         }
+
+         .recommendation-box div p {
+             margin: 0;
+         }
+
+         .recommendation-box-green {
+             background: #C0E6C9;
+             color: #00360D;
+         }
+
+         .recommendation-box-blue {
+             background: #C0C9E6;
+             color: #000E3A;
+         }
+
+         .recommendation-box-yellow {
+             background: #E6DDC0;
+             color: #171201;
+         }
+
+         .blue-text { color: #C0CAE6; }
+         .yellow-text { color: #E6DDC0; }
+         .green-text { color: #C0E6C9; }
+         .normal { font-weight: 400; }
+         .ma0 { margin: 0; }
+
+         .position {
+             display: flex;
+             margin-top: 2rem;
+         }
+
+         .footer {
+             border-top: 1px solid #333;
+             background: #000;
+             padding: 3rem 0 4.5rem;
+             margin-top: 4rem;
+         }
+
+         .footer-mobile {
+             text-align: center;
+             margin-top: .5rem;
+         }
+
+         .hero-image {
+             margin-bottom: 10px;
+         }
+         .hero-image img {
+             width: 100%;
+             height: auto;
+             border-radius: 8px;
+         }
+         .thumbnail-container {
+             display: flex;
+             gap: 8px;
+             flex-wrap: wrap;
+             justify-content: center;
+         }
+         .thumbnail {
+             width: 59px;
+             height: 50px;
+             object-fit: cover;
+             cursor: pointer;
+             border: 2px solid transparent;
+             border-radius: 4px;
+             opacity: .4;
+         }
+         .thumbnail:hover, .thumbnail.active {
+             border-color: #007BFF;
+             opacity: 1;
+         }
+
+         .case-study {
+             background: #000;
+             border: 1px solid #333;
+             border-radius: 8px;
+         }
+
+         .case-study:nth-of-type(1) {
+             margin-right: 1rem;
+         }
+
+         .case-study:nth-of-type(2) {
+             margin-left: 1rem;
+         }
+
+         .case-study img {
+             display: block;
+             max-width: 50%;
+             margin: 0 auto;
+         }
+
+         .case-study h4 {
+             text-align: center;
+         }
+
+         .case-study a {
+             display: flex;
+             justify-content: center;
+             margin: 1rem 0 1.5rem; 
+         }
+
+         .flex-block-mobile {
+             display: flex;
+         }
+
+         .block.block {
+             display: block;
+         }
+
+         .flex.flex {
+             display: flex;
+         }
+
+         .justify-center {
+             justify-content: center
+         }
+
+         .items-center {
+             align-items: center;
+         }
+
+         @media (max-width: 450px) {
+             .footer-wrapper {
+                 padding: 0 2rem;
+             }
+             
+             .footer-mobile {
+                 display: flex;
+                 flex-direction: column;
+                 align-items: flex-start;
+             }
+             .footer-mobile a {
+                 margin-bottom: .5rem;
+             }
+         }
+
+         @media (max-width: 500px) {
+             .flex-block-mobile {
+                 display: block;
+             }
+             .case-study.case-study {
+                 margin: 0 0 1rem;
+             }
+         }
+
+        </style>
+    </head>
+    <body>
+
+        <div class="wrapper">
+            <div class="header-wrapper">
+                <div>
+                    <h1 class="main-heading"><span class="blue-text">Philip Ardeljan.</span> <span class="yellow-text">Product Designer</span></h1>
+                    <h2 class="subheading"><span class="blue-text">I work with founders & engineers to transform ideas into user-friendly products.</span> <span class="yellow-text normal"> I help companies design great products by leveraging</span> <span class="blue-text">10+ years of experience.</span></h2>
+                </div>
+            </div>
+
+            <br>
+
+            <div class="carousel">
+                <div class="hero-image">
+                    <img id="hero" src="img/1.png" alt="Hero">
+                </div>
+                <div class="thumbnail-container">
+                    <img class="thumbnail active" src="img/1.png" alt="Thumbnail 1" data-image="img/1.png">
+                    <img class="thumbnail" src="img/15.png" alt="Thumbnail 2" data-image="img/15.png">
+                    <img class="thumbnail" src="img/3.png" alt="Thumbnail 3" data-image="img/3.png">
+                    <img class="thumbnail" src="img/4.png" alt="Thumbnail 4" data-image="img/4.png">
+                    <img class="thumbnail" src="img/16.png" alt="Thumbnail 5" data-image="img/16.png">
+                    <img class="thumbnail" src="img/18.png" alt="Thumbnail 6" data-image="img/18.png">
+                    <img class="thumbnail" src="img/7.png" alt="Thumbnail 7" data-image="img/7.png">
+                    <img class="thumbnail" src="img/8.png" alt="Thumbnail 8" data-image="img/8.png">
+                    <img class="thumbnail" src="img/9.png" alt="Thumbnail 9" data-image="img/9.png">
+                    <img class="thumbnail" src="img/10.png" alt="Thumbnail 10" data-image="img/10.png">
+                    <img class="thumbnail" src="img/11.png" alt="Thumbnail 11" data-image="img/11.png">
+                    <img class="thumbnail" src="img/12.png" alt="Thumbnail 12" data-image="img/12.png">
+                    <img class="thumbnail" src="img/13.png" alt="Thumbnail 13" data-image="img/13.png">
+                </div>
+                
+            </div>
+
+            <br><br>
+            
+            <div>
+                <h2 class="blue-text">I'm passionate about</h2>
+                <h2 class="green-text normal ma0">Understanding user needs</h2>
+                <h2 class="blue-text normal ma0">Designing intuitive user interfaces</h2>
+                <h2 class="yellow-text normal ma0">Collaborating with software engineers</h2>
+            </div>
+
+            <br><br><br><br>
+
+            <div class="recommendation-box recommendation-box-green">
+                <p><b>Philip has taken our products to a whole new level.</b> With a consistently friendly tone and open communication, Philip works very well with engineers, scrum masters, product owners and customer-facing staff. Philip is equally capable of two things: bringing another person's vision to life faithfully; and taking the seed of the initial idea and coming back with a much better alternative. <b>I highly recommend Philip.</b></p>
+                <div>
+                    <div class="block">
+                        <h4>Justin</h4>
+                        <p>Co-founder</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="recommendation-box recommendation-box-blue">
+                <p>Philip is an <b>exceptional product designer</b> with a keen eye for detail and a deep understanding of user-centric design. His ability to seamlessly blend research, UX, and UI ensures intuitive and impactful solutions. A strong collaborator and problem-solver, <b>Philip consistently delivers high-quality designs</b> that align with both user needs and business objectives.</p>
+                <div>
+                    <div class="block">
+                        <h4>Sean</h4>
+                        <p>CTO</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="recommendation-box recommendation-box-yellow">
+                <p>I’ve worked with Philip for 7 years and I can say that he is without doubt <b>the best product designer I’ve ever worked with.</b> I’ve been amazed at his attention to detail and his continued focus on making sure the end user has the best possible experience. While his specialty is design he's also capable of writing technical specifications that software engineers can easily pick up and deliver, as well as contributing to the codebase directly. <b>He would be a great asset to any team.</b></p>
+                <div>
+                    <div class="block">
+                        <h4>Stephen</h4>
+                        <p>Full stack engineer</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <br><br><br>
+
+        <div class="wrapper flex-block-mobile">
+            <div class="case-study">
+                <img style="width: 60px; margin-top: 1rem;" src="img/document-emoji.png" alt="Hero">
+                <h2 style="font-size: 24px;" class="blue-text ma0">Case study</h2>
+                <p style="text-align: center; padding: .5rem;" class="yellow-text ma0">How do you get 50,000 students excited about mathematics?</p>
+                <a href="Case Study How do you get 50,000 students excited about mathematics.pdf" download><button>Get Case Study (PDF)</button></a>
+            </div>
+            
+            <div class="case-study">
+                <img style="width: 60px; margin-top: 1rem;" src="img/art-emoji.png" alt="Hero">
+                <h2 style="font-size: 24px;" class="blue-text ma0">UI example kit</h2>
+                <p style="text-align: center; padding: .5rem;" class="yellow-text ma0">Examples of Product Design work I've created in my career.</p>
+                <a href="UI work examples of Philip Ardeljan, Product Designer.pdf" download><button>Get UI samples (PDF)</button></a>
+            </div>
+        </div>
+
+        <br><br><br>
+
+        <div class="wrapper">
+        <div style="padding: 4rem 1rem 0;" class="footer-wrapper">
+            <div>
+                <h2 class="yellow-text ma0">Let’s build something amazing together!</h2>
+                <div class="flex justify-center items-center yellow-text">
+                    <span class="status-button"></span>
+                    <p>Currently available for opportunities</p>
+                </div>
+                <div class="footer-mobile">
+                    <a href="Philip Ardeljan Product Designer Resume.pdf" download><button>Download CV (PDF)</button></a>
+                    <a href="mailto:philip@ardeljan.com"><button>Email</button></a>
+                    <a href="https://www.linkedin.com/in/philipardeljan/"><button>LinkedIn</button></a>
+                </div>
+                <br>
+            </div>
+            <br>
+            
+        </div>
+        </div>
+
+        <script>
+         const heroImage = document.getElementById('hero');
+         const thumbnails = document.querySelectorAll('.thumbnail');
+
+         thumbnails.forEach(thumbnail => {
+             thumbnail.addEventListener('click', (event) => {
+                 // Update hero image
+                 heroImage.src = event.target.getAttribute('data-image');
+
+                 // Remove active class from all thumbnails
+                 thumbnails.forEach(thumb => thumb.classList.remove('active'));
+
+                 // Add active class to clicked thumbnail
+                 event.target.classList.add('active');
+             });
+         });
+        </script>
+        
+    </body>
+</html>

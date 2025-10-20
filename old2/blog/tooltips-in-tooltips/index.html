@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!--Hello friend-->
+    <link rel="stylesheet" type="text/css" href="/../styles23-03-2023.css">
+    <link rel="shortcut icon" href="/../favicon.ico">
+    <title>Tooltips in tooltips · Philip Ardeljan is a UI designer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.fastcomments.com/js/embed.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<style>
+
+ .tooltip {
+     position: relative;
+     display: inline-block;
+     color: blue;
+     cursor: pointer;
+ }
+
+ .tooltip .tooltiptext {
+     visibility: hidden;
+     width: 300px;
+     background-color: #fff;
+     box-shadow: 0px 0px 20px rgba(0, 0, 0, .1), 0px 0px 2px rgba(0, 0, 0, .1) ;
+     color: #000;
+     border-radius: 2px;
+     position: absolute;
+     z-index: 1;
+     top: 100%;
+     left: 50%;
+     margin-left: -120px;
+     opacity: 0;
+     transition: opacity 0.3s;
+ }
+
+ .tooltip:hover .tooltiptext {
+     visibility: visible;
+     opacity: 1;
+ }
+
+ .tooltip2 {
+     color: blue;
+     padding: 20px 0;
+ }
+
+ .tooltip2 .tooltiptext2 {
+     visibility: hidden;
+     width: 420px;
+     height: 240px;
+     background-color: #fff;
+     box-shadow: 0px 0px 20px rgba(0, 0, 0, .1), 0px 0px 2px rgba(0, 0, 0, .1) ;
+     color: #000;
+     border-radius: 2px;
+     position: absolute;
+     z-index: 1;
+     top: 72%;
+     left: 50%;
+     margin-left: -130px;
+     opacity: 0;
+     transition: opacity 0.3s;
+ }
+
+ .tooltip2:hover .tooltiptext2 {
+     visibility: visible;
+     opacity: 1;
+ }
+
+
+ .tooltip3 {
+     color: blue;
+     padding: 20px 0;
+ }
+
+ .tooltip3 .tooltiptext3 {
+     visibility: hidden;
+     width: 320px;
+     background-color: #fff;
+     box-shadow: 0px 0px 20px rgba(0, 0, 0, .1), 0px 0px 2px rgba(0, 0, 0, .1) ;
+     color: #000;
+     border-radius: 2px;
+     position: absolute;
+     z-index: 1;
+     top: 63%;
+     left: 50%;
+     margin-left: -130px;
+     opacity: 0;
+     transition: opacity 0.3s;
+ }
+
+ .tooltip3:hover .tooltiptext3 {
+     visibility: visible;
+     opacity: 1;
+ }
+
+ .tooltip4 {
+     color: blue;
+     padding: 20px 0;
+ }
+
+ .tooltip4 .tooltiptext4 {
+     visibility: hidden;
+     width: 400px;
+     background-color: #fff;
+     box-shadow: 0px 0px 20px rgba(0, 0, 0, .1), 0px 0px 2px rgba(0, 0, 0, .1) ;
+     color: #000;
+     border-radius: 2px;
+     position: absolute;
+     z-index: 1;
+     bottom: 80px;
+     left: 50%;
+     margin-left: -180px;
+     opacity: 0;
+     transition: opacity 0.3s;
+ }
+
+ .tooltip4:hover .tooltiptext4 {
+     visibility: visible;
+     opacity: 1;
+ }
+ 
+</style>
+
+<body>
+    <nav>
+        <br>
+        <div class="blog-wrapper">
+            <a href="/blog/">Back</a>
+        </div>
+    </nav>
+    
+    <div class="blog-wrapper">
+
+        <div class="blog-box">
+            <h2>Tooltips in tooltips</h2>
+            <p>7 September 2020</p>
+        </div>
+
+    </div>
+
+    <div class="blog-wrapper">
+
+        <div>
+            <p>With the recent release of <a target="_blank" href="https://store.steampowered.com/app/1158310/Crusader_Kings_III/">Crusader Kings 3</a> by Paradox Interactive, a new UI paradigm in the game stopped me in my tracks. There are a lot of lessons that web designers can learn from video game user interface design and while they aren’t always transferrable, they are worth exploring. In this case it’s the idea of having <i>tooltips within tooltips.</i></p>
+
+            <img src="tooltips.png" />
+            <figcaption style="text-align: left;">Tooltips within tooltips! Image taken from <a target="_blank" href="https://www.crusaderkings.com/news/dev-diary-16-tutorials-and-tooltips-and-encyclopedias-oh-my">this dev diary</a></figcaption>
+
+            <br>
+
+            <p>Tooltips have become a standard component in user interface design. The majority of web UI frameworks include some form of tooltip, with Bootstrap having <i>two</i> types (Tooltips and Popovers). Wikipedia uses tooltips when hovering over links:</p>
+
+            <img style="width: 50%;" src="droplet2.png" />
+            <figcaption style="text-align: left;">Image taken from this <a target="_blank" href="https://en.wikipedia.org/wiki/Respiratory_droplet">Wikipedia article</a></figcaption>
+
+            <br>
+
+            <h2>What about nested tooltips... on the web?</h2>
+            <h3>Hover over "small droplets" to begin</h3>
+            <br>
+            
+            <div style="margin: 0 auto; padding: 1rem; border: 1px solid #eee; line-height: 1.5;">The virus is spread primarily via
+                <div class="tooltip"><span style="color: #009AFF;">small droplets</span>
+                    <span class="tooltiptext">
+                        <img style="width: 300px;" src="droplet.png" />
+                        <p style="padding: 10px 20px; color: unset; font-size: 15px;">A respiratory droplet is a small aqueous droplet produced by exhalation, consisting of
+
+                            <span class="tooltip3">saliva
+
+                                <span class="tooltiptext3">
+
+                                    <img style="display: block; width: 320px;" src="saliva.jpg" />
+
+                                    <span style="display: block; padding: 20px 20px;"><b>Saliva</b> (commonly referred to as <b>spit</b>) is an extracellular fluid produced and secreted by salivary glands in the mouth. In
+                                        <span class="tooltip4">humans,
+
+                                            <span class="tooltiptext4">
+
+                                                <span style="display: flex; align-items: center;" class="tooltiptext4">
+
+                                                    <img style="display: inline-block; height: 240px; border-right: 1px solid #ddd;" src="humans.jpg" />
+                                                    <span style="display: inline-block; padding: 20px 20px; width: 230px;"><b>Humans</b> (Homo sapiens) are highly intelligent primates that have become the dominant species on Earth. They are the only extant members of the subtribe Hominina and—together with chimpanzees, gorillas, and orangutans—are part of the family Hominidae (the great apes, or hominids).</span>
+                                                    
+                                                </span>                                                
+                                                
+                                            </span>
+                                        </span>
+
+                                        saliva is 99.5⁠% water plus electrolytes, mucus, white blood cells, epithelial cells (from which DNA can be extracted), enzymes (such as amylase and lipase), antimicrobial agents such as secretory IgA, and lysozymes.</span>
+                                        
+                                        
+                                </span>
+                            </span>
+
+                            or mucus and other matter derived from
+
+                            <span class="tooltip2">respiratory tract
+
+                                <span style="display: flex; align-items: center;" class="tooltiptext2">
+
+                                    <span style="display: inline-block; padding: 20px 20px; width: 230px;">The <b>respiratory tract</b> is the subdivision of the respiratory system involved with the process of respiration in mammals. The respiratory tract is lined with respiratory mucosa or respiratory epithelium.</span>
+                                    
+                                    <img style="display: inline-block; height: 240px; border-left: 1px solid #ddd;" src="tract.svg" />
+                                    
+                                </span>
+                            </span>
+                            
+                            surfaces. Droplet sizes range from <5 µm to 1000 µm. Large droplets fall to the ground or another surface before drying, but smaller ones fall slowly and dry so quickly...
+                    </span>
+                        </p>
+                        
+                </div>
+                from coughing, sneezing, and talking. The droplets are usually not airborne, however those standing in close proximity may inhale them and become infected. People may also become infected by touching a contaminated surface and then touching their face. The transmission may also occur through aerosols that can stay suspended in the air for longer periods of time in enclosed spaces. It is most contagious during the first three days after the onset of symptoms, although spread is possible before symptoms appear, and from people who are asymptomatic.
+            </div>
+            <figcaption style="text-align: left;">Images and content taken from <a target="_blank" href="https://en.wikipedia.org/">Wikipedia</a></figcaption>
+
+            <br>
+
+            <p>Did you find it intuitive? Could you easily traverse up and down the tooltip chain? Note: this is a HTML/CSS example that I quickly put together so it’s rough around the edges.</p>
+
+            <p>I found it suprisingly intuitive and easy to use. When you hover to reveal the first tooltip, you keep your cursor nice and still. After that, you locate a piece of information you want to learn more about and you hover over that. It might overlap the first tooltip, but that’s fine. You’ve chosen to seek more information.</p>
+
+            <p>Another reason I like this idea, is that it matches how I think. When learning something new, there might be a supporting concept or idea I don't fully grasp. A nested tooltip is a great solution.</p>
+
+            <p>In the context of a complex grand strategy game like CK3, having explanatory text is necessary. The designers and developers at Paradox elegantly solved this by implementing tooltips within tooltips. Kudos to them.</p>
+
+            <h3>Potential issues</h3>
+            <ul>
+                <li><b>Accessibility.</b> Well anything is possible with Javascript right? You could tab through the tooltips to get them working.</li>
+                <li><b>User experience.</b> It can be frustrating to move your cursor 1 pixel outside of the bounds of the element which removes the tooltip.</li>
+                <li><b>How deep do you go?</b> The designer should use discretion. An infinitely deep tooltip chain doesn't make sense. There might be some sweet number here like, 2 or 3 nested tooltips.</li>
+                <li><b>Touch?</b> I'm not sure how mobile works. You could just treat them as tappable elements.</li>
+            </ul>
+
+            <p>I guess the question is: could the web embrace nested tooltips?</p>
+
+        </div>
+    </div>
+
+    <br><br><br><br><br>
+
+</body>
+<script>
+
+ //this is my ga tracking code. there are many others like it, but this one is mine 👋
+ (function(i, s, o, g, r, a, m) {
+     i['GoogleAnalyticsObject'] = r;
+     i[r] = i[r] || function() {
+         (i[r].q = i[r].q || []).push(arguments)
+     }, i[r].l = 1 * new Date();
+     a = s.createElement(o),
+     m = s.getElementsByTagName(o)[0];
+     a.async = 1;
+     a.src = g;
+     m.parentNode.insertBefore(a, m)
+ })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+ ga('create', 'UA-54702241-1', 'auto');
+ ga('send', 'pageview');
+
+</script>
+</html>
