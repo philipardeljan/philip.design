@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <title>Should designers prompt? · Philip Ardeljan</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: #7B7B7B;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        nav {
+            margin-bottom: 60px;
+        }
+
+        nav a {
+            color: #7B7B7B;
+            text-decoration: none;
+            font-size: 0.95rem;
+        }
+
+        nav a:hover {
+            color: #000;
+        }
+
+        article h1 {
+            font-size: 2rem;
+            font-weight: 500;
+            color: #000;
+            margin-bottom: 0.5rem;
+            line-height: 1.3;
+        }
+
+        .post-date {
+            color: #999999;
+            font-size: 0.95rem;
+            margin-bottom: 3rem;
+        }
+
+        article h2, article h3 {
+            color: #000;
+            font-weight: 500;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        article h2 {
+            font-size: 1.5rem;
+        }
+
+        article h3 {
+            font-size: 1.25rem;
+        }
+
+        article p {
+            margin-bottom: 1.5rem;
+        }
+
+        article a {
+            color: #009AFF;
+            text-decoration: none;
+        }
+
+        article a:hover {
+            text-decoration: underline;
+        }
+
+        article ul, article ol {
+            margin-bottom: 1.5rem;
+            margin-left: 1.5rem;
+        }
+
+        article li {
+            margin-bottom: 0.5rem;
+        }
+
+        article img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            margin: 2rem 0 0.5rem 0;
+        }
+
+        figcaption {
+            color: #999999;
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
+        }
+
+        article em {
+            font-style: italic;
+        }
+
+        article strong {
+            font-weight: 600;
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <a href="/blog/">← Back</a>
+        </nav>
+
+        <article>
+            <h1>Should designers prompt?</h1>
+            <p class="post-date">21 Oct 2025</p>
+
+            <p><em>This debate might matter more than "should designers code?"</em></p>
+
+            <p>The design world loves a good existential question. Not long ago, it was "should designers code?" — a debate that divided opinion and shaped job descriptions. Now, there's a new one: should designers prompt? This one has bigger implications than it first appears, especially for software devs.</p>
+
+            <h2>The rise of vibe-coding</h2>
+            <p>Let's start with a simple truth: the end result of vibe-coding is still code.</p>
+
+            <p>When that code is temporary (quick prototypes, mockups, or experiments), that's fine. Tools like Cursor make this faster and more expressive than ever. But when that "vibe-coded" output starts moving into production, the stakes change. The conversation shifts from <em>can designers code</em>, to <em>should their code ship at all</em>.</p>
+
+            <h2>The AI paradigm shift</h2>
+            <p>AI tools have completely redefined creative work. Agents like <a href="https://claude.ai/">Claude</a> and environments like <a href="https://cursor.com/">Cursor</a> now act as genuine collaborators. They are able to generate, refactor, and explain code with surprising accuracy.</p>
+
+            <p><strong>For engineers, this is a revolution in productivity.</strong><br>
+            <strong>For designers, it's an invitation to rethink what "hands-on" really means.</strong></p>
+
+            <p>There are, broadly speaking, three kinds of product designers today:</p>
+            <ol>
+                <li><strong>The technical designer</strong> — fluent in front-end development and just as comfortable in VS Code as in Figma.</li>
+                <li><strong>The semi-technical designer</strong> — confident with HTML/CSS and the occasional component tweak, but not shipping production code.</li>
+                <li><strong>The design-purist</strong> — deeply skilled in visual design, research, and interaction, but focused entirely on Figma and prototyping tools.</li>
+            </ol>
+
+            <p>It's the 2nd and 3rd group — and often the largest — that now faces the most urgent question: Should designers prompt?</p>
+
+            <h2>The short answer: yes.</h2>
+            <p>If designers don't learn how to prompt — to communicate effectively with AI tools — they risk being outpaced by those who can. This isn't hyperbole, it's already happening.</p>
+
+            <p>I recently joined a fast-moving startup with a lean product team. A lot of the early product had been "vibe-coded". It was rough, functional and brilliant in places. My first role as a designer was to refine the experience. Improve usability. Remove friction. That's my comfort zone: understanding user needs, sketching ideas, and reworking flows in Figma. But once that foundational work was done, the next phase began: building and iterating quickly. And this is where prompting changed everything.</p>
+
+            <h2>From Figma to code — through AI</h2>
+            <p>I've always had a mild technical streak. I enjoy working in code editors, version control, and even customising environments like Emacs. So when AI tools like Cursor entered the picture, it felt natural to use them. Now, instead of stopping at a Figma prototype, I can describe a component, prompt it into existence, and fine-tune the code directly. I don't need to wait for an engineer to translate a screenshot or Figma prototype into production-ready UI.</p>
+
+            <p>With the recently released <a href="https://www.figma.com/blog/introducing-figma-mcp/">Figma MCP</a>, that loop is closing even tighter. I can design visually in Figma, prompt Claude via Cursor to build it, and submit a PR for review. Engineers still review and refine the output, but the iteration cycle is dramatically faster. This isn't speculative — it's happening now.</p>
+
+            <h2>The new workflow of modern product teams</h2>
+            <p>This blended approach — designers prompting, engineers reviewing — is becoming the new norm. It's efficient, creative, and ultimately more aligned with how digital products are built today. Designers who embrace prompting will work closer to production, communicate more effectively with engineers, and ship better experiences faster. Those who don't may find themselves increasingly sidelined.</p>
+
+            <p>So the real question isn't whether designers should prompt. It's whether they can afford not to.</p>
+
+            <p>Because as prompting becomes part of the design toolkit, product teams will expect it. The best designers will use it to move ideas from concept to code seamlessly — and the best engineers will adapt to collaborate with them.</p>
+
+            <p>And that leads to a final, slightly uncomfortable thought for developers everywhere:</p>
+
+            <p><em>Are you ready to spend your day reviewing pull requests from designers who've just vibe-coded an entire feature?</em></p>
+        </article>
+    </div>
+
+    <script>
+    (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-54702241-1', 'auto');
+    ga('send', 'pageview');
+    </script>
+</body>
+</html>
+
