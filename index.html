@@ -393,16 +393,25 @@
                 <div class="work-carousel">
                     <div class="work-carousel-content" id="workCarouselContent">
                         <div class="work-item-content active">
-                            <img src="img/markmywords3.png" alt="MarkMyWords AI Upload Agent" class="work-screenshot">
+                            <img src="img/1 MarkMyWords - AI Upload Agent.png" alt="MarkMyWords AI Upload Agent" class="work-screenshot">
                         </div>
                         <div class="work-item-content">
-                            <img src="img/15.png" alt="Maths Pathway Learning Platform" class="work-screenshot">
+                            <img src="img/2 Maths Pathway - Learning Platform.png" alt="Maths Pathway Learning Platform" class="work-screenshot">
                         </div>
                         <div class="work-item-content">
-                            <img src="img/3.png" alt="NZX Limited Trading Interface" class="work-screenshot">
+                            <img src="img/3 NZX Limited - Trading Interface.png" alt="NZX Limited Trading Interface" class="work-screenshot">
                         </div>
                         <div class="work-item-content">
-                            <img src="img/4.png" alt="Maths Pathway Learning Platform" class="work-screenshot">
+                            <img src="img/4 Maths Pathway - Student Platform.png" alt="Maths Pathway Student Platform" class="work-screenshot">
+                        </div>
+                        <div class="work-item-content">
+                            <img src="img/5 Maths Pathway - Learning Platform.png" alt="Maths Pathway Learning Platform" class="work-screenshot">
+                        </div>
+                        <div class="work-item-content">
+                            <img src="img/6 Loaf - SVG Tool.png" alt="Loaf SVG Tool" class="work-screenshot">
+                        </div>
+                        <div class="work-item-content">
+                            <img src="img/7 Maths Pathway - Learning Platform.png" alt="Maths Pathway Learning Platform" class="work-screenshot">
                         </div>
                     </div>
                     <div class="work-caption">
@@ -452,23 +461,26 @@
         <script>
          let currentWorkIndex = 0;
 
-         const workTitles = [
-             "MarkMyWords, AI Upload Agent",
-             "Maths Pathway, Learning Platform",
-             "NZX Limited, Trading Interface",
-             "Maths Pathway, Learning Platform"
-         ];
+          const workTitles = [
+              "MarkMyWords, AI Upload Agent",
+              "Maths Pathway, Learning Platform",
+              "NZX Limited, Trading Interface",
+              "Maths Pathway, Student Platform",
+              "Maths Pathway, Learning Platform",
+              "Loaf, SVG Tool",
+              "Maths Pathway, Learning Platform"
+          ];
 
-         // Work Carousel Functions
-         function nextWork() {
-             currentWorkIndex = (currentWorkIndex + 1) % 4;
-             updateWorkCarousel();
-         }
+        // Work Carousel Functions
+        function nextWork() {
+            currentWorkIndex = (currentWorkIndex + 1) % 7;
+            updateWorkCarousel();
+        }
 
-         function previousWork() {
-             currentWorkIndex = (currentWorkIndex - 1 + 4) % 4;
-             updateWorkCarousel();
-         }
+        function previousWork() {
+            currentWorkIndex = (currentWorkIndex - 1 + 7) % 7;
+            updateWorkCarousel();
+        }
 
          function updateWorkCarousel() {
              const items = document.querySelectorAll('#workCarouselContent .work-item-content');
