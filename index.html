@@ -2,372 +2,382 @@
 <html lang="en">
     <head>
         <script>
-         // Google Analytics tracking code
-         (function(i, s, o, g, r, a, m) {
-             i['GoogleAnalyticsObject'] = r;
-             i[r] = i[r] || function() {
-                 (i[r].q = i[r].q || []).push(arguments)
-             }, i[r].l = 1 * new Date();
-             a = s.createElement(o),
-             m = s.getElementsByTagName(o)[0];
-             a.async = 1;
-             a.src = g;
-             m.parentNode.insertBefore(a, m)
-         })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-         ga('create', 'UA-54702241-1', 'auto');
-         ga('send', 'pageview');
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+         })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+         ga('create','UA-54702241-1','auto');
+         ga('send','pageview');
         </script>
-        
+
         <link rel="shortcut icon" href="favicon.ico">
         <title>Philip Ardeljan is a product designer</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
+
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
         <meta charset="UTF-8">
-        
+
         <style>
-         * {
-             -webkit-font-smoothing: antialiased;
-             margin: 0;
-             padding: 0;
-             box-sizing: border-box;
-             letter-spacing: -0.5px;
-         }
-         
-         body {
-             font-family: "Inter", sans-serif;
-             background: #ffffff;
-             color: #7B7B7B;
-             line-height: 1.6;
+
+         *{
+             -webkit-font-smoothing:antialiased;
+             margin:0;
+             padding:0;
+             box-sizing:border-box;
+             letter-spacing:-0.5px;
          }
 
-         .container {
-             max-width: 650px;
-             margin: 0 auto;
-             padding: 0 2rem;
+         body{
+             font-family:"Inter",sans-serif;
+             background:#ffffff;
+             color:#7B7B7B;
+             line-height:1.6;
          }
 
-         /* Header Section */
-         .header {
-             padding: 6rem 0 1rem;
+         .container{
+             max-width:650px;
+             margin:0 auto;
+             padding:0 2rem;
          }
 
-         .header h1 {
-             font-size: 2rem;
-             font-weight: 700;
-             margin-bottom: 0.25rem;
-             color: #000;
+         /* Header */
+
+         .header{
+             padding:6rem 0 1rem;
          }
 
-         .header .subtitle {
-             font-size: 1.2rem;
-             color: #999999;
-             font-weight: 400;
-             margin-top: -1rem;
+         .header h1{
+             font-size:2rem;
+             font-weight:700;
+             margin-bottom:.25rem;
+             color:#000;
          }
 
-         /* Career Section */
-         .career-section {
-             margin: 3rem 0;
+         .subtitle{
+             font-size:1.2rem;
+             color:#999;
+             font-weight:400;
+             margin-top:-1rem;
          }
 
-         .section-title {
-             font-size: 1.1rem;
-             font-weight: 700;
-             margin-bottom: .5rem;
-             color: #000;
+         /* Section titles */
+
+         .section-title{
+             font-size:1.1rem;
+             font-weight:700;
+             margin-bottom:.5rem;
+             color:#000;
          }
 
-         .career-item {
-             display: flex;
-             justify-content: space-between;
-             align-items: baseline;
-             padding: 0 0 0.5rem;
-             color: #999999;
-             font-size: 0.95rem;
+         /* Career */
+
+         .career-section{
+             margin:3rem 0;
          }
 
-         .career-date {
-             color: #999999;
-             font-size: 0.95rem;
-             white-space: nowrap;
-             margin-left: 2rem;
+         .career-item{
+             display:flex;
+             justify-content:space-between;
+             align-items:flex-start;
+             padding:0 0 .6rem;
+             font-size:.95rem;
+             color:#999;
          }
 
-         /* Side by side sections */
-         .two-column {
-             display: grid;
-             grid-template-columns: 1fr 1fr;
-             gap: 3rem;
-             margin: 3rem 0 6rem;;
+         .career-role{
+             display:flex;
+             align-items:center;
+             gap:8px;
+             flex-wrap:wrap;
          }
 
-         .column-section {
-             margin: 0;
+         .career-date{
+             white-space:nowrap;
+             margin-left:2rem;
          }
 
-         .list-items {
-             list-style: none;
+         /* Badge */
+
+         .badge{
+             font-size:.7rem;
+             padding:2px 8px;
+             border-radius:6px;
+             border:1px solid #e0e0e0;
+             background:#f2f2f2;
+             color:#666;
+             white-space:nowrap;
          }
 
-         .list-items li {
-             margin-bottom: 0.5rem;
-             color: #999999;
-             font-size: 0.95rem;
+         .badge-education{
+             background:#eef5ff;
+             color:#3b6bdc;
          }
 
-         /* Carousel Sections */
-         .carousel-section {
-             margin: 3rem 0 6rem;
-             text-align: center;
+         .badge-finance{
+             background:#eefaf2;
+             color:#2f8f57;
          }
 
-         .carousel-title {
-             font-size: 1.1rem;
-             font-weight: 600;
-             margin-bottom: 2rem;
-             color: #000;
+         .badge-accounting{
+             background:#fff5ea;
+             color:#c06a2c;
          }
 
-         /* Selected Work Carousel */
-         .work-carousel-container {
-             position: relative;
-             margin: 3rem auto;
-             padding: 0 1rem;
+         .badge-personal{
+             background:#f6f0ff;
+             color:#7a4bd1;
          }
 
-         .work-carousel {
-             display: flex;
-             flex-direction: column;
-             align-items: center;
-             justify-content: center;
-             position: relative;
+         /* Two column */
+
+         .two-column{
+             display:grid;
+             grid-template-columns:1fr 1fr;
+             gap:3rem;
+             margin:3rem 0 6rem;
          }
 
-         .work-carousel-content {
-             position: relative;
-             width: 100%;
-             margin-bottom: 1.5rem;
+         .list-items{
+             list-style:none;
          }
 
-         .work-item-content {
-             width: 100%;
-             display: flex;
-             flex-direction: column;
-             align-items: center;
-             opacity: 0;
-             position: absolute;
-             top: 0;
-             left: 0;
-             transition: opacity 0.3s ease;
-             pointer-events: none;
+         .list-items li{
+             margin-bottom:.5rem;
+             font-size:.95rem;
+             color:#999;
          }
 
-         .work-item-content.active {
-             opacity: 1;
-             position: relative;
-             pointer-events: auto;
+         /* Carousel */
+
+         .carousel-section{
+             margin:3rem 0 6rem;
+             text-align:center;
          }
 
-         .work-screenshot {
-             width: 100%;
-             max-width: 900px;
-             border-radius: 12px;
-             border: 1px solid #ddd;
+         .work-carousel-container{
+             position:relative;
+             margin:3rem auto;
+             padding:0 1rem;
          }
 
-         .work-caption {
-             display: flex;
-             align-items: center;
-             justify-content: space-between;
-             width: 100%;
-             max-width: 900px;
-             margin: 0 auto;
+         .work-carousel{
+             display:flex;
+             flex-direction:column;
+             align-items:center;
          }
 
-         .work-title {
-             font-size: 0.95rem;
-             font-weight: 400;
-             color: #999999;
+         .work-carousel-content{
+             position:relative;
+             width:100%;
+             margin-bottom:1.5rem;
          }
 
-         /* Writing Section */
-         .writing-section {
-             margin: 3rem 0;
+         .work-item-content{
+             width:100%;
+             opacity:0;
+             position:absolute;
+             top:0;
+             left:0;
+             transition:opacity .3s ease;
+             pointer-events:none;
          }
 
-         .writing-item {
-             display: flex;
-             justify-content: space-between;
-             align-items: baseline;
-             padding: 0.5rem 0;
+         .work-item-content.active{
+             opacity:1;
+             position:relative;
+             pointer-events:auto;
          }
 
-          .writing-date {
-              color: #999999;
-              font-size: 0.95rem;
-              white-space: nowrap;
-              margin-right: 2rem;
-              opacity: .8;
-              min-width: 100px;
-          }
-
-         .writing-title {
-             color: #999999;
-             text-decoration: underline;
-             cursor: pointer;
-             font-size: 0.95rem;
-             flex: 1;
+         .work-screenshot{
+             width:100%;
+             max-width:900px;
+             border-radius:12px;
+             border:1px solid #ddd;
          }
 
-         .writing-title a {
-             color: #999999;
-             text-decoration: underline;
+         .work-caption{
+             display:flex;
+             align-items:center;
+             justify-content:space-between;
+             width:100%;
+             max-width:900px;
+             margin:0 auto;
          }
 
-         .writing-title a:visited {
-             color: #999999;
+         .work-title{
+             font-size:.95rem;
+             color:#999;
          }
 
-         .writing-title:hover,
-         .writing-title a:hover {
-             color: #000;
+         .work-title .badge{
+             margin-left: .5rem;
          }
 
+         /* Carousel buttons */
 
-         /* Carousel Navigation */
-         .carousel-nav {
-             background: rgba(255, 255, 255, 0.9);
-             border: 1px solid #ddd;
-             color: #333;
-             font-size: 1.2rem;
-             padding: 0.5rem 0.75rem;
-             cursor: pointer;
-             border-radius: 6px;
-             min-width: 80px;
-             height: 40px;
-             display: flex;
-             align-items: center;
-             justify-content: center;
-             transition: all 0.3s ease;
+         .carousel-nav{
+             background:rgba(255,255,255,.9);
+             border:1px solid #ddd;
+             color:#333;
+             font-size:1.2rem;
+             padding:.5rem .75rem;
+             cursor:pointer;
+             border-radius:6px;
+             min-width:80px;
+             height:40px;
+             display:flex;
+             align-items:center;
+             justify-content:center;
+             transition:.3s;
          }
 
-         .carousel-nav:hover {
-             background: #fff;
-             box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+         .carousel-nav:hover{
+             background:#fff;
+             box-shadow:0 4px 12px rgba(0,0,0,.15);
          }
 
-         /* Contact Section */
-         .contact-section {
-             margin: 6rem 0 8rem;
+         /* Writing */
+
+         .writing-section{
+             margin:3rem 0;
          }
 
-         .contact-content {
-             font-size: 0.95rem;
-             color: #999999;
+         .writing-item{
+             display:flex;
+             justify-content:space-between;
+             padding:.5rem 0;
          }
 
-         .contact-link {
-             color: #999999;
-             text-decoration: underline;
-             cursor: pointer;
+         .writing-date{
+             font-size:.95rem;
+             margin-right:2rem;
+             opacity:.8;
+             min-width:100px;
          }
 
-         .contact-link:hover {
-             color: #000;
+         .writing-title a{
+             color:#999;
+             text-decoration:underline;
          }
 
-         /* Responsive Design */
-         @media (max-width: 768px) {
-             .container {
-                 padding: 0 1rem;
+         .writing-title a:hover{
+             color:#000;
+         }
+
+         /* Contact */
+
+         .contact-section{
+             margin:6rem 0 8rem;
+         }
+
+         .contact-link{
+             color:#999;
+             text-decoration:underline;
+         }
+
+         .contact-link:hover{
+             color:#000;
+         }
+
+         /* Mobile */
+
+         @media (max-width:768px){
+
+             .container{
+                 padding:0 1rem;
              }
 
-             .header h1 {
-                 font-size: 1.75rem;
+             .header h1{
+                 font-size:1.75rem;
              }
 
-             .two-column {
-                 grid-template-columns: 1fr;
-                 gap: 2rem;
+             .two-column{
+                 grid-template-columns:1fr;
+                 gap:2rem;
              }
 
-             .testimonial-card {
-                 flex-direction: column;
-                 text-align: center;
-                 padding: 1.5rem;
+             .career-item{
+                 flex-direction:column;
+                 gap:4px;
              }
 
-             .testimonial-image {
-                 margin-right: 0;
-                 margin-bottom: 1rem;
-                 max-width: 150px;
+             .career-date{
+                 margin-left:0;
              }
 
-             .carousel-nav {
-                 width: 40px;
-                 height: 40px;
-                 font-size: 1.2rem;
+             /* Carousel title mobile layout */
+
+             .work-title{
+                 display:flex;
+                 flex-direction:column;
+                 align-items:center;
+                 gap:6px;
+                 text-align:center;
              }
 
-             .career-item,
-             .writing-item {
-                 flex-direction: column;
-                 align-items: flex-start;
-             }
-
-             .career-date,
-             .writing-date {
+             .work-title .badge{
+                 white-space:normal;
                  margin-left: 0;
-                 margin-right: 0;
-                 margin-top: 0.25rem;
-             }
-         }
-
-         @media (max-width: 480px) {
-             .testimonial-card {
-                 padding: 1rem;
              }
 
-             .testimonial-image {
-                 max-width: 120px;
-             }
          }
+
         </style>
     </head>
+
     <body>
+
         <div class="container">
-            <!-- Header Section -->
+
             <header class="header">
                 <h1>Philip Ardeljan</h1>
                 <p class="subtitle">Designer</p>
             </header>
 
-            <!-- Career Section -->
             <section class="career-section">
+
                 <h2 class="section-title">Career</h2>
+
                 <div class="career-item">
-                    <span>Product Designer at MarkMyWords</span>
+                    <div class="career-role">
+                        <span>Head of Product & Design at MarkMyWords</span>
+                        <span class="badge badge-education">Education</span>
+                    </div>
                     <span class="career-date">2025-Present</span>
                 </div>
+
                 <div class="career-item">
-                    <span>Product Designer at Maths Pathway</span>
+                    <div class="career-role">
+                        <span>Product Designer at Maths Pathway</span>
+                        <span class="badge badge-education">Education</span>
+                    </div>
                     <span class="career-date">2017-2025</span>
                 </div>
+
                 <div class="career-item">
-                    <span>UI/UX Designer at NZX Limited</span>
+                    <div class="career-role">
+                        <span>UI/UX Designer at NZX Limited</span>
+                        <span class="badge badge-finance">Finance</span>
+                    </div>
                     <span class="career-date">2015-2016</span>
                 </div>
+
                 <div class="career-item">
-                    <span>UI/UX Designer at Saasu</span>
+                    <div class="career-role">
+                        <span>UI/UX Designer at Saasu</span>
+                        <span class="badge badge-accounting">Accounting</span>
+                    </div>
                     <span class="career-date">2013-2015</span>
                 </div>
+
             </section>
 
-            <!-- Specialities and I'm all about sections -->
             <div class="two-column">
-                <section class="column-section">
+
+                <section>
                     <h2 class="section-title">Specialities</h2>
                     <ul class="list-items">
                         <li>Product Design</li>
@@ -376,7 +386,7 @@
                     </ul>
                 </section>
 
-                <section class="column-section">
+                <section>
                     <h2 class="section-title">I'm all about:</h2>
                     <ul class="list-items">
                         <li>Understanding user needs</li>
@@ -384,121 +394,158 @@
                         <li>Collaborating with software engineers</li>
                     </ul>
                 </section>
+
             </div>
+
         </div>
 
-        <!-- Selected Work Carousel -->
         <section class="carousel-section">
+
             <div class="work-carousel-container">
+
                 <div class="work-carousel">
+
                     <div class="work-carousel-content" id="workCarouselContent">
+
                         <div class="work-item-content active">
-                            <img src="img/1 MarkMyWords - AI Upload Agent.png" alt="MarkMyWords AI Upload Agent" class="work-screenshot">
+                            <img src="img/1 MarkMyWords - AI Upload Agent.png" class="work-screenshot">
                         </div>
+
                         <div class="work-item-content">
-                            <img src="img/2 Maths Pathway - Learning Platform.png" alt="Maths Pathway Learning Platform" class="work-screenshot">
+                            <img src="img/2 Maths Pathway - Learning Platform.png" class="work-screenshot">
                         </div>
+
                         <div class="work-item-content">
-                            <img src="img/3 NZX Limited - Trading Interface.png" alt="NZX Limited Trading Interface" class="work-screenshot">
+                            <img src="img/3 NZX Limited - Trading Interface.png" class="work-screenshot">
                         </div>
+
                         <div class="work-item-content">
-                            <img src="img/4 Maths Pathway - Student Platform.png" alt="Maths Pathway Student Platform" class="work-screenshot">
+                            <img src="img/4 Maths Pathway - Student Platform.png" class="work-screenshot">
                         </div>
+
                         <div class="work-item-content">
-                            <img src="img/5 Maths Pathway - Learning Platform.png" alt="Maths Pathway Learning Platform" class="work-screenshot">
+                            <img src="img/5 Maths Pathway - Learning Platform.png" class="work-screenshot">
                         </div>
+
                         <div class="work-item-content">
-                            <img src="img/6 Loaf - SVG Tool.png" alt="Loaf SVG Tool" class="work-screenshot">
+                            <img src="img/6 Loaf - SVG Tool.png" class="work-screenshot">
                         </div>
+
                         <div class="work-item-content">
-                            <img src="img/7 Maths Pathway - Learning Platform.png" alt="Maths Pathway Learning Platform" class="work-screenshot">
+                            <img src="img/7 Maths Pathway - Learning Platform.png" class="work-screenshot">
                         </div>
+
                     </div>
+
                     <div class="work-caption">
+
                         <button class="carousel-nav prev" onclick="previousWork()">‹</button>
-                        <p class="work-title" id="workTitle">MarkMyWords, AI Upload Agent</p>
+
+                        <p class="work-title" id="workTitle"></p>
+
                         <button class="carousel-nav next" onclick="nextWork()">›</button>
+
                     </div>
+
                 </div>
+
             </div>
+
         </section>
 
         <div class="container">
-            <!-- Writing Section -->
+
             <section class="writing-section">
+
                 <h2 class="section-title">Writing</h2>
+
                 <div class="writing-item">
                     <span class="writing-date">21 Oct 2025</span>
                     <span class="writing-title"><a href="blog/should-designers-prompt/">Should designers prompt?</a></span>
                 </div>
+
                 <div class="writing-item">
                     <span class="writing-date">26 Jan 2022</span>
                     <span class="writing-title"><a href="blog/airpods-dont-just-work/">AirPods don't "Just Work"</a></span>
                 </div>
+
                 <div class="writing-item">
                     <span class="writing-date">21 Jul 2020</span>
                     <span class="writing-title"><a href="blog/fast-design-will-kill-your-product/">Fast design will kill your product</a></span>
                 </div>
+
                 <div class="writing-item">
                     <span class="writing-date">17 Mar 2020</span>
-                    <span class="writing-title"><a href="blog/the-future-of-design-tools-and-why-developers-should-care/">The future of design tools (and why developers should care)</a></span>
+                    <span class="writing-title"><a href="blog/the-future-of-design-tools-and-why-developers-should-care/">The future of design tools</a></span>
                 </div>
+
                 <div class="writing-item">
                     <span class="writing-date">17 Nov 2016</span>
                     <span class="writing-title"><a href="blog/15kb-of-css-is-all-youll-ever-need">15kb of CSS is all you'll ever need ⚡</a></span>
                 </div>
+
             </section>
 
-            <!-- Contact Section -->
             <section class="contact-section">
+
                 <h2 class="section-title">Want to have a chat?</h2>
-                <div class="contact-content">
-                    <p><a class="contact-link" href="https://x.com/philipardeljan">I'm active on X</a> or send me an email: philip@ardeljan.com</p>
-                </div>
+
+                <p>
+                    <a class="contact-link" href="https://x.com/philipardeljan">I'm active on X</a>
+                    or send me an email: philip@ardeljan.com
+                </p>
+
             </section>
+
         </div>
 
         <script>
-         let currentWorkIndex = 0;
 
-          const workTitles = [
-              "MarkMyWords, AI Upload Agent",
-              "Maths Pathway, Learning Platform",
-              "NZX Limited, Trading Interface",
-              "Maths Pathway, Student Platform",
-              "Maths Pathway, Learning Platform",
-              "Loaf, SVG Tool",
-              "Maths Pathway, Learning Platform"
-          ];
+         let currentWorkIndex=0;
 
-        // Work Carousel Functions
-        function nextWork() {
-            currentWorkIndex = (currentWorkIndex + 1) % 7;
-            updateWorkCarousel();
-        }
+         const workItems=[
+             {title:"MarkMyWords, AI Upload Agent",category:"Education",class:"badge-education"},
+             {title:"Maths Pathway, Learning Platform",category:"Education",class:"badge-education"},
+             {title:"NZX Limited, Trading Interface",category:"Finance",class:"badge-finance"},
+             {title:"Maths Pathway, Student Platform",category:"Education",class:"badge-education"},
+             {title:"Maths Pathway, Learning Platform",category:"Education",class:"badge-education"},
+             {title:"Loaf, SVG Tool",category:"Personal",class:"badge-personal"},
+             {title:"Maths Pathway, Learning Platform",category:"Education",class:"badge-education"}
+         ];
 
-        function previousWork() {
-            currentWorkIndex = (currentWorkIndex - 1 + 7) % 7;
-            updateWorkCarousel();
-        }
+         function nextWork(){
+             currentWorkIndex=(currentWorkIndex+1)%workItems.length;
+             updateWorkCarousel();
+         }
 
-         function updateWorkCarousel() {
-             const items = document.querySelectorAll('#workCarouselContent .work-item-content');
-             const titleElement = document.getElementById('workTitle');
-             
-             items.forEach((item, index) => {
-                 if (index === currentWorkIndex) {
+         function previousWork(){
+             currentWorkIndex=(currentWorkIndex-1+workItems.length)%workItems.length;
+             updateWorkCarousel();
+         }
+
+         function updateWorkCarousel(){
+
+             const items=document.querySelectorAll('#workCarouselContent .work-item-content');
+             const title=document.getElementById('workTitle');
+
+             items.forEach((item,index)=>{
+                 if(index===currentWorkIndex){
                      item.classList.add('active');
-                 } else {
+                 }else{
                      item.classList.remove('active');
                  }
              });
-             
-             titleElement.textContent = workTitles[currentWorkIndex];
+
+             const work=workItems[currentWorkIndex];
+
+             title.innerHTML=
+                 `${work.title}<span class="badge ${work.class}">${work.category}</span>`;
+
          }
 
-         // Initialize carousel
          updateWorkCarousel();
+
         </script>
+
     </body>
 </html>
